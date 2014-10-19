@@ -1,0 +1,66 @@
+global !p
+from complete import *
+endglobal
+
+snippet "sh(u(t(i(l)?)?)?)?\." "Methods of shutil." r
+shutil.$1`!p snip.rv = complete(t[1], ["copyfileobj", "copyfile", "copymode", "copystat", "copy", "copy2", "ignore_patterns", "copytree", "rmtree", "move", "make_archive", "get_archive_formats", "register_archive_format", "unregister_archive_format"])`
+endsnippet
+
+#########################################################################
+
+snippet "\bshutil.copyfileobj[a-zA-Z]?" "shutil.copyfileobj" r
+shutil.copyfileobj(${1:fsrc}, ${2:fdst}${3:, ${4:length}})
+endsnippet
+
+snippet "\bshutil.copyfile[a-zA-Z]?" "shutil.copyfile" r
+shutil.copyfile(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bshutil.copymode[a-zA-Z]?" "shutil.copymode" r
+shutil.copymode(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bshutil.copystat[a-zA-Z]?" "shutil.copystat" r
+shutil.copystat(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bshutil.copy[a-zA-Z]?" "shutil.copy" r
+shutil.copy(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bshutil.copy2[a-zA-Z]?" "shutil.copy2" r
+shutil.copy2(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bshutil.ignore_patterns[a-zA-Z]?" "shutil.ignore_patterns" r
+shutil.ignore_patterns(${1:*patterns})
+endsnippet
+
+snippet "\bshutil.copytree[a-zA-Z]?" "shutil.copytree" r
+shutil.copytree(${1:src}, ${2:dst}, ${3:symlinks=False}, ${4:ignore=None})
+endsnippet
+
+snippet "\bshutil.rmtree[a-zA-Z]?" "shutil.rmtree" r
+shutil.rmtree(${1:path}${2:, ${3:ignore_errors}${4:, ${5:onerror}}})
+endsnippet
+
+snippet "\bshutil.move[a-zA-Z]?" "shutil.move" r
+shutil.move(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bshutil.make_archive[a-zA-Z]?" "shutil.make_archive" r
+shutil.make_archive(${1:base_name}, ${2:format}${3:, ${4:root_dir}${5:, ${6:base_dir}${7:, ${8:verbose}${9:, ${10:dry_run}${11:, ${12:owner}${13:, ${14:group}${15:, ${16:logger}}}}}}}})
+endsnippet
+
+snippet "\bshutil.get_archive_formats[a-zA-Z]?" "shutil.get_archive_formats" r
+shutil.get_archive_formats()
+endsnippet
+
+snippet "\bshutil.register_archive_format[a-zA-Z]?" "shutil.register_archive_format" r
+shutil.register_archive_format(${1:name}, ${2:function}${3:, ${4:extra_args}${5:, ${6:description}}})
+endsnippet
+
+snippet "\bshutil.unregister_archive_format[a-zA-Z]?" "shutil.unregister_archive_format" r
+shutil.unregister_archive_format(${1:name})
+endsnippet
+

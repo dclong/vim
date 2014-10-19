@@ -1,0 +1,66 @@
+
+snippet "g(r(e(e(k)?)?)?)?\." "Math Formula" r
+`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
+endsnippet
+
+snippet "m(a(t(h)?)?)?\." "Math Formula" r
+`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
+endsnippet
+
+snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
+\begin{${1:something}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet "\b\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" r
+\frac{$1}{$2}
+endsnippet
+
+snippet "\b\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" r
+\int_{${1:lower_limit}}^{${2:upper_limit}} ${3:integrand} 
+endsnippet
+
+snippet "\b\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" r
+\overset{$1}{$2}
+endsnippet
+
+snippet "\b\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" r
+\nonumber 
+endsnippet
+
+snippet "\b\\nn" "\nonumber \\" r
+\nonumber \\
+endsnippet
+
+snippet "\b\\l(e(f(t)?)?)?" "\left" r
+\left$1`!p snip.rv = complete(t[1], ["<", "(", "{", "["])`\right$1
+endsnippet
+
+snippet '([a-zA-Z]+)(\d+)' "X_1" r
+`!p snip.rv = match.group(1) + "_" + match.group(2)`
+endsnippet
+
+snippet '([a-zA-Z]+)\((\d+)' "X_(1)" r
+`!p snip.rv = match.group(1) + "_{(" + match.group(2) + ")}"`
+endsnippet
+
+snippet min "min{}" w
+min\\{$1\\}
+endsnippet
+
+snippet max "max{}" w
+max\\{$1\\}
+endsnippet
+
+snippet "\b\\b(a(r)?)?" "bar" r
+\bar{${1:expr}}
+endsnippet
+
+snippet "\b\\s(q(r(t)?)?)?" "\sqrt" r
+\sqrt{${1:expr}}
+endsnippet
+
+snippet "\b\\d(o(t)?)?" "\dot" r
+\dot{${1:expr}}
+endsnippet

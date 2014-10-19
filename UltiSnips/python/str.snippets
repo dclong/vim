@@ -1,0 +1,170 @@
+global !p
+from complete import *
+endglobal
+
+snippet "\bs(t(r)?)?\." "Methods of The str Class" r
+str.$1`!p snip.rv = complete(t[1], ["capitalize", "center", "count", "decode", "encode", "endswith", "expandtabs", "find", "format", "index", "isalnum", "isalpha", "isdigit", "islower", "isspace", "istitle", "isupper", "join", "len", "ljust", "lower", "lstrip", "partition", "replace", "rfind", "rindex", "rjust", "rpartition", "rsplit", "rstrip", "split", "splitlines", "startswith", "str", "strip", "swapcase", "title", "translate", "upper", "zfill", "isnumeric", "isdecimal"])`
+endsnippet
+
+snippet "\bstr.str[a-zA-Z]?" "str()" r
+str(${1:obj})
+endsnippet
+
+snippet "\bstr.len[a-zA-Z]?" "len()" r
+len(${1:obj})
+endsnippet
+
+##################################################################
+snippet "\bstr.capitalize[a-zA-Z]?" "str.capitalize" r
+${1:str}.capitalize()
+endsnippet
+
+snippet "\bstr.center[a-zA-Z]?" "str.center" r
+${4:str}.center(${1:width}${2:, ${3:fillchar}})
+endsnippet
+
+snippet "\bstr.count[a-zA-Z]?" "str.count" r
+${6:str}.count(${1:sub}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.decode[a-zA-Z]?" "str.decode" r
+${5:str}.decode(${1:${2:encoding}${3:, ${4:errors}}})
+endsnippet
+
+snippet "\bstr.encode[a-zA-Z]?" "str.encode" r
+${5:str}.encode(${1:${2:encoding}${3:, ${4:errors}}})
+endsnippet
+
+snippet "\bstr.endswith[a-zA-Z]?" "str.endswith" r
+${6:str}.endswith(${1:suffix}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.expandtabs[a-zA-Z]?" "str.expandtabs" r
+${2:str}.expandtabs(${1:tabsize})
+endsnippet
+
+snippet "\bstr.find[a-zA-Z]?" "str.find" r
+${6:str}.find(${1:sub}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.format[a-zA-Z]?" "str.format" r
+${3:str}.format(${1:*args}, ${2:**kwargs})
+endsnippet
+
+snippet "\bstr.index[a-zA-Z]?" "str.index" r
+${6:str}.index(${1:sub}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.isalnum[a-zA-Z]?" "str.isalnum" r
+${1:str}.isalnum()
+endsnippet
+
+snippet "\bstr.isalpha[a-zA-Z]?" "str.isalpha" r
+${1:str}.isalpha()
+endsnippet
+
+snippet "\bstr.isdigit[a-zA-Z]?" "str.isdigit" r
+${1:str}.isdigit()
+endsnippet
+
+snippet "\bstr.islower[a-zA-Z]?" "str.islower" r
+${1:str}.islower()
+endsnippet
+
+snippet "\bstr.isspace[a-zA-Z]?" "str.isspace" r
+${1:str}.isspace()
+endsnippet
+
+snippet "\bstr.istitle[a-zA-Z]?" "str.istitle" r
+${1:str}.istitle()
+endsnippet
+
+snippet "\bstr.isupper[a-zA-Z]?" "str.isupper" r
+${1:str}.isupper()
+endsnippet
+
+snippet "\bstr.join[a-zA-Z]?" "str.join" r
+${2:str}.join(${1:iterable})
+endsnippet
+
+snippet "\bstr.ljust[a-zA-Z]?" "str.ljust" r
+${4:str}.ljust(${1:width}${2:, ${3:fillchar}})
+endsnippet
+
+snippet "\bstr.lower[a-zA-Z]?" "str.lower" r
+${1:str}.lower()
+endsnippet
+
+snippet "\bstr.lstrip[a-zA-Z]?" "str.lstrip" r
+${2:str}.lstrip(${1:chars})
+endsnippet
+
+snippet "\bstr.partition[a-zA-Z]?" "str.partition" r
+${2:str}.partition(${1:sep})
+endsnippet
+
+snippet "\bstr.replace[a-zA-Z]?" "str.replace" r
+${5:str}.replace(${1:old}, ${2:new}${3:, ${4:count}})
+endsnippet
+
+snippet "\bstr.rfind[a-zA-Z]?" "str.rfind" r
+${6:str}.rfind(${1:sub}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.rindex[a-zA-Z]?" "str.rindex" r
+${6:str}.rindex(${1:sub}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.rjust[a-zA-Z]?" "str.rjust" r
+${4:str}.rjust(${1:width}${2:, ${3:fillchar}})
+endsnippet
+
+snippet "\bstr.rpartition[a-zA-Z]?" "str.rpartition" r
+${2:str}.rpartition(${1:sep})
+endsnippet
+
+snippet "\bstr.rsplit[a-zA-Z]?" "str.rsplit" r
+${5:str}.rsplit(${1:${2:sep}${3:, ${4:maxsplit}}})
+endsnippet
+
+snippet "\bstr.rstrip[a-zA-Z]?" "str.rstrip" r
+${2:str}.rstrip(${1:chars})
+endsnippet
+
+snippet "\bstr.split[a-zA-Z]?" "str.split" r
+${5:str}.split(${1:${2:sep}${3:, ${4:maxsplit}}})
+endsnippet
+
+snippet "\bstr.splitlines[a-zA-Z]?" "str.splitlines" r
+${2:str}.splitlines(${1:keepends})
+endsnippet
+
+snippet "\bstr.startswith[a-zA-Z]?" "str.startswith" r
+${6:str}.startswith(${1:prefix}${2:, ${3:start}${4:, ${5:end}}})
+endsnippet
+
+snippet "\bstr.strip[a-zA-Z]?" "str.strip" r
+${2:str}.strip(${1:chars})
+endsnippet
+
+snippet "\bstr.swapcase[a-zA-Z]?" "str.swapcase" r
+${1:str}.swapcase()
+endsnippet
+
+snippet "\bstr.title[a-zA-Z]?" "str.title" r
+${1:str}.title()
+endsnippet
+
+snippet "\bstr.translate[a-zA-Z]?" "str.translate" r
+${4:str}.translate(${1:table}${2:, ${3:deletechars}})
+endsnippet
+
+snippet "\bstr.upper[a-zA-Z]?" "str.upper" r
+${1:str}.upper()
+endsnippet
+
+snippet "\bstr.zfill[a-zA-Z]?" "str.zfill" r
+${2:str}.zfill(${1:width})
+endsnippet
+
+

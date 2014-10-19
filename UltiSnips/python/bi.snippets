@@ -1,0 +1,362 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+
+snippet bi. "Built-in Methods" w
+bi.$1`!p snip.rv = complete(t[1], ["abs", "all", "any", "basestring", "bin", "bool", "bytearray", "callable", "chr", "classmethod", "cmp", "compile", "complex", "delattr", "dict", "dict", "dict", "dir", "divmod", "enumerate", "eval", "execfile", "file", "filter", "float", "format", "frozenset", "getattr", "globals", "hasattr", "hash", "help", "hex", "id", "input", "int", "int", "isinstance", "issubclass", "iter", "len", "list", "locals", "long", "long", "map", "max", "memoryview", "min", "next", "object", "oct", "open", "ord", "pow", "print", "property", "range", "raw_input", "reduce", "reload", "repr", "reversed", "round", "set", "setattr", "slice", "slice", "sorted", "staticmethod", "str", "sum", "super", "tuple", "type", "type", "unichr", "unicode", "unicode", "vars", "xrange", "xrange", "zip", "__import__", "apply", "buffer", "coerce", "intern"])`
+endsnippet
+
+snippet bi.abs "abs" b
+abs(${1:x})
+endsnippet
+
+snippet bi.all "all" b
+all(${1:iterable})
+endsnippet
+
+snippet bi.any "any" b
+any(${1:iterable})
+endsnippet
+
+snippet bi.basestring "basestring" b
+basestring()
+endsnippet
+
+snippet bi.bin "bin" b
+bin(${1:x})
+endsnippet
+
+snippet bi.bool "bool" b
+bool(${1:x})
+endsnippet
+
+snippet bi.bytearray "bytearray" b
+bytearray(${1:${2:source}${3:, ${4:encoding}${5:, ${6:errors}}}})
+endsnippet
+
+snippet bi.callable "callable" b
+callable(${1:object})
+endsnippet
+
+snippet bi.chr "chr" b
+chr(${1:i})
+endsnippet
+
+snippet bi.classmethod "classmethod" b
+classmethod(${1:function})
+endsnippet
+
+snippet bi.cmp "cmp" b
+cmp(${1:x}, ${2:y})
+endsnippet
+
+snippet bi.compile "compile" b
+compile(${1:source}, ${2:filename}, ${3:mode}${4:, ${5:flags}${6:, ${7:dont_inherit}}})
+endsnippet
+
+snippet bi.complex "complex" b
+complex(${1:${2:real}${3:, ${4:imag}}})
+endsnippet
+
+snippet bi.delattr "delattr" b
+delattr(${1:object}, ${2:name})
+endsnippet
+
+snippet bi.dict "dict" b
+dict(${1:**kwarg})
+endsnippet
+
+snippet bi.dict "dict" b
+dict(${1:mapping}, ${2:**kwarg})
+endsnippet
+
+snippet bi.dict "dict" b
+dict(${1:iterable}, ${2:**kwarg})
+endsnippet
+
+snippet bi.dir "dir" b
+dir(${1:object})
+endsnippet
+
+snippet bi.divmod "divmod" b
+divmod(${1:a}, ${2:b})
+endsnippet
+
+snippet bi.enumerate "enumerate" b
+enumerate(${1:sequence}, ${2:start=0})
+endsnippet
+
+snippet bi.eval "eval" b
+eval(${1:expression}${2:, ${3:globals}${4:, ${5:locals}}})
+endsnippet
+
+snippet bi.execfile "execfile" b
+execfile(${1:filename}${2:, ${3:globals}${4:, ${5:locals}}})
+endsnippet
+
+snippet bi.file "file" b
+file(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
+endsnippet
+
+snippet bi.filter "filter" b
+filter(${1:function}, ${2:iterable})
+endsnippet
+
+snippet bi.float "float" b
+float(${1:x})
+endsnippet
+
+snippet bi.format "format" b
+format(${1:value}${2:, ${3:format_spec}})
+endsnippet
+
+snippet bi.frozenset "frozenset" b
+frozenset(${1:iterable})
+endsnippet
+
+snippet bi.getattr "getattr" b
+getattr(${1:object}, ${2:name}${3:, ${4:default}})
+endsnippet
+
+snippet bi.globals "globals" b
+globals()
+endsnippet
+
+snippet bi.hasattr "hasattr" b
+hasattr(${1:object}, ${2:name})
+endsnippet
+
+snippet bi.hash "hash" b
+hash(${1:object})
+endsnippet
+
+snippet bi.help "help" b
+help(${1:object})
+endsnippet
+
+snippet bi.hex "hex" b
+hex(${1:x})
+endsnippet
+
+snippet bi.id "id" b
+id(${1:object})
+endsnippet
+
+snippet bi.input "input" b
+input(${1:prompt})
+endsnippet
+
+snippet bi.int "int" b
+int(${1:x=0})
+endsnippet
+
+snippet bi.int "int" b
+int(${1:x}, ${2:base=10})
+endsnippet
+
+snippet bi.isinstance "isinstance" b
+isinstance(${1:object}, ${2:classinfo})
+endsnippet
+
+snippet bi.issubclass "issubclass" b
+issubclass(${1:class}, ${2:classinfo})
+endsnippet
+
+snippet bi.iter "iter" b
+iter(${1:o}${2:, ${3:sentinel}})
+endsnippet
+
+snippet bi.len "len" b
+len(${1:obj})
+endsnippet
+
+snippet bi.list "list" b
+list(${1:iterable})
+endsnippet
+
+snippet bi.locals "locals" b
+locals()
+endsnippet
+
+snippet bi.long "long" b
+long(${1:x=0})
+endsnippet
+
+snippet bi.long "long" b
+long(${1:x}, ${2:base=10})
+endsnippet
+
+snippet bi.map "map" b
+map(${1:function}, ${2:iterable}, ${3:...})
+endsnippet
+
+snippet bi.max "max" b
+max(${1:arg1}, ${2:arg2}, ${3:*args}${4:, ${5:key}})
+endsnippet
+
+snippet bi.memoryview "memoryview" b
+memoryview(${1:obj})
+endsnippet
+
+snippet bi.min "min" b
+min(${1:arg1}, ${2:arg2}, ${3:*args}${4:, ${5:key}})
+endsnippet
+
+snippet bi.next "next" b
+next(${1:iterator}${2:, ${3:default}})
+endsnippet
+
+snippet bi.object "object" b
+object()
+endsnippet
+
+snippet bi.oct "oct" b
+oct(${1:x})
+endsnippet
+
+snippet bi.open "open" b
+open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
+endsnippet
+
+snippet bi.ord "ord" b
+ord(${1:c})
+endsnippet
+
+snippet bi.pow "pow" b
+pow(${1:x}, ${2:y}${3:, ${4:z}})
+endsnippet
+
+snippet bi.print "print" b
+print(${1:*objects}, ${2:sep=' '}, ${3:end='\n'}, ${4:file=sys.stdout})
+endsnippet
+
+snippet bi.property "property" b
+property(${1:${2:fget}${3:, ${4:fset}${5:, ${6:fdel}${7:, ${8:doc}}}}})
+endsnippet
+
+snippet bi.range "range" b
+range(${1:stop})
+endsnippet
+
+snippet bi.raw_input "raw_input" b
+raw_input(${1:prompt})
+endsnippet
+
+snippet bi.reduce "reduce" b
+reduce(${1:function}, ${2:iterable}${3:, ${4:initializer}})
+endsnippet
+
+snippet bi.reload "reload" b
+reload(${1:module})
+endsnippet
+
+snippet bi.repr "repr" b
+repr(${1:object})
+endsnippet
+
+snippet bi.reversed "reversed" b
+reversed(${1:seq})
+endsnippet
+
+snippet bi.round "round" b
+round(${1:number}${2:, ${3:ndigits}})
+endsnippet
+
+snippet bi.set "set" b
+set(${1:iterable})
+endsnippet
+
+snippet bi.setattr "setattr" b
+setattr(${1:object}, ${2:name}, ${3:value})
+endsnippet
+
+snippet bi.slice "slice" b
+slice(${1:stop})
+endsnippet
+
+snippet bi.slice "slice" b
+slice(${1:start}, ${2:stop}${3:, ${4:step}})
+endsnippet
+
+snippet bi.sorted "sorted" b
+sorted(${1:iterable}${2:, ${3:cmp}${4:, ${5:key}${6:, ${7:reverse}}}})
+endsnippet
+
+snippet bi.staticmethod "staticmethod" b
+staticmethod(${1:function})
+endsnippet
+
+snippet bi.str "str" b
+str(${1:object=''})
+endsnippet
+
+snippet bi.sum "sum" b
+sum(${1:iterable}${2:, ${3:start}})
+endsnippet
+
+snippet bi.super "super" b
+super(${1:type}${2:, ${3:object-or-type}})
+endsnippet
+
+snippet bi.tuple "tuple" b
+tuple(${1:iterable})
+endsnippet
+
+snippet bi.type "type" b
+type(${1:object})
+endsnippet
+
+snippet bi.type "type" b
+type(${1:name}, ${2:bases}, ${3:dict})
+endsnippet
+
+snippet bi.unichr "unichr" b
+unichr(${1:i})
+endsnippet
+
+snippet bi.unicode "unicode" b
+unicode(${1:object=''})
+endsnippet
+
+snippet bi.unicode "unicode" b
+unicode(${1:object}${2:, ${3:encoding}${4:, ${5:errors}}})
+endsnippet
+
+snippet bi.vars "vars" b
+vars(${1:object})
+endsnippet
+
+snippet bi.xrange "xrange" b
+xrange(${1:stop})
+endsnippet
+
+snippet bi.xrange "xrange" b
+xrange(${1:start}, ${2:stop}${3:, ${4:step}})
+endsnippet
+
+snippet bi.zip "zip" b
+zip(${1:${2:iterable}, ${3:...}})
+endsnippet
+
+snippet bi.__import__ "__import__" b
+__import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})
+endsnippet
+
+snippet bi.apply "apply" b
+apply(${1:function}, ${2:args}${3:, ${4:keywords}})
+endsnippet
+
+snippet bi.buffer "buffer" b
+buffer(${1:object}${2:, ${3:offset}${4:, ${5:size}}})
+endsnippet
+
+snippet bi.coerce "coerce" b
+coerce(${1:x}, ${2:y})
+endsnippet
+
+snippet bi.intern "intern" b
+intern(${1:string})
+endsnippet
+

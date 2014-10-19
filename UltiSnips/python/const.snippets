@@ -1,0 +1,34 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+
+snippet "\bb(o(o(l(e(a(n)?)?)?)?)?)?\." "Const Variables" r
+$1`!p snip.rv = complete(t[1], ["True", "False"])`
+endsnippet
+
+snippet "\bc(o(n(s(t)?)?)?)?\." "Const Variables" r
+$1`!p snip.rv = complete(t[1], ["True", "False", "None", "math.pi", "math.e"])`
+endsnippet
+
+snippet "is null" "is null transformation" w
+== None
+endsnippet
+
+snippet "is not null" "is not null transformation" w
+!= None
+endsnippet
+
+snippet "\bno(n(e)?)?" "None" r
+None
+endsnippet
+
+snippet "\bt(r(u(e)?)?)?" "True" r
+True
+endsnippet
+
+snippet "\bf(a(l(s(e)?)?)?)?" "False" r
+False
+endsnippet
+

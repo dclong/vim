@@ -1,0 +1,611 @@
+global !p
+from complete import *
+endglobal
+
+snippet os. "Methods of OS" w
+os.$1`!p snip.rv = complete(t[1], ["error", "name", "environ", "chdir", "fchdir", "getcwd", "ctermid", "getegid", "geteuid", "getgid", "getgroups", "initgroups", "getlogin", "getpgid", "getpgrp", "getpid", "getppid", "getresuid", "getresgid", "getuid", "getenv", "putenv", "setegid", "seteuid", "setgid", "setgroups", "setpgrp", "setpgid", "setregid", "setresgid", "setresuid", "setreuid", "getsid", "setsid", "setuid", "strerror", "umask", "uname", "unsetenv", "fdopen", "popen", "tmpfile", "popen2", "popen3", "popen4", "close", "closerange", "dup", "dup2", "fchmod", "fchown", "fdatasync", "fpathconf", "fstat", "fstatvfs", "fsync", "ftruncate", "isatty", "lseek", "SEEK_SET", "SEEK_CUR", "SEEK_END", "open", "openpty", "pipe", "read", "tcgetpgrp", "tcsetpgrp", "ttyname", "write", "O_RDONLY", "O_WRONLY", "O_RDWR", "O_APPEND", "O_CREAT", "O_EXCL", "O_TRUNC", "O_DSYNC", "O_RSYNC", "O_SYNC", "O_NDELAY", "O_NONBLOCK", "O_NOCTTY", "O_SHLOCK", "O_EXLOCK", "O_BINARY", "O_NOINHERIT", "O_SHORT_LIVED", "O_TEMPORARY", "O_RANDOM", "O_SEQUENTIAL", "O_TEXT", "O_ASYNC", "O_DIRECT", "O_DIRECTORY", "O_NOFOLLOW", "O_NOATIME", "access", "F_OK", "R_OK", "W_OK", "X_OK", "chdir", "fchdir", "getcwd", "getcwdu", "chflags", "chroot", "chmod", "chown", "lchflags", "lchmod", "lchown", "link", "listdir", "lstat", "mkfifo", "mknod", "major", "minor", "makedev", "mkdir", "makedirs", "path.", "pathconf", "pathconf_names", "readlink", "remove", "removedirs", "rename", "renames", "rmdir", "stat", "stat_float_times", "statvfs", "symlink", "tempnam", "tmpnam", "TMP_MAX", "unlink", "utime", "walk", "abort", "execl", "execle", "execlp", "execlpe", "execv", "execve", "execvp", "execvpe", "_exit", "EX_OK", "EX_USAGE", "EX_DATAERR", "EX_NOINPUT", "EX_NOUSER", "EX_NOHOST", "EX_UNAVAILABLE", "EX_SOFTWARE", "EX_OSERR", "EX_OSFILE", "EX_CANTCREAT", "EX_IOERR", "EX_TEMPFAIL", "EX_PROTOCOL", "EX_NOPERM", "EX_CONFIG", "EX_NOTFOUND", "fork", "forkpty", "kill", "killpg", "nice", "plock", "popen", "popen2", "popen3", "popen4", "spawnl", "spawnle", "spawnlp", "spawnlpe", "spawnv", "spawnve", "spawnvp", "spawnvpe", "P_NOWAIT", "P_NOWAITO", "P_WAIT", "P_DETACH", "P_OVERLAY", "startfile", "system", "times", "wait", "waitpid", "wait3", "wait4", "WNOHANG", "WCONTINUED", "WUNTRACED", "WCOREDUMP", "WIFCONTINUED", "WIFSTOPPED", "WIFSIGNALED", "WIFEXITED", "WEXITSTATUS", "WSTOPSIG", "WTERMSIG", "confstr", "confstr_names", "getloadavg", "sysconf", "sysconf_names", "curdir", "pardir", "sep", "altsep", "extsep", "pathsep", "defpath", "linesep", "devnull", "urandom"])`
+endsnippet
+
+snippet os.environ "os.environ" w
+os.environ[${1:"environment_variable"}]
+endsnippet
+
+####################################################################################
+
+snippet "\bos.chdir[a-zA-Z]?" "os.chdir" r
+os.chdir(${1:path})
+endsnippet
+
+snippet "\bos.fchdir[a-zA-Z]?" "os.fchdir" r
+os.fchdir(${1:fd})
+endsnippet
+
+snippet "\bos.getcwd[a-zA-Z]?" "os.getcwd" r
+os.getcwd()
+endsnippet
+
+snippet "\bos.ctermid[a-zA-Z]?" "os.ctermid" r
+os.ctermid()
+endsnippet
+
+snippet "\bos.getegid[a-zA-Z]?" "os.getegid" r
+os.getegid()
+endsnippet
+
+snippet "\bos.geteuid[a-zA-Z]?" "os.geteuid" r
+os.geteuid()
+endsnippet
+
+snippet "\bos.getgid[a-zA-Z]?" "os.getgid" r
+os.getgid()
+endsnippet
+
+snippet "\bos.getgroups[a-zA-Z]?" "os.getgroups" r
+os.getgroups()
+endsnippet
+
+snippet "\bos.initgroups[a-zA-Z]?" "os.initgroups" r
+os.initgroups(${1:username}, ${2:gid})
+endsnippet
+
+snippet "\bos.getlogin[a-zA-Z]?" "os.getlogin" r
+os.getlogin()
+endsnippet
+
+snippet "\bos.getpgid[a-zA-Z]?" "os.getpgid" r
+os.getpgid(${1:pid})
+endsnippet
+
+snippet "\bos.getpgrp[a-zA-Z]?" "os.getpgrp" r
+os.getpgrp()
+endsnippet
+
+snippet "\bos.getpid[a-zA-Z]?" "os.getpid" r
+os.getpid()
+endsnippet
+
+snippet "\bos.getppid[a-zA-Z]?" "os.getppid" r
+os.getppid()
+endsnippet
+
+snippet "\bos.getresuid[a-zA-Z]?" "os.getresuid" r
+os.getresuid()
+endsnippet
+
+snippet "\bos.getresgid[a-zA-Z]?" "os.getresgid" r
+os.getresgid()
+endsnippet
+
+snippet "\bos.getuid[a-zA-Z]?" "os.getuid" r
+os.getuid()
+endsnippet
+
+snippet "\bos.getenv[a-zA-Z]?" "os.getenv" r
+os.getenv(${1:varname}${2:, ${3:value}})
+endsnippet
+
+snippet "\bos.putenv[a-zA-Z]?" "os.putenv" r
+os.putenv(${1:varname}, ${2:value})
+endsnippet
+
+snippet "\bos.setegid[a-zA-Z]?" "os.setegid" r
+os.setegid(${1:egid})
+endsnippet
+
+snippet "\bos.seteuid[a-zA-Z]?" "os.seteuid" r
+os.seteuid(${1:euid})
+endsnippet
+
+snippet "\bos.setgid[a-zA-Z]?" "os.setgid" r
+os.setgid(${1:gid})
+endsnippet
+
+snippet "\bos.setgroups[a-zA-Z]?" "os.setgroups" r
+os.setgroups(${1:groups})
+endsnippet
+
+snippet "\bos.setpgrp[a-zA-Z]?" "os.setpgrp" r
+os.setpgrp()
+endsnippet
+
+snippet "\bos.setpgid[a-zA-Z]?" "os.setpgid" r
+os.setpgid(${1:pid}, ${2:pgrp})
+endsnippet
+
+snippet "\bos.setregid[a-zA-Z]?" "os.setregid" r
+os.setregid(${1:rgid}, ${2:egid})
+endsnippet
+
+snippet "\bos.setresgid[a-zA-Z]?" "os.setresgid" r
+os.setresgid(${1:rgid}, ${2:egid}, ${3:sgid})
+endsnippet
+
+snippet "\bos.setresuid[a-zA-Z]?" "os.setresuid" r
+os.setresuid(${1:ruid}, ${2:euid}, ${3:suid})
+endsnippet
+
+snippet "\bos.setreuid[a-zA-Z]?" "os.setreuid" r
+os.setreuid(${1:ruid}, ${2:euid})
+endsnippet
+
+snippet "\bos.getsid[a-zA-Z]?" "os.getsid" r
+os.getsid(${1:pid})
+endsnippet
+
+snippet "\bos.setsid[a-zA-Z]?" "os.setsid" r
+os.setsid()
+endsnippet
+
+snippet "\bos.setuid[a-zA-Z]?" "os.setuid" r
+os.setuid(${1:uid})
+endsnippet
+
+snippet "\bos.strerror[a-zA-Z]?" "os.strerror" r
+os.strerror(${1:code})
+endsnippet
+
+snippet "\bos.umask[a-zA-Z]?" "os.umask" r
+os.umask(${1:mask})
+endsnippet
+
+snippet "\bos.uname[a-zA-Z]?" "os.uname" r
+os.uname()
+endsnippet
+
+snippet "\bos.unsetenv[a-zA-Z]?" "os.unsetenv" r
+os.unsetenv(${1:varname})
+endsnippet
+
+snippet "\bos.fdopen[a-zA-Z]?" "os.fdopen" r
+os.fdopen(${1:fd}${2:, ${3:mode}${4:, ${5:bufsize}}})
+endsnippet
+
+snippet "\bos.popen[a-zA-Z]?" "os.popen" r
+os.popen(${1:command}${2:, ${3:mode}${4:, ${5:bufsize}}})
+endsnippet
+
+snippet "\bos.tmpfile[a-zA-Z]?" "os.tmpfile" r
+os.tmpfile()
+endsnippet
+
+snippet "\bos.popen2[a-zA-Z]?" "os.popen2" r
+os.popen2(${1:cmd}${2:, ${3:mode}${4:, ${5:bufsize}}})
+endsnippet
+
+snippet "\bos.popen3[a-zA-Z]?" "os.popen3" r
+os.popen3(${1:cmd}${2:, ${3:mode}${4:, ${5:bufsize}}})
+endsnippet
+
+snippet "\bos.popen4[a-zA-Z]?" "os.popen4" r
+os.popen4(${1:cmd}${2:, ${3:mode}${4:, ${5:bufsize}}})
+endsnippet
+
+snippet "\bos.close[a-zA-Z]?" "os.close" r
+os.close(${1:fd})
+endsnippet
+
+snippet "\bos.closerange[a-zA-Z]?" "os.closerange" r
+os.closerange(${1:fd_low}, ${2:fd_high})
+endsnippet
+
+snippet "\bos.dup[a-zA-Z]?" "os.dup" r
+os.dup(${1:fd})
+endsnippet
+
+snippet "\bos.dup2[a-zA-Z]?" "os.dup2" r
+os.dup2(${1:fd}, ${2:fd2})
+endsnippet
+
+snippet "\bos.fchmod[a-zA-Z]?" "os.fchmod" r
+os.fchmod(${1:fd}, ${2:mode})
+endsnippet
+
+snippet "\bos.fchown[a-zA-Z]?" "os.fchown" r
+os.fchown(${1:fd}, ${2:uid}, ${3:gid})
+endsnippet
+
+snippet "\bos.fdatasync[a-zA-Z]?" "os.fdatasync" r
+os.fdatasync(${1:fd})
+endsnippet
+
+snippet "\bos.fpathconf[a-zA-Z]?" "os.fpathconf" r
+os.fpathconf(${1:fd}, ${2:name})
+endsnippet
+
+snippet "\bos.fstat[a-zA-Z]?" "os.fstat" r
+os.fstat(${1:fd})
+endsnippet
+
+snippet "\bos.fstatvfs[a-zA-Z]?" "os.fstatvfs" r
+os.fstatvfs(${1:fd})
+endsnippet
+
+snippet "\bos.fsync[a-zA-Z]?" "os.fsync" r
+os.fsync(${1:fd})
+endsnippet
+
+snippet "\bos.ftruncate[a-zA-Z]?" "os.ftruncate" r
+os.ftruncate(${1:fd}, ${2:length})
+endsnippet
+
+snippet "\bos.isatty[a-zA-Z]?" "os.isatty" r
+os.isatty(${1:fd})
+endsnippet
+
+snippet "\bos.lseek[a-zA-Z]?" "os.lseek" r
+os.lseek(${1:fd}, ${2:pos}, ${3:how})
+endsnippet
+
+snippet "\bos.open[a-zA-Z]?" "os.open" r
+os.open(${1:file}, ${2:flags}${3:, ${4:mode}})
+endsnippet
+
+snippet "\bos.openpty[a-zA-Z]?" "os.openpty" r
+os.openpty()
+endsnippet
+
+snippet "\bos.pipe[a-zA-Z]?" "os.pipe" r
+os.pipe()
+endsnippet
+
+snippet "\bos.read[a-zA-Z]?" "os.read" r
+os.read(${1:fd}, ${2:n})
+endsnippet
+
+snippet "\bos.tcgetpgrp[a-zA-Z]?" "os.tcgetpgrp" r
+os.tcgetpgrp(${1:fd})
+endsnippet
+
+snippet "\bos.tcsetpgrp[a-zA-Z]?" "os.tcsetpgrp" r
+os.tcsetpgrp(${1:fd}, ${2:pg})
+endsnippet
+
+snippet "\bos.ttyname[a-zA-Z]?" "os.ttyname" r
+os.ttyname(${1:fd})
+endsnippet
+
+snippet "\bos.write[a-zA-Z]?" "os.write" r
+os.write(${1:fd}, ${2:str})
+endsnippet
+
+snippet "\bos.access[a-zA-Z]?" "os.access" r
+os.access(${1:path}, ${2:mode})
+endsnippet
+
+snippet "\bos.chdir[a-zA-Z]?" "os.chdir" r
+os.chdir(${1:path})
+endsnippet
+
+snippet "\bos.fchdir[a-zA-Z]?" "os.fchdir" r
+os.fchdir(${1:fd})
+endsnippet
+
+snippet "\bos.getcwd[a-zA-Z]?" "os.getcwd" r
+os.getcwd()
+endsnippet
+
+snippet "\bos.getcwdu[a-zA-Z]?" "os.getcwdu" r
+os.getcwdu()
+endsnippet
+
+snippet "\bos.chflags[a-zA-Z]?" "os.chflags" r
+os.chflags(${1:path}, ${2:flags})
+endsnippet
+
+snippet "\bos.chroot[a-zA-Z]?" "os.chroot" r
+os.chroot(${1:path})
+endsnippet
+
+snippet "\bos.chmod[a-zA-Z]?" "os.chmod" r
+os.chmod(${1:path}, ${2:mode})
+endsnippet
+
+snippet "\bos.chown[a-zA-Z]?" "os.chown" r
+os.chown(${1:path}, ${2:uid}, ${3:gid})
+endsnippet
+
+snippet "\bos.lchflags[a-zA-Z]?" "os.lchflags" r
+os.lchflags(${1:path}, ${2:flags})
+endsnippet
+
+snippet "\bos.lchmod[a-zA-Z]?" "os.lchmod" r
+os.lchmod(${1:path}, ${2:mode})
+endsnippet
+
+snippet "\bos.lchown[a-zA-Z]?" "os.lchown" r
+os.lchown(${1:path}, ${2:uid}, ${3:gid})
+endsnippet
+
+snippet "\bos.link[a-zA-Z]?" "os.link" r
+os.link(${1:source}, ${2:link_name})
+endsnippet
+
+snippet "\bos.listdir[a-zA-Z]?" "os.listdir" r
+os.listdir(${1:path})
+endsnippet
+
+snippet "\bos.lstat[a-zA-Z]?" "os.lstat" r
+os.lstat(${1:path})
+endsnippet
+
+snippet "\bos.mkfifo[a-zA-Z]?" "os.mkfifo" r
+os.mkfifo(${1:path}${2:, ${3:mode}})
+endsnippet
+
+snippet "\bos.mknod[a-zA-Z]?" "os.mknod" r
+os.mknod(${1:filename}${2:, ${3:mode=0600}${4:, ${5:device=0}}})
+endsnippet
+
+snippet "\bos.major[a-zA-Z]?" "os.major" r
+os.major(${1:device})
+endsnippet
+
+snippet "\bos.minor[a-zA-Z]?" "os.minor" r
+os.minor(${1:device})
+endsnippet
+
+snippet "\bos.makedev[a-zA-Z]?" "os.makedev" r
+os.makedev(${1:major}, ${2:minor})
+endsnippet
+
+snippet "\bos.mkdir[a-zA-Z]?" "os.mkdir" r
+os.mkdir(${1:path}${2:, ${3:mode}})
+endsnippet
+
+snippet "\bos.makedirs[a-zA-Z]?" "os.makedirs" r
+os.makedirs(${1:path}${2:, ${3:mode}})
+endsnippet
+
+snippet "\bos.pathconf[a-zA-Z]?" "os.pathconf" r
+os.pathconf(${1:path}, ${2:name})
+endsnippet
+
+snippet "\bos.readlink[a-zA-Z]?" "os.readlink" r
+os.readlink(${1:path})
+endsnippet
+
+snippet "\bos.remove[a-zA-Z]?" "os.remove" r
+os.remove(${1:path})
+endsnippet
+
+snippet "\bos.removedirs[a-zA-Z]?" "os.removedirs" r
+os.removedirs(${1:path})
+endsnippet
+
+snippet "\bos.rename[a-zA-Z]?" "os.rename" r
+os.rename(${1:src}, ${2:dst})
+endsnippet
+
+snippet "\bos.renames[a-zA-Z]?" "os.renames" r
+os.renames(${1:old}, ${2:new})
+endsnippet
+
+snippet "\bos.rmdir[a-zA-Z]?" "os.rmdir" r
+os.rmdir(${1:path})
+endsnippet
+
+snippet "\bos.stat[a-zA-Z]?" "os.stat" r
+os.stat(${1:path})
+endsnippet
+
+snippet "\bos.stat_float_times[a-zA-Z]?" "os.stat_float_times" r
+os.stat_float_times(${1:newvalue})
+endsnippet
+
+snippet "\bos.statvfs[a-zA-Z]?" "os.statvfs" r
+os.statvfs(${1:path})
+endsnippet
+
+snippet "\bos.symlink[a-zA-Z]?" "os.symlink" r
+os.symlink(${1:source}, ${2:link_name})
+endsnippet
+
+snippet "\bos.tempnam[a-zA-Z]?" "os.tempnam" r
+os.tempnam(${1:${2:dir}${3:, ${4:prefix}}})
+endsnippet
+
+snippet "\bos.tmpnam[a-zA-Z]?" "os.tmpnam" r
+os.tmpnam()
+endsnippet
+
+snippet "\bos.unlink[a-zA-Z]?" "os.unlink" r
+os.unlink(${1:path})
+endsnippet
+
+snippet "\bos.utime[a-zA-Z]?" "os.utime" r
+os.utime(${1:path}, ${2:times})
+endsnippet
+
+snippet "\bos.walk[a-zA-Z]?" "os.walk" r
+os.walk(${1:top}, ${2:topdown=True}, ${3:onerror=None}, ${4:followlinks=False})
+endsnippet
+
+snippet "\bos.abort[a-zA-Z]?" "os.abort" r
+os.abort()
+endsnippet
+
+snippet "\bos.execl[a-zA-Z]?" "os.execl" r
+os.execl(${1:path}, ${2:arg0}, ${3:arg1}, ${4:...})
+endsnippet
+
+snippet "\bos.execle[a-zA-Z]?" "os.execle" r
+os.execle(${1:path}, ${2:arg0}, ${3:arg1}, ${4:...}, ${5:env})
+endsnippet
+
+snippet "\bos.execlp[a-zA-Z]?" "os.execlp" r
+os.execlp(${1:file}, ${2:arg0}, ${3:arg1}, ${4:...})
+endsnippet
+
+snippet "\bos.execlpe[a-zA-Z]?" "os.execlpe" r
+os.execlpe(${1:file}, ${2:arg0}, ${3:arg1}, ${4:...}, ${5:env})
+endsnippet
+
+snippet "\bos.execv[a-zA-Z]?" "os.execv" r
+os.execv(${1:path}, ${2:args})
+endsnippet
+
+snippet "\bos.execve[a-zA-Z]?" "os.execve" r
+os.execve(${1:path}, ${2:args}, ${3:env})
+endsnippet
+
+snippet "\bos.execvp[a-zA-Z]?" "os.execvp" r
+os.execvp(${1:file}, ${2:args})
+endsnippet
+
+snippet "\bos.execvpe[a-zA-Z]?" "os.execvpe" r
+os.execvpe(${1:file}, ${2:args}, ${3:env})
+endsnippet
+
+snippet "\bos._exit[a-zA-Z]?" "os._exit" r
+os._exit(${1:n})
+endsnippet
+
+snippet "\bos.fork[a-zA-Z]?" "os.fork" r
+os.fork()
+endsnippet
+
+snippet "\bos.forkpty[a-zA-Z]?" "os.forkpty" r
+os.forkpty()
+endsnippet
+
+snippet "\bos.kill[a-zA-Z]?" "os.kill" r
+os.kill(${1:pid}, ${2:sig})
+endsnippet
+
+snippet "\bos.killpg[a-zA-Z]?" "os.killpg" r
+os.killpg(${1:pgid}, ${2:sig})
+endsnippet
+
+snippet "\bos.nice[a-zA-Z]?" "os.nice" r
+os.nice(${1:increment})
+endsnippet
+
+snippet "\bos.plock[a-zA-Z]?" "os.plock" r
+os.plock(${1:op})
+endsnippet
+
+snippet "\bos.popen[a-zA-Z]?" "os.popen" r
+os.popen(${1:...})
+endsnippet
+
+snippet "\bos.popen2[a-zA-Z]?" "os.popen2" r
+os.popen2(${1:...})
+endsnippet
+
+snippet "\bos.popen3[a-zA-Z]?" "os.popen3" r
+os.popen3(${1:...})
+endsnippet
+
+snippet "\bos.popen4[a-zA-Z]?" "os.popen4" r
+os.popen4(${1:...})
+endsnippet
+
+snippet "\bos.spawnl[a-zA-Z]?" "os.spawnl" r
+os.spawnl(${1:mode}, ${2:path}, ${3:...})
+endsnippet
+
+snippet "\bos.spawnle[a-zA-Z]?" "os.spawnle" r
+os.spawnle(${1:mode}, ${2:path}, ${3:...}, ${4:env})
+endsnippet
+
+snippet "\bos.spawnlp[a-zA-Z]?" "os.spawnlp" r
+os.spawnlp(${1:mode}, ${2:file}, ${3:...})
+endsnippet
+
+snippet "\bos.spawnlpe[a-zA-Z]?" "os.spawnlpe" r
+os.spawnlpe(${1:mode}, ${2:file}, ${3:...}, ${4:env})
+endsnippet
+
+snippet "\bos.spawnv[a-zA-Z]?" "os.spawnv" r
+os.spawnv(${1:mode}, ${2:path}, ${3:args})
+endsnippet
+
+snippet "\bos.spawnve[a-zA-Z]?" "os.spawnve" r
+os.spawnve(${1:mode}, ${2:path}, ${3:args}, ${4:env})
+endsnippet
+
+snippet "\bos.spawnvp[a-zA-Z]?" "os.spawnvp" r
+os.spawnvp(${1:mode}, ${2:file}, ${3:args})
+endsnippet
+
+snippet "\bos.spawnvpe[a-zA-Z]?" "os.spawnvpe" r
+os.spawnvpe(${1:mode}, ${2:file}, ${3:args}, ${4:env})
+endsnippet
+
+snippet "\bos.startfile[a-zA-Z]?" "os.startfile" r
+os.startfile(${1:path}${2:, ${3:operation}})
+endsnippet
+
+snippet "\bos.system[a-zA-Z]?" "os.system" r
+os.system(${1:command})
+endsnippet
+
+snippet "\bos.times[a-zA-Z]?" "os.times" r
+os.times()
+endsnippet
+
+snippet "\bos.wait[a-zA-Z]?" "os.wait" r
+os.wait()
+endsnippet
+
+snippet "\bos.waitpid[a-zA-Z]?" "os.waitpid" r
+os.waitpid(${1:pid}, ${2:options})
+endsnippet
+
+snippet "\bos.wait3[a-zA-Z]?" "os.wait3" r
+os.wait3(${1:options})
+endsnippet
+
+snippet "\bos.wait4[a-zA-Z]?" "os.wait4" r
+os.wait4(${1:pid}, ${2:options})
+endsnippet
+
+snippet "\bos.WCOREDUMP[a-zA-Z]?" "os.WCOREDUMP" r
+os.WCOREDUMP(${1:status})
+endsnippet
+
+snippet "\bos.WIFCONTINUED[a-zA-Z]?" "os.WIFCONTINUED" r
+os.WIFCONTINUED(${1:status})
+endsnippet
+
+snippet "\bos.WIFSTOPPED[a-zA-Z]?" "os.WIFSTOPPED" r
+os.WIFSTOPPED(${1:status})
+endsnippet
+
+snippet "\bos.WIFSIGNALED[a-zA-Z]?" "os.WIFSIGNALED" r
+os.WIFSIGNALED(${1:status})
+endsnippet
+
+snippet "\bos.WIFEXITED[a-zA-Z]?" "os.WIFEXITED" r
+os.WIFEXITED(${1:status})
+endsnippet
+
+snippet "\bos.WEXITSTATUS[a-zA-Z]?" "os.WEXITSTATUS" r
+os.WEXITSTATUS(${1:status})
+endsnippet
+
+snippet "\bos.WSTOPSIG[a-zA-Z]?" "os.WSTOPSIG" r
+os.WSTOPSIG(${1:status})
+endsnippet
+
+snippet "\bos.WTERMSIG[a-zA-Z]?" "os.WTERMSIG" r
+os.WTERMSIG(${1:status})
+endsnippet
+
+snippet "\bos.confstr[a-zA-Z]?" "os.confstr" r
+os.confstr(${1:name})
+endsnippet
+
+snippet "\bos.getloadavg[a-zA-Z]?" "os.getloadavg" r
+os.getloadavg()
+endsnippet
+
+snippet "\bos.sysconf[a-zA-Z]?" "os.sysconf" r
+os.sysconf(${1:name})
+endsnippet
+
+snippet "\bos.urandom[a-zA-Z]?" "os.urandom" r
+os.urandom(${1:n})
+endsnippet
+
+

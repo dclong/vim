@@ -1,0 +1,24 @@
+global !p
+from complete import *
+endglobal
+
+snippet "json\." "Methods of json." r
+json.$1`!p snip.rv = complete(t[1], ["dump", "dumps", "load", "loads"])`
+endsnippet
+
+snippet "\bjson.dump[a-zA-Z]?" "json.dump" r
+json.dump(${1:obj}, ${2:fp}, ${3:skipkeys=False}, ${4:ensure_ascii=True}, ${5:check_circular=True}, ${6:allow_nan=True}, ${7:cls=None}, ${8:indent=None}, ${9:separators=None}, ${10:encoding="utf-8"}, ${11:default=None}, ${12:sort_keys=False}, ${13:**kw})
+endsnippet
+
+snippet "\bjson.dumps[a-zA-Z]?" "json.dumps" r
+json.dumps(${1:obj}, ${2:skipkeys=False}, ${3:ensure_ascii=True}, ${4:check_circular=True}, ${5:allow_nan=True}, ${6:cls=None}, ${7:indent=None}, ${8:separators=None}, ${9:encoding="utf-8"}, ${10:default=None}, ${11:sort_keys=False}, ${12:**kw})
+endsnippet
+
+snippet "\bjson.load[a-zA-Z]?" "json.load" r
+json.load(${1:fp}${2:, ${3:encoding}${4:, ${5:cls}${6:, ${7:object_hook}${8:, ${9:parse_float}${10:, ${11:parse_int}${12:, ${13:parse_constant}${14:, ${15:object_pairs_hook}${16:, ${17:**kw}}}}}}}}})
+endsnippet
+
+snippet "\bjson.loads[a-zA-Z]?" "json.loads" r
+json.loads(${1:s}${2:, ${3:encoding}${4:, ${5:cls}${6:, ${7:object_hook}${8:, ${9:parse_float}${10:, ${11:parse_int}${12:, ${13:parse_constant}${14:, ${15:object_pairs_hook}${16:, ${17:**kw}}}}}}}}})
+endsnippet
+

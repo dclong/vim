@@ -1,0 +1,36 @@
+global !p
+from complete import *
+endglobal
+
+snippet "crypto\." "Methods of crypto." r
+Crypto.$1`!p snip.rv = complete(t[1], ["Cipher", "Hash", "Protocol", "PublicKey", "Signature", "Util"])`
+endsnippet
+
+snippet "Crypto.Cipher\." "Methods of Crypto.Cipher." r
+Crypto.Cipher.$1`!p snip.rv = complete(t[1], ["AES", "ARC2", "ARC4", "Blowfish", "CAST", "DES", "DES3", "XOR"])`
+endsnippet
+
+snippet "Crypto.Cipher.AES\." "Methods of Crypto.Cipher.AES." r
+Crypto.Cipher.AES.$1`!p snip.rv = complete(t[1], ["new", "MODE_ECB", "MODE_CBC", "MODE_CFB", "MODE_PGP", "MODE_OFB", "MODE_CTR", "MODE_OPENPGP"])`
+endsnippet
+
+snippet "\bCrypto.Cipher.AES.new[a-zA-Z]?" "Crypto.Cipher.AES.new" r
+Crypto.Cipher.AES.new(${1:key}, ${2:*args}, ${3:**kwargs})
+endsnippet
+
+snippet "\baes(c(i(p(h(e(r)?)?)?)?)?)?\." "Methods of AESCipher." r
+AESCipher.$1`!p snip.rv = complete(t[1], ["__init__", "decrypt", "encrypt"])`
+endsnippet
+
+snippet "\bAESCipher.__init__[a-zA-Z]?" "AESCipher.__init__" r
+AESCipher.__init__(${1:key}, ${2:*args}, ${3:**kwargs})
+endsnippet
+
+snippet "\bAESCipher.decrypt[a-zA-Z]?" "AESCipher.decrypt" r
+AESCipher.decrypt(${1:ciphertext})
+endsnippet
+
+snippet "\bAESCipher.encrypt[a-zA-Z]?" "AESCipher.encrypt" r
+AESCipher.encrypt(${1:plaintext})
+endsnippet
+

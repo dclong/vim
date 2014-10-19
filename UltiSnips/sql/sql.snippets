@@ -1,0 +1,120 @@
+global !p
+from complete import *
+endglobal
+
+snippet "s(e(l(e(c(t)?)?)?)?)?" "Select Statement" rb
+select ${1:distinct }${2:top ${3:5} }
+	${4:field1}
+from
+	${5:t1}
+${6:${7:inner join
+	${8:t2}
+on
+	${9:condition}}
+${10:where
+	${11:condition}}}
+${12:group by
+	${13:1}
+${14:having
+	${15:condition}}}
+${16:order by
+	${17:1} ${18:desc}}
+;
+endsnippet
+
+snippet "c(r(e(a(t)?)?)?)?" "create" rb
+create
+endsnippet
+
+snippet create "create" b
+create $1 `!p snip.rv = complete(t[1], ["table", "view"])`
+endsnippet
+
+snippet ct "Create Table" b
+create ${1:$2set }table ${3:t} (
+	${4:f1} ${5:t1},
+	${6:f2} ${7:t2}
+)
+;
+endsnippet
+
+snippet cv "Create View" b
+create ${1:$2set }view ${3:t} ${4:as }(
+	${4:f1} ${5:t1},
+	${6:f2} ${7:t2}
+)
+;
+endsnippet
+
+snippet st "Show Table" b
+show table ${1:t};
+endsnippet
+
+snippet sv "Show View" b
+show view ${1:v};
+endsnippet
+
+snippet dt "Drop Table" b
+drop table ${1:t};
+endsnippet
+
+snippet dv "Drop Table" b
+drop view ${1:t};
+endsnippet
+
+snippet ht "Help Table" b
+help table ${1:t};
+endsnippet
+
+snippet hv "Help View" b
+help view ${1:t};
+endsnippet
+
+snippet in "In Condition" w
+in ($1)
+endsnippet
+
+snippet join "Join Table" b
+$1`!p snip.rv = complete(t[1], ["inner", "left", "right", "outer"])` join
+endsnippet
+
+snippet hc "Help Column" b
+help column ${1:t}.${2:*};
+endsnippet
+
+snippet case "Case ... End" b
+case
+	when ${1:c1} then 
+		${2:v1}
+	${3:when ${4:c2} then
+		${5:v2}}	
+	${6:else
+		${7:v3}}
+end
+endsnippet
+
+snippet cnt "Count Function" b
+count(${1:distinct }${2:v})
+endsnippet
+
+snippet u "Standard ID" w
+zkyr9jm_
+endsnippet
+
+snippet ii "insert into" b
+insert into
+	${1:t}
+values
+	(${2:v1}, ${3:v2})
+;
+endsnippet
+
+snippet '/\*|cb' "Comment Block" rb
+/*
+${1:* @author ${2:Ben Chuanlong}}
+${3:* @description $4}
+${5:* @param $6}
+${7:* @return $8}
+${9:* @summary $9}
+*/
+endsnippet

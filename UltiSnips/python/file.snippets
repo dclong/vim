@@ -1,0 +1,67 @@
+global !p
+from complete import *
+endglobal
+
+snippet "\bf(i(l(e)?)?)?\." "File Methods" r
+file.$1`!p snip.rv = complete(t[1], ["close", "flush", "fileno", "isatty", "next", "open", "read", "readline", "readlines", "xreadlines", "seek", "tell", "truncate", "write", "writelines"])`
+endsnippet
+
+snippet "\bfile.open[a-zA-Z]?" "Open a File" r
+${6:fd} = open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
+endsnippet
+
+################################################################################
+
+snippet "\bfile.close[a-zA-Z]?" "file.close" r
+${1:file}.close()
+endsnippet
+
+snippet "\bfile.flush[a-zA-Z]?" "file.flush" r
+${1:file}.flush()
+endsnippet
+
+snippet "\bfile.fileno[a-zA-Z]?" "file.fileno" r
+${1:file}.fileno()
+endsnippet
+
+snippet "\bfile.isatty[a-zA-Z]?" "file.isatty" r
+${1:file}.isatty()
+endsnippet
+
+snippet "\bfile.next[a-zA-Z]?" "file.next" r
+${1:file}.next()
+endsnippet
+
+snippet "\bfile.read[a-zA-Z]?" "file.read" r
+${2:file}.read(${1:size})
+endsnippet
+
+snippet "\bfile.readline[a-zA-Z]?" "file.readline" r
+${2:file}.readline(${1:size})
+endsnippet
+
+snippet "\bfile.readlines[a-zA-Z]?" "file.readlines" r
+${2:file}.readlines(${1:sizehint})
+endsnippet
+
+snippet "\bfile.seek[a-zA-Z]?" "file.seek" r
+${4:file}.seek(${1:offset}${2:, ${3:whence}})
+endsnippet
+
+snippet "\bfile.tell[a-zA-Z]?" "file.tell" r
+${1:file}.tell()
+endsnippet
+
+snippet "\bfile.truncate[a-zA-Z]?" "file.truncate" r
+${2:file}.truncate(${1:size})
+endsnippet
+
+snippet "\bfile.write[a-zA-Z]?\b" "file.write" r
+${2:file}.write(${1:str})
+endsnippet
+
+snippet "\bfile.writelines[a-zA-Z]?" "file.writelines" r
+${2:file}.writelines(${1:sequence})
+endsnippet
+
+

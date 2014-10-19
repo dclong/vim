@@ -1,0 +1,32 @@
+extends texmath
+
+global !p
+from complete import *
+endglobal
+
+
+snippet "\b\\?r(e(f)?)?" "\\ref{}" r
+\ref{$1}
+endsnippet
+
+####################
+# TABULARS, ARRAYS #
+####################
+
+snippet tab
+\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
+$0${2/((?<=.)c|l|r)|./(?1: & )/g}
+\end{$1${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
+endsnippet
+
+###############
+#  Utilities  #
+###############
+
+snippet "\\?(use)?p(a(c(k(a(g(e)?)?)?)?)?)?" "Package" rb
+\usepackage[${1:options}]{${2:package}}$0
+endsnippet
+
+snippet "\\?a(u(t(h(o(r)?)?)?)?)?" "\author{}" rb
+\author{${1:Ben Chuanlong Du}}
+endsnippet

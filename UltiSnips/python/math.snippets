@@ -1,0 +1,182 @@
+global !p
+from complete import *
+endglobal
+
+snippet "m(a(t(h)?)?)?\." "Methods of math." r
+math.$1`!p snip.rv = complete(t[1], ["abs", "max", "min", "ceil", "copysign", "fabs", "factorial", "floor", "fmod", "frexp", "fsum", "isinf", "isnan", "ldexp", "modf", "trunc", "exp", "expm1", "log", "log1p", "log10", "pow", "sqrt", "acos", "asin", "atan", "atan2", "cos", "hypot", "sin", "tan", "degrees", "radians", "acosh", "asinh", "atanh", "cosh", "sinh", "tanh", "erf", "erfc", "gamma", "lgamma", "pi", "e"])`
+endsnippet
+
+snippet "\bmath.abs[a-zA-Z]?" "abs()" r
+abs(${1:number})
+endsnippet
+
+snippet "\bmath.max[a-zA-Z]?" "max" r
+bi.max
+endsnippet
+
+snippet "\bmath.min[a-zA-Z]" "min" r
+min(${1:arg1}, ${2:arg2}, ${3:*args}${4:, ${5:key}})
+endsnippet
+
+##################################################################################
+
+snippet "\bmath.ceil[a-zA-Z]?" "math.ceil" r
+math.ceil(${1:x})
+endsnippet
+
+snippet "\bmath.copysign[a-zA-Z]?" "math.copysign" r
+math.copysign(${1:x}, ${2:y})
+endsnippet
+
+snippet "\bmath.fabs[a-zA-Z]?" "math.fabs" r
+math.fabs(${1:x})
+endsnippet
+
+snippet "\bmath.factorial[a-zA-Z]?" "math.factorial" r
+math.factorial(${1:x})
+endsnippet
+
+snippet "\bmath.floor[a-zA-Z]?" "math.floor" r
+math.floor(${1:x})
+endsnippet
+
+snippet "\bmath.fmod[a-zA-Z]?" "math.fmod" r
+math.fmod(${1:x}, ${2:y})
+endsnippet
+
+snippet "\bmath.frexp[a-zA-Z]?" "math.frexp" r
+math.frexp(${1:x})
+endsnippet
+
+snippet "\bmath.fsum[a-zA-Z]?" "math.fsum" r
+math.fsum(${1:iterable})
+endsnippet
+
+snippet "\bmath.isinf[a-zA-Z]?" "math.isinf" r
+math.isinf(${1:x})
+endsnippet
+
+snippet "\bmath.isnan[a-zA-Z]?" "math.isnan" r
+math.isnan(${1:x})
+endsnippet
+
+snippet "\bmath.ldexp[a-zA-Z]?" "math.ldexp" r
+math.ldexp(${1:x}, ${2:i})
+endsnippet
+
+snippet "\bmath.modf[a-zA-Z]?" "math.modf" r
+math.modf(${1:x})
+endsnippet
+
+snippet "\bmath.trunc[a-zA-Z]?" "math.trunc" r
+math.trunc(${1:x})
+endsnippet
+
+snippet "\bmath.exp[a-zA-Z]?" "math.exp" r
+math.exp(${1:x})
+endsnippet
+
+snippet "\bmath.expm1[a-zA-Z]?" "math.expm1" r
+math.expm1(${1:x})
+endsnippet
+
+snippet "\bmath.log[a-zA-Z]?" "math.log" r
+math.log(${1:x}${2:, ${3:base}})
+endsnippet
+
+snippet "\bmath.log1p[a-zA-Z]?" "math.log1p" r
+math.log1p(${1:x})
+endsnippet
+
+snippet "\bmath.log10[a-zA-Z]?" "math.log10" r
+math.log10(${1:x})
+endsnippet
+
+snippet "\bmath.pow[a-zA-Z]?" "math.pow" r
+math.pow(${1:x}, ${2:y})
+endsnippet
+
+snippet "\bmath.sqrt[a-zA-Z]?" "math.sqrt" r
+math.sqrt(${1:x})
+endsnippet
+
+snippet "\bmath.acos[a-zA-Z]?" "math.acos" r
+math.acos(${1:x})
+endsnippet
+
+snippet "\bmath.asin[a-zA-Z]?" "math.asin" r
+math.asin(${1:x})
+endsnippet
+
+snippet "\bmath.atan[a-zA-Z]?" "math.atan" r
+math.atan(${1:x})
+endsnippet
+
+snippet "\bmath.atan2[a-zA-Z]?" "math.atan2" r
+math.atan2(${1:y}, ${2:x})
+endsnippet
+
+snippet "\bmath.cos[a-zA-Z]?" "math.cos" r
+math.cos(${1:x})
+endsnippet
+
+snippet "\bmath.hypot[a-zA-Z]?" "math.hypot" r
+math.hypot(${1:x}, ${2:y})
+endsnippet
+
+snippet "\bmath.sin[a-zA-Z]?" "math.sin" r
+math.sin(${1:x})
+endsnippet
+
+snippet "\bmath.tan[a-zA-Z]?" "math.tan" r
+math.tan(${1:x})
+endsnippet
+
+snippet "\bmath.degrees[a-zA-Z]?" "math.degrees" r
+math.degrees(${1:x})
+endsnippet
+
+snippet "\bmath.radians[a-zA-Z]?" "math.radians" r
+math.radians(${1:x})
+endsnippet
+
+snippet "\bmath.acosh[a-zA-Z]?" "math.acosh" r
+math.acosh(${1:x})
+endsnippet
+
+snippet "\bmath.asinh[a-zA-Z]?" "math.asinh" r
+math.asinh(${1:x})
+endsnippet
+
+snippet "\bmath.atanh[a-zA-Z]?" "math.atanh" r
+math.atanh(${1:x})
+endsnippet
+
+snippet "\bmath.cosh[a-zA-Z]?" "math.cosh" r
+math.cosh(${1:x})
+endsnippet
+
+snippet "\bmath.sinh[a-zA-Z]?" "math.sinh" r
+math.sinh(${1:x})
+endsnippet
+
+snippet "\bmath.tanh[a-zA-Z]?" "math.tanh" r
+math.tanh(${1:x})
+endsnippet
+
+snippet "\bmath.erf[a-zA-Z]?" "math.erf" r
+math.erf(${1:x})
+endsnippet
+
+snippet "\bmath.erfc[a-zA-Z]?" "math.erfc" r
+math.erfc(${1:x})
+endsnippet
+
+snippet "\bmath.gamma[a-zA-Z]?" "math.gamma" r
+math.gamma(${1:x})
+endsnippet
+
+snippet "\bmath.lgamma[a-zA-Z]?" "math.lgamma" r
+math.lgamma(${1:x})
+endsnippet
+

@@ -1,0 +1,29 @@
+
+global !p
+from complete import *
+endglobal
+
+snippet "w(o(r(d(s)?)?)?)?\." "Single Words" r
+$1`!p snip.rv = complete(t[1], ["abbreviation",  "bibliography", "difference", "message", "case-sensitive", "case-insensitive", "independent", "problem", "probability", "programming", "temporary", "synchronization", "executable"])`
+endsnippet
+
+snippet pro "Pro*" w
+pro$1`!p snip.rv = complete(t[1], ["blem", "bability", "gram"])`
+endsnippet
+
+snippet "p(h(r(a(s(e)?)?)?)?)?\." "Phrases" r
+$1`!p snip.rv = complete(t[1], ["Teradata SQL Assistant",  "Fun Problems",  "fun problems", "desktop environment", "remote desktop"])`
+endsnippet
+
+snippet "t(o(o(l(s)?)?)?)?\." "Tools" r
+$1`!p snip.rv = complete(t[1], ["Git", "SQL", "Java", "Cygwin", "CygwinPortable", "SAS", "SAS Enterprise Guide", "MATLAB", "Mathematica", "AutoHotkey", "BitTorrent", "C++", "Python"])`
+endsnippet
+
+snippet "a(b(b(r(e(v(i(a(t(i(o(n)?)?)?)?)?)?)?)?)?)?)?\." "Abbreviation" r
+$1`!p snip.rv = complete(t[1], ["tds", "sql", "author", "fp", "FP", "idp", "pm", "bib", "os", "rd"])`
+endsnippet
+
+
+snippet "b(u(s(i(n(e(s(s)?)?)?)?)?)?)?\." "Business" r
+$1`!p snip.rv = complete(t[1], ["Amazon", "Ebay", "New Egg"])`
+endsnippet

@@ -1,0 +1,32 @@
+" never remove the following line in Debian
+runtime! debian.vim
+" global configuration file
+:source $lommon/vim/vimrc/global.vim
+"color scheme
+colorscheme inkpot
+" Syntax highlighting
+syntax on
+" more vim specific (non vi compatible) features
+:source $lommon/vim/vimrc/more_vim.vim
+" filetype identation and plugins
+:source $lommon/vim/vimrc/filetype.vim
+" typping related settings
+:source $lommon/vim/vimrc/typping.vim
+" jump to last position when open a file
+:source $lommon/vim/vimrc/last_position.vim
+" swap and backup directories
+:source $lommon/vim/vimrc/swup.vim
+" key mappings
+:source $lommon/vim/vimrc/key_mappings.vim
+" macros
+:source $lommon/vim/vimrc/macros.vim
+" comamnds
+:source $lommon/vim/vimrc/commands.vim
+" clang
+:source $lommon/vim/vimrc/clang.vim
+" vim addon 
+:source $lommon/vim/vimrc/vam.vim
+" UltiSnips
+:source $lommon/vim/vimrc/ultisnips.vim
+" airline
+:source $lommon/vim/vimrc/airline.vim

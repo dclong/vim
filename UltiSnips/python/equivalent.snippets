@@ -1,0 +1,39 @@
+global !p
+from complete import *
+endglobal
+
+snippet "\be\." "Language Equivalence" r
+`!p snip.rv = complete(t[1], ["Sys.getenv", "tolower", "lcase", "toupper", "ucase", "dir", "getwd", "setwd", "system", "exit"])`
+endsnippet
+
+snippet "\be.(Sys.)?getenv" "os.environ" r
+os.environ[${1:"environment_variable"}]
+endsnippet
+
+snippet "\be.(tolower|lcase)" "Function Lower" r
+str.lower
+endsnippet
+
+snippet "\be.(toupper|ucase)" "Function Upper" r
+str.upper
+endsnippet
+
+snippet "\be.dir" "List Content of a Directory" r
+os.listdir
+endsnippet
+
+snippet "\be.getwd" "Get the Working Directory" r
+os.getcwd
+endsnippet
+
+snippet "\be.setwd" "Set the Working Directory" r
+os.chdir
+endsnippet
+
+snippet "\be.system" "Run System Command" r
+os.system
+endsnippet
+
+snippet "\be.exit" "Exit Program" r
+sys.exit
+endsnippet

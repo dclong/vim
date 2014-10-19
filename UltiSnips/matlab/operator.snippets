@@ -1,0 +1,18 @@
+
+
+snippet "(\w*) ?\+= ?(\w*)" "+=" r
+`!p snip.rv = match.group(1) + " = " + match.group(1) + " + " + match.group(2)`
+endsnippet
+
+snippet "(\w*) ?-= ?(\w*)" "-=" r
+`!p snip.rv = match.group(1) + " = " + match.group(1) + " - " + match.group(2)`
+endsnippet
+
+snippet "(\w*) ?\*= ?(\w*)" "*=" r
+`!p snip.rv = match.group(1) + " = " + match.group(1) + " * " + match.group(2)`
+endsnippet
+
+snippet "(\w*) ?/= ?(\w*)" "/=" r
+`!p snip.rv = match.group(1) + " = " + match.group(1) + " / " + match.group(2)`
+endsnippet
+

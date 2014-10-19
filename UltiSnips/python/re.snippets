@@ -1,0 +1,48 @@
+global !p
+from complete import *
+endglobal
+
+snippet "\br(e)?\." "Methods of the re Module" r
+re.$1`!p snip.rv = complete(t[1], ["compile", "DEBUG", "I", "IGNORECASE", "L", "LOCALE", "M", "MULTILINE", "S", "DOTALL", "U", "UNICODE", "X", "VERBOSE", "search", "match", "split", "findall", "finditer", "sub", "subn", "escape", "purge"])`
+endsnippet
+
+snippet re.compile "re.compile" b
+re.compile(${1:pattern}, ${2:flags=0})
+endsnippet
+
+snippet re.search "re.search" b
+re.search(${1:pattern}, ${2:string}, ${3:flags=0})
+endsnippet
+
+snippet re.match "re.match" b
+re.match(${1:pattern}, ${2:string}, ${3:flags=0})
+endsnippet
+
+snippet re.split "re.split" b
+re.split(${1:pattern}, ${2:string}, ${3:maxsplit=0}, ${4:flags=0})
+endsnippet
+
+snippet re.findall "re.findall" b
+re.findall(${1:pattern}, ${2:string}, ${3:flags=0})
+endsnippet
+
+snippet re.finditer "re.finditer" b
+re.finditer(${1:pattern}, ${2:string}, ${3:flags=0})
+endsnippet
+
+snippet re.sub "re.sub" b
+re.sub(${1:pattern}, ${2:repl}, ${3:string}, ${4:count=0}, ${5:flags=0})
+endsnippet
+
+snippet re.subn "re.subn" b
+re.subn(${1:pattern}, ${2:repl}, ${3:string}, ${4:count=0}, ${5:flags=0})
+endsnippet
+
+snippet re.escape "re.escape" b
+re.escape(${1:string})
+endsnippet
+
+snippet re.purge "re.purge" b
+re.purge()
+endsnippet
+

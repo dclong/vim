@@ -1,0 +1,199 @@
+global !p
+from complete import *
+endglobal
+
+snippet if "if statement" !b
+if ${1:condition}
+	$2
+end
+endsnippet
+
+snippet fun "Function Definition" !b
+function ${1:rv} = ${2:funname}(${3:arg1})
+	$4
+endsnippet
+
+snippet for "for loop" !b
+for ${1:i} = ${2:1}:${3:1}:${4:2}
+	$5
+end
+endsnippet
+
+# disp
+snippet pr "function disp" !w
+disp($1);
+endsnippet
+
+snippet print "function disp" !w
+disp($1);
+endsnippet
+
+snippet cat "function disp" !w
+disp($1);
+endsnippet
+
+snippet disp "function disp" !w
+disp($1);
+endsnippet
+
+# strcat
+snippet strcat "function strcat" !w
+strcat($1, $2);
+endsnippet
+
+snippet paste "function strcat" !w
+strcat($1, $2);
+endsnippet
+
+snippet pa "function strcat" !w
+strcat($1, $2);
+endsnippet
+
+# num2str
+snippet toString "function num2str" !w
+num2str($1);
+endsnippet
+
+snippet tostring "function num2str" !w
+num2str($1);
+endsnippet
+
+snippet string "function num2str" !w
+num2str($1);
+endsnippet
+
+snippet str "function num2str" !w
+num2str($1);
+endsnippet
+
+snippet n2s "function num2str" !w
+num2str($1);
+endsnippet
+
+snippet num2str "function num2str" !w
+num2str($1);
+endsnippet
+
+# literal string
+snippet " "Literal String" !w
+'$1'
+endsnippet
+
+# dlmread
+snippet read.table "function dlmread" !w
+dlmread(${1:file});
+endsnippet
+
+snippet rt "function dlmread" !w
+dlmread(${1:file});
+endsnippet
+
+snippet dlmread "function dlmread" !w
+dlmread(${1:file});
+endsnippet
+
+snippet dr "function dlmread" !w
+dlmread(${1:file});
+endsnippet
+
+# dlmwrite
+snippet write.table "function dlmwrite" !w
+dlmwrite(${1:file}, ${2:obj}${3:, 'precision', ${4:15}});
+endsnippet
+
+snippet wt "function dlmwrite" !w
+dlmwrite(${1:file}, ${2:obj}${3:, 'precision', ${4:15}});
+endsnippet
+
+snippet dlmwrite "function dlmwrite" !w
+dlmwrite(${1:file}, ${2:obj}${3:, 'precision', ${4:15}});
+endsnippet
+
+snippet dw "function dlmwrite" !w
+dlmwrite(${1:file}, ${2:obj}${3:, 'precision', ${4:15}});
+endsnippet
+
+# infinity
+snippet Inf "Infinity" !w
+Inf
+endsnippet
+
+snippet inf "Infinity" !w
+Inf
+endsnippet
+
+# fread
+snippet fread "function fread" !w
+fread(${1:fileHandle}, ${2:Inf}, ${3:'double'});
+endsnippet
+
+snippet fr "function fread" !w
+fread(${1:fileHandle}, ${2:Inf}, ${3:'double'});
+endsnippet
+
+# reshape
+snippet reshape "function reshape" !w
+reshape(${1:array}, [$2]);
+endsnippet
+
+snippet rs "function reshape" !w
+reshape(${1:array}, [$2]);
+endsnippet
+
+snippet matrix "function reshape" !w
+reshape(${1:array}, [$2]);
+endsnippet
+
+snippet array "function reshape" !w
+reshape(${1:array}, [$2]);
+endsnippet
+
+snippet % "Coment Line" !b
+%--------------------------------------------------------------------------------
+endsnippet
+
+snippet %3 "3-Line Comment" !b
+%--------------------------------------------------------------------------------
+% $1
+%--------------------------------------------------------------------------------
+endsnippet
+
+snippet c3 "3-Line Comment" !b
+%--------------------------------------------------------------------------------
+% $1
+%--------------------------------------------------------------------------------
+endsnippet
+
+snippet cb "Comment Block" !b
+%--------------------------------------------------------------------------------
+% @author ${1:Ben Chuanlong Du}
+% @description $2
+% @param $3
+% @return $4
+% @summary $5
+%--------------------------------------------------------------------------------
+endsnippet
+
+snippet zeros "function zeros" !w
+zeros(${1:d1}, ${2:d2});
+endsnippet
+
+snippet matrix "function zeros" !w
+zeros(${1:d1}, ${2:d2});
+endsnippet
+
+snippet a. "Array/Matrix Related Functions" !w
+$1`!p snip.rv = complete(t[1], ["numel", "ones", "reshape", "size", "zeros"])`
+endsnippet
+
+snippet numel "function numel" !w
+numel(${1:array});
+endsnippet
+
+snippet f. "File Related Functions" !w
+$1`!p snip.rv = complete(t[1], ["fread", "fopen", "fprintf"])`
+endsnippet
+
+snippet [ "[]" !w
+[$1]
+endsnippet

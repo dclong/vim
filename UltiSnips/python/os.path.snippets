@@ -1,0 +1,129 @@
+global !p
+from complete import *
+endglobal
+
+snippet "\bos\.p(a(t(h)?)?)?\." "Methods of os.path" r
+os.path.$1`!p snip.rv = complete(t[1], ["abspath", "basename", "commonprefix", "dirname", "exists", "lexists", "expanduser", "expandvars", "getatime", "getmtime", "getctime", "getsize", "isabs", "isfile", "isdir", "islink", "ismount", "join", "normcase", "normpath", "realpath", "relpath", "samefile", "sameopenfile", "samestat", "split", "splitdrive", "splitext", "splitunc", "walk", "supports_unicode_filenames"])`
+endsnippet
+
+snippet "\bos.path.abspath[a-zA-Z]?" "os.path.abspath" r
+os.path.abspath(${1:path})
+endsnippet
+
+snippet "\bos.path.basename[a-zA-Z]?" "os.path.basename" r
+os.path.basename(${1:path})
+endsnippet
+
+snippet "\bos.path.commonprefix[a-zA-Z]?" "os.path.commonprefix" r
+os.path.commonprefix(${1:list})
+endsnippet
+
+snippet "\bos.path.dirname[a-zA-Z]?" "os.path.dirname" r
+os.path.dirname(${1:path})
+endsnippet
+
+snippet "\bos.path.exists[a-zA-Z]?" "os.path.exists" r
+os.path.exists(${1:path})
+endsnippet
+
+snippet "\bos.path.lexists[a-zA-Z]?" "os.path.lexists" r
+os.path.lexists(${1:path})
+endsnippet
+
+snippet "\bos.path.expanduser[a-zA-Z]?" "os.path.expanduser" r
+os.path.expanduser(${1:path})
+endsnippet
+
+snippet "\bos.path.expandvars[a-zA-Z]?" "os.path.expandvars" r
+os.path.expandvars(${1:path})
+endsnippet
+
+snippet "\bos.path.getatime[a-zA-Z]?" "os.path.getatime" r
+os.path.getatime(${1:path})
+endsnippet
+
+snippet "\bos.path.getmtime[a-zA-Z]?" "os.path.getmtime" r
+os.path.getmtime(${1:path})
+endsnippet
+
+snippet "\bos.path.getctime[a-zA-Z]?" "os.path.getctime" r
+os.path.getctime(${1:path})
+endsnippet
+
+snippet "\bos.path.getsize[a-zA-Z]?" "os.path.getsize" r
+os.path.getsize(${1:path})
+endsnippet
+
+snippet "\bos.path.isabs[a-zA-Z]?" "os.path.isabs" r
+os.path.isabs(${1:path})
+endsnippet
+
+snippet "\bos.path.isfile[a-zA-Z]?" "os.path.isfile" r
+os.path.isfile(${1:path})
+endsnippet
+
+snippet "\bos.path.isdir[a-zA-Z]?" "os.path.isdir" r
+os.path.isdir(${1:path})
+endsnippet
+
+snippet "\bos.path.islink[a-zA-Z]?" "os.path.islink" r
+os.path.islink(${1:path})
+endsnippet
+
+snippet "\bos.path.ismount[a-zA-Z]?" "os.path.ismount" r
+os.path.ismount(${1:path})
+endsnippet
+
+snippet "\bos.path.join[a-zA-Z]?" "os.path.join" r
+os.path.join(${1:path1}${2:, ${3:path2}${4:, ${5:...}}})
+endsnippet
+
+snippet "\bos.path.normcase[a-zA-Z]?" "os.path.normcase" r
+os.path.normcase(${1:path})
+endsnippet
+
+snippet "\bos.path.normpath[a-zA-Z]?" "os.path.normpath" r
+os.path.normpath(${1:path})
+endsnippet
+
+snippet "\bos.path.realpath[a-zA-Z]?" "os.path.realpath" r
+os.path.realpath(${1:path})
+endsnippet
+
+snippet "\bos.path.relpath[a-zA-Z]?" "os.path.relpath" r
+os.path.relpath(${1:path}${2:, ${3:start}})
+endsnippet
+
+snippet "\bos.path.samefile[a-zA-Z]?" "os.path.samefile" r
+os.path.samefile(${1:path1}, ${2:path2})
+endsnippet
+
+snippet "\bos.path.sameopenfile[a-zA-Z]?" "os.path.sameopenfile" r
+os.path.sameopenfile(${1:fp1}, ${2:fp2})
+endsnippet
+
+snippet "\bos.path.samestat[a-zA-Z]?" "os.path.samestat" r
+os.path.samestat(${1:stat1}, ${2:stat2})
+endsnippet
+
+snippet "\bos.path.split[a-zA-Z]?" "os.path.split" r
+os.path.split(${1:path})
+endsnippet
+
+snippet "\bos.path.splitdrive[a-zA-Z]?" "os.path.splitdrive" r
+os.path.splitdrive(${1:path})
+endsnippet
+
+snippet "\bos.path.splitext[a-zA-Z]?" "os.path.splitext" r
+os.path.splitext(${1:path})
+endsnippet
+
+snippet "\bos.path.splitunc[a-zA-Z]?" "os.path.splitunc" r
+os.path.splitunc(${1:path})
+endsnippet
+
+snippet "\bos.path.walk[a-zA-Z]?" "os.path.walk" r
+os.path.walk(${1:path}, ${2:visit}, ${3:arg})
+endsnippet
+
+

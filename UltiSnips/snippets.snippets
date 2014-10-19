@@ -1,0 +1,56 @@
+# vim:ft=snippets:
+
+#########################
+# SNIPPETS for SNIPPETS #
+#########################
+
+global !p
+from complete import *
+endglobal
+
+# We use a little hack so that the snippet is expanded
+# and parsed correctly
+snippet "s(n(i(p(p(e(t)?)?)?)?)?)?" "Snippet definition" rb
+`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
+$0
+`!p snip.rv = "endsnippet"`
+endsnippet
+
+snippet "g(l(o(b(a(l)?)?)?)?)?" "Global snippet" rb
+`!p snip.rv = "global"` !p
+$0
+`!p snip.rv = "endglobal"`
+endsnippet
+
+snippet vis "${VISUAL}" i
+\$\{VISUAL${1:${2:default}${3:/transform/}}\}
+endsnippet
+
+snippet '\b(\d+)' "Surround as Default Value of $1" r
+${`!p snip.rv = match.group(1)`:${VISUAL}}
+endsnippet
+
+#snippet ` "Paired Back Tick" w
+#`$1`
+#endsnippet
+
+snippet vi "Vim Script" w
+\`!v $1\`
+endsnippet
+
+snippet "\bc(o(m(p(l(e(t(e)?)?)?)?)?)?)?" "function complete" r
+complete(t[${1:1}], [${2:string_element}])
+endsnippet
+
+snippet "\bp(y(t(h(o(n)?)?)?)?)?" "Python Functions" r
+`!p snip.rv = unichr(96) + "!p snip.rv = "`${1:pass}`!p snip.rv = unichr(96)`
+endsnippet
+
+snippet "\bm(atch.group)?" "match.group()" r
+match.group(${1:1})
+endsnippet
+
+snippet "p(r(i(o(r(i(t(y)?)?)?)?)?)?)?" "Priority" rb
+priority ${1:1}
+endsnippet
+

@@ -1,0 +1,57 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+
+snippet "l(i(s(t)?)?)?\." "Methods of list." r
+list.$1`!p snip.rv = complete(t[1], ["append", "extend", "insert", "len", "list", "remove", "pop", "index", "count", "sort", "reverse"])`
+endsnippet
+
+snippet "\blist.list[a-zA-Z]?" "list()" r
+list(${1:obj})
+endsnippet
+
+snippet "\blist.len[a-zA-Z]?" "len()" r
+len(${1:obj})
+endsnippet
+
+###########################################################################
+
+snippet "\blist.append[a-zA-Z]?" "list.append" r
+${2:list}.append(${1:x})
+endsnippet
+
+snippet "\blist.extend[a-zA-Z]?" "list.extend" r
+${2:list}.extend(${1:L})
+endsnippet
+
+snippet "\blist.insert[a-zA-Z]?" "list.insert" r
+${3:list}.insert(${1:i}, ${2:x})
+endsnippet
+
+snippet "\blist.remove[a-zA-Z]?" "list.remove" r
+${2:list}.remove(${1:x})
+endsnippet
+
+snippet "\blist.pop[a-zA-Z]?" "list.pop" r
+${2:list}.pop(${1:i})
+endsnippet
+
+snippet "\blist.index[a-zA-Z]?" "list.index" r
+${2:list}.index(${1:x})
+endsnippet
+
+snippet "\blist.count[a-zA-Z]?" "list.count" r
+${2:list}.count(${1:x})
+endsnippet
+
+snippet "\blist.sort[a-zA-Z]?" "list.sort" r
+${4:list}.sort(${1:cmp=None}, ${2:key=None}, ${3:reverse=False})
+endsnippet
+
+snippet "\blist.reverse[a-zA-Z]?" "list.reverse" r
+${1:list}.reverse()
+endsnippet
+
+

@@ -1,0 +1,86 @@
+global !p
+from complete import *
+endglobal
+
+snippet "cf\." "Control Flow" r
+$1`!p snip.rv = complete(t[1], ["for", "while", "break", "continue", "exit", "if", "elif", "else", "try", "pass"])`
+endsnippet
+
+snippet "lo(o(p)?)?\." "Loop" r
+$1`!p snip.rv = complete(t[1], ["for", "while", "break", "continue", "exit"])`
+endsnippet
+
+snippet for "for loop" b
+for ${1:item} in ${2:iterable}:
+	${3:pass}
+#end for
+endsnippet
+
+snippet if "If" b
+if ${1:condition}:
+	${2:pass}
+#end if
+endsnippet
+
+snippet "elif|elseif|ei" "Else If" rb
+elif ${1:condition}:
+	${2:pass}
+endsnippet
+
+snippet "ife(l(s(e)?)?)?" "If / Else" rb
+if ${1:condition}:
+	${2:pass}
+else:
+	${3:pass}
+#end if
+endsnippet
+
+snippet "e(l(s(e)?)?)?" "else" rb
+else:
+    ${1:pass}
+endsnippet
+
+
+##########################
+# Try / Except / Finally #
+##########################
+snippet try "Try / Except" b
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+#end try
+endsnippet
+
+snippet try "Try / Except / Else" b
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}
+#end try
+endsnippet
+
+snippet try "Try / Except / Finally" b
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+finally:
+	${5:pass}
+#end try
+endsnippet
+
+snippet try "Try / Except / Else / Finally" b
+try:
+	${1:pass}
+except${2: ${3:Exception}, ${4:e}}:
+	${5:raise}
+else:
+	${6:pass}
+finally:
+	${7:pass}
+#end try
+endsnippet
+

@@ -1,0 +1,112 @@
+global !p
+from complete import *
+endglobal
+
+snippet sys. "Methods of sys." b
+sys.$1`!p snip.rv = complete(t[1], ["argv", "byteorder", "builtin_module_names", "call_tracing", "copyright", "_clear_type_cache", "_current_frames", "dllhandle", "displayhook", "dont_write_bytecode", "excepthook", "__displayhook__", "__excepthook__", "exc_info", "exc_clear", "exc_type", "exc_value", "exc_traceback", "exec_prefix", "executable", "exit", "exitfunc", "flags", "float_info", "float_repr_style", "getcheckinterval", "getdefaultencoding", "getdlopenflags", "getfilesystemencoding", "getrefcount", "getrecursionlimit", "getsizeof", "_getframe", "getprofile", "gettrace", "getwindowsversion", "hexversion", "long_info", "last_type", "last_value", "last_traceback", "maxint", "maxsize", "maxunicode", "meta_path", "modules", "path", "path_hooks", "path_importer_cache", "platform", "prefix", "ps1", "ps2", "py3kwarning", "setcheckinterval", "setdefaultencoding", "setdlopenflags", "setprofile", "setrecursionlimit", "settrace", "settscdump", "stdin", "stdout", "stderr", "__stdin__", "__stdout__", "__stderr__", "subversion", "tracebacklimit", "version", "api_version", "version_info", "warnoptions", "winver"])`
+endsnippet
+
+snippet "\bsys.call_tracing[a-zA-Z]?" "sys.call_tracing" r
+sys.call_tracing(${1:func}, ${2:args})
+endsnippet
+
+snippet "\bsys._clear_type_cache[a-zA-Z]?" "sys._clear_type_cache" r
+sys._clear_type_cache()
+endsnippet
+
+snippet "\bsys._current_frames[a-zA-Z]?" "sys._current_frames" r
+sys._current_frames()
+endsnippet
+
+snippet "\bsys.displayhook[a-zA-Z]?" "sys.displayhook" r
+sys.displayhook(${1:value})
+endsnippet
+
+snippet "\bsys.excepthook[a-zA-Z]?" "sys.excepthook" r
+sys.excepthook(${1:type}, ${2:value}, ${3:traceback})
+endsnippet
+
+snippet "\bsys.exc_info[a-zA-Z]?" "sys.exc_info" r
+sys.exc_info()
+endsnippet
+
+snippet "\bsys.exc_clear[a-zA-Z]?" "sys.exc_clear" r
+sys.exc_clear()
+endsnippet
+
+snippet "\bsys.exit[a-zA-Z]?" "sys.exit" r
+sys.exit(${1:arg_o})
+endsnippet
+
+snippet "\bsys.getcheckinterval[a-zA-Z]?" "sys.getcheckinterval" r
+sys.getcheckinterval()
+endsnippet
+
+snippet "\bsys.getdefaultencoding[a-zA-Z]?" "sys.getdefaultencoding" r
+sys.getdefaultencoding()
+endsnippet
+
+snippet "\bsys.getdlopenflags[a-zA-Z]?" "sys.getdlopenflags" r
+sys.getdlopenflags()
+endsnippet
+
+snippet "\bsys.getfilesystemencoding[a-zA-Z]?" "sys.getfilesystemencoding" r
+sys.getfilesystemencoding()
+endsnippet
+
+snippet "\bsys.getrefcount[a-zA-Z]?" "sys.getrefcount" r
+sys.getrefcount(${1:object})
+endsnippet
+
+snippet "\bsys.getrecursionlimit[a-zA-Z]?" "sys.getrecursionlimit" r
+sys.getrecursionlimit()
+endsnippet
+
+snippet "\bsys.getsizeof[a-zA-Z]?" "sys.getsizeof" r
+sys.getsizeof(${1:object}${2:, ${3:default}})
+endsnippet
+
+snippet "\bsys._getframe[a-zA-Z]?" "sys._getframe" r
+sys._getframe(${1:depth})
+endsnippet
+
+snippet "\bsys.getprofile[a-zA-Z]?" "sys.getprofile" r
+sys.getprofile()
+endsnippet
+
+snippet "\bsys.gettrace[a-zA-Z]?" "sys.gettrace" r
+sys.gettrace()
+endsnippet
+
+snippet "\bsys.getwindowsversion[a-zA-Z]?" "sys.getwindowsversion" r
+sys.getwindowsversion()
+endsnippet
+
+snippet "\bsys.setcheckinterval[a-zA-Z]?" "sys.setcheckinterval" r
+sys.setcheckinterval(${1:interval})
+endsnippet
+
+snippet "\bsys.setdefaultencoding[a-zA-Z]?" "sys.setdefaultencoding" r
+sys.setdefaultencoding(${1:name})
+endsnippet
+
+snippet "\bsys.setdlopenflags[a-zA-Z]?" "sys.setdlopenflags" r
+sys.setdlopenflags(${1:n})
+endsnippet
+
+snippet "\bsys.setprofile[a-zA-Z]?" "sys.setprofile" r
+sys.setprofile(${1:profilefunc})
+endsnippet
+
+snippet "\bsys.setrecursionlimit[a-zA-Z]?" "sys.setrecursionlimit" r
+sys.setrecursionlimit(${1:limit})
+endsnippet
+
+snippet "\bsys.settrace[a-zA-Z]?" "sys.settrace" r
+sys.settrace(${1:tracefunc})
+endsnippet
+
+snippet "\bsys.settscdump[a-zA-Z]?" "sys.settscdump" r
+sys.settscdump(${1:on_flag})
+endsnippet
+
