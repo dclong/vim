@@ -118,6 +118,15 @@ ${2:${VISUAL:Content}}
 `!p snip.rv = _get_comment_format()[0]` `!p snip.rv = foldmarker()[1]` $1 `!p snip.rv = _get_comment_format()[2]`
 endsnippet
 
-snippet todo "@TODO" !w
-@TODO
+priority 2
+snippet /todo "@TODO" !w
+/*
+@TODO: $1
+*/
 endsnippet
+
+priority 1
+snippet todo "@TODO" !w
+@TODO: $1
+endsnippet
+
