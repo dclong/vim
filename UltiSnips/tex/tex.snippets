@@ -5,7 +5,7 @@ from complete import *
 endglobal
 
 
-snippet "\b\\?r(e(f)?)?" "\\ref{}" r
+snippet "\\r(e(f)?)?" "\\ref{}" rb
 \ref{$1}
 endsnippet
 
@@ -23,10 +23,10 @@ endsnippet
 #  Utilities  #
 ###############
 
-snippet "\\?(use)?p(a(c(k(a(g(e)?)?)?)?)?)?" "Package" rb
+snippet "\\(use)?p(a(c(k(a(g(e)?)?)?)?)?)?" "Package" rb
 \usepackage[${1:options}]{${2:package}}$0
 endsnippet
 
-snippet "\\?a(u(t(h(o(r)?)?)?)?)?" "\author{}" rb
+snippet "\\a(u(t(h(o(r)?)?)?)?)?" "\author{}" rb
 \author{${1:Ben Chuanlong Du}}
 endsnippet

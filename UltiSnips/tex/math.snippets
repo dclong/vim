@@ -1,10 +1,13 @@
+global !p
+from complete import *
+endglobal
 
 snippet "g(r(e(e(k)?)?)?)?\." "Math Formula" r
-`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
+$1`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
 endsnippet
 
 snippet "m(a(t(h)?)?)?\." "Math Formula" r
-`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
+$1`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
 endsnippet
 
 snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
@@ -13,27 +16,27 @@ snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
 \end{$1}
 endsnippet
 
-snippet "\b\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" r
+snippet "\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" rb
 \frac{$1}{$2}
 endsnippet
 
-snippet "\b\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" r
+snippet "\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" rb
 \int_{${1:lower_limit}}^{${2:upper_limit}} ${3:integrand} 
 endsnippet
 
-snippet "\b\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" r
+snippet "\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" rb
 \overset{$1}{$2}
 endsnippet
 
-snippet "\b\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" r
+snippet "\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" rb
 \nonumber 
 endsnippet
 
-snippet "\b\\nn" "\nonumber \\" r
+snippet "\\nn" "\nonumber \\" rb
 \nonumber \\
 endsnippet
 
-snippet "\b\\l(e(f(t)?)?)?" "\left" r
+snippet "\\l(e(f(t)?)?)?" "\left" rb
 \left$1`!p snip.rv = complete(t[1], ["<", "(", "{", "["])`\right$1
 endsnippet
 
@@ -53,14 +56,14 @@ snippet max "max{}" w
 max\\{$1\\}
 endsnippet
 
-snippet "\b\\b(a(r)?)?" "bar" r
+snippet "\\b(a(r)?)?" "bar" rb
 \bar{${1:expr}}
 endsnippet
 
-snippet "\b\\s(q(r(t)?)?)?" "\sqrt" r
+snippet "\\s(q(r(t)?)?)?" "\sqrt" rb
 \sqrt{${1:expr}}
 endsnippet
 
-snippet "\b\\d(o(t)?)?" "\dot" r
+snippet "\\d(o(t)?)?" "\dot" rb
 \dot{${1:expr}}
 endsnippet
