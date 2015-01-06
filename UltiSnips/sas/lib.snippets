@@ -1,0 +1,19 @@
+
+# library snippets
+
+snippet "lib(n(a(m(e)?)?)?)?" "libname" !rb
+libname $1`!p snip.rv = complete(t[1], ["_all_"])`
+endsnippet
+
+snippet "(libname \w)" "libname" !rb
+`!p snip.rv = match.group(1)` $1`!p snip.rv = complete(t[1], ["clear", "list"])`
+endsnippet
+
+snippet ls "Lib on Server" b
+libname ${1:ls} "/risk/aml/user_aml/dclong/${2:$1}/data";
+endsnippet
+
+snippet ll "Lib on Localhost" b
+libname ${1:ll} "/cygdrive/c/Users/zkyr9jm/Documents/projects/${2:$1}/data";
+endsnippet
+

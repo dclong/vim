@@ -1,0 +1,73 @@
+
+snippet '%?m(a(c(r(o)?)?)?)?' "Macro Definition Without Arguments" !rb
+%macro ${1:macro_name}(${2:arg1});
+    ${3:/* start here */} 
+%mend $1;
+endsnippet
+
+snippet %a "%array" !b
+%array(${1:arr}${2:, data=${3:d}}${4:, var=${5:v}}${6:, values=${7:l}}${8:, delim=%str(${9: })}${10:, debug=${11:N}}${12:, numlist=${13:Y}});
+endsnippet
+
+snippet %av "%array" !b
+%array(${1:arr}, values=${7:v});
+endsnippet
+
+snippet %o "%do_over" !b
+%do_over(${1:arr}${2:, values=${3:v}}${4:, delim=%str(${5: })}${6:, phrase=${7:?}}${8:, escape=${9:?}}${10:, between=${11:b}}${12:, macro=${13:m}}${14:, keyword=$15})
+endsnippet
+
+snippet %om "%do_over" !b
+%do_over(${1:arr}, macro=${2:m})
+endsnippet
+
+snippet %omb "%do_over" !b
+%do_over(${1:arr}, macro=${2:m}, between=${3: })
+endsnippet
+
+snippet %op "%do_over" !b
+%do_over(${1:arr}, phrase=${2:?})
+endsnippet
+
+snippet %pct "Macro %percentile" !b
+%percentile(data=${1:d}${2:, var=$3}${4:, pctArr=$5}${6:, pctList=$7});
+endsnippet
+
+snippet %temp "A Temp Macro" !b
+%macro temp;
+%do i = 1 %to &msN.;
+    %let m = &&ms&i;
+    %let out = n3d.bd_tran_pty_&m.;
+	%ptran(data=n3d.tran_&m., bp=B, cd=D, out=&out.);
+	%percentile(data=&out., var=tot_amt, output=bd_pctl_pty_&m., pctArr=pcts);
+%end;
+%mend temp;
+%temp;
+endsnippet
+
+snippet "%d(o( (l(o(o(p)?)?)?)?)?)?|%f(o(r (l(o(o(p)?)?)?)?)?)?" "Do Loop" !rb
+%do ${1:i} = ${2:1} %to ${3:2} %by ${4:1};
+    ${5:...}
+%end;
+endsnippet
+
+snippet "%p(u(t)?)?" "%put" !rb
+%put $1`!p snip.rv = complete(t[1], ["_user_", "_automatic_", "_global_", "_local_"])`;
+endsnippet
+
+snippet %im "Include Macro" !b
+%include ${1:macro}($2.sas);
+endsnippet
+
+snippet %ima "Include %array" !b
+%include ${1:macro}(array.sas);
+endsnippet
+
+snippet %imo "Include %array" !b
+%include ${1:macro}(do_over.sas);
+endsnippet
+
+snippet %imn "Include %array" !b
+%include ${1:macro}(numlist.sas);
+endsnippet
+
