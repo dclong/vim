@@ -1,0 +1,29 @@
+
+global !p
+from complete import *
+endglobal
+
+snippet "a(r(r(a(y)?)?)?)?\.|m(a(t(r(i(x)?)?)?)?)?\." "Array/Matrix Related Functions" wr
+$1`!p snip.rv = complete(t[1], ["numel", "ones", "reshape", "size", "zeros"])`
+endsnippet
+
+snippet "number of elements?|len(gth)?|numel" "Function numel" wr
+numel(${1:array});
+endsnippet
+
+snippet "reshape|matrix|array" "Function reshape" wr
+reshape(${1:array}, [$2]);
+endsnippet
+
+snippet "(array|matrix) of zero|zero matrix|zeros" "Function zeros" wr
+zeros(${1:d1}, ${2:d2});
+endsnippet
+
+snippet "column (combine|concatenate)|(combine|concatenate) by column|horzcat|cbind" "Function zeros" wr
+horzcat(${1:m1}, ${2:m2}${3:, m3});
+endsnippet
+
+snippet "row (combine|concatenate)|(combine|concatenate) by row|vertcat|rbind" "Function zeros" wr
+vertcat(${1:m1}, ${2:m2}${3:, m3});
+endsnippet
+
