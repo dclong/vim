@@ -1,0 +1,76 @@
+
+snippet #' "Help Documentation" b
+#' @title ${1:title of this help documentation}
+#'
+#' @description ${2:give a description of each function in this page}
+${3:#' 
+#' @aliases ${4:`!p snip.rv = os.path.splitext(fn)[0]`}}
+${5:#'
+#' @param ${6:first parameter}}
+${7:#'
+#' @param ${8:more parameter}}
+${9:#' 
+#' @return ${10:return value of the function following}}
+#' 
+#' @author ${11:Ben Chuanlong Du}
+${12:#' 
+#' @keywords ${13:kw1, kw2}}
+${14:#' 
+#' @seealso ${15:simular functions}}
+${16:#'
+#' @references ${17:references based on which the function are implemented}}
+${18:#'
+#' @export}
+#'
+${19:#' @rdname ${20:`!p snip.rv = os.path.splitext(fn)[0]`}}
+${21:#' 
+#' @example
+#' \dontrun{
+#' ${22:code here}
+#' }}
+#'
+endsnippet
+
+snippet "#' @exp(o(r(t)?)?)?" "@export" br
+#' @export 
+endsnippet
+
+snippet "#' @p(a(r(a(m)?)?)?)?" "@param" br
+#' @param ${1:param} ${2:description}
+endsnippet
+
+snippet "#' @rd(n(a(m(e)?)?)?)?" "@rdname" br
+#' @rdname ${1:target Rd doc}
+endsnippet
+
+snippet "#' @a(u(t(h(o(r)?)?)?)?)?" "@author" br
+#' @author ${1:Ben Chuanlong Du}
+endsnippet
+
+snippet "#' @" "Roxygen Tags" rb
+#' @$1`!p snip.rv = complete(t[1], ["export", "examples", "param", "rdname", "author", "title", "description"])`
+endsnippet
+
+snippet "#' @t(i(t(l(e)?)?)?)?" "@title" rb
+#' @title ${1:title}
+endsnippet
+
+snippet "#' @d(e(s(c(r(i(p(t(i(o(n)?)?)?)?)?)?)?)?)?)?" "@description" br
+#' @description ${1:description}
+endsnippet
+
+snippet "#' @exa(m(p(l(e)?)?)?)?" "@examples" br
+#' @examples
+#' \dontrun{
+#' ${1:example}
+#' }
+endsnippet
+
+snippet \l "Link" w
+\link{$1}
+endsnippet
+
+snippet \c "Link" w
+\code{$1}
+endsnippet
+
