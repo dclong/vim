@@ -1,0 +1,27 @@
+
+global !p
+from complete import *
+endglobal
+
+snippet "loop" "Loops in SAS" br
+$1`!p snip.rv = complete(t[1], ["do loop", "do until loop", "do while loop"])`
+endsnippet
+
+snippet 'do loop|dl|for' "Do Loop" rb
+do ${1:i} = ${2:1} to ${3:2} by ${4:1};
+    ${5:...}
+end;
+endsnippet
+
+snippet "do until loop|until" "Do Until Loop" br
+do until (${1:condition});
+    ${2:...}
+end;
+endsnippet
+
+snippet "do while loop|while" "Do While Loop" br
+do while (${1:condition});
+    ${2:...}
+end;
+endsnippet
+

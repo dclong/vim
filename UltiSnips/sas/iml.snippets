@@ -1,0 +1,117 @@
+
+global !p
+from complete import *
+endglobal
+
+snippet "identity matrix|eye|diag|i" "Identity Matrix" rw
+i(${1:dim});
+endsnippet
+
+snippet "matrix|j" "Fill a Matrix" rw
+j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}});
+endsnippet
+
+snippet "rep(e(a(t)?)?)?" "Repeat a Matrix" rw
+repeat(${1:matrix}, ${2:norw}, ${3:ncol});
+endsnippet
+
+snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
+MatrixReduction.$1`!p snip.rv = complete(t[1], ["addition", "multiplication", "maximum", "minimum", "index of maximum", "index of minimum", "mean", "sums of squares"])`
+endsnippet
+
+priority 2
+snippet "MatrixReduction\.addition(.| )row|row sums?|sums? of rows?|rowSums?" "Sum of Rows" r
+${1:matrix}[, +]
+endsnippet
+
+priority 1
+snippet "MatrixReduction\.addition(.| )row|row sums?|sums? of rows?|rowSums?\((\w)\)" "Sum of Rows" r
+${1:`!p snip.rv = match.group(1)`}[, +]
+endsnippet
+
+priority 2
+snippet "MatrixReduction\.addition(.| )col(umn)?|col(umn) sums?|sums? of col(umn)?s?|col(S|s)ums?" "Sum of Columns" r
+${1:matrix}[+, ]
+endsnippet
+
+priority 1
+snippet "MatrixReduction\.addition(.| )col(umn)?|col(umn) sums?|sums? of col(umn)?s?|col(S|s)ums?\((\w)\)" "Sum of Columns" r
+${1:`!p snip.rv = match.group(1)`}[+, ]
+endsnippet
+
+snippet "MatrixReduction\.multiplication(.| )rows?|prod(uct)?s? of rows?|row prod(uct)?s?|row(P|p)rods?" "Product of Rows" r
+${1:matrix}[, #]
+endsnippet
+
+snippet "MatrixReduction\.multiplication(.| )col(umn)?s?|prod(uct)?s? of col(umn)?s?|col(umn)?s? prod(uct)?s?|col(P|p)rods?" "Product of Columns" r
+${1:matrix}[#, ]
+endsnippet
+
+snippet "MatrixReduction\.maximum(.| )rows?|max(imum)?s? of rows?|row max(imum)?s?|row(M|m)axs?" "Maximums of Rows" r
+${1:matrix}[, <>]
+endsnippet
+
+snippet "MatrixReduction\.maximum(.| )col(umn)?s?|max(imum)?s? of col(umn)?s?|col(umn)? max(imum)?s?|col(M|m)axs?" "Maximums of Columns" r
+${1:matrix}[<>, ]
+endsnippet
+
+snippet "MatrixReduction\.minimum(.| )rows?|min(imum)?s? of rows?|row min(imum)?s?|row(M|m)ins?" "Minimums of Rows" r
+${1:matrix}[, ><]
+endsnippet
+
+snippet "MatrixReduction\.minimum(.| )col(umn)?s?|min(imum)?s? of col(umn)?s?|col(umn)?s? min(imum)?s?|col(M|m)ins?" "Minimums of Columns" r
+${1:matrix}[><, ]
+endsnippet
+
+snippet "MatrixReduction\.index of maximum(.| )rows?|indexs? of maximums? of rows?|rows? indexs? max(imum)?s?|row(M|m)ax(I|i)nd(ex)?" "Indices of Maximums of Rows" r
+${1:matrix}[, <:>]
+endsnippet
+
+snippet "MatrixReduction\.col(M|m)ax(I|i)nd(ex)?" "Indices of Maximums of Columns" r
+${1:matrix}[<:>, ]
+endsnippet
+
+snippet "MatrixReduction\.row(M|m)in(I|i)nd(ex)?" "Indices of Minimum of Rows" r
+${1:matrix}[, >:<]
+endsnippet
+
+snippet "MatrixReduction\.col(M|m)in(I|i)nd(ex)?" "Indices of Minimum of Columns" r
+${1:matrix}[>:<, ]
+endsnippet
+
+snippet "MatrixReduction\.row(M|m)eans?" "Means of Rows" r
+${1:matrix}[, :]
+endsnippet
+
+snippet "MatrixReduction\.col(M|m)eans?" "Means of Columns" r
+${1:matrix}[:, ]
+endsnippet
+
+snippet "MatrixReduction\.row(SS|ss)" "Sums of Squares of Rows" r
+${1:matrix}[, ##]
+endsnippet
+
+snippet "MatrixReduction\.sums of squares of |col(SS|ss)" "Sums of Squares of Columns" r
+${1:matrix}[##, ]
+endsnippet
+
+priority 2
+snippet "cbind" "R-style cbind Function" r
+insert(${1:x}, ${2:y}, 0, ncol($1)+1)
+endsnippet
+
+priority 1
+snippet "cbind\((\w), ?(\w)\)" "R-style cbind Function" r
+insert(${1:`!p snip.rv = match.group(1)`}, ${2:`!p snip.rv = match.group(2)`}, 0, ncol($1)+1)
+endsnippet
+
+priority 2
+snippet "rbind" "R-style rbind Function" r
+insert(${1:x}, ${2:y}, nrow($1)+1, 0)
+endsnippet
+
+priority 1
+snippet "rbind\((\w), ?(\w)\)" "R-style rbind Function" r
+insert(${1:`!p snip.rv = match.group(1)`}, ${2:`!p snip.rv = match.group(2)`}, nrow($1)+1, 0)
+endsnippet
+

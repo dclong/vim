@@ -4,23 +4,23 @@ endglobal
 
 # procedure snippets
 
-snippet "p(r(o(c)?)?)?" "Procedure" !rb
+snippet "p(r(o(c)?)?)?" "Procedure" rb
 proc $1`!p snip.rv = complete(t[1], ["fcmp", "freq", "format", "glm", "iml", "logistic", "means", "mixed", "print", "rank", "reg", "sql", "sort", "transpose", "univariate"])`
 endsnippet
 
-snippet "proc fcmp" "The FCMP Procedure" !b
+snippet "proc fcmp" "The FCMP Procedure" b
 proc fcmp outlib = ${1:lib}.${2:funcs}.${3:category};
     $4
 run;
 endsnippet
 
-snippet "proc sort" "The SORT Procedure" !b
+snippet "proc sort" "The SORT Procedure" b
 proc sort ${1:data = data_set_name} ${2:out = ${3:output_data_set_name}};
     by ${1:column_name};
 run;
 endsnippet
 
-snippet "proc sql" "The SQL Procedure" !b
+snippet "proc sql" "The SQL Procedure" b
 proc sql;
     select ${1:distinct }${2:top ${3:5} }${4:*}
     from
@@ -41,13 +41,13 @@ proc sql;
 quit;
 endsnippet
 
-snippet "proc print" "The Print Procedure" !b
+snippet "proc print" "The Print Procedure" b
 proc print data = ${1:d} ${2:(${3:where=(${4:condition})} ${5:obs=${6:5}})};
     title "${7:$1}";
 run;
 endsnippet
 
-snippet 'pp(\d+)' "Print Top n Rows" !rb
+snippet 'pp(\d+)' "Print Top n Rows" rb
 proc print data = ${1:d} ${2:(obs=${3:`!p snip.rv = match.group(1)`})};
     title "${4:$1}";
 run;
@@ -59,7 +59,7 @@ proc print data = ${1:d} ${2:(where=(${3: }))};
 run;
 endsnippet
 
-snippet sort "Proc Sort" !b
+snippet sort "Proc Sort" b
 proc sort data = ${1:d} ${2:out = ${3:o}};
 	title "${4:$1 Sorted}";
 	by ${5:descending} ${6:var};

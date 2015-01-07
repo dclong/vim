@@ -1,26 +1,12 @@
 
+global !p
+from complete import *
+endglobal
+
 # do; ... end;
-snippet db "Do End Group" b
+snippet "do end block|db" "Do End Block" br
 do;
     ${1:...}
-end;
-endsnippet
-
-snippet 'dl|for' "Do Loop" rb
-do ${1:i} = ${2:1} to ${3:2} by ${4:1};
-    ${5:...}
-end;
-endsnippet
-
-snippet until "Do Until Loop" b
-do until (${1:condition});
-    ${2:...}
-end;
-endsnippet
-
-snippet while "Do While Loop" b
-do while (${1:condition});
-    ${2:...}
 end;
 endsnippet
 
@@ -36,5 +22,9 @@ if ${1:condition} then do;
 end; else do;
 	$3;
 end;
+endsnippet
+
+snippet "do" "do Auto Completion" br
+$1`!p snip.rv = complete(t[1], ["do end block", "do loop", "do until loop", "do while loop"])`
 endsnippet
 
