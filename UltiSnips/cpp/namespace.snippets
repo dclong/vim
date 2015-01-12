@@ -1,0 +1,17 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet std "std::" w
+std::
+endsnippet
+
+snippet ns "namespace .. (namespace)"
+namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
+{
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
+endsnippet
+

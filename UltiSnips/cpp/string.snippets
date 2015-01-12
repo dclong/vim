@@ -1,0 +1,25 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "\.s(t(r(i(n(g)?)?)?)?)?|s(t(r(i(n(g)?)?)?)?)?\." "Functions/methods of String" rw
+str.$1`!p snip.rv = complete(t[1], ["atoi", "atol", "atoll", "stoi", "stol", "stoll", "size"])`
+endsnippet
+
+priority 1
+snippet stol "std::stol" w
+std::stol(${1:str})
+endsnippet
+
+priority 1
+snippet "str(i(n(g)?)?)?" "std::string" rw
+std::string
+endsnippet
+
+priority 1
+snippet "to_str(i(n(g)?)?)?" "std::to_string" rw
+std::to_string(${1:arg})
+endsnippet
+

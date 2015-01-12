@@ -1,0 +1,58 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 2
+snippet ":?:umap" "std::unordered_map" rw
+std::unordered_map<${1:key}, ${2:value}>
+endsnippet
+
+priority 2
+snippet ":?:uset" "std::unordered_set" rw
+std::unordered_set<${1:Type}>
+endsnippet
+
+priority 1
+snippet ":?:set" "std::set" rw
+std::set<${1:Type}>
+endsnippet
+
+priority 1
+snippet ":?:map" "std::map" rw
+std::map<${1:key}, ${2:value}>
+endsnippet
+
+snippet ":?:vec(t(o(r)?)?)?" "std::vector" rw
+std::vector<${1:Type}>
+endsnippet
+
+priority 1
+snippet ":?:it" "Iterator" rw
+::iterator
+endsnippet
+
+priority 2
+snippet ":?:cit" "Const Iterator" rw
+::const_iterator
+endsnippet
+
+priority 2
+snippet "forit" "For Loop Using Iterator" rw
+for(${2:Type} ${3:it}=${1:obj}.begin(); $3!=$1.end(); ++$3){
+	${4:/* code */}
+}
+endsnippet
+
+priority 3
+snippet "forcit" "For Loop Using Const Iterator" rw
+for(${2:Type} ${3:it}=${1:obj}.cbegin(); $3!=$1.cend(); ++$3){
+	${4:/* code */}
+}
+endsnippet
+
+priority 1
+snippet beginend "$1.begin(), $1.end() (beginend)"
+${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
+endsnippet
+
