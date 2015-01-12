@@ -36,13 +36,13 @@ snippet td "Typedef"
 typedef ${1:int} ${2:MyCustomType};
 endsnippet
 
-snippet if "if .. (if)"
-if (${1:/* condition */}){
+snippet if "If Statement"
+if(${1:/* condition */}){
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
 endsnippet
 
-snippet el "else .. (else)"
+snippet el "Else Statement"
 else{
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
@@ -108,7 +108,7 @@ do{
 } while(${1:/* condition */});
 endsnippet
 
-snippet for "for loop" !b
+snippet for "For Loop" b
 for(${1:init}; ${2:stop}; ${3:change}){
     $4
 }
