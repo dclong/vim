@@ -1,0 +1,10 @@
+
+snippet s. "String Functions" w
+$1`!p snip.rv = complete(t[1], ["nchar", "paste"])`
+endsnippet
+
+priority 1
+snippet "p(a(s(t(e)?)?)?)?" "Function paste" rw
+paste($1${2:, sep="$3"}${4:, collapse="$5"})
+endsnippet
+
