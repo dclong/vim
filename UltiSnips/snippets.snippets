@@ -10,9 +10,10 @@ endglobal
 
 # We use a little hack so that the snippet is expanded
 # and parsed correctly
-snippet "s(n(i(p(p(e(t)?)?)?)?)?)?" "Snippet definition" rb
-`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
-$0
+snippet "snip(p(e(t)?)?)?" "Snippet definition" rb
+priority ${5:1}
+`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:rb}
+$4
 `!p snip.rv = "endsnippet"`
 endsnippet
 
