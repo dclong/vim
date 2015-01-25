@@ -16,7 +16,7 @@ ${9:#'
 ${12:#' 
 #' @keywords ${13:kw1, kw2}}
 ${14:#' 
-#' @seealso ${15:simular functions}}
+#' @seealso ${15:similar functions}}
 ${16:#'
 #' @references ${17:references based on which the function are implemented}}
 ${18:#'
@@ -31,34 +31,42 @@ ${21:#'
 #'
 endsnippet
 
+priority 2
 snippet "#' @exp(o(r(t)?)?)?" "@export" br
 #' @export 
 endsnippet
 
+priority 2
 snippet "#' @p(a(r(a(m)?)?)?)?" "@param" br
 #' @param ${1:param} ${2:description}
 endsnippet
 
+priority 2
 snippet "#' @rd(n(a(m(e)?)?)?)?" "@rdname" br
 #' @rdname ${1:target Rd doc}
 endsnippet
 
+priority 2
 snippet "#' @a(u(t(h(o(r)?)?)?)?)?" "@author" br
 #' @author ${1:Ben Chuanlong Du}
 endsnippet
 
+priority 2
 snippet "#' @" "Roxygen Tags" rb
 #' @$1`!p snip.rv = complete(t[1], ["export", "examples", "param", "rdname", "author", "title", "description"])`
 endsnippet
 
+priority 2
 snippet "#' @t(i(t(l(e)?)?)?)?" "@title" rb
 #' @title ${1:title}
 endsnippet
 
+priority 2
 snippet "#' @d(e(s(c(r(i(p(t(i(o(n)?)?)?)?)?)?)?)?)?)?" "@description" br
 #' @description ${1:description}
 endsnippet
 
+priority 2
 snippet "#' @exa(m(p(l(e)?)?)?)?" "@examples" br
 #' @examples
 #' \dontrun{

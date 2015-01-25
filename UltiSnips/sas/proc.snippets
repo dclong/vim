@@ -5,7 +5,7 @@ endglobal
 # procedure snippets
 
 snippet "p(r(o(c)?)?)?" "Procedure" rb
-proc $1`!p snip.rv = complete(t[1], ["fcmp", "freq", "format", "glm", "iml", "logistic", "means", "mixed", "print", "rank", "reg", "sql", "sort", "transpose", "univariate"])`
+proc $1`!p snip.rv = complete(t[1], ["fcmp", "freq", "format", "glm", "iml", "import", "logistic", "means", "mixed", "print", "rank", "reg", "sql", "sort", "transpose", "univariate"])`
 endsnippet
 
 snippet "proc fcmp" "The FCMP Procedure" b
@@ -63,6 +63,19 @@ snippet sort "Proc Sort" b
 proc sort data = ${1:d} ${2:out = ${3:o}};
 	title "${4:$1 Sorted}";
 	by ${5:descending} ${6:var};
+run;
+endsnippet
+
+priority 2
+snippet "proc import" "The IMPORT Procedure" rb
+proc import 
+    dataFile="${1:file_path}"
+    dbms=$2`!p snip.rv = complete(t[2], ["csv", "dlm", "xlsx"])`
+    ${3:replace}
+    ; 
+    ${4:sheet="${5:sheet_name}";}
+    ${6:getNames=${7:Y};}
+    ${8:dataRow=${9:1};}
 run;
 endsnippet
 
