@@ -4,7 +4,7 @@ from complete import *
 endglobal
 
 # @TODO there is a trailing space issue here!!!
-snippet input "Input in a Data Step" !b
+snippet input "Input in a Data Step" b
 input ${1:variable_name};
 datalines;
 ${2:/*type in data here*/}
@@ -12,7 +12,7 @@ ${2:/*type in data here*/}
 endsnippet
 
 # data step snippets
-snippet "d(a(t(a)?)?)?" "Data Step" !rb
+snippet "d(a(t(a)?)?)?" "Data Step" rb
 data ${1:data_set_name};
     $2`!p snip.rv = complete(t[2], ["input", "merge", "set"])`$3
 run;

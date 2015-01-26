@@ -4,15 +4,15 @@ from complete import *
 endglobal
 
 snippet "identity matrix|eye|diag|i" "Identity Matrix" rw
-i(${1:dim});
+i(${1:dim})
 endsnippet
 
 snippet "matrix|j" "Fill a Matrix" rw
-j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}});
+j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}})
 endsnippet
 
 snippet "rep(e(a(t)?)?)?" "Repeat a Matrix" rw
-repeat(${1:matrix}, ${2:norw}, ${3:ncol});
+repeat(${1:matrix}, ${2:norw}, ${3:ncol})
 endsnippet
 
 snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
@@ -291,5 +291,32 @@ endsnippet
 priority 1
 snippet "rt" "Generate a Random Number from the T Distribution" rw
 rand('T', ${2:degree_freedom}, ${4:non-centrality})
+endsnippet
+
+priority 1
+snippet "read" "Read Data Set into IML" rw
+use ${1:DataSet};
+read all var _all_ into ${2:VarName};
+close $1;
+endsnippet
+
+priority 1
+snippet "diff?" "The dif<n> Function" rw
+dif${2:1}(${1:vector})
+endsnippet
+
+priority 1
+snippet "diff?" "The lag<n> Function" rw
+lag${2:1}(${1:vector})
+endsnippet
+
+priority 1
+snippet "pow(e(r)?)?" "Elementwise Power" rw
+${1:base} ## ${2:power}
+endsnippet
+
+priority 1
+snippet "mpow(e(r)?)?" "Matrix Power" rw
+${1:base_matrix} ** ${2:power}
 endsnippet
 

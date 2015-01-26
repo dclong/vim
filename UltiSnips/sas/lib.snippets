@@ -1,11 +1,11 @@
 
 # library snippets
 
-snippet "lib(n(a(m(e)?)?)?)?" "libname" !rb
+snippet "lib(n(a(m(e)?)?)?)?" "libname" rb
 libname $1`!p snip.rv = complete(t[1], ["_all_"])`
 endsnippet
 
-snippet "(libname \w)" "libname" !rb
+snippet "(libname \w)" "libname" rb
 `!p snip.rv = match.group(1)` $1`!p snip.rv = complete(t[1], ["clear", "list"])`
 endsnippet
 
