@@ -12,7 +12,7 @@ endglobal
 # and parsed correctly
 snippet "snip(p(e(t)?)?)?" "Snippet definition" rb
 priority ${5:1}
-`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:rb}
+`!p snip.rv = "snippet"` "\b${1:RegEx Trigger}" "${2:Description}" ${3:r}
 $4
 `!p snip.rv = "endsnippet"`
 endsnippet
@@ -27,7 +27,10 @@ snippet vis "${VISUAL}" i
 \$\{VISUAL${1:${2:default}${3:/transform/}}\}
 endsnippet
 
-snippet '\b(\d+)' "Surround as Default Value of $1" r
+# You have to invoke this snippet with using: TAB, \d, TAB
+# or
+# You have to invoke this snippet with using: \d, TAB
+snippet "(\d+)" "Surround as Default Value of $1" r
 ${`!p snip.rv = match.group(1)`:${VISUAL}}
 endsnippet
 
