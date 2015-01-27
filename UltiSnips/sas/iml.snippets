@@ -11,10 +11,15 @@ snippet "\bmatrix|\bj" "Fill a Matrix" r
 j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}})
 endsnippet
 
+snippet "\bwhich|\bloc" "The LOC Function" r
+loc(${1:values})
+endsnippet
+
 snippet "\brep(e(a(t)?)?)?" "Repeat a Matrix" r
 repeat(${1:matrix}, ${2:nrow}, ${3:ncol})
 endsnippet
 
+priority 1
 snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
 MatrixReduction.$1`!p snip.rv = complete(t[1], ["addition", "multiplication", "maximum", "minimum", "index of maximum", "index of minimum", "mean", "sums of squares"])`
 endsnippet
@@ -122,11 +127,6 @@ start ${1:fun_name}(${2:arg});
 finish;
 endsnippet
 
-
-priority 1
-snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
-MatrixReduction.$1`!p snip.rv = complete(t[1], ["addition", "multiplication", "maximum", "minimum", "index of maximum", "index of minimum", "mean", "sums of squares"])`
-endsnippet
 
 priority 2
 snippet "\bcdf" "CDF of Distributions" r
