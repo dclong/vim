@@ -13,8 +13,14 @@ endsnippet
 
 # data step snippets
 snippet "d(a(t(a)?)?)?" "Data Step" rb
-data ${1:data_set_name};
-    $2`!p snip.rv = complete(t[2], ["input", "merge", "set"])`$3
+data ${1:data_set};
+	${2:set ${3:data_set};}
+	${4:merge ${5:data_set};}
+	${6:inFile '${7:file_path}';
+	input ${8:v1} ${9:v2};
+	dataLines;
+${10:raw_data}
+;}
 run;
 endsnippet
 

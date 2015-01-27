@@ -4,19 +4,19 @@ from complete import *
 endglobal
 
 # do; ... end;
-snippet "do end block|db" "Do End Block" br
+snippet "\bdo end block|\bdb" "Do End Block" rb
 do;
     ${1:...}
 end;
 endsnippet
 
-snippet if "If Statement" b
+snippet "\bif" "If Statement" rb
 if ${1:condition} then do;
 	$2;
 end;
 endsnippet
 
-snippet ife "If Else Statement" b
+snippet "\bife" "If Else Statement" rb
 if ${1:condition} then do;
 	$2;
 end; else do;
@@ -24,7 +24,7 @@ end; else do;
 end;
 endsnippet
 
-snippet "do" "do Auto Completion" br
+snippet "\bdo" "do Auto Completion" rb
 $1`!p snip.rv = complete(t[1], ["do end block", "do loop", "do until loop", "do while loop"])`
 endsnippet
 

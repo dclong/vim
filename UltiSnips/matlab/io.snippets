@@ -1,17 +1,17 @@
 
-snippet "read table|read.table|dlmread" "Function dlmread" wr
+snippet "\bread table|\bread.table|\bdlmread" "Function dlmread" r
 dlmread(${1:file});
 endsnippet
 
-snippet "write table|write.table|dlmwrite" "Function dlmwrite" wr
+snippet "\bwrite table|\bwrite.table|\bdlmwrite" "Function dlmwrite" r
 dlmwrite(${1:file}, ${2:obj}${3:, 'precision', ${4:15}});
 endsnippet
 
-snippet "read file|fread|scan" "Function fread" wr
+snippet "\bread file|\bfread|\bscan" "Function fread" r
 fread(${1:fileHandle}, ${2:Inf}, ${3:'double'});
 endsnippet
 
-snippet "f(i(l(e)?)?)?.|io." "File Related Functions" w
+snippet "\bf(i(l(e)?)?)?\.|\bio\." "File Related Functions" r
 $1`!p snip.rv = complete(t[1], ["fread", "fopen", "fprintf"])`
 endsnippet
 

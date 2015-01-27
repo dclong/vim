@@ -1,13 +1,13 @@
 
-snippet cat "function cat" w
+snippet "\bcat" "function cat" r
 cat(${1:...}${2:, file = ""}${3:, sep = "${4:}"}${5:, fill = ${6:FALSE}}${7:, labels = ${8:NULL}}${9:, append = ${10:FALSE}})
 endsnippet
 
-snippet io. "IO Functions" w
+snippet "\bio\." "IO Functions" r
 $1`!p snip.rv = complete(t[1], ["cat", "print", "read.table", "write.table"])`
 endsnippet
 
-snippet "write.t(a(b(l(e)?)?)?)?" "function write.table" rw
+snippet "\bwrite.t(a(b(l(e)?)?)?)?" "function write.table" r
 write.table(x=$1, file=$2, row.names=${3:FALSE}, col.names=${4:TRUE}, sep="${5: }")
 endsnippet
 
