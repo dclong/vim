@@ -30,3 +30,23 @@ ${1:fun_name} = function(${2:arg}){
 }
 endsnippet
 
+#priority 1
+#snippet "\blam(b(d(a)?)?)?" "Annonymous/Lambda Function" r
+#function(${1:args}){$2}
+#endsnippet
+
+priority 1
+snippet "\bapp(l(y)?)?" "The apply Function" r
+apply(${1:array}, ${2:on_margin}, ${3:function(${4:args}){$5}}${6:, ${7:optional_args_to_fun}})
+endsnippet
+
+priority 1
+snippet "\blapp(l(y)?)?" "The lapply Function" r
+lapply(${1:vec_list}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}})
+endsnippet
+
+priority 1
+snippet "\bsapp(l(y)?)?" "The sapply Function" r
+sapply(${1:vec_list}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}}${7:, simplify=${8:TRUE}}${9:, USE.NAMES=${10:TRUE}})
+endsnippet
+
