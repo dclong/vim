@@ -52,6 +52,7 @@ fun! SetupVAM()
 
     " Tell VAM which plugins to fetch & load:
     call vam#ActivateAddons(["repeat", "surround", "UltiSnips", "vim-airline", "JSON"], {'auto_install' : 0})
+    "Vim-R-plugin", 
     "SuperTab%182"
     "pythoncomplete"
     "jedi-vim",
