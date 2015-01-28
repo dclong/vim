@@ -3,16 +3,16 @@ global !p
 from complete import *
 endglobal
 
-snippet "max_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::max_element" rw
+snippet "\bmax_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::max_element" r
 std::max_element(${1:first}, ${2:last}${3:, ${4:comparator}})
 endsnippet
 
-snippet "min_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::min_element" rw
+snippet "\bmin_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::min_element" r
 std::min_element(${1:first}, ${2:last}${3:, ${4:comparator}})
 endsnippet
 
 priority 1
-snippet "algo(r(i(t(h(m)?)?)?)?)?\." "STL Algorithms" rw
+snippet "\balgo(r(i(t(h(m)?)?)?)?)?\." "STL Algorithms" r
 std::$1`!p snip.rv = complete(t[1], ["all_of", "any_of", "none_of", "for_each", "count", "count_if", "mismatch", "equal", "find", "find_if", "find_if_not", "find_end", "find_first_of", "adjacent_find", "search", "search_n", "copy", "copy_if", "copy_n", "copy_backward", "move", "move_backward", "fill", "fill_n", "transform", "generate", "generate_n", "remove", "remove_if", "remove_copy", "remove_copy_if", "replace", "replace_if", "replace_copy", "replace_copy_if", "swap", "swap_ranges", "iter_swap", "reverse", "reverse_copy", "rotate", "rotate_copy", "random_shuffle", "shuffle", "unique", "unique_copy", "is_partitioned", "partition", "partition_copy", "stable_partition", "partition_point", "is_sorted", "is_sorted_until", "sort", "partial_sort", "partial_sort_copy", "stable_sort", "nth_element", "lower_bound", "upper_bound", "binary_search", "equal_range", "merge", "inplace_merge", "includes", "set_difference", "set_intersection", "set_symmetric_difference", "set_union", "is_heap", "is_heap_until", "make_heap", "push_heap", "pop_heap", "sort_heap", "max", "max_element", "min", "min_element", "minmax", "minmax_element", "lexicographical_compare", "is_permutation", "next_permutation", "prev_permutation", "iota", "accumulate", "inner_product", "adjacent_difference", "partial_sum", "qsort", "bsearch"])`
 endsnippet
 

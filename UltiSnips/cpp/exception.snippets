@@ -3,10 +3,10 @@ global !p
 from complete import *
 endglobal
 
-snippet "run(t(i(m(e(_(e(r(r(o(r)?)?)?)?)?)?)?)?)?)?" "std::runtime_error" rw
+snippet "\brun(t(i(m(e(_(e(r(r(o(r)?)?)?)?)?)?)?)?)?)?" "std::runtime_error" r
 throw std::runtime_error(${1:error_message});
 endsnippet
 
-snippet "throw" "std::throw" rw
+snippet "\bthrow" "std::throw" rb
 throw std::$1`!p snip.rv = complete(t[1], ["runtime_error"])`
 endsnippet
