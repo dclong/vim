@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "\bos\.p(a(t(h)?)?)?\." "Methods of os.path" r
-os.path.$1`!p snip.rv = complete(t[1], ["abspath", "basename", "commonprefix", "dirname", "exists", "lexists", "expanduser", "expandvars", "getatime", "getmtime", "getctime", "getsize", "isabs", "isfile", "isdir", "islink", "ismount", "join", "normcase", "normpath", "realpath", "relpath", "samefile", "sameopenfile", "samestat", "split", "splitdrive", "splitext", "splitunc", "walk", "supports_unicode_filenames"])`
+os.path.$1`!p snip.rv = complete(t[1], "python/os.path.json")`
 endsnippet
 
 snippet "\bos.path.abspath[a-zA-Z]?" "os.path.abspath" r

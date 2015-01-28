@@ -1,0 +1,9 @@
+[
+    "atoi: *convert string to integer",
+    "atol: *convert string to long integer",
+    "atoll: *convert string to long long integer",
+    "stoi: convert this string to integer",
+    "stol: convert this string to long integer",
+    "stoll: convert this string to long long integer",
+    "size: length of this string"
+]

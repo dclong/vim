@@ -1,0 +1,16 @@
+[
+    "copyfileobj",
+    "copyfile",
+    "copymode",
+    "copystat",
+    "copy",
+    "copy2",
+    "ignore_patterns",
+    "copytree",
+    "rmtree",
+    "move",
+    "make_archive",
+    "get_archive_formats",
+    "register_archive_format",
+    "unregister_archive_format"
+]

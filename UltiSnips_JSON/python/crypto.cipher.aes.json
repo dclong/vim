@@ -1,0 +1,10 @@
+[
+    "new",
+    "MODE_ECB",
+    "MODE_CBC",
+    "MODE_CFB",
+    "MODE_PGP",
+    "MODE_OFB",
+    "MODE_CTR",
+    "MODE_OPENPGP"
+]

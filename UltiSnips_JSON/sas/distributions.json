@@ -1,0 +1,22 @@
+[
+    "BERN",
+    "BETA",
+    "BINOM",
+    "CAUCHY",
+    "CHISQ",
+    "EXPO",
+    "F",
+    "GAMMA",
+    "HYPER",
+    "LAPLACE",
+    "LOGISTIC",
+    "LOGNORMAL",
+    "NEGB",
+    "NORMAL",
+    "PARETO",
+    "POISSON",
+    "T",
+    "UNIFORM",
+    "WALD",
+    "WEIBULL"
+]

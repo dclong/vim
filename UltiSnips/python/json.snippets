@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "json\." "Methods of json." r
-json.$1`!p snip.rv = complete(t[1], ["dump", "dumps", "load", "loads"])`
+json.$1`!p snip.rv = complete(t[1], "python/json.json")`
 endsnippet
 
 snippet "\bjson.dump[a-zA-Z]?" "json.dump" r

@@ -1,0 +1,17 @@
+[
+    "close",
+    "flush",
+    "fileno",
+    "isatty",
+    "next",
+    "open",
+    "read",
+    "readline",
+    "readlines",
+    "xreadlines",
+    "seek",
+    "tell",
+    "truncate",
+    "write",
+    "writelines"
+]

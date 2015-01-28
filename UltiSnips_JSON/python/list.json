@@ -1,0 +1,13 @@
+[
+    "append",
+    "extend",
+    "insert",
+    "len",
+    "list",
+    "remove",
+    "pop",
+    "index",
+    "count",
+    "sort",
+    "reverse"
+]

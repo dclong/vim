@@ -3,11 +3,11 @@ from complete import *
 endglobal
 
 snippet "g(r(e(e(k)?)?)?)?\." "Math Formula" r
-$1`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
+$1`!p snip.rv = complete(t[1], "tex/math.json")`
 endsnippet
 
 snippet "m(a(t(h)?)?)?\." "Math Formula" r
-$1`!p snip.rv = complete(t[1], ["alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta", "theta", "vartheta", "kappa", "lambda", "mu", "nu", "xi", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau", "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta", "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega"])`
+$1`!p snip.rv = complete(t[1], "text/math.json")`
 endsnippet
 
 snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb

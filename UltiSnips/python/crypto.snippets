@@ -3,15 +3,15 @@ from complete import *
 endglobal
 
 snippet "crypto\." "Methods of crypto." r
-Crypto.$1`!p snip.rv = complete(t[1], ["Cipher", "Hash", "Protocol", "PublicKey", "Signature", "Util"])`
+Crypto.$1`!p snip.rv = complete(t[1], "python/crypto.json")`
 endsnippet
 
 snippet "Crypto.Cipher\." "Methods of Crypto.Cipher." r
-Crypto.Cipher.$1`!p snip.rv = complete(t[1], ["AES", "ARC2", "ARC4", "Blowfish", "CAST", "DES", "DES3", "XOR"])`
+Crypto.Cipher.$1`!p snip.rv = complete(t[1], "crypto.cipher.json")`
 endsnippet
 
 snippet "Crypto.Cipher.AES\." "Methods of Crypto.Cipher.AES." r
-Crypto.Cipher.AES.$1`!p snip.rv = complete(t[1], ["new", "MODE_ECB", "MODE_CBC", "MODE_CFB", "MODE_PGP", "MODE_OFB", "MODE_CTR", "MODE_OPENPGP"])`
+Crypto.Cipher.AES.$1`!p snip.rv = complete(t[1], "crypto.cipher.aes.json")`
 endsnippet
 
 snippet "\bCrypto.Cipher.AES.new[a-zA-Z]?" "Crypto.Cipher.AES.new" r

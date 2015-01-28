@@ -1,0 +1,13 @@
+[
+    "argparse",
+    "datetime",
+    "getopt",
+    "nltk",
+    "numpy",
+    "os",
+    "subprocess",
+    "warnings",
+    "shutil",
+    "hashlib",
+    "sys"
+]

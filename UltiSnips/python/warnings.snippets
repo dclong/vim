@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "w(a(r(n(i(n(g(s)?)?)?)?)?)?)?\." "Methods of warnings" rb
-warnings.$1`!p snip.rv = complete(t[1], ["simplefilter", "warn", "warn_explicit", "warnpy3k", "showwarning", "formatwarning", "filterwarnings", "simplefilter", "resetwarnings"])`
+warnings.$1`!p snip.rv = complete(t[1], "python/warnings.json")`
 endsnippet
 
 snippet "\bwarnings.simplefilter\*?" "warnings.simplefilter" r

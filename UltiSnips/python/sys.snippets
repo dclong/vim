@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet sys. "Methods of sys." b
-sys.$1`!p snip.rv = complete(t[1], ["argv", "byteorder", "builtin_module_names", "call_tracing", "copyright", "_clear_type_cache", "_current_frames", "dllhandle", "displayhook", "dont_write_bytecode", "excepthook", "__displayhook__", "__excepthook__", "exc_info", "exc_clear", "exc_type", "exc_value", "exc_traceback", "exec_prefix", "executable", "exit", "exitfunc", "flags", "float_info", "float_repr_style", "getcheckinterval", "getdefaultencoding", "getdlopenflags", "getfilesystemencoding", "getrefcount", "getrecursionlimit", "getsizeof", "_getframe", "getprofile", "gettrace", "getwindowsversion", "hexversion", "long_info", "last_type", "last_value", "last_traceback", "maxint", "maxsize", "maxunicode", "meta_path", "modules", "path", "path_hooks", "path_importer_cache", "platform", "prefix", "ps1", "ps2", "py3kwarning", "setcheckinterval", "setdefaultencoding", "setdlopenflags", "setprofile", "setrecursionlimit", "settrace", "settscdump", "stdin", "stdout", "stderr", "__stdin__", "__stdout__", "__stderr__", "subversion", "tracebacklimit", "version", "api_version", "version_info", "warnoptions", "winver"])`
+sys.$1`!p snip.rv = complete(t[1], "python/sys.json")`
 endsnippet
 
 snippet "\bsys.call_tracing[a-zA-Z]?" "sys.call_tracing" r

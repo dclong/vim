@@ -1,0 +1,11 @@
+[
+    "simplefilter",
+    "warn",
+    "warn_explicit",
+    "warnpy3k",
+    "showwarning",
+    "formatwarning",
+    "filterwarnings",
+    "simplefilter",
+    "resetwarnings"
+]

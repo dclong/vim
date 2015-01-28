@@ -21,7 +21,7 @@ endsnippet
 
 priority 1
 snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
-MatrixReduction.$1`!p snip.rv = complete(t[1], ["addition", "multiplication", "maximum", "minimum", "index of maximum", "index of minimum", "mean", "sums of squares"])`
+MatrixReduction.$1`!p snip.rv = complete(t[1], "sas/matrix_reduction.json")`
 endsnippet
 
 priority 2
@@ -130,27 +130,27 @@ endsnippet
 
 priority 2
 snippet "\bcdf" "CDF of Distributions" r
-cdf('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:quantile}, ${3:args})
+cdf('$1`!p snip.rv = complete(t[1], "sas/distributions.json")`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 3
 snippet "\blogcdf" "Logarithm of CDF of Distributions" r
-logcdf('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:quantile}, ${3:args})
+logcdf('$1`!p snip.rv = complete(t[1], "sas/distributions.json")`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 2
 snippet "\bpdf" "PDF of Distributions" r
-pdf('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:quantile}, ${3:args})
+pdf('$1`!p snip.rv = complete(t[1], "sas/distributions.json")`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 1
 snippet "\bquantile" "Quantile of Distributions/Inverse CDFs" r
-quantile('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:probability}, ${3:args})
+quantile('$1`!p snip.rv = complete(t[1], "sas/distributions.json")`', ${2:probability}, ${3:args})
 endsnippet
 
 priority 1
 snippet "\brand" "Generate Random Numbers" r
-rand('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:args})
+rand('$1`!p snip.rv = complete(t[1], "sas/distributions.json")`', ${2:args})
 endsnippet
 
 priority 1

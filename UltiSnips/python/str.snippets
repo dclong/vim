@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "\bs(t(r)?)?\." "Methods of The str Class" r
-str.$1`!p snip.rv = complete(t[1], ["capitalize", "center", "count", "decode", "encode", "endswith", "expandtabs", "find", "format", "index", "isalnum", "isalpha", "isdigit", "islower", "isspace", "istitle", "isupper", "join", "len", "ljust", "lower", "lstrip", "partition", "replace", "rfind", "rindex", "rjust", "rpartition", "rsplit", "rstrip", "split", "splitlines", "startswith", "str", "strip", "swapcase", "title", "translate", "upper", "zfill", "isnumeric", "isdecimal"])`
+str.$1`!p snip.rv = complete(t[1], "python/str.json")`
 endsnippet
 
 snippet "\bstr.str[a-zA-Z]?" "str()" r

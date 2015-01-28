@@ -3,11 +3,11 @@ from complete import *
 endglobal
 
 snippet "cf\." "Control Flow" r
-$1`!p snip.rv = complete(t[1], ["for", "while", "break", "continue", "exit", "if", "elif", "else", "try", "pass"])`
+$1`!p snip.rv = complete(t[1], "python/control_flow.json")`
 endsnippet
 
 snippet "lo(o(p)?)?\." "Loop" r
-$1`!p snip.rv = complete(t[1], ["for", "while", "break", "continue", "exit"])`
+$1`!p snip.rv = complete(t[1], "python/loop.json")`
 endsnippet
 
 snippet for "for loop" b
