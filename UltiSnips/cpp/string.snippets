@@ -5,7 +5,7 @@ endglobal
 
 priority 1
 snippet "\bstr(i(n(g)?)?)?\." "Functions/methods of String" r
-${2:str_obj}.$1`!p snip.rv = complete(t[1], ["atoi", "atol", "atoll", "stoi", "stol", "stoll", "size"])`
+${2:str_obj}.$1`!p snip.rv = complete(t[1], ["atoi: *convert string to integer", "atol: *convert string to long integer", "atoll: *convert string to long long integer", "stoi: convert this string to integer", "stol: convert this string to long integer", "stoll: convert this string to long long integer", "size: length of this string"])`
 endsnippet
 
 priority 2
