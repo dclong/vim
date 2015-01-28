@@ -3,18 +3,23 @@ global !p
 from complete import *
 endglobal
 
-snippet "identity matrix|eye|diag|i" "Identity Matrix" rw
-i(${1:dim});
+snippet "\bidentity matrix|\beye|\bdiag|\bi" "Identity Matrix" r
+i(${1:dim})
 endsnippet
 
-snippet "matrix|j" "Fill a Matrix" rw
-j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}});
+snippet "\bmatrix|\bj" "Fill a Matrix" r
+j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}})
 endsnippet
 
-snippet "rep(e(a(t)?)?)?" "Repeat a Matrix" rw
-repeat(${1:matrix}, ${2:norw}, ${3:ncol});
+snippet "\bwhich|\bloc" "The LOC Function" r
+loc(${1:values})
 endsnippet
 
+snippet "\brep(e(a(t)?)?)?" "Repeat a Matrix" r
+repeat(${1:matrix}, ${2:nrow}, ${3:ncol})
+endsnippet
+
+priority 1
 snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
 MatrixReduction.$1`!p snip.rv = complete(t[1], ["addition", "multiplication", "maximum", "minimum", "index of maximum", "index of minimum", "mean", "sums of squares"])`
 endsnippet
@@ -123,173 +128,195 @@ finish;
 endsnippet
 
 
-priority 1
-snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
-MatrixReduction.$1`!p snip.rv = complete(t[1], ["addition", "multiplication", "maximum", "minimum", "index of maximum", "index of minimum", "mean", "sums of squares"])`
-endsnippet
-
 priority 2
-snippet "cdf" "CDF of Distributions" rw
+snippet "\bcdf" "CDF of Distributions" r
 cdf('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 3
-snippet "logcdf" "Logarithm of CDF of Distributions" rw
+snippet "\blogcdf" "Logarithm of CDF of Distributions" r
 logcdf('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 2
-snippet "pdf" "PDF of Distributions" rw
+snippet "\bpdf" "PDF of Distributions" r
 pdf('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 1
-snippet "quantile" "Quantile of Distributions/Inverse CDFs" rw
+snippet "\bquantile" "Quantile of Distributions/Inverse CDFs" r
 quantile('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:probability}, ${3:args})
 endsnippet
 
 priority 1
-snippet "rand" "Generate Random Numbers" rw
+snippet "\brand" "Generate Random Numbers" r
 rand('$1`!p snip.rv = complete(t[1], ["BERN", "BETA", "BINOM", "CAUCHY", "CHISQ", "EXPO", "F", "GAMMA", "HYPER", "LAPLACE", "LOGISTIC", "LOGNORMAL", "NEGB", "NORMAL", "PARETO", "POISSON", "T", "UNIFORM", "WALD", "WEIBULL"])`', ${2:args})
 endsnippet
 
 priority 1
-snippet "pnorm" "CDF of the Normal Distribution" rw
+snippet "\bpnorm" "CDF of the Normal Distribution" r
 cdf('NORMAL', ${1:quantile}, ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "dnorm" "PDF of the Normal Distribution" rw
+snippet "\bdnorm" "PDF of the Normal Distribution" r
 pdf('NORMAL', ${1:quantile}, ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "qnorm" "Quantile of the Normal Distribution" rw
+snippet "\bqnorm" "Quantile of the Normal Distribution" r
 quantile('NORMAL', ${1:probability}, ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "rnorm" "Generate a Random Number from the Normal Distribution" rw
+snippet "\brnorm" "Generate a Random Number from the Normal Distribution" r
 rand('NORMAL', ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "pbern" "CDF of the Bernoulli Distribution" rw
+snippet "\bpbern" "CDF of the Bernoulli Distribution" r
 cdf('BERNOULLI', ${1:quantile}, ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "dbern" "PDF of the Bernoulli Distribution" rw
+snippet "\bdbern" "PDF of the Bernoulli Distribution" r
 pdf('BERNOULLI', ${1:quantile}, ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "qbern" "Quantile of the Bernoulli Distribution" rw
+snippet "\bqbern" "Quantile of the Bernoulli Distribution" r
 quantile('BERNOULLI', ${1:probability}, ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "rbern" "Generate a Random Number from the Bernoulli Distribution" rw
+snippet "\brbern" "Generate a Random Number from the Bernoulli Distribution" r
 rand('BERNOULLI', ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "pbeta" "CDF of the Beta Distribution" rw
+snippet "\bpbeta" "CDF of the Beta Distribution" r
 cdf('BETA', ${1:quantile}, ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "dbeta" "PDF of the Beta Distribution" rw
+snippet "\bdbeta" "PDF of the Beta Distribution" r
 pdf('BETA', ${1:quantile}, ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "qbeta" "Quantile of the Beta Distribution" rw
+snippet "\bqbeta" "Quantile of the Beta Distribution" r
 quantile('BETA', ${1:probability}, ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "rbeta" "Generate a Random Number from the Beta Distribution" rw
+snippet "\brbeta" "Generate a Random Number from the Beta Distribution" r
 rand('BETA', ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "pbinom" "CDF of the Binomial Distribution" rw
+snippet "\bpbinom" "CDF of the Binomial Distribution" r
 cdf('BINOMIAL', ${1:quantile}, ${2:success_probability}, ${3:size})
 endsnippet
 
 priority 1
-snippet "dbinom" "PDF of the Binomial Distribution" rw
+snippet "\bdbinom" "PDF of the Binomial Distribution" r
 pdf('BINOMIAL', ${1:quantile}, ${2:success_probability}, ${3:size})
 endsnippet
 
 priority 1
-snippet "qbinom" "Quantile of the Binomial Distribution" rw
+snippet "\bqbinom" "Quantile of the Binomial Distribution" r
 quantile('BINOMIAL', ${1:probability}, ${2:success_probability}, ${3:size})
 endsnippet
 
 priority 1
-snippet "rbinom" "Generate a Random Number from the Binomial Distribution" rw
+snippet "\brbinom" "Generate a Random Number from the Binomial Distribution" r
 rand('BINOMIAL', ${2:p}, ${3:size})
 endsnippet
 
 priority 1
-snippet "pchisq" "CDF of the Chi-Square Distribution" rw
+snippet "\bpchisq" "CDF of the Chi-Square Distribution" r
 cdf('CHISQUARE', ${1:quantile}, ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "dchisq" "PDF of the Chi-Square Distribution" rw
+snippet "\bdchisq" "PDF of the Chi-Square Distribution" r
 pdf('CHISQUARE', ${1:quantile}, ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "qchisq" "Quantile of the Chi-Square Distribution" rw
+snippet "\bqchisq" "Quantile of the Chi-Square Distribution" r
 quantile('CHISQUARE', ${1:probability}, ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "rchisq" "Generate a Random Number from the Chi-Square Distribution" rw
+snippet "\brchisq" "Generate a Random Number from the Chi-Square Distribution" r
 rand('CHISQUARE', ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "pf" "CDF of the F Distribution" rw
+snippet "\bpf" "CDF of the F Distribution" r
 cdf('F', ${1:quantile}, ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "df" "PDF of the F Distribution" rw
+snippet "\bdf" "PDF of the F Distribution" r
 pdf('F', ${1:quantile}, ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "qf" "Quantile of the F Distribution" rw
+snippet "\bqf" "Quantile of the F Distribution" r
 quantile('F', ${1:probability}, ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "rf" "Generate a Random Number from the F Distribution" rw
+snippet "\brf" "Generate a Random Number from the F Distribution" r
 rand('F', ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "pt" "CDF of the T Distribution" rw
+snippet "\bpt" "CDF of the T Distribution" r
 cdf('T', ${1:quantile}, ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "dt" "PDF of the T Distribution" rw
+snippet "\bdt" "PDF of the T Distribution" r
 pdf('T', ${1:quantile}, ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "qt" "Quantile of the T Distribution" rw
+snippet "\bqt" "Quantile of the T Distribution" r
 quantile('T', ${1:probability}, ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "rt" "Generate a Random Number from the T Distribution" rw
+snippet "\brt" "Generate a Random Number from the T Distribution" r
 rand('T', ${2:degree_freedom}, ${4:non-centrality})
+endsnippet
+
+priority 1
+snippet "\bread" "Read Data Set into IML" r
+use ${1:DataSet};
+read all var _all_ into ${2:VarName};
+close $1;
+endsnippet
+
+priority 1
+snippet "\bdiff?" "The dif<n> Function" r
+dif${2:1}(${1:vector})
+endsnippet
+
+priority 1
+snippet "\bdiff?" "The lag<n> Function" r
+lag${2:1}(${1:vector})
+endsnippet
+
+priority 1
+snippet "\bpow(e(r)?)?" "Elementwise Power" r
+${1:base} ## ${2:power}
+endsnippet
+
+priority 1
+snippet "\bmpow(e(r)?)?" "Matrix Power" r
+${1:base_matrix} ** ${2:power}
 endsnippet
 

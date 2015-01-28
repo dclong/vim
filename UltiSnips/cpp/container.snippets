@@ -4,48 +4,48 @@ from complete import *
 endglobal
 
 priority 2
-snippet ":?:umap" "std::unordered_map" rw
+snippet "\b:?:umap" "std::unordered_map" r
 std::unordered_map<${1:key}, ${2:value}>
 endsnippet
 
 priority 2
-snippet ":?:uset" "std::unordered_set" rw
+snippet "\b:?:uset" "std::unordered_set" r
 std::unordered_set<${1:Type}>
 endsnippet
 
 priority 1
-snippet ":?:set" "std::set" rw
+snippet "\b:?:set" "std::set" r
 std::set<${1:Type}>
 endsnippet
 
 priority 1
-snippet ":?:map" "std::map" rw
+snippet "\b:?:map" "std::map" r
 std::map<${1:key}, ${2:value}>
 endsnippet
 
-snippet ":?:vec(t(o(r)?)?)?" "std::vector" rw
+snippet "\b:?:vec(t(o(r)?)?)?" "std::vector" r
 std::vector<${1:Type}>
 endsnippet
 
 priority 1
-snippet ":?:it" "Iterator" rw
+snippet "\b:?:it" "Iterator" r
 ::iterator
 endsnippet
 
 priority 2
-snippet ":?:cit" "Const Iterator" rw
+snippet "\b:?:cit" "Const Iterator" r
 ::const_iterator
 endsnippet
 
 priority 2
-snippet "forit" "For Loop Using Iterator" rw
+snippet "\bforit" "For Loop Using Iterator" rb
 for(${2:Type} ${3:it}=${1:obj}.begin(); $3!=$1.end(); ++$3){
 	${4:/* code */}
 }
 endsnippet
 
 priority 3
-snippet "forcit" "For Loop Using Const Iterator" rw
+snippet "\bforcit" "For Loop Using Const Iterator" rb
 for(${2:Type} ${3:it}=${1:obj}.cbegin(); $3!=$1.cend(); ++$3){
 	${4:/* code */}
 }

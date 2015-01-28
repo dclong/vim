@@ -3,27 +3,27 @@ global !p
 from complete import *
 endglobal
 
-snippet "a(r(r(a(y)?)?)?)?\.|m(a(t(r(i(x)?)?)?)?)?\." "Array/Matrix Related Functions" wr
+snippet "\ba(r(r(a(y)?)?)?)?\.|\bm(a(t(r(i(x)?)?)?)?)?\." "Array/Matrix Related Functions" r
 $1`!p snip.rv = complete(t[1], ["numel", "ones", "reshape", "size", "zeros"])`
 endsnippet
 
-snippet "number of elements?|len(gth)?|numel" "Function numel" wr
+snippet "\bnumber of elements?|\blen(gth)?|\bnumel" "Function numel" r
 numel(${1:array});
 endsnippet
 
-snippet "reshape|matrix|array" "Function reshape" wr
+snippet "\breshape|\bmatrix|\barray" "Function reshape" r
 reshape(${1:array}, [$2]);
 endsnippet
 
-snippet "(array|matrix) of zero|zero matrix|zeros" "Function zeros" wr
+snippet "\b(array|matrix) of zero|\bzero matrix|\bzeros" "Function zeros" r
 zeros(${1:d1}, ${2:d2});
 endsnippet
 
-snippet "column (combine|concatenate)|(combine|concatenate) by column|horzcat|cbind" "Function zeros" wr
+snippet "\bcolumn (combine|concatenate)|\b(combine|concatenate) by column|\bhorzcat|cbind" "Function zeros" r
 horzcat(${1:m1}, ${2:m2}${3:, m3});
 endsnippet
 
-snippet "row (combine|concatenate)|(combine|concatenate) by row|vertcat|rbind" "Function zeros" wr
+snippet "\brow (combine|concatenate)|\b(combine|concatenate) by row|\bvertcat|\brbind" "Function zeros" r
 vertcat(${1:m1}, ${2:m2}${3:, m3});
 endsnippet
 
