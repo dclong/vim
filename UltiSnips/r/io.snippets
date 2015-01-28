@@ -4,7 +4,7 @@ cat(${1:...}${2:, file = ""}${3:, sep = "${4:}"}${5:, fill = ${6:FALSE}}${7:, la
 endsnippet
 
 snippet "\bio\." "IO Functions" r
-$1`!p snip.rv = complete(t[1], ["cat", "print", "read.table", "write.table"])`
+$1`!p snip.rv = complete(t[1], "r/io.json")`
 endsnippet
 
 snippet "\bwrite.t(a(b(l(e)?)?)?)?" "function write.table" r
