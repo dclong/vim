@@ -1,0 +1,12 @@
+
+global !p
+from complete import *
+endglobal
+
+snippet "run(t(i(m(e(_(e(r(r(o(r)?)?)?)?)?)?)?)?)?)?" "std::runtime_error" rw
+throw std::runtime_error(${1:error_message});
+endsnippet
+
+snippet "throw" "std::throw" rw
+throw std::$1`!p snip.rv = complete(t[1], ["runtime_error"])`
+endsnippet
