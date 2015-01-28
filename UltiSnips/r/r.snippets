@@ -1,3 +1,5 @@
+extends programming
+
 global !p
 from complete import *
 endglobal
@@ -37,16 +39,16 @@ endsnippet
 
 priority 1
 snippet "\bapp(l(y)?)?" "The apply Function" r
-apply(${1:array}, ${2:on_margin}, ${3:function(${4:args}){$5}}${6:, ${7:optional_args_to_fun}})
+apply(${1:${VISUAL:array}}, ${2:on_margin}, ${3:function(${4:args}){$5}}${6:, ${7:optional_args_to_fun}})
 endsnippet
 
 priority 1
 snippet "\blapp(l(y)?)?" "The lapply Function" r
-lapply(${1:vec_list}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}})
+lapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}})
 endsnippet
 
 priority 1
 snippet "\bsapp(l(y)?)?" "The sapply Function" r
-sapply(${1:vec_list}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}}${7:, simplify=${8:TRUE}}${9:, USE.NAMES=${10:TRUE}})
+sapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}}${7:, simplify=${8:TRUE}}${9:, USE.NAMES=${10:TRUE}})
 endsnippet
 
