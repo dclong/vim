@@ -1,17 +1,17 @@
 
-snippet "\ble\b" "<=" r
+snippet "\ble" "<=" r
 <=
 endsnippet
 
-snippet ge ">=" w
+snippet "\bge" ">=" r
 >=
 endsnippet
 
-snippet eq "==" w
+snippet "\beq" "==" r
 ==
 endsnippet
 
-snippet ne "!=" w
+snippet "\bne" "!=" r
 !=
 endsnippet
 
@@ -23,17 +23,35 @@ snippet "\bdec(r(e(a(s)?)?)?)?" "+=" r
 -=
 endsnippet
 
-snippet /3 "Comment Block" b
+snippet "\b/3" "Comment Block" rb
 /*
 $1
 */
 endsnippet
 
-snippet "b(r(e(a)?)?)?" "break a loop" rb
+priority 1
+snippet "\bb(r(e(a)?)?)?" "break a loop" r
 break
 endsnippet
 
-snippet "c(o(n(t(i(n(u)?)?)?)?)?)?" "continue a loop" rb
+priority 1
+snippet "\bc(o(n(t(i(n(u)?)?)?)?)?)?" "continue a loop" r
 continue
+endsnippet
+
+
+priority 1
+snippet "\bnot" "NOT" r
+!
+endsnippet
+
+priority 1
+snippet "\bor" "OR" r
+|
+endsnippet
+
+priority 1
+snippet "\band" "AND" r
+&
 endsnippet
 
