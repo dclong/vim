@@ -3,27 +3,37 @@ global !p
 from complete import *
 endglobal
 
+priority 1
 snippet "\ba(r(r(a(y)?)?)?)?\.|\bm(a(t(r(i(x)?)?)?)?)?\." "Array/Matrix Related Functions" r
 $1`!p snip.rv = complete(t[1], ["numel", "ones", "reshape", "size", "zeros"])`
 endsnippet
 
+priority 1
 snippet "\bnumber of elements?|\blen(gth)?|\bnumel" "Function numel" r
 numel(${1:array});
 endsnippet
 
+priority 1
 snippet "\breshape|\bmatrix|\barray" "Function reshape" r
 reshape(${1:array}, [$2]);
 endsnippet
 
+priority 1
 snippet "\b(array|matrix) of zero|\bzero matrix|\bzeros" "Function zeros" r
 zeros(${1:d1}, ${2:d2});
 endsnippet
 
+priority 1
 snippet "\bcolumn (combine|concatenate)|\b(combine|concatenate) by column|\bhorzcat|cbind" "Function zeros" r
 horzcat(${1:m1}, ${2:m2}${3:, m3});
 endsnippet
 
+priority 1
 snippet "\brow (combine|concatenate)|\b(combine|concatenate) by row|\bvertcat|\brbind" "Function zeros" r
 vertcat(${1:m1}, ${2:m2}${3:, m3});
 endsnippet
 
+priority 1
+snippet "\bmean" "The mean Function" r
+mean(${1:matrix}, $2`!p snip.rv = complete(t[2], ["1: column means", "2: row means"])`)
+endsnippet
