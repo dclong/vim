@@ -1,0 +1,17 @@
+
+global !p
+from complete import *
+endglobal
+
+snippet "\btrue" "TRUE" r
+TRUE
+endsnippet
+
+snippet "\bfalse" "FALSE" r
+FALSE
+endsnippet
+
+snippet "\bb(o(o(l(e(a(n)?)?)?)?)?)?\." "Boolean Values" r
+$1`!p snip.rv = complete(t[1], ["FALSE", "TRUE"])`
+endsnippet
+

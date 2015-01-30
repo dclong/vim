@@ -4,51 +4,21 @@ global !p
 from complete import *
 endglobal
 
-snippet "\btrue" "TRUE" r
-TRUE
-endsnippet
-
-snippet "\bfalse" "FALSE" r
-FALSE
-endsnippet
-
-snippet "\bb(o(o(l(e(a(n)?)?)?)?)?)?\." "Boolean Values" r
-$1`!p snip.rv = complete(t[1], ["FALSE", "TRUE"])`
-endsnippet
-
-snippet "\bif" "If" r
-if(${1:condition}){
-	$2
-}
-endsnippet
-
-snippet "\bidentity matrix|\bi|\beye|\bdiag" "Identity Matrix" r
-diag(x=${1:1}, ${2:nrow}, ${3:ncol})
-endsnippet
-
-snippet "\bfun(c(t(i(o(n)?)?)?)?)?" "Define a Function" rb
-${1:fun_name} = function(${2:arg}){
-	${3:}
-}
-endsnippet
-
 #priority 1
 #snippet "\blam(b(d(a)?)?)?" "Annonymous/Lambda Function" r
 #function(${1:args}){$2}
 #endsnippet
 
 priority 1
-snippet "\bapp(l(y)?)?" "The apply Function" r
-apply(${1:${VISUAL:array}}, $2`!p snip.rv = complete(t[2], ["1: apply fun on row", "2: apply fun on column"])`, ${3:function(${4:args}){$5}}${6:, ${7:optional_args_to_fun}})
+snippet "\bfun(c(t(i(o(n)?)?)?)?)?" "Define a Function" rb
+${1:fun_name} = function(${2:arg}){
+	${3:}
+}
 endsnippet
 
 priority 1
-snippet "\blapp(l(y)?)?" "The lapply Function" r
-lapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}})
+snippet "\bfor" "The for Loop" rb
+for(${1:i} in ${2:vector}){
+    $3
+}
 endsnippet
-
-priority 1
-snippet "\bsapp(l(y)?)?" "The sapply Function" r
-sapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}}${7:, simplify=${8:TRUE}}${9:, USE.NAMES=${10:TRUE}})
-endsnippet
-

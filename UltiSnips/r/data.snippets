@@ -1,0 +1,11 @@
+
+priority 1
+snippet "\bidentity matrix|\bi|\beye|\bdiag" "Identity Matrix" r
+diag(x=${1:1}, ${2:nrow}, ${3:ncol})
+endsnippet
+
+priority 1
+snippet "\bmatrix|\bj" "Fill a Matrix" r
+matrix(data=${1:NA}, nrow=${2:1}, ncol=${3:1}${4:${5:, byrow=${6:FALSE}}${7:, dimnames=${8:NULL}}})
+endsnippet
+

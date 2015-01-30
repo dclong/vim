@@ -1,0 +1,29 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "dist\." "Distribution-related Functions" r
+$1`!p snip.rv = complete(t[1], ["dnorm", "pnorm", "qnorm", "rnorm"])`
+endsnippet
+
+priority 1
+snippet "\bdnorm[a-zA-Z]?" "dnorm" r
+dnorm(${1:x}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}${7:, log=${8:FALSE}}})
+endsnippet
+
+priority 1
+snippet "\bpnorm[a-zA-Z]?" "pnorm" r
+pnorm(${1:q}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}${7:, lower.tail=${8:TRUE}}${9:, log.p=${10:FALSE}}})
+endsnippet
+
+priority 1
+snippet "\bqnorm[a-zA-Z]?" "qnorm" r
+qnorm(${1:p}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}${7:, lower.tail=${8:TRUE}}${9:, log.p=${10:FALSE}}})
+endsnippet
+
+priority 1
+snippet "\brnorm[a-zA-Z]?" "rnorm" r
+rnorm(n=${1:1}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}})
+endsnippet
