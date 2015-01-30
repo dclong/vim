@@ -83,6 +83,7 @@ def foldmarker():
 
 endglobal
 
+priority 1
 snippet box "A nice box with the current comment symbol" b
 `!p
 box = make_box(len(t[1]))
@@ -93,6 +94,7 @@ snip.rv = box[2] + '\n' + box[3]`
 $0
 endsnippet
 
+priority 1
 snippet bbox "A nice box over the full width" b
 `!p
 width = int(vim.eval("&textwidth")) or 71
@@ -104,14 +106,17 @@ snip.rv = box[2] + '\n' + box[3]`
 $0
 endsnippet
 
+priority 1
 snippet fold "Insert a vim fold marker" b
 `!p snip.rv = _get_comment_format()[0]` ${1:Fold description} `!p snip.rv = foldmarker()[0]`${2:1} `!p snip.rv = _get_comment_format()[2]`
 endsnippet
 
+priority 1
 snippet foldc "Insert a vim fold close marker" b
 `!p snip.rv = _get_comment_format()[0]` ${2:1}`!p snip.rv = foldmarker()[1]` `!p snip.rv = _get_comment_format()[2]`
 endsnippet
 
+priority 1
 snippet foldp "Insert a vim fold marker pair" b
 `!p snip.rv = _get_comment_format()[0]` ${1:Fold description} `!p snip.rv = foldmarker()[0]` `!p snip.rv = _get_comment_format()[2]`
 ${2:${VISUAL:Content}}
