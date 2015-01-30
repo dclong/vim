@@ -55,3 +55,26 @@ snippet "\band" "AND" r
 &
 endsnippet
 
+priority 1
+snippet "\bif" "if ..." rb
+if(${1:condition}){
+	$2
+}
+endsnippet
+
+priority 1
+snippet "\bife(l(s(e)?)?)?" "if ... else ..." rb
+if(${1:condition}){
+	${2:}
+}else{
+	${3:}
+}
+endsnippet
+
+priority 1
+snippet "\be(l(s(e)?)?)?" "else" rb
+else{
+    ${1:}
+}
+endsnippet
+
