@@ -2,32 +2,38 @@ global !p
 from complete import *
 endglobal
 
-snippet "cf\." "Control Flow" r
+priority 1
+snippet "\bcf\." "Control Flow" rb
 $1`!p snip.rv = complete(t[1], "python/control_flow.json")`
 endsnippet
 
-snippet "lo(o(p)?)?\." "Loop" r
+priority 1
+snippet "\blo(o(p)?)?\." "Loop" rb
 $1`!p snip.rv = complete(t[1], "python/loop.json")`
 endsnippet
 
-snippet for "for loop" b
+priority 1
+snippet "\bfor" "for loop" rb
 for ${1:item} in ${2:iterable}:
 	${3:pass}
 #end for
 endsnippet
 
-snippet if "If" b
+priority 2
+snippet "\bif" "If" rb
 if ${1:condition}:
 	${2:pass}
 #end if
 endsnippet
 
-snippet "elif|elseif|ei" "Else If" rb
+priority 1
+snippet "\belif|\belseif|\bei" "Else If" rb
 elif ${1:condition}:
 	${2:pass}
 endsnippet
 
-snippet "ife(l(s(e)?)?)?" "If / Else" rb
+priority 1
+snippet "\bife(l(s(e)?)?)?" "If / Else" rb
 if ${1:condition}:
 	${2:pass}
 else:
@@ -35,15 +41,14 @@ else:
 #end if
 endsnippet
 
-snippet "e(l(s(e)?)?)?" "else" rb
+priority 1
+snippet "\be(l(s(e)?)?)?" "else" rb
 else:
     ${1:pass}
 endsnippet
 
 
-##########################
-# Try / Except / Finally #
-##########################
+priority 1
 snippet try "Try / Except" b
 try:
 	${1:pass}
@@ -52,6 +57,7 @@ except ${2:Exception}, ${3:e}:
 #end try
 endsnippet
 
+priority 1
 snippet try "Try / Except / Else" b
 try:
 	${1:pass}
@@ -62,6 +68,7 @@ else:
 #end try
 endsnippet
 
+priority 1
 snippet try "Try / Except / Finally" b
 try:
 	${1:pass}
@@ -72,6 +79,7 @@ finally:
 #end try
 endsnippet
 
+priority 1
 snippet try "Try / Except / Else / Finally" b
 try:
 	${1:pass}
