@@ -1,0 +1,19 @@
+[
+    "container_type: Container",
+    "value_type: Container::value_type",
+    "size_type: Container::size_type",
+    "reference: Container::reference",
+    "const_reference: Container::const_reference",
+    "=: assigns values to the container adaptor",
+    "top: accesses the top element",
+    "empty: checks whether the underlying container is empty",
+    "size: returns the number of elements",
+    "push: inserts element and sorts the underlying container",
+    "emplace: constructs element in-place and sorts the underlying container",
+    "pop: removes the top element",
+    "swap: swaps the contents",
+    "c: the underlying container",
+    "comp: the comparison function object",
+    "std::swap: specializes the std::swap algorithm",
+    "std::uses_allocator<std::priority_queue>: specializes the std::uses_allocator type trait"
+]

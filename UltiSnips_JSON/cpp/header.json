@@ -1,9 +1,11 @@
 [
-    "chrono: part of date and time library",
     "algorithm: algorithms",
+    "chrono: part of date and time library",
     "fstream: file stream",
+    "forward_list: the single-linked list container",
+    "iterator: iterator related classes and functions",
     "iostream: I/O stream",
-    "list: the list container",
+    "list: the double-linked list container",
     "map: the map (tree-based, sorted) container",
     "pair: the pair data structure",
     "random: random number generators",

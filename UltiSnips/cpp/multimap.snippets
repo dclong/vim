@@ -1,0 +1,15 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 2
+snippet "\b\.mm(a(p)?)?" "Members of std::multimap" r
+.$1`!p snip.rv = complete(t[1], "cpp/multimap.json")`
+endsnippet
+
+priority 1
+snippet "\bmm(a(p)?)?\." "Members of std::multimap" r
+${2:multimap_object}.$1`!p snip.rv = complete(t[1], "cpp/multimap.json")`
+endsnippet
+

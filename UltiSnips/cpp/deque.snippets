@@ -1,0 +1,15 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 2
+snippet "\b\.de(q(u(e)?)?)?" "Members of std::deque" r
+.$1`!p snip.rv = complete(t[1], "cpp/deque.json")`
+endsnippet
+
+priority 1
+snippet "\bde(q(u(e)?)?)?\." "Members of std::deque" r
+${2:deque_object}.$1`!p snip.rv = complete(t[1], "cpp/deque.json")`
+endsnippet
+
