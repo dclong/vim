@@ -1,0 +1,15 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 2
+snippet "\b\.ms(e(t)?)?" "Members of std::multiset" r
+.$1`!p snip.rv = complete(t[1], "cpp/multiset.json")`
+endsnippet
+
+priority 1
+snippet "\bms(e(t)?)?\." "Members of std::multiset.json" r
+${2:multiset}.$1`!p snip.rv = complete(t[1], "cpp/multiset")`
+endsnippet
+
