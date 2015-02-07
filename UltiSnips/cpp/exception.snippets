@@ -8,5 +8,5 @@ throw std::runtime_error(${1:error_message});
 endsnippet
 
 snippet "\bthrow" "std::throw" rb
-throw std::$1`!p snip.rv = complete(t[1], ["runtime_error"])`
+throw std::$1`!p snip.rv = complete(t[1], opts=["runtime_error"])`
 endsnippet

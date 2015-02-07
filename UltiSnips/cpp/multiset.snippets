@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.ms(e(t)?)?" "Members of std::multiset" r
-.$1`!p snip.rv = complete(t[1], "cpp/multiset.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/multiset.json")`
 endsnippet
 
 priority 1
 snippet "\bms(e(t)?)?\." "Members of std::multiset.json" r
-${2:multiset}.$1`!p snip.rv = complete(t[1], "cpp/multiset")`
+${2:multiset}.$1`!p snip.rv = complete(t[1], file="cpp/multiset")`
 endsnippet
 

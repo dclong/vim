@@ -27,7 +27,7 @@ create
 endsnippet
 
 snippet create "create" b
-create $1 `!p snip.rv = complete(t[1], ["table", "view"])`
+create $1 `!p snip.rv = complete(t[1], opts=["table", "view"])`
 endsnippet
 
 snippet ct "Create Table" b
@@ -75,7 +75,7 @@ in ($1)
 endsnippet
 
 snippet join "Join Table" b
-$1`!p snip.rv = complete(t[1], ["inner", "left", "right", "outer"])` join
+$1`!p snip.rv = complete(t[1], opts=["inner", "left", "right", "outer"])` join
 endsnippet
 
 snippet hc "Help Column" b

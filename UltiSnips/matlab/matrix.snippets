@@ -5,7 +5,7 @@ endglobal
 
 priority 1
 snippet "\ba(r(r(a(y)?)?)?)?\.|\bm(a(t(r(i(x)?)?)?)?)?\." "Array/Matrix Related Functions" r
-$1`!p snip.rv = complete(t[1], ["numel", "ones", "reshape", "size", "zeros"])`
+$1`!p snip.rv = complete(t[1], opts=["numel", "ones", "reshape", "size", "zeros"])`
 endsnippet
 
 priority 1
@@ -35,5 +35,5 @@ endsnippet
 
 priority 1
 snippet "\bmean" "The mean Function" r
-mean(${1:matrix}, $2`!p snip.rv = complete(t[2], ["1: column means", "2: row means"])`)
+mean(${1:matrix}, $2`!p snip.rv = complete(t[2], opts=["1: column means", "2: row means"])`)
 endsnippet

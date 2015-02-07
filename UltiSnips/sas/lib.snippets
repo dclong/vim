@@ -2,11 +2,11 @@
 # library snippets
 
 snippet "lib(n(a(m(e)?)?)?)?" "libname" rb
-libname $1`!p snip.rv = complete(t[1], ["_all_"])`
+libname $1`!p snip.rv = complete(t[1], opts=["_all_"])`
 endsnippet
 
 snippet "(libname \w)" "libname" rb
-`!p snip.rv = match.group(1)` $1`!p snip.rv = complete(t[1], ["clear", "list"])`
+`!p snip.rv = match.group(1)` $1`!p snip.rv = complete(t[1], opts=["clear", "list"])`
 endsnippet
 
 snippet ls "Lib on Server" b

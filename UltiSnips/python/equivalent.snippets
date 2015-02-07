@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "\be\." "Language Equivalence" r
-`!p snip.rv = complete(t[1], ["Sys.getenv", "tolower", "lcase", "toupper", "ucase", "dir", "getwd", "setwd", "system", "exit"])`
+`!p snip.rv = complete(t[1], opts=["Sys.getenv", "tolower", "lcase", "toupper", "ucase", "dir", "getwd", "setwd", "system", "exit"])`
 endsnippet
 
 snippet "\be.(Sys.)?getenv" "os.environ" r

@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "\bf(i(l(e)?)?)?\." "File Methods" r
-file.$1`!p snip.rv = complete(t[1], "python/file.json")`
+file.$1`!p snip.rv = complete(t[1], file="python/file.json")`
 endsnippet
 
 snippet "\bfile.open[a-zA-Z]?" "Open a File" r

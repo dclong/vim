@@ -52,7 +52,7 @@ snippet "%d(o( (l(o(o(p)?)?)?)?)?)?|%f(o(r (l(o(o(p)?)?)?)?)?)?" "Do Loop" rb
 endsnippet
 
 snippet "%p(u(t)?)?" "%put" rb
-%put $1`!p snip.rv = complete(t[1], ["_user_", "_automatic_", "_global_", "_local_"])`;
+%put $1`!p snip.rv = complete(t[1], opts=["_user_", "_automatic_", "_global_", "_local_"])`;
 endsnippet
 
 snippet %im "Include Macro" b

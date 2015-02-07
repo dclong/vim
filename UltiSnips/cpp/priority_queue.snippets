@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.pq(u(e(u(e)?)?)?)?" "Members of std::priority_queue" r
-.$1`!p snip.rv = complete(t[1], "cpp/priority_queue.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/priority_queue.json")`
 endsnippet
 
 priority 1
 snippet "\bpq(u(e(u(e)?)?)?)?\." "Members of std::priority_queue" r
-${2:priority_queue}.$1`!p snip.rv = complete(t[1], "cpp/priority_queue.json")`
+${2:priority_queue}.$1`!p snip.rv = complete(t[1], file="cpp/priority_queue.json")`
 endsnippet
 

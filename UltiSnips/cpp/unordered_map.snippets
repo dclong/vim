@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.umap" "Members of std::unordered_map" r
-.$1`!p snip.rv = complete(t[1], "cpp/unordered_map.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/unordered_map.json")`
 endsnippet
 
 priority 1
 snippet "\bumap\." "Members of std::unordered_map" r
-${2:unordered_map_object}.$1`!p snip.rv = complete(t[1], "cpp/unordered_map.json")`
+${2:unordered_map_object}.$1`!p snip.rv = complete(t[1], file="cpp/unordered_map.json")`
 endsnippet
 

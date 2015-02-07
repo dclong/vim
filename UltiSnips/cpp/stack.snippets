@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.sta(c(k)?)?" "Members of std::stack" r
-.$1`!p snip.rv = complete(t[1], "cpp/stack.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/stack.json")`
 endsnippet
 
 priority 1
 snippet "\bsta(c(k)?)?\." "Members of std::stack" r
-${2:stack_object}.$1`!p snip.rv = complete(t[1], "cpp/stack.json")`
+${2:stack_object}.$1`!p snip.rv = complete(t[1], file="cpp/stack.json")`
 endsnippet
 

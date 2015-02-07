@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "m(a(t(h)?)?)?\." "Methods of math." r
-math.$1`!p snip.rv = complete(t[1], "python/math.json")`
+math.$1`!p snip.rv = complete(t[1], file="python/math.json")`
 endsnippet
 
 snippet "\bmath.abs[a-zA-Z]?" "abs()" r

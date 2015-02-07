@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "\br(e)?\." "Methods of the re Module" r
-re.$1`!p snip.rv = complete(t[1], "python/re.json")`
+re.$1`!p snip.rv = complete(t[1], file="python/re.json")`
 endsnippet
 
 snippet re.compile "re.compile" b
