@@ -3,7 +3,7 @@ global !p
 from complete import *
 endglobal
 
-snippet "\bidentity matrix|\beye|\bdiag|\bi" "Identity Matrix" r
+snippet "\bidentity matrix|\beye|\bdiag" "Identity Matrix" r
 i(${1:dim})
 endsnippet
 
@@ -52,50 +52,62 @@ snippet "MatrixReduction\.multiplication(.| )col(umn)?s?|prod(uct)?s? of col(umn
 ${1:matrix}[#, ]
 endsnippet
 
+priority 2
 snippet "MatrixReduction\.maximum(.| )rows?|max(imum)?s? of rows?|row max(imum)?s?|row(M|m)axs?" "Maximums of Rows" r
 ${1:matrix}[, <>]
 endsnippet
 
+priority 2
 snippet "MatrixReduction\.maximum(.| )col(umn)?s?|max(imum)?s? of col(umn)?s?|col(umn)? max(imum)?s?|col(M|m)axs?" "Maximums of Columns" r
 ${1:matrix}[<>, ]
 endsnippet
 
+priority 2
 snippet "MatrixReduction\.minimum(.| )rows?|min(imum)?s? of rows?|row min(imum)?s?|row(M|m)ins?" "Minimums of Rows" r
 ${1:matrix}[, ><]
 endsnippet
 
+priority 2
 snippet "MatrixReduction\.minimum(.| )col(umn)?s?|min(imum)?s? of col(umn)?s?|col(umn)?s? min(imum)?s?|col(M|m)ins?" "Minimums of Columns" r
 ${1:matrix}[><, ]
 endsnippet
 
+priority 2
 snippet "MatrixReduction\.index of maximum(.| )rows?|indexs? of maximums? of rows?|rows? indexs? max(imum)?s?|row(M|m)ax(I|i)nd(ex)?" "Indices of Maximums of Rows" r
 ${1:matrix}[, <:>]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.col(M|m)ax(I|i)nd(ex)?" "Indices of Maximums of Columns" r
 ${1:matrix}[<:>, ]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.row(M|m)in(I|i)nd(ex)?" "Indices of Minimum of Rows" r
 ${1:matrix}[, >:<]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.col(M|m)in(I|i)nd(ex)?" "Indices of Minimum of Columns" r
 ${1:matrix}[>:<, ]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.row(M|m)eans?" "Means of Rows" r
 ${1:matrix}[, :]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.col(M|m)eans?" "Means of Columns" r
 ${1:matrix}[:, ]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.row(SS|ss)" "Sums of Squares of Rows" r
 ${1:matrix}[, ##]
 endsnippet
 
+priority 1
 snippet "MatrixReduction\.sums of squares of |col(SS|ss)" "Sums of Squares of Columns" r
 ${1:matrix}[##, ]
 endsnippet
@@ -320,3 +332,17 @@ snippet "\bmpow(e(r)?)?" "Matrix Power" r
 ${1:base_matrix} ** ${2:power}
 endsnippet
 
+priority 1
+snippet "\bmax" "Maximum Value of Matrices" r
+max(${1:m1}, ${2:m2})
+endsnippet
+
+priority 1
+snippet "\bmin" "Minimum Value of Matrices" r
+min(${1:m1}, ${2:m2})
+endsnippet
+
+priority 1
+snippet "\breturn" "Return a Value" rb
+return(${1:value});
+endsnippet
