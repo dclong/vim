@@ -1,0 +1,19 @@
+[
+    "algorithm: algorithms",
+    "chrono: part of date and time library",
+    "fstream: file stream",
+    "forward_list: the single-linked list container",
+    "iterator: iterator related classes and functions",
+    "iostream: I/O stream",
+    "list: the double-linked list container",
+    "map: the map (tree-based, sorted) container",
+    "pair: the pair data structure",
+    "random: random number generators",
+    "set: the set (tree-based, sorted) container",
+    "string: strings",
+    "tuple: the tuple (multiple unrelated types) data structure",
+    "unordered_map: the unordered_map (hashtable-based, unsorted) container",
+    "unordered_set: the unordered_set (hashtable-based, unsorted) container",
+    "utility: utilities libarary",
+    "vector: the vector container"
+]
