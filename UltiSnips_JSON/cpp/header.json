@@ -1,4 +1,29 @@
 [
+    [
+        "unordered_map: the unordered_map (hashtable-based, unsorted) container", 
+        10, 
+        "2015-02-07 09:56:46.864470"
+    ], 
+    [
+        "random: random number generators", 
+        6, 
+        "2015-02-07 10:44:18.867970"
+    ], 
+    [
+        "vector: the vector container", 
+        4, 
+        "2015-02-07 09:56:46.864470"
+    ], 
+    [
+        "algorithm: algorithms", 
+        2, 
+        "2015-02-07 09:56:46.864470"
+    ], 
+    [
+        "map: the map (tree-based, sorted) container", 
+        1, 
+        "2015-02-07 09:56:46.864470"
+    ], 
     "chrono: part of date and time library", 
     "fstream: file stream", 
     "forward_list: the single-linked list container", 
@@ -6,26 +31,13 @@
     "iostream: I/O stream", 
     "list: the double-linked list container", 
     "pair: the pair data structure", 
-    "random: random number generators", 
     "set: the set (tree-based, sorted) container", 
     "string: strings", 
     "tuple: the tuple (multiple unrelated types) data structure", 
     "unordered_set: the unordered_set (hashtable-based, unsorted) container", 
-    "utility: utilities libarary", 
     [
-        "map: the map (tree-based, sorted) container", 
-        1
-    ], 
-    [
-        "algorithm: algorithms", 
-        2
-    ], 
-    [
-        "vector: the vector container", 
-        4
-    ], 
-    [
-        "unordered_map: the unordered_map (hashtable-based, unsorted) container", 
-        10
+        "utility: utilities libarary", 
+        1, 
+        "2015-02-07 10:44:18.869693"
     ]
 ]
