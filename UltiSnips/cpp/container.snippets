@@ -5,72 +5,72 @@ endglobal
 
 priority 2
 # don't add \b
-snippet ":?:umap" "std::unordered_map" r
+snippet ":?:umap<" "std::unordered_map" r
 std::unordered_map<${1:key}, ${2:value}>
 endsnippet
 
 priority 1
-snippet "\bumap" "std::unordered_map" r
+snippet "\bumap<" "std::unordered_map" r
 unordered_map<${1:key}, ${2:value}>
 endsnippet
 
 priority 2
-snippet ":?:uset" "std::unordered_set" r
+snippet ":?:uset<" "std::unordered_set" r
 std::unordered_set<${1:Type}>
 endsnippet
 
 priority 1
-snippet "\buset" "std::unordered_set" r
+snippet "\buset<" "std::unordered_set" r
 unordered_set<${1:Type}>
 endsnippet
 
 priority 2
-snippet ":?:forw(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?" "std::forward_list" r
+snippet ":?:forw(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?<" "std::forward_list" r
 std::forward_list<${1:Type}>
 endsnippet
 
 priority 1
-snippet "\bforw(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?" "std::forward_list" r
+snippet "\bforw(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?<" "std::forward_list" r
 forward_list<${1:Type}>
 endsnippet
 
 priority 2
-snippet ":?:li(s(t)?)?" "std::list" r
+snippet ":?:li(s(t)?)?<" "std::list" r
 std::list<${1:Type}>
 endsnippet
 
 priority 1
-snippet "\bli(s(t)?)?" "std::list" r
+snippet "\bli(s(t)?)?<" "std::list" r
 list<${1:Type}>
 endsnippet
 
 priority 2
-snippet ":?:set" "std::set" r
+snippet ":?:set<" "std::set" r
 std::set<${1:Type}>
 endsnippet
 
 priority 1
-snippet "\bset" "std::set" r
+snippet "\bset<" "std::set" r
 set<${1:Type}>
 endsnippet
 
 priority 2
-snippet ":?:map" "std::map" r
+snippet ":?:map<" "std::map" r
 std::map<${1:key}, ${2:value}>
 endsnippet
 
 priority 1
-snippet "\bmap" "std::map" r
+snippet "\bmap<" "std::map" r
 map<${1:key}, ${2:value}>
 endsnippet
 
 priority 2
-snippet ":?:vec(t(o(r)?)?)?" "std::vector" r
+snippet ":?:vec(t(o(r)?)?)?<" "std::vector" r
 std::vector<${1:Type}>
 endsnippet
 
 priority 1
-snippet "\bvec(t(o(r)?)?)?" "std::vector" r
+snippet "\bvec(t(o(r)?)?)?<" "std::vector" r
 vector<${1:Type}>
 endsnippet
 
