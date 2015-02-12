@@ -1,14 +1,11 @@
 
 extends programming
 
-###########################################################################
-#                            TextMate Snippets                            #
-###########################################################################
-
 global !p
 from complete import *
 endglobal
 
+priority 1
 snippet "o(p(t(i(o(n(s)?)?)?)?)?)?" "Methods of options" rb
 options $1`!p snip.rv = complete(t[1], "sas/options.json")`
 endsnippet
