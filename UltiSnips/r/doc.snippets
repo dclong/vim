@@ -74,11 +74,13 @@ snippet "#' @exa(m(p(l(e)?)?)?)?" "@examples" rb
 #' }
 endsnippet
 
-snippet \l "Link" w
-\link{$1}
+priority 1
+snippet "\\l(i(n(k)?)?)?" "Link in R Doc" r
+\link{${1:link}}
 endsnippet
 
-snippet \c "Link" w
-\code{$1}
+priority 1
+snippet "\\c(o(d(e)?)?)?" "Code in R Doc" r
+\code{${1:code}}
 endsnippet
 

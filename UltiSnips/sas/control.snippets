@@ -6,22 +6,22 @@ endglobal
 # do; ... end;
 snippet "\bdo end block|\bdb" "Do End Block" rb
 do;
-    ${1:...}
+    ${1:/* code */}
 end;
 endsnippet
 
 priority 2
 snippet "\bif" "If Statement" rb
 if ${1:condition} then do;
-	$2;
+	${2:/* code */}
 end;
 endsnippet
 
 snippet "\bife" "If Else Statement" rb
 if ${1:condition} then do;
-	$2;
+	${2:/* code */}
 end; else do;
-	$3;
+	${3:/* code */}
 end;
 endsnippet
 

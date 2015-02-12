@@ -2,35 +2,31 @@ global !p
 from complete import *
 endglobal
 
-snippet "s(e(l(e(c(t)?)?)?)?)?" "Select Statement" rb
+snippet "\bs(e(l(e(c(t)?)?)?)?)?" "Select Statement" rb
 select ${1:distinct }${2:top ${3:5} }
-	${4:field1}
+	${4:field}
 from
-	${5:t1}
-${6:${7:inner join
-	${8:t2}
+	${5:t1}${6: as ${7:A}}
+${8:${15:inner} join
+	${9:t2}${10: as ${11:B}}
 on
-	${9:condition}}
-${10:where
-	${11:condition}}}
-${12:group by
-	${13:1}
-${14:having
-	${15:condition}}}
-${16:order by
-	${17:1} ${18:desc}}
+	${12:condition}}
+${13:where
+	${14:condition}}
+${16:group by
+	${17:1}
+${18:having
+	${19:condition}}}
+${20:order by
+	${21:1} ${22:desc}}
 ;
-endsnippet
-
-snippet "c(r(e(a(t)?)?)?)?" "create" rb
-create
 endsnippet
 
 snippet create "create" b
 create $1 `!p snip.rv = complete(t[1], opts=["table", "view"])`
 endsnippet
 
-snippet ct "Create Table" b
+snippet "create table" "Create Table" rb
 create ${1:$2set }table ${3:t} (
 	${4:f1} ${5:t1},
 	${6:f2} ${7:t2}
@@ -38,7 +34,7 @@ create ${1:$2set }table ${3:t} (
 ;
 endsnippet
 
-snippet cv "Create View" b
+snippet "create view" "Create View" rb
 create ${1:$2set }view ${3:t} ${4:as }(
 	${4:f1} ${5:t1},
 	${6:f2} ${7:t2}
@@ -46,43 +42,43 @@ create ${1:$2set }view ${3:t} ${4:as }(
 ;
 endsnippet
 
-snippet st "Show Table" b
+snippet "st" "Show Table" rb
 show table ${1:t};
 endsnippet
 
-snippet sv "Show View" b
+snippet "sv" "Show View" rb
 show view ${1:v};
 endsnippet
 
-snippet dt "Drop Table" b
+snippet "dt" "Drop Table" rb
 drop table ${1:t};
 endsnippet
 
-snippet dv "Drop Table" b
+snippet "dv" "Drop Table" rb
 drop view ${1:t};
 endsnippet
 
-snippet ht "Help Table" b
+snippet "ht" "Help Table" rb
 help table ${1:t};
 endsnippet
 
-snippet hv "Help View" b
+snippet "hv" "Help View" rb
 help view ${1:t};
 endsnippet
 
-snippet in "In Condition" w
+snippet "\bin" "In Condition" r
 in ($1)
 endsnippet
 
-snippet join "Join Table" b
+snippet "join" "Join Table" rb
 $1`!p snip.rv = complete(t[1], opts=["inner", "left", "right", "outer"])` join
 endsnippet
 
-snippet hc "Help Column" b
+snippet "hc" "Help Column" rb
 help column ${1:t}.${2:*};
 endsnippet
 
-snippet case "Case ... End" b
+snippet "case" "Case ... End" rb
 case
 	when ${1:c1} then 
 		${2:v1}
@@ -93,15 +89,11 @@ case
 end
 endsnippet
 
-snippet cnt "Count Function" b
+snippet "cnt" "Count Function" rb
 count(${1:distinct }${2:v})
 endsnippet
 
-snippet u "Standard ID" w
-zkyr9jm_
-endsnippet
-
-snippet ii "insert into" b
+snippet "ii" "insert into" rb
 insert into
 	${1:t}
 values

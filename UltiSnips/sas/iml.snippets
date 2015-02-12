@@ -8,7 +8,7 @@ i(${1:dim})
 endsnippet
 
 snippet "\bmatrix|\bj" "Fill a Matrix" r
-j(${1:nrow}${2:, ${3:ncol}${4:, ${5:value}}})
+j(${1:nrow}${2:, ${3:ncol}${4:, ${5:1}}})
 endsnippet
 
 snippet "\bwhich|\bloc" "The LOC Function" r
@@ -346,3 +346,9 @@ priority 1
 snippet "\breturn" "Return a Value" rb
 return(${1:value});
 endsnippet
+
+priority 1
+snippet "\bcho(o(s(e)?)?)?|\bife(l(s(e)?)?)?" "Conditional Element Selection" r
+choose(${1:condition}, ${2:result-for-true}, ${3:result-for-false})
+endsnippet
+

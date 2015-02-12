@@ -124,14 +124,19 @@ ${2:${VISUAL:Content}}
 endsnippet
 
 priority 2
-snippet /todo "@TODO" !w
+snippet "/todo" "@TODO" rb
 /*
 @TODO: $1
 */
 endsnippet
 
 priority 1
-snippet todo "@TODO" !w
+snippet "\btodo" "@TODO" r
 @TODO: $1
+endsnippet
+
+priority 1
+snippet "\buuid" "Insert an UUID" r
+`uuidgen`
 endsnippet
 
