@@ -3,7 +3,7 @@ from complete import *
 endglobal
 
 snippet "\bg(e(t(o(p(t)?)?)?)?)?\." "Methods of getopt." r
-getopt.$1`!p snip.rv = complete(t[1], ["getopt", "gnu_getopt"])`
+getopt.$1`!p snip.rv = complete(t[1], opts=["getopt", "gnu_getopt"])`
 endsnippet
 
 snippet "\bgetopt.getopt\*?" "getopt.getopt" r

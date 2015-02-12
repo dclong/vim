@@ -22,8 +22,8 @@ ${20:order by
 ;
 endsnippet
 
-snippet "\bc(r(e(a(t(e)?)?)?)?)?" "create" rb
-create $1 `!p snip.rv = complete(t[1], ["table", "view"])`
+snippet create "create" b
+create $1 `!p snip.rv = complete(t[1], opts=["table", "view"])`
 endsnippet
 
 snippet "create table" "Create Table" rb
@@ -71,7 +71,7 @@ in ($1)
 endsnippet
 
 snippet "join" "Join Table" rb
-$1`!p snip.rv = complete(t[1], ["inner", "left", "right", "outer"])` join
+$1`!p snip.rv = complete(t[1], opts=["inner", "left", "right", "outer"])` join
 endsnippet
 
 snippet "hc" "Help Column" rb

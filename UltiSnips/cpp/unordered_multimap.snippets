@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.umm(a(p)?)?" "Members of std::unordered_multimap" r
-.$1`!p snip.rv = complete(t[1], "cpp/unordered_multimap.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/unordered_multimap.json")`
 endsnippet
 
 priority 1
 snippet "\bumm(a(p)?)?\." "Members of std::unordered_multimap" r
-${2:unordered_multimap_object}.$1`!p snip.rv = complete(t[1], "cpp/unordered_multimap.json")`
+${2:unordered_multimap_object}.$1`!p snip.rv = complete(t[1], file="cpp/unordered_multimap.json")`
 endsnippet
 

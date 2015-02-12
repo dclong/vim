@@ -3,11 +3,11 @@ from complete import *
 endglobal
 
 snippet "g(r(e(e(k)?)?)?)?\." "Math Formula" r
-$1`!p snip.rv = complete(t[1], "tex/math.json")`
+$1`!p snip.rv = complete(t[1], file="tex/math.json")`
 endsnippet
 
 snippet "m(a(t(h)?)?)?\." "Math Formula" r
-$1`!p snip.rv = complete(t[1], "text/math.json")`
+$1`!p snip.rv = complete(t[1], file="text/math.json")`
 endsnippet
 
 snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
@@ -37,7 +37,7 @@ snippet "\\nn" "\nonumber \\" rb
 endsnippet
 
 snippet "\\l(e(f(t)?)?)?" "\left" rb
-\left$1`!p snip.rv = complete(t[1], ["<", "(", "{", "["])`\right$1
+\left$1`!p snip.rv = complete(t[1], opts=["<", "(", "{", "["])`\right$1
 endsnippet
 
 snippet '([a-zA-Z]+)(\d+)' "X_1" r

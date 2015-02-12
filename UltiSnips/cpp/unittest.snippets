@@ -1,0 +1,53 @@
+
+priority 2
+snippet "\bS(C(E(N(A(R(I(O)?)?)?)?)?)?)?|S(c(e(n(a(r(i(o)?)?)?)?)?)?)?" "Catch BDD-style SCENARIO" rb
+SCENARIO("${1:describe what you want to test}", "[${2:tags separated by comma}]"){
+	GIVEN("${3:a scenario}"){
+		${4:// code to build the scenario}
+		${5:REQUIRE(${6:conditions});}
+		${7:WHEN("${8:describe a behavior}"){
+			${9:// code for behavior}
+			${10:THEN("${11:describe expected results}"){
+				REQUIRE(${12:conditions});
+			}}
+		}}
+	}
+}
+endsnippet
+
+priority 2
+snippet "\bG(I(V(E(N)?)?)?)?|G(i(v(e(n)?)?)?)?" "Catch BDD-style GIVEN" rb
+GIVEN("${1:a scenario}"){
+	${2:// code to build the scenario}
+	${3:REQUIRE(${4:conditions});}
+	WHEN("${5:describe a behavior}"){
+		${6:// code for behavior}
+		${7:THEN("${8:describe expected results}"){
+			REQUIRE(${9:conditions});
+		}}
+	}
+}
+endsnippet
+
+priority 2
+snippet "\bW(H(E(N)?)?)?|W(h(e(n)?)?)?" "Catch BDD-style WHEN" rb
+WHEN("${1:describe a behavior}"){
+	${2:// code for behavior}
+	${3:THEN("${4:describe expected results}"){
+		REQUIRE(${5:conditions});
+	}}
+}
+endsnippet
+
+priority 2
+snippet "\bT(H(E(N)?)?)?|T(h(e(n)?)?)?" "Catch BDD-style THEN" rb
+THEN("${1:describe expected results}"){
+	REQUIRE(${2:conditions});
+}
+endsnippet
+
+priority 2
+snippet "R(E(Q(U(I(R(E)?)?)?)?)?)?|R(e(q(u(i(r(e)?)?)?)?)?)?" "Catch REQUIRE" rb
+REQUIRE(${1:conditions});
+endsnippet
+

@@ -4,7 +4,7 @@ from complete import *
 endglobal
 
 snippet "\bloop" "Loops in SAS" rb
-$1`!p snip.rv = complete(t[1], ["do loop", "do until loop", "do while loop"])`
+$1`!p snip.rv = complete(t[1], opts=["do loop", "do until loop", "do while loop"])`
 endsnippet
 
 snippet '\bdo loop|\bdl|\bfor' "Do Loop" rb

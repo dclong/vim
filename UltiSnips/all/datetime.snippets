@@ -1,0 +1,27 @@
+# date and time
+
+priority 1
+snippet "\bd/" "Date in mm/dd/yyyy" r
+`!v strftime("%m/%d/%Y")`
+endsnippet
+
+priority 1
+snippet "\bd-" "Date in yyyy-mm-dd" r
+`!v strftime("%Y-%m-%d")`
+endsnippet
+
+priority 1
+snippet "\bd," "Date in mmm dd, yyyy" r
+`!v strftime("%b %d, %Y")`
+endsnippet
+
+priority 1
+snippet "\bdns" "Date in yyyymmdd" r
+`!v strftime("%Y%m%d")`
+endsnippet
+
+priority 1
+snippet "\btns" "Date in yyyymmddhhmmss" r
+`!v strftime("%Y%m%d%H%M%S")`
+endsnippet
+

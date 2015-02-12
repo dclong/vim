@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.map" "Members of std::map" r
-.$1`!p snip.rv = complete(t[1], "cpp/map.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/map.json")`
 endsnippet
 
 priority 1
 snippet "\bmap\." "Members of std::map" r
-${2:map_object}.$1`!p snip.rv = complete(t[1], "cpp/map.json")`
+${2:map_object}.$1`!p snip.rv = complete(t[1], file="cpp/map.json")`
 endsnippet
 

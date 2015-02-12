@@ -5,7 +5,7 @@ endglobal
 # procedure snippets
 
 snippet "p(r(o(c)?)?)?" "Procedure" rb
-proc $1`!p snip.rv = complete(t[1], "sas/proc.snippets")`
+proc $1`!p snip.rv = complete(t[1], file="sas/proc.snippets")`
 endsnippet
 
 snippet "proc fcmp" "The FCMP Procedure" b
@@ -70,7 +70,7 @@ priority 2
 snippet "proc import" "The IMPORT Procedure" rb
 proc import 
     dataFile="${1:file_path}"
-    dbms=$2`!p snip.rv = complete(t[2], ["csv", "dlm", "xlsx"])`
+    dbms=$2`!p snip.rv = complete(t[2], opts=["csv", "dlm", "xlsx"])`
     ${3:replace}
     ; 
     ${4:sheet="${5:sheet_name}";}

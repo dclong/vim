@@ -5,11 +5,11 @@ endglobal
 
 priority 2
 snippet "\b\.umset" "Members of std::unordered_multiset" r
-.$1`!p snip.rv = complete(t[1], "cpp/unordered_multiset.json")`
+.$1`!p snip.rv = complete(t[1], file="cpp/unordered_multiset.json")`
 endsnippet
 
 priority 1
 snippet "\bumset\." "Members of std::unordered_multiset" r
-${2:unordered_multiset_object}.$1`!p snip.rv = complete(t[1], "cpp/unordered_multiset.json")`
+${2:unordered_multiset_object}.$1`!p snip.rv = complete(t[1], file="cpp/unordered_multiset.json")`
 endsnippet
 

@@ -3,15 +3,15 @@ from complete import *
 endglobal
 
 snippet "crypto\." "Methods of crypto." r
-Crypto.$1`!p snip.rv = complete(t[1], "python/crypto.json")`
+Crypto.$1`!p snip.rv = complete(t[1], file="python/crypto.json")`
 endsnippet
 
 snippet "Crypto.Cipher\." "Methods of Crypto.Cipher." r
-Crypto.Cipher.$1`!p snip.rv = complete(t[1], "crypto.cipher.json")`
+Crypto.Cipher.$1`!p snip.rv = complete(t[1], file="crypto.cipher.json")`
 endsnippet
 
 snippet "Crypto.Cipher.AES\." "Methods of Crypto.Cipher.AES." r
-Crypto.Cipher.AES.$1`!p snip.rv = complete(t[1], "crypto.cipher.aes.json")`
+Crypto.Cipher.AES.$1`!p snip.rv = complete(t[1], file="crypto.cipher.aes.json")`
 endsnippet
 
 snippet "\bCrypto.Cipher.AES.new[a-zA-Z]?" "Crypto.Cipher.AES.new" r
@@ -19,7 +19,7 @@ Crypto.Cipher.AES.new(${1:key}, ${2:*args}, ${3:**kwargs})
 endsnippet
 
 snippet "\baes(c(i(p(h(e(r)?)?)?)?)?)?\." "Methods of AESCipher." r
-AESCipher.$1`!p snip.rv = complete(t[1], ["__init__", "decrypt", "encrypt"])`
+AESCipher.$1`!p snip.rv = complete(t[1], opts=["__init__", "decrypt", "encrypt"])`
 endsnippet
 
 snippet "\bAESCipher.__init__[a-zA-Z]?" "AESCipher.__init__" r

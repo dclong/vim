@@ -12,6 +12,6 @@ fread(${1:fileHandle}, ${2:Inf}, ${3:'double'});
 endsnippet
 
 snippet "\bf(i(l(e)?)?)?\.|\bio\." "File Related Functions" r
-$1`!p snip.rv = complete(t[1], ["fread", "fopen", "fprintf"])`
+$1`!p snip.rv = complete(t[1], opts=["fread", "fopen", "fprintf"])`
 endsnippet
 
