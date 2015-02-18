@@ -1,38 +1,12 @@
 
+priority 1
 snippet '%m(a(c(r(o)?)?)?)?' "Macro Definition Without Arguments" rb
 %macro ${1:macro_name}(${2:arg1});
     ${3:/* start here */} 
 %mend $1;
 endsnippet
 
-snippet %a "%array" b
-%array(${1:arr}${2:, data=${3:d}}${4:, var=${5:v}}${6:, values=${7:l}}${8:, delim=%str(${9: })}${10:, debug=${11:N}}${12:, numlist=${13:Y}});
-endsnippet
-
-snippet %av "%array" b
-%array(${1:arr}, values=${7:v});
-endsnippet
-
-snippet %o "%do_over" b
-%do_over(${1:arr}${2:, values=${3:v}}${4:, delim=%str(${5: })}${6:, phrase=${7:?}}${8:, escape=${9:?}}${10:, between=${11:b}}${12:, macro=${13:m}}${14:, keyword=$15})
-endsnippet
-
-snippet %om "%do_over" b
-%do_over(${1:arr}, macro=${2:m})
-endsnippet
-
-snippet %omb "%do_over" b
-%do_over(${1:arr}, macro=${2:m}, between=${3: })
-endsnippet
-
-snippet %op "%do_over" b
-%do_over(${1:arr}, phrase=${2:?})
-endsnippet
-
-snippet %pct "Macro %percentile" b
-%percentile(data=${1:d}${2:, var=$3}${4:, pctArr=$5}${6:, pctList=$7});
-endsnippet
-
+priority 1
 snippet %temp "A Temp Macro" b
 %macro temp;
 %do i = 1 %to &msN.;
@@ -45,29 +19,92 @@ snippet %temp "A Temp Macro" b
 %temp;
 endsnippet
 
+priority 1
 snippet "%d(o( (l(o(o(p)?)?)?)?)?)?|%f(o(r (l(o(o(p)?)?)?)?)?)?" "Do Loop" rb
 %do ${1:i} = ${2:1} %to ${3:2} %by ${4:1};
     ${5:...}
 %end;
 endsnippet
 
+priority 1
 snippet "%p(u(t)?)?" "%put" rb
 %put $1`!p snip.rv = complete(t[1], opts=["_user_", "_automatic_", "_global_", "_local_"])`;
 endsnippet
 
+priority 1
+snippet "%in(c(l(u(d(e)?)?)?)?)?" "%include" rb
+%include ${1:path};
+endsnippet
+
+priority 1
+snippet "%if" "%If ... Branch" rb
+%if ${1:conditions} %then %do;
+	${2:/* code */}
+%end;
+endsnippet
+
+priority 1
+snippet "%ifelse" "%If ... %Else ... Branch" rb
+%if ${1:conditions} %then %do;
+	${2:/* code */}
+%end; %else %do;
+	${3:/* code */}
+%end;
+endsnippet
+
+##############################################################
+priority 1
 snippet %im "Include Macro" b
 %include ${1:macro}($2.sas);
 endsnippet
 
+priority 1
+snippet %pct "Macro %percentile" b
+%percentile(data=${1:d}${2:, var=$3}${4:, pctArr=$5}${6:, pctList=$7});
+endsnippet
+
+priority 1
 snippet %ima "Include %array" b
 %include ${1:macro}(array.sas);
 endsnippet
 
+priority 1
 snippet %imo "Include %array" b
 %include ${1:macro}(do_over.sas);
 endsnippet
 
+priority 1
 snippet %imn "Include %array" b
 %include ${1:macro}(numlist.sas);
+endsnippet
+
+priority 1
+snippet %a "%array" b
+%array(${1:arr}${2:, data=${3:d}}${4:, var=${5:v}}${6:, values=${7:l}}${8:, delim=%str(${9: })}${10:, debug=${11:N}}${12:, numlist=${13:Y}});
+endsnippet
+
+priority 1
+snippet %av "%array" b
+%array(${1:arr}, values=${7:v});
+endsnippet
+
+priority 1
+snippet %o "%do_over" b
+%do_over(${1:arr}${2:, values=${3:v}}${4:, delim=%str(${5: })}${6:, phrase=${7:?}}${8:, escape=${9:?}}${10:, between=${11:b}}${12:, macro=${13:m}}${14:, keyword=$15})
+endsnippet
+
+priority 1
+snippet %om "%do_over" b
+%do_over(${1:arr}, macro=${2:m})
+endsnippet
+
+priority 1
+snippet %omb "%do_over" b
+%do_over(${1:arr}, macro=${2:m}, between=${3: })
+endsnippet
+
+priority 1
+snippet %op "%do_over" b
+%do_over(${1:arr}, phrase=${2:?})
 endsnippet
 
