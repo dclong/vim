@@ -1,0 +1,28 @@
+
+priority 2
+snippet "/todo" "@TODO" rb
+/*
+@TODO: $1
+*/
+endsnippet
+
+priority 1
+snippet "\btodo" "@TODO" r
+@TODO: $1
+endsnippet
+
+priority 1
+snippet "\buuid" "Insert an UUID" r
+`uuidgen`
+endsnippet
+
+#priority 1
+#snippet "'" "Single Quoted String" r
+#'${1:string}' 
+#endsnippet
+#
+#priority 1
+#snippet '"' "Double Quoted String" r
+#"${1:string}"
+#endsnippet
+#

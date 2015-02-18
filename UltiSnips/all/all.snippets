@@ -123,20 +123,3 @@ ${2:${VISUAL:Content}}
 `!p snip.rv = _get_comment_format()[0]` `!p snip.rv = foldmarker()[1]` $1 `!p snip.rv = _get_comment_format()[2]`
 endsnippet
 
-priority 2
-snippet "/todo" "@TODO" rb
-/*
-@TODO: $1
-*/
-endsnippet
-
-priority 1
-snippet "\btodo" "@TODO" r
-@TODO: $1
-endsnippet
-
-priority 1
-snippet "\buuid" "Insert an UUID" r
-`uuidgen`
-endsnippet
-
