@@ -86,14 +86,14 @@ endsnippet
 
 priority 2
 snippet "\bforit" "For Loop Using Iterator" rb
-for(${2:Type} ${3:it}=${1:obj}.begin(); $3!=$1.end(); ++$3){
+for(${2:auto} ${3:it}=${1:obj}.begin(); $3!=$1.end(); ++$3){
 	${4:/* code */}
 }
 endsnippet
 
 priority 3
 snippet "\bforcit" "For Loop Using Const Iterator" rb
-for(${2:Type} ${3:it}=${1:obj}.cbegin(); $3!=$1.cend(); ++$3){
+for(${2:auto} ${3:it}=${1:obj}.cbegin(); $3!=$1.cend(); ++$3){
 	${4:/* code */}
 }
 endsnippet
@@ -103,3 +103,13 @@ snippet beginend "$1.begin(), $1.end() (beginend)"
 ${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
 endsnippet
 
+priority 1
+snippet "\bfore(r(a(s(e)?)?)?)?" "Erase in Loop" rb
+for(${2:auto} ${3:it}=${1:container}.begin(); $3!=$1.end(); ){
+	$2 ${4:cit} = $3;
+	++$3;
+	if(${5:$4}){
+		$1.erase($4);
+	}
+}
+endsnippet

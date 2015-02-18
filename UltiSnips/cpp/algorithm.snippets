@@ -3,16 +3,26 @@ global !p
 from complete import *
 endglobal
 
-snippet "\bmax_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::max_element" r
-std::max_element(${1:first}, ${2:last}${3:, ${4:comparator}})
-endsnippet
-
-snippet "\bmin_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::min_element" r
-std::min_element(${1:first}, ${2:last}${3:, ${4:comparator}})
-endsnippet
-
 priority 1
 snippet "\balgo(r(i(t(h(m)?)?)?)?)?\." "STL Algorithms" r
 std::$1`!p snip.rv = complete(t[1], file="cpp/algorithm.json")`
+endsnippet
+
+snippet "\bmax_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::max_element" r
+std::max_element(${1:first}, ${2:last}${3:, [${9:capture}](${4:Type1 const &} ${5:a}, ${6:Type2 const &} ${7:b}){
+	${8:/* code */}
+}})
+endsnippet
+
+snippet "\bmin_e(l(e(m(e(n(t)?)?)?)?)?)?" "std::min_element" r
+std::min_element(${1:first}, ${2:last}${3:, [${9:capture}](${4:Type1 const &} ${5:a}, ${6:Type2 const &} ${7:b}){
+	${8:/* code */}
+}})
+endsnippet
+
+snippet "\bsort" "std::sort" rb
+std::sort(${1:first}, ${2:last}${3:, [${9:capture}](${4:Type1 const &} ${5:a}, ${6:Type2 const &} ${7:b}){
+	${8:/* code */}
+}})
 endsnippet
 
