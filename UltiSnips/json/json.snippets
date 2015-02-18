@@ -1,0 +1,39 @@
+
+priority 1
+snippet "\bs(t(r(i(n(g)?)?)?)?)?" "String" rb
+"${1:key}": "${0:string}",
+endsnippet
+
+priority 1
+snippet "\bn(u(m(b(e(r)?)?)?)?)?" "Number" rb
+"${1:key}": ${0:number},
+endsnippet
+
+priority 1
+snippet "\ba(r(r(a(y)?)?)?)?|l(i(s(t)?)?)?" "Array" rb
+[
+   ${VISUAL}$0
+],
+endsnippet
+
+priority 1
+snippet "\bo(b(j(e(c(t)?)?)?)?)?|m(a(p)?)?|d(i(c(t(i(o(n(a(r(y)?)?)?)?)?)?)?)?)?" "Object" rb
+{
+   ${VISUAL}$0
+},
+endsnippet
+
+priority 2
+snippet "\buuid" "UUID" rb
+"UUID": "`uuidgen`",
+endsnippet
+
+priority 1
+snippet "\blink(e(d(i(n)?)?)?)?" "LinkedIn" rb
+"LinkedIn": "${1:${VISUAL:LinkedIn Address}}",
+endsnippet
+
+priority 1
+snippet "\bwechat" "WeChat" rb
+"WeChat": "${1:${VISUAL:WeChat ID}}",
+endsnippet
