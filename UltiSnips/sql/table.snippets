@@ -1,0 +1,45 @@
+
+snippet "\bc(r(e(a(t(e)?)?)?)?)?" "create" rb
+create $1 `!p snip.rv = complete(t[1], opts=["table", "view"])`
+endsnippet
+
+snippet "create table" "Create Table" rb
+create ${1:$2set }table ${3:table_name} (
+	${4:field_1} ${5:type_1},
+	${6:field_2} ${7:type_2}
+)
+;
+endsnippet
+
+snippet "create view" "Create View" rb
+create ${1:$2set }view ${3:table_name} ${4:as }(
+	${4:field_1} ${5:table_1},
+	${6:field_2} ${7:table_2}
+)
+;
+endsnippet
+
+snippet "st" "Show Table" rb
+show table ${1:t};
+endsnippet
+
+snippet "sv" "Show View" rb
+show view ${1:v};
+endsnippet
+
+snippet "dt" "Drop Table" rb
+drop table ${1:t};
+endsnippet
+
+snippet "dv" "Drop Table" rb
+drop view ${1:t};
+endsnippet
+
+snippet "ht" "Help Table" rb
+help table ${1:t};
+endsnippet
+
+snippet "hv" "Help View" rb
+help view ${1:t};
+endsnippet
+
