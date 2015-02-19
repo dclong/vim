@@ -1,0 +1,52 @@
+###########################################################################
+#                            TEXTMATE SNIPPETS                            #
+###########################################################################
+
+# Many of the snippets here use a global option called
+# "g:ultisnips_java_brace_style" which, if set to "nl" will put a newline
+# before '{' braces.
+# Setting "g:ultisnips_java_junit" will change how the test method snippet
+# looks, it is defaulted to junit4, setting this option to 3 will remove the
+# @Test annotation from the method
+
+global !p
+
+def junit(snip):
+    if snip.opt("g:ultisnips_java_junit", "") == "3":
+        snip += ""
+    else:
+        snip.rv += "@Test\n\t"
+
+def nl(snip):
+    if snip.opt("g:ultisnips_java_brace_style", "") == "nl":
+        snip += ""
+    else:
+        snip.rv += " "
+def getArgs(group):
+	import re
+	word = re.compile('[a-zA-Z><.]+ \w+')
+	return [i.split(" ") for i in word.findall(group) ]
+
+def camel(word):
+	return word[0].upper() + word[1:]
+
+endglobal
+
+snippet "i|n" "new primitive or int" rb
+${1:int} ${2:i} = ${3:1};
+$0
+endsnippet
+
+snippet "o|v" "new Object or variable" rb
+${1:Object} ${2:var} = new $1(${3});
+endsnippet
+
+snippet cos "constant string" b
+public static final String ${1:var} = "$2";$0
+endsnippet
+
+snippet main "method (main)" b
+public static void main(String[] args)`!p nl(snip)`{
+	$0
+}
+endsnippet

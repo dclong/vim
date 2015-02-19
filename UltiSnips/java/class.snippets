@@ -1,0 +1,164 @@
+
+snippet cle "class extends" b
+public class ${1:`!p
+snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
+	$0
+}
+endsnippet
+
+snippet clc "class with constructor, fields, setter and getters" b
+public class `!p
+snip.rv = snip.basename or "untitled"` {
+`!p
+args = getArgs(t[1])
+if len(args) == 0: snip.rv = ""
+for i in args:
+	snip.rv += "\n\tprivate " + i[0] + " " + i[1]+ ";"
+if len(args) > 0:
+	snip.rv += "\n"`
+	public `!p snip.rv = snip.basename or "unknown"`($1) { `!p
+args = getArgs(t[1])
+for i in args:
+	snip.rv += "\n\t\tthis." + i[1] + " = " + i[1] + ";"
+if len(args) == 0:
+	snip.rv += "\n"`
+	}$0
+`!p
+args = getArgs(t[1])
+if len(args) == 0: snip.rv = ""
+for i in args:
+	snip.rv += "\n\tpublic void set" + camel(i[1]) + "(" + i[0] + " " + i[1] + ") {\n" + "\
+	\tthis." + i[1] + " = " + i[1] + ";\n\t}\n"
+
+	snip.rv += "\n\tpublic " + i[0] + " get" + camel(i[1]) + "() {\
+	\n\t\treturn " + i[1] + ";\n\t}\n"
+`
+}
+endsnippet
+
+snippet clc "class with constructor, with field names" b
+public class `!p
+snip.rv = snip.basename or "untitled"` {
+`!p
+args = getArgs(t[1])
+for i in args:
+	snip.rv += "\n\tprivate " + i[0] + " " + i[1]+ ";"
+if len(args) > 0:
+	snip.rv += "\n"`
+	public `!p snip.rv = snip.basename or "unknown"`($1) { `!p
+args = getArgs(t[1])
+for i in args:
+	snip.rv += "\n\t\tthis." + i[1] + " = " + i[1]
+if len(args) == 0:
+	snip.rv += "\n"`
+	}
+}
+endsnippet
+
+snippet clc "class and constructor" b
+public class `!p
+snip.rv = snip.basename or "untitled"` {
+
+	public `!p snip.rv = snip.basename or "untitled"`($2) {
+		$0
+	}
+}
+endsnippet
+
+snippet cl "class" b
+public class ${1:`!p
+snip.rv = snip.basename or "untitled"`} {
+	$0
+}
+endsnippet
+
+snippet in "interface" b
+interface ${1:`!p snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }{
+	$0
+}
+endsnippet
+
+snippet mt "method throws" b
+${1:private} ${2:void} ${3:method}(${4}) ${5:throws $6 }{
+	$0
+}
+endsnippet
+
+snippet m  "method" b
+${1:private} ${2:void} ${3:method}(${4}) {
+	$0
+}
+endsnippet
+
+snippet md "Method With javadoc" b
+/**
+ * ${7:Short Description}`!p
+for i in getArgs(t[4]):
+	snip.rv += "\n\t * @param " + i[1] + " usage..."`
+ * `!p
+if "throws" in t[5]:
+	snip.rv = "\n\t * @throws " + t[6]
+else:
+	snip.rv = ""` `!p
+if not "void" in t[2]:
+	snip.rv = "\n\t * @return object"
+else:
+	snip.rv = ""`
+ **/
+${1:public} ${2:void} ${3:method}($4) ${5:throws $6 }{
+	$0
+}
+endsnippet
+
+snippet /get(ter)?/ "getter" rb
+public ${1:String} get${2:Name}() {
+	return `!p snip.rv = t[2].lower()`;
+}
+endsnippet
+
+snippet /set(ter)?/ "setter" rb
+public void set${1:Name}(${2:String} $1) {
+	return this.`!p snip.rv = t[1].lower()` = `!p snip.rv = t[1].lower()`;
+}
+endsnippet
+
+snippet /se?tge?t|ge?tse?t|gs/ "setter and getter" rb
+public void set${1:Name}(${2:String} `!p snip.rv = t[1].lower()`) {
+	this.`!p snip.rv = t[1].lower()` = `!p snip.rv = t[1].lower()`;
+}
+
+public $2 get$1() {
+	return `!p snip.rv = t[1].lower()`;
+}
+endsnippet
+
+snippet cn "constructor, \w fields + assigments" b
+ `!p
+args = getArgs(t[1])
+for i in args:
+	snip.rv += "\n\tprivate " + i[0] + " " + i[1]+ ";"
+if len(args) > 0:
+	snip.rv += "\n"`
+public `!p snip.rv = snip.basename or "unknown"`($1) { `!p
+args = getArgs(t[1])
+for i in args:
+	snip.rv += "\n\t\tthis." + i[1] + " = " + i[1]
+if len(args) == 0:
+	snip.rv += "\n"`
+}
+endsnippet
+
+snippet cn "Constructor" b
+public `!p snip.rv = snip.basename or "untitled"`(${1:}) {
+	$0
+}
+endsnippet
+
+snippet cc "constructor call or setter body"
+this.${1:var} = $1;
+endsnippet
+
+snippet "fi(e(l(d)?)?)?" "field" rb
+${1:private} ${2:String} ${3:`!p snip.rv = t[2].lower()`};
+endsnippet
+

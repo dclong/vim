@@ -1,0 +1,40 @@
+
+snippet as "assert" b
+assert ${1:test}${2/(.+)/(?1: \: ")/}${2:Failure message}${2/(.+)/(?1:")/};$0
+endsnippet
+
+snippet at "assert true" b
+assertTrue(${1:actual});
+endsnippet
+
+snippet af "assert false" b
+assertFalse(${1:actual});$0
+endsnippet
+
+snippet ae "assert equals" b
+assertEquals(${1:expected}, ${2:actual});
+endsnippet
+
+snippet t "test" b
+`!p junit(snip)`public void test${1:Name}() {
+	$0
+}
+endsnippet
+
+snippet tt "test throws" b
+`!p junit(snip)`public void test${1:Name}() ${2:throws Exception }{
+	$0
+}
+endsnippet
+
+snippet tc "test case"
+public class ${1:`!p snip.rv = snip.basename or "untitled"`} extends ${2:TestCase}`!p nl(snip)`{
+	$0
+}
+endsnippet
+
+snippet imt "import junit_framework_TestCase;"  b
+import junit.framework.TestCase;
+$0
+endsnippet
+

@@ -1,0 +1,26 @@
+
+priority 1
+snippet p "print" b
+System.out.print($1);$0
+endsnippet
+
+priority 1
+snippet pl "println"  b
+System.out.println($1);$0
+endsnippet
+
+priority 1
+snippet "(?i)\bScan(n(e(r)?)?)?|In(p(u(t)?)?)?T(e(x(t)?)?)?" "Input using Scanner" rb
+Scanner ${1:scan} = new Scanner(new File(${2:file})).useDelimiter("${3: }");
+while(scan.${4:hasNextDouble}()){
+	${5:scan.nextDouble();}
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bP(r(i(n(t)?)?)?)?W(r(i(t(e(r)?)?)?)?)?|Out(p(u(t)?)?)?T(e(x(t)?)?)?" "PrintWriter for Writing Text Files" r
+PrintWriter ${1:out} = new PrintWriter(${2:"${3:file_path}"});
+out.print(${4:value});
+$5
+out.close();
+endsnippet

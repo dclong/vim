@@ -1,0 +1,27 @@
+
+snippet list "Collections List" b
+List<${1:String}> ${2:list} = new ${3:Array}List<$1>();
+endsnippet
+
+snippet map "Collections Map" b
+Map<${1:String}, ${2:String}> ${3:map} = new ${4:Hash}Map<$1, $2>();
+endsnippet
+
+snippet set "Collections Set" b
+Set<${1:String}> ${2:set} = new ${3:Hash}Set<$1>();
+endsnippet
+
+snippet try "try/catch" b
+try {
+	$1
+} catch(${2:Exception} ${3:e}){
+	${4:e.printStackTrace();}
+}
+endsnippet
+
+snippet sw "switch" b
+switch ($1)`!p nl(snip)`{
+	case $2: $0
+}
+endsnippet
+
