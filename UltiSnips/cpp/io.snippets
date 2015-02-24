@@ -3,6 +3,7 @@ global !p
 from complete import *
 endglobal
 
+priority 2
 snippet readfile "read file (readF)"
 std::vector<char> v;
 if (FILE *fp = fopen(${1:"filename"}, "r")){
@@ -13,11 +14,18 @@ if (FILE *fp = fopen(${1:"filename"}, "r")){
 }
 endsnippet
 
-snippet "\bcout" "std::cout" r
+priority 1
+snippet "\bcout" "std::cout" rb
+cout << ${1:output};
+endsnippet
+
+priority 1
+snippet ":cout" "std::cout" r
 std::cout << ${1:output};
 endsnippet
 
-snippet "\bendl" "std::endl" r
+priority 1
+snippet ":endl" "std::endl" r
 std::endl
 endsnippet
 

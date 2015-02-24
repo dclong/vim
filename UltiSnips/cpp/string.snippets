@@ -24,7 +24,12 @@ std::string
 endsnippet
 
 priority 1
-snippet "\bto_str(i(n(g)?)?)?" "std::to_string" r
+snippet "(?i):to_str(i(n(g)?)?)?|:toStr(i(n(g)?)?)?" "std::to_string" r
 std::to_string(${1:arg})
+endsnippet
+
+priority 1
+snippet "(?i)\bto_s(t(r(i(n(g)?)?)?)?)?|\btoS(t(r(i(n(g)?)?)?)?)?" "std::to_string" r
+to_string(${1:arg})
 endsnippet
 
