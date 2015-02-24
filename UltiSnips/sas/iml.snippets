@@ -3,137 +3,137 @@ global !p
 from complete import *
 endglobal
 
-snippet "\bidentity matrix|\beye|\bdiag" "Identity Matrix" r
+snippet "(?i)\bidentity matrix|\beye|\bdiag" "Identity Matrix" r
 i(${1:dim})
 endsnippet
 
-snippet "\bmatrix|\bj" "Fill a Matrix" r
+snippet "(?i)\bmatrix|\bj" "Fill a Matrix" r
 j(${1:nrow}${2:, ${3:ncol}${4:, ${5:1}}})
 endsnippet
 
-snippet "\bwhich|\bloc" "The LOC Function" r
+snippet "(?i)\bwhich|\bloc" "The LOC Function" r
 loc(${1:values})
 endsnippet
 
-snippet "\brep(e(a(t)?)?)?" "Repeat a Matrix" r
+snippet "(?i)\brep(e(a(t)?)?)?" "Repeat a Matrix" r
 repeat(${1:matrix}, ${2:nrow}, ${3:ncol})
 endsnippet
 
 priority 1
-snippet "matrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
+snippet "(?i)\bmatrix reduction\.|matred\.|red(u(c(t(i(o(n)?)?)?)?)?)?\." "Matrix Reduction" rb
 MatrixReduction.$1`!p snip.rv = complete(t[1], file="sas/matrix_reduction.json")`
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.addition(.| )row|row sums?|sums? of rows?|rowSums?" "Sum of Rows" r
+snippet "(?i)\bMatrixReduction\.addition(.| )row|row sums?|sums? of rows?|rowSums?" "Sum of Rows" r
 ${1:matrix}[, +]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.addition(.| )row|row sums?|sums? of rows?|rowSums?\((\w)\)" "Sum of Rows" r
+snippet "(?i)\bMatrixReduction\.addition(.| )row|row sums?|sums? of rows?|rowSums?\((\w)\)" "Sum of Rows" r
 ${1:`!p snip.rv = match.group(1)`}[, +]
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.addition(.| )col(umn)?|col(umn) sums?|sums? of col(umn)?s?|col(S|s)ums?" "Sum of Columns" r
+snippet "(?i)\bMatrixReduction\.addition(.| )col(umn)?|col(umn) sums?|sums? of col(umn)?s?|colSums?" "Sum of Columns" r
 ${1:matrix}[+, ]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.addition(.| )col(umn)?|col(umn) sums?|sums? of col(umn)?s?|col(S|s)ums?\((\w)\)" "Sum of Columns" r
+snippet "(?i)\bMatrixReduction\.addition(.| )col(umn)?|col(umn) sums?|sums? of col(umn)?s?|colSums?\((\w)\)" "Sum of Columns" r
 ${1:`!p snip.rv = match.group(1)`}[+, ]
 endsnippet
 
-snippet "MatrixReduction\.multiplication(.| )rows?|prod(uct)?s? of rows?|row prod(uct)?s?|row(P|p)rods?" "Product of Rows" r
+snippet "(?i)\bMatrixReduction\.multiplication(.| )rows?|prod(uct)?s? of rows?|row prod(uct)?s?|rowProds?" "Product of Rows" r
 ${1:matrix}[, #]
 endsnippet
 
-snippet "MatrixReduction\.multiplication(.| )col(umn)?s?|prod(uct)?s? of col(umn)?s?|col(umn)?s? prod(uct)?s?|col(P|p)rods?" "Product of Columns" r
+snippet "(?i)\bMatrixReduction\.multiplication(.| )col(umn)?s?|prod(uct)?s? of col(umn)?s?|col(umn)?s? prod(uct)?s?|colProds?" "Product of Columns" r
 ${1:matrix}[#, ]
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.maximum(.| )rows?|max(imum)?s? of rows?|row max(imum)?s?|row(M|m)axs?" "Maximums of Rows" r
+snippet "(?i)\bMatrixReduction\.maximum(.| )rows?|max(imum)?s? of rows?|row max(imum)?s?|rowMaxs?" "Maximums of Rows" r
 ${1:matrix}[, <>]
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.maximum(.| )col(umn)?s?|max(imum)?s? of col(umn)?s?|col(umn)? max(imum)?s?|col(M|m)axs?" "Maximums of Columns" r
+snippet "(?i)\bMatrixReduction\.maximum(.| )col(umn)?s?|max(imum)?s? of col(umn)?s?|col(umn)? max(imum)?s?|colMaxs?" "Maximums of Columns" r
 ${1:matrix}[<>, ]
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.minimum(.| )rows?|min(imum)?s? of rows?|row min(imum)?s?|row(M|m)ins?" "Minimums of Rows" r
+snippet "(?i)\bMatrixReduction\.minimum(.| )rows?|min(imum)?s? of rows?|row min(imum)?s?|rowMins?" "Minimums of Rows" r
 ${1:matrix}[, ><]
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.minimum(.| )col(umn)?s?|min(imum)?s? of col(umn)?s?|col(umn)?s? min(imum)?s?|col(M|m)ins?" "Minimums of Columns" r
+snippet "(?i)\bMatrixReduction\.minimum(.| )col(umn)?s?|min(imum)?s? of col(umn)?s?|col(umn)?s? min(imum)?s?|colMins?" "Minimums of Columns" r
 ${1:matrix}[><, ]
 endsnippet
 
 priority 2
-snippet "MatrixReduction\.index of maximum(.| )rows?|indexs? of maximums? of rows?|rows? indexs? max(imum)?s?|row(M|m)ax(I|i)nd(ex)?" "Indices of Maximums of Rows" r
+snippet "(?i)\bMatrixReduction\.index of maximum(.| )rows?|indexs? of maximums? of rows?|rows? indexs? max(imum)?s?|rowMaxInd(ex)?" "Indices of Maximums of Rows" r
 ${1:matrix}[, <:>]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.col(M|m)ax(I|i)nd(ex)?" "Indices of Maximums of Columns" r
+snippet "(?i)\bMatrixReduction\.colMaxInd(ex)?" "Indices of Maximums of Columns" r
 ${1:matrix}[<:>, ]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.row(M|m)in(I|i)nd(ex)?" "Indices of Minimum of Rows" r
+snippet "(?i)\bMatrixReduction\.rowMinInd(ex)?" "Indices of Minimum of Rows" r
 ${1:matrix}[, >:<]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.col(M|m)in(I|i)nd(ex)?" "Indices of Minimum of Columns" r
+snippet "(?i)\bMatrixReduction\.colMinInd(ex)?" "Indices of Minimum of Columns" r
 ${1:matrix}[>:<, ]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.row(M|m)eans?" "Means of Rows" r
+snippet "(?i)\bMatrixReduction\.rowMeans?" "Means of Rows" r
 ${1:matrix}[, :]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.col(M|m)eans?" "Means of Columns" r
+snippet "(?i)\bMatrixReduction\.colMeans?" "Means of Columns" r
 ${1:matrix}[:, ]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.row(SS|ss)" "Sums of Squares of Rows" r
+snippet "(?i)\bMatrixReduction\.rowSS" "Sums of Squares of Rows" r
 ${1:matrix}[, ##]
 endsnippet
 
 priority 1
-snippet "MatrixReduction\.sums of squares of |col(SS|ss)" "Sums of Squares of Columns" r
+snippet "(?i)\bMatrixReduction\.sums of squares of |colSS" "Sums of Squares of Columns" r
 ${1:matrix}[##, ]
 endsnippet
 
 priority 2
-snippet "cbind" "R-style cbind Function" r
+snippet "(?i)cbind" "R-style cbind Function" r
 insert(${1:x}, ${2:y}, 0, ncol($1)+1)
 endsnippet
 
 priority 1
-snippet "cbind\((\w), ?(\w)\)" "R-style cbind Function" r
+snippet "(?i)cbind\((\w), ?(\w)\)" "R-style cbind Function" r
 insert(${1:`!p snip.rv = match.group(1)`}, ${2:`!p snip.rv = match.group(2)`}, 0, ncol($1)+1)
 endsnippet
 
 priority 2
-snippet "rbind" "R-style rbind Function" r
+snippet "(?i)rbind" "R-style rbind Function" r
 insert(${1:x}, ${2:y}, nrow($1)+1, 0)
 endsnippet
 
 priority 1
-snippet "rbind\((\w), ?(\w)\)" "R-style rbind Function" r
+snippet "(?i)rbind\((\w), ?(\w)\)" "R-style rbind Function" r
 insert(${1:`!p snip.rv = match.group(1)`}, ${2:`!p snip.rv = match.group(2)`}, nrow($1)+1, 0)
 endsnippet
 
 priority 2
-snippet "start" "Define a Module in IML" rb
+snippet "(?i)\bstart" "Define a Module in IML" rb
 start ${1:fun_name}(${2:arg});
 	${3:/* code */}
 finish;
@@ -141,214 +141,214 @@ endsnippet
 
 
 priority 2
-snippet "\bcdf" "CDF of Distributions" r
+snippet "(?i)\bcdf" "CDF of Distributions" r
 cdf('$1`!p snip.rv = complete(t[1], file="sas/distributions.json")`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 3
-snippet "\blogcdf" "Logarithm of CDF of Distributions" r
+snippet "(?i)\blogCDF" "Logarithm of CDF of Distributions" r
 logcdf('$1`!p snip.rv = complete(t[1], file="sas/distributions.json")`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 2
-snippet "\bpdf" "PDF of Distributions" r
+snippet "(?i)\bpdf" "PDF of Distributions" r
 pdf('$1`!p snip.rv = complete(t[1], file="sas/distributions.json")`', ${2:quantile}, ${3:args})
 endsnippet
 
 priority 1
-snippet "\bquantile" "Quantile of Distributions/Inverse CDFs" r
+snippet "(?i)\bquantile" "Quantile of Distributions/Inverse CDFs" r
 quantile('$1`!p snip.rv = complete(t[1], file="sas/distributions.json")`', ${2:probability}, ${3:args})
 endsnippet
 
 priority 1
-snippet "\brand" "Generate Random Numbers" r
+snippet "(?i)\brand" "Generate Random Numbers" r
 rand('$1`!p snip.rv = complete(t[1], file="sas/distributions.json")`', ${2:args})
 endsnippet
 
 priority 1
-snippet "\bpnorm" "CDF of the Normal Distribution" r
+snippet "(?i)\bpnorm" "CDF of the Normal Distribution" r
 cdf('NORMAL', ${1:quantile}, ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "\bdnorm" "PDF of the Normal Distribution" r
+snippet "(?i)\bdnorm" "PDF of the Normal Distribution" r
 pdf('NORMAL', ${1:quantile}, ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "\bqnorm" "Quantile of the Normal Distribution" r
+snippet "(?i)\bqnorm" "Quantile of the Normal Distribution" r
 quantile('NORMAL', ${1:probability}, ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "\brnorm" "Generate a Random Number from the Normal Distribution" r
+snippet "(?i)\brnorm" "Generate a Random Number from the Normal Distribution" r
 rand('NORMAL', ${2:mean}, ${3:standard_deviation})
 endsnippet
 
 priority 1
-snippet "\bpbern" "CDF of the Bernoulli Distribution" r
+snippet "(?i)\bpbern" "CDF of the Bernoulli Distribution" r
 cdf('BERNOULLI', ${1:quantile}, ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "\bdbern" "PDF of the Bernoulli Distribution" r
+snippet "(?i)\bdbern" "PDF of the Bernoulli Distribution" r
 pdf('BERNOULLI', ${1:quantile}, ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "\bqbern" "Quantile of the Bernoulli Distribution" r
+snippet "(?i)\bqbern" "Quantile of the Bernoulli Distribution" r
 quantile('BERNOULLI', ${1:probability}, ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "\brbern" "Generate a Random Number from the Bernoulli Distribution" r
+snippet "(?i)\brbern" "Generate a Random Number from the Bernoulli Distribution" r
 rand('BERNOULLI', ${2:success_probability})
 endsnippet
 
 priority 1
-snippet "\bpbeta" "CDF of the Beta Distribution" r
+snippet "(?i)\bpbeta" "CDF of the Beta Distribution" r
 cdf('BETA', ${1:quantile}, ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "\bdbeta" "PDF of the Beta Distribution" r
+snippet "(?i)\bdbeta" "PDF of the Beta Distribution" r
 pdf('BETA', ${1:quantile}, ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "\bqbeta" "Quantile of the Beta Distribution" r
+snippet "(?i)\bqbeta" "Quantile of the Beta Distribution" r
 quantile('BETA', ${1:probability}, ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "\brbeta" "Generate a Random Number from the Beta Distribution" r
+snippet "(?i)\brbeta" "Generate a Random Number from the Beta Distribution" r
 rand('BETA', ${2:alpha}, ${3:beta})
 endsnippet
 
 priority 1
-snippet "\bpbinom" "CDF of the Binomial Distribution" r
+snippet "(?i)\bpbinom" "CDF of the Binomial Distribution" r
 cdf('BINOMIAL', ${1:quantile}, ${2:success_probability}, ${3:size})
 endsnippet
 
 priority 1
-snippet "\bdbinom" "PDF of the Binomial Distribution" r
+snippet "(?i)\bdbinom" "PDF of the Binomial Distribution" r
 pdf('BINOMIAL', ${1:quantile}, ${2:success_probability}, ${3:size})
 endsnippet
 
 priority 1
-snippet "\bqbinom" "Quantile of the Binomial Distribution" r
+snippet "(?i)\bqbinom" "Quantile of the Binomial Distribution" r
 quantile('BINOMIAL', ${1:probability}, ${2:success_probability}, ${3:size})
 endsnippet
 
 priority 1
-snippet "\brbinom" "Generate a Random Number from the Binomial Distribution" r
+snippet "(?i)\brbinom" "Generate a Random Number from the Binomial Distribution" r
 rand('BINOMIAL', ${2:p}, ${3:size})
 endsnippet
 
 priority 1
-snippet "\bpchisq" "CDF of the Chi-Square Distribution" r
+snippet "(?i)\bpchisq" "CDF of the Chi-Square Distribution" r
 cdf('CHISQUARE', ${1:quantile}, ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bdchisq" "PDF of the Chi-Square Distribution" r
+snippet "(?i)\bdchisq" "PDF of the Chi-Square Distribution" r
 pdf('CHISQUARE', ${1:quantile}, ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bqchisq" "Quantile of the Chi-Square Distribution" r
+snippet "(?i)\bqchisq" "Quantile of the Chi-Square Distribution" r
 quantile('CHISQUARE', ${1:probability}, ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "\brchisq" "Generate a Random Number from the Chi-Square Distribution" r
+snippet "(?i)\brchisq" "Generate a Random Number from the Chi-Square Distribution" r
 rand('CHISQUARE', ${2:degree_freedom}, ${3:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bpf" "CDF of the F Distribution" r
+snippet "(?i)\bpf" "CDF of the F Distribution" r
 cdf('F', ${1:quantile}, ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bdf" "PDF of the F Distribution" r
+snippet "(?i)\bdf" "PDF of the F Distribution" r
 pdf('F', ${1:quantile}, ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bqf" "Quantile of the F Distribution" r
+snippet "(?i)\bqf" "Quantile of the F Distribution" r
 quantile('F', ${1:probability}, ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\brf" "Generate a Random Number from the F Distribution" r
+snippet "(?i)\brf" "Generate a Random Number from the F Distribution" r
 rand('F', ${2:numerator_degree_freedom}, ${3:denominator_degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bpt" "CDF of the T Distribution" r
+snippet "(?i)\bpt" "CDF of the T Distribution" r
 cdf('T', ${1:quantile}, ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bdt" "PDF of the T Distribution" r
+snippet "(?i)\bdt" "PDF of the T Distribution" r
 pdf('T', ${1:quantile}, ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bqt" "Quantile of the T Distribution" r
+snippet "(?i)\bqt" "Quantile of the T Distribution" r
 quantile('T', ${1:probability}, ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\brt" "Generate a Random Number from the T Distribution" r
+snippet "(?i)\brt" "Generate a Random Number from the T Distribution" r
 rand('T', ${2:degree_freedom}, ${4:non-centrality})
 endsnippet
 
 priority 1
-snippet "\bread" "Read Data Set into IML" r
+snippet "(?i)\bread" "Read Data Set into IML" r
 use ${1:DataSet};
 read all var _all_ into ${2:VarName};
 close $1;
 endsnippet
 
 priority 1
-snippet "\bdiff?" "The dif<n> Function" r
+snippet "(?i)\bdiff?" "The dif<n> Function" r
 dif${2:1}(${1:vector})
 endsnippet
 
 priority 1
-snippet "\bdiff?" "The lag<n> Function" r
+snippet "(?i)\bdiff?" "The lag<n> Function" r
 lag${2:1}(${1:vector})
 endsnippet
 
 priority 1
-snippet "\bpow(e(r)?)?" "Elementwise Power" r
+snippet "(?i)\bpow(e(r)?)?" "Elementwise Power" r
 ${1:base} ## ${2:power}
 endsnippet
 
 priority 1
-snippet "\bmpow(e(r)?)?" "Matrix Power" r
+snippet "(?i)\bmpow(e(r)?)?" "Matrix Power" r
 ${1:base_matrix} ** ${2:power}
 endsnippet
 
 priority 1
-snippet "\bmax" "Maximum Value of Matrices" r
+snippet "(?i)\bmax" "Maximum Value of Matrices" r
 max(${1:m1}, ${2:m2})
 endsnippet
 
 priority 1
-snippet "\bmin" "Minimum Value of Matrices" r
+snippet "(?i)\bmin" "Minimum Value of Matrices" r
 min(${1:m1}, ${2:m2})
 endsnippet
 
 priority 1
-snippet "\breturn" "Return a Value" rb
+snippet "(?i)\breturn" "Return a Value" rb
 return(${1:value});
 endsnippet
 
 priority 1
-snippet "\bcho(o(s(e)?)?)?|\bife(l(s(e)?)?)?" "Conditional Element Selection" r
+snippet "(?i)\bcho(o(s(e)?)?)?|\bife(l(s(e)?)?)?" "Conditional Element Selection" r
 choose(${1:condition}, ${2:result-for-true}, ${3:result-for-false})
 endsnippet
 
