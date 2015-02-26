@@ -96,3 +96,13 @@ proc export data=${1:dataset} ${2:(where=(${3:conditions}))}
 run;
 endsnippet
 
+priority 1
+snippet "proc transpose" "The TRANSPOSE Procedure" rb
+proc transpose data=${1:in_dataset}${2: out=${3:out_dataset}${4: (drop=${5:_name_})}}${6: prefix=${7:prefix}};
+    by ${8:group_column};
+    ${9:id ${10:nest_column}};
+    var ${11:columns};
+run;
+endsnippet
+
+
