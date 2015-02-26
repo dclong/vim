@@ -2,37 +2,55 @@ extends text
 extends tex
 extends html
 
-priority 10
 
+priority 2
 snippet link "Link to something" 
 [${1:${VISUAL:Text}}](${3:http://:www.url.com})$0
 endsnippet
 
+priority 2
 snippet img "Image" 
 ![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
 endsnippet
 
+priority 2
 snippet nn "\nonumber \newline" w
 \nonumber \newline
 endsnippet
 
+priority 2
 snippet nl "\newline" w
 \newline
 endsnippet
 
+priority 2
 snippet e "Inline Equation" w
 $$1$
 endsnippet
 
+priority 2
 snippet ee "Display Equation" b
 $$
     $1
 $$
 endsnippet
 
+priority 2
 snippet quote "Block Quote" b
 > ${1:type in quotes here}
 >
 >
+endsnippet
+
+priority 2
+snippet "\bc(o(d(e)?)?)?" "Code Block" rb
+`!p snip.rv = chr(96) * 3`${2:language}
+${1:code}
+`!p snip.rv = chr(96) * 3`
+endsnippet
+
+priority 2
+snippet "\bic(o(d(e)?)?)?" "Code Block" r
+`!p snip.rv = chr(96)`${1:code}`!p snip.rv = chr(96)`
 endsnippet
 
