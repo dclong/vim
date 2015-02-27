@@ -1,4 +1,8 @@
 
+global !p
+from complete import *
+endglobal
+
 snippet "\bs(t(r(i(n(g)?)?)?)?)?\." "String Functions" r
 $1`!p snip.rv = complete(t[1], opts=["nchar", "paste"])`
 endsnippet
@@ -6,5 +10,15 @@ endsnippet
 priority 1
 snippet "\bp(a(s(t(e)?)?)?)?" "Function paste" r
 paste($1${2:, sep="$3"}${4:, collapse="$5"})
+endsnippet
+
+priority 1
+snippet "\btrim|\bstrip" "Remove leading/trailing white spaces from a string" r
+stringr::str_trim(${1:string}${2:, side="$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
+endsnippet
+
+priority 1
+snippet "(?i)\bsubStr(i(n(g)?)?)?" "Substring" r
+substr(${1:string}, ${2:position}${3:, length})
 endsnippet
 
