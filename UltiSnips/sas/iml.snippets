@@ -308,7 +308,8 @@ endsnippet
 priority 1
 snippet "(?i)\bread" "Read Data Set into IML" r
 use ${1:DataSet};
-read all var _all_ into ${2:VarName};
+${2:read all var _all_ into ${3:VarName};}
+${4:read all var {${5:column_name}};}
 close $1;
 endsnippet
 

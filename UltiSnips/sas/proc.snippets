@@ -74,6 +74,8 @@ proc sort data = ${1:d} ${2:out = ${3:o}};
 run;
 endsnippet
 
+# depends on whether dlm, use delimiter or not ...
+# also make the dataRow 2 if getNames=Y
 priority 2
 snippet "proc import" "The IMPORT Procedure" rb
 proc import out=${1:dataset} ${11:(where=(${12:conditions}))}
@@ -81,6 +83,7 @@ proc import out=${1:dataset} ${11:(where=(${12:conditions}))}
     dbms=$3`!p snip.rv = complete(t[3], opts=["csv", "dlm", "xlsx"])`
     ${4:replace}
     ; 
+    delimiter="\t";
     ${5:sheet="${6:sheet_name}";}
     ${7:getNames=${8:Y};}
     ${9:dataRow=${10:1};}

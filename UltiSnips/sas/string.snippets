@@ -1,0 +1,26 @@
+
+priority 1
+snippet "s(t(r(i(n(g)?)?)?)?)?\." "Procedure" rb
+proc $1`!p snip.rv = complete(t[1], file="sas/string.json")`
+endsnippet
+
+priority 1
+snippet "\bcatx" "Concatenate String with Leading/Trailing White Spaces Removed" r
+catx(${1:""}, ${2:item1}, ${3:item2})
+endsnippet
+
+priority 1
+snippet "\bstrip" "Trim leading/trailing white spaces in a String" r
+strip(${1:string})
+endsnippet
+
+priority 1
+snippet "(?i)\bsubStr(i(n(g)?)?)?" "Substring" r
+substr(${1:string}, ${2:position}${3:, length})
+endsnippet
+
+priority 1
+snippet "scan|split" "Split a string and return the nth ocurrence" r
+scan(${1:string}, ${2:count}${3:, ${4:charlist}${5:, ${6:modifiers}}})
+endsnippet
+
