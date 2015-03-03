@@ -4,7 +4,7 @@
     "right: right align a string with trailing white spaces moved to the beginning", 
     "trim: removes trailing blanks from a character string, and returns one blank if the string is missing", 
     "compbl: removes multiple blanks from a character string", 
-    "index: searches a character expression for a string of characters, and returns the position of the string's first character for the first occurrence of the string", 
+    "index: searches a character expression for a string of characters, and returns the position of the first occurrence of the string", 
     "input: returns the value that is produced when SAS converts an expression using the specified informat", 
     "tranwrd: replaces all occurrences of a substring in a character string", 
     "upCase: converts all letters in an argument to uppercase", 
