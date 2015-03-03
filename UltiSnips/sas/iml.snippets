@@ -3,20 +3,33 @@ global !p
 from complete import *
 endglobal
 
+priority 1
 snippet "(?i)\bidentity matrix|\beye|\bdiag" "Identity Matrix" r
 i(${1:dim})
 endsnippet
 
+priority 1
 snippet "(?i)\bmatrix|\bj" "Fill a Matrix" r
 j(${1:nrow}${2:, ${3:ncol}${4:, ${5:1}}})
 endsnippet
 
+priority 1
 snippet "(?i)\bwhich|\bloc" "The LOC Function" r
-loc(${1:values})
+if any(${1:values}) then do;
+	${2:var_name} = loc($1);
+end;${3: else do;
+	${4:/* default value(s) */}
+end;}
 endsnippet
 
+priority 1
 snippet "(?i)\brep(e(a(t)?)?)?" "Repeat a Matrix" r
 repeat(${1:matrix}, ${2:nrow}, ${3:ncol})
+endsnippet
+
+priority 1
+snippet "\bsha(p(e)?)?|resh(a(p(e)?)?)?" "Reshapes a Matrix" r
+shape(${1:matrix}, ${2:nrow}${3:, ${4:ncol}${5:, ${6:padding_value}}})
 endsnippet
 
 priority 1
@@ -353,3 +366,7 @@ snippet "(?i)\bcho(o(s(e)?)?)?|\bife(l(s(e)?)?)?" "Conditional Element Selection
 choose(${1:condition}, ${2:result-for-true}, ${3:result-for-false})
 endsnippet
 
+priority 1
+snippet "\bmatt(r(i(b)?)?)?" "Matrix Attributes" r
+mattrib ${1:matrix}${2: rowname=(${3:rownames})}${4: colname=(${5:colnames})}${6: label="${7:label}"}${8: format=${9:format}};
+endsnippet

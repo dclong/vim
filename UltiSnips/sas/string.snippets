@@ -1,7 +1,11 @@
 
+global !p
+from complete import *
+endglobal
+
 priority 1
 snippet "s(t(r(i(n(g)?)?)?)?)?\." "Procedure" rb
-proc $1`!p snip.rv = complete(t[1], file="sas/string.json")`
+$1`!p snip.rv = complete(t[1], file="sas/string.json")`
 endsnippet
 
 priority 1
