@@ -11,8 +11,8 @@
     ], 
     [
         "vector: the vector container", 
-        4, 
-        "2015-02-07 09:56:46.864470"
+        5, 
+        "2015-02-28 16:50:47.355138"
     ], 
     [
         "algorithm: algorithms", 
@@ -24,6 +24,11 @@
         1, 
         "2015-02-07 09:56:46.864470"
     ], 
+    [
+        "utility: utilities libarary", 
+        1, 
+        "2015-02-07 10:44:18.869693"
+    ], 
     "chrono: part of date and time library", 
     "fstream: file stream", 
     "forward_list: the single-linked list container", 
@@ -34,10 +39,5 @@
     "set: the set (tree-based, sorted) container", 
     "string: strings", 
     "tuple: the tuple (multiple unrelated types) data structure", 
-    "unordered_set: the unordered_set (hashtable-based, unsorted) container", 
-    [
-        "utility: utilities libarary", 
-        1, 
-        "2015-02-07 10:44:18.869693"
-    ]
+    "unordered_set: the unordered_set (hashtable-based, unsorted) container"
 ]
