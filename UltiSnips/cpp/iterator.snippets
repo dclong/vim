@@ -7,3 +7,19 @@ priority 1
 snippet "\b\.it(e(r(a(t(o(r)?)?)?)?)?)?" "Classes/Functions Related to Iterators" r
 .$1`!p snip.rv = complete(t[1], file="cpp/iterator.json")`
 endsnippet
+
+priority 1
+snippet "\bb(e(g(i(n)?)?)?)?e(n(d)?)?" "$1.begin(), $1.end() (beginend)" r
+${1:container}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
+endsnippet
+
+priority 1
+snippet ":?:it" "Iterator" r
+::iterator
+endsnippet
+
+priority 2
+snippet ":?:cit" "Const Iterator" r
+::const_iterator
+endsnippet
+
