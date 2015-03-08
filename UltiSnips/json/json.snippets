@@ -1,39 +1,104 @@
 
 priority 1
-snippet "\bs(t(r(i(n(g)?)?)?)?)?" "String" rb
+snippet "(?i)\bstr(i(n(g)?)?)?|char(a(c(t(e(r)?)?)?)?)?" "String" rb
 "${1:key}": "${0:string}",
 endsnippet
 
 priority 1
-snippet "\bn(u(m(b(e(r)?)?)?)?)?" "Number" rb
+snippet "(?i)\bnum(b(e(r)?)?)?" "Number" rb
 "${1:key}": ${0:number},
 endsnippet
 
 priority 1
-snippet "\ba(r(r(a(y)?)?)?)?|l(i(s(t)?)?)?" "Array" rb
+snippet "(?i)\barr(a(y)?)?|li(s(t)?)?" "Array" rb
 [
    ${VISUAL}$0
 ],
 endsnippet
 
 priority 1
-snippet "\bo(b(j(e(c(t)?)?)?)?)?|m(a(p)?)?|d(i(c(t(i(o(n(a(r(y)?)?)?)?)?)?)?)?)?" "Object" rb
+snippet "(?i)\bo(b(j(e(c(t)?)?)?)?)?|m(a(p)?)?|d(i(c(t(i(o(n(a(r(y)?)?)?)?)?)?)?)?)?" "Object" rb
 {
    ${VISUAL}$0
 },
 endsnippet
 
-priority 2
-snippet "\buuid" "UUID" rb
+priority 3
+snippet "(?i)\buuid" "UUID" rb
 "UUID": "`uuidgen`",
 endsnippet
 
+priority 2
+snippet "(?i)\buuid" "UUID" r
+`uuidgen`
+endsnippet
+
 priority 1
-snippet "\blink(e(d(i(n)?)?)?)?" "LinkedIn" rb
+snippet "(?i)\blink(e(d(i(n)?)?)?)?" "LinkedIn" rb
 "LinkedIn": "${1:${VISUAL:LinkedIn Address}}",
 endsnippet
 
 priority 1
-snippet "\bwechat" "WeChat" rb
+snippet "(?i)\bwechat" "WeChat" rb
 "WeChat": "${1:${VISUAL:WeChat ID}}",
+endsnippet
+
+priority 1
+snippet "(?i)\bdep(a(r(t(m(e(n(t)?)?)?)?)?)?)?" "Contact - Department" rb
+"Department": "${1:department}"${2:,}
+endsnippet
+
+priority 1
+snippet "(?i)\bem(a(i(l)?)?)?" "Contact - Email" rb
+"Email": ["${1:email_1}"]${2:,}
+endsnippet
+
+priority 1
+snippet "(?i)ph(o(n(e)?)?)?" "Contact - Phone" rb
+"Phone": {
+	"Cell": ["${1:phone_1}"]
+},
+endsnippet
+
+priority 1
+snippet "(?i)\b(job|work)( (h(i(s(t(o(r(y)?)?)?)?)?)?)?)?" "Description" rb
+"Job History": [
+	{
+		"Email": "${1:email}",
+		"Phone": "${2:phone}",
+		"Title": "${3:title}",
+		"Department": "${4:department}",
+		"Company": "uuid"
+	}
+]
+endsnippet
+
+priority 1
+snippet "(?i)\bname" "Contact - Name" rb
+"Name":{
+	${1:"English": {
+		"Surname": "${2:last_name}",
+		"Given Name": "${3:first_name}",
+		${4:"Aliases": ["${5:alias}"],}
+		${6:"Preferred Name": "${7:preferred_name}"}
+	}},
+	${8:"Chinese": {
+		"Surname": "${9:last_name}",
+		"Given Name": "${10:first_name}",
+		${11:"Aliases": ["${12:alias}"],}
+		${13:"Preferred Name": "${14:Bill}"}
+	}}
+},
+endsnippet
+
+priority 1
+snippet "(?i)\bcon(t(a(c(t)?)?)?)?" "Contact Entry" rb
+{
+	${1:name}
+	${2:email}
+	${3:phone}
+	${4:WeChat}
+	${5:LinkedIn}
+	${6:job}
+}
 endsnippet
