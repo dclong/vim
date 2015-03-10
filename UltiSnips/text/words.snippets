@@ -3,36 +3,54 @@ global !p
 from complete import *
 endglobal
 
-snippet "w(o(r(d(s)?)?)?)?\." "Single Words" r
-$1`!p snip.rv = complete(t[1], opts=["abbreviation",  "bibliography", "difference", "message", "case-sensitive", "case-insensitive", "independent", "problem", "probability", "programming", "temporary", "synchronization", "executable", "statistics"])`
+priority 1
+snippet "\bw(o(r(d(s)?)?)?)?\." "Single Words" r
+$1`!p snip.rv = complete(t[1], opts=["abbreviation",  "bibliography", "difference", "message", "case-sensitive", "case-insensitive", "independent", "problem", "probability", "programming", "temporary", "synchronization", "executable", "statistics", "cross-platform", "appraisal"])`
 endsnippet
 
-snippet pro "Pro*" w
+priority 1
+snippet "\bw(o(r(d(s)?)?)?)?\." "Single Words" r
+$1`!p snip.rv = complete(t[1], opts=["HELOC", "original", "origination", "term"])`
+endsnippet
+
+priority 1
+snippet "\bpro" "Pro*" r
 pro$1`!p snip.rv = complete(t[1], opts=["blem", "bability", "gram"])`
 endsnippet
 
-snippet "p(h(r(a(s(e)?)?)?)?)?\." "Phrases" r
+priority 1
+snippet "\bp(h(r(a(s(e)?)?)?)?)?\." "Phrases" r
 $1`!p snip.rv = complete(t[1], opts=["Teradata SQL Assistant",  "Fun Problems",  "fun problems", "desktop environment", "remote desktop"])`
 endsnippet
 
-snippet "t(o(o(l(s)?)?)?)?\." "Tools" r
+priority 1
+snippet "\bt(o(o(l(s)?)?)?)?\." "Tools" r
 $1`!p snip.rv = complete(t[1], opts=["Git", "SQL", "Java", "Cygwin", "CygwinPortable", "SAS", "SAS Enterprise Guide", "MATLAB", "Mathematica", "AutoHotkey", "BitTorrent", "C++", "Python"])`
 endsnippet
 
-snippet "a(b(b(r(e(v(i(a(t(i(o(n)?)?)?)?)?)?)?)?)?)?)?\." "Abbreviation" r
+priority 1
+snippet "\ba(b(b(r(e(v(i(a(t(i(o(n)?)?)?)?)?)?)?)?)?)?)?\." "Abbreviation" r
 $1`!p snip.rv = complete(t[1], opts=["tds", "sql", "author", "fp", "FP", "idp", "pm", "bib", "os", "rd"])`
 endsnippet
 
 
-snippet "b(u(s(i(n(e(s(s)?)?)?)?)?)?)?\." "Business" r
+priority 1
+snippet "\bb(u(s(i(n(e(s(s)?)?)?)?)?)?)?\." "Business" r
 $1`!p snip.rv = complete(t[1], opts=["Amazon", "Ebay", "New Egg"])`
 endsnippet
 
-snippet "html" "HTML" rw
+priority 1
+snippet "\bhtml" "HTML" r
 HTML
 endsnippet
 
-snippet "rsn(a(p(s(h(o(t)?)?)?)?)?)?" "Rsnapshot" rw
+priority 1
+snippet "\brsn(a(p(s(h(o(t)?)?)?)?)?)?" "Rsnapshot" r
 Rsnapshot
+endsnippet
+
+priority 1
+snippet "\bpdf" "PDF" r
+PDF
 endsnippet
 
