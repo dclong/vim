@@ -28,6 +28,16 @@ repeat(${1:matrix}, ${2:nrow}, ${3:ncol})
 endsnippet
 
 priority 1
+snippet "(?i)\buni(q(u(e)?)?)?" "Unique" r
+unique(${1:m1})
+endsnippet
+
+priority 1
+snippet "(?i)\buni(o(n)?)?" "Union" r
+union(${1:m1}, ${2:m2})
+endsnippet
+
+priority 1
 snippet "\bsha(p(e)?)?|resh(a(p(e)?)?)?" "Reshapes a Matrix" r
 shape(${1:matrix}, ${2:nrow}${3:, ${4:ncol}${5:, ${6:padding_value}}})
 endsnippet
