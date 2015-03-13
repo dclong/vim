@@ -13,7 +13,7 @@ endglobal
 priority 1
 snippet "snip(p(e(t)?)?)?" "Snippet definition" rb
 priority ${5:1}
-`!p snip.rv = "snippet"` "\b${1:RegEx Trigger}" "${2:Description}" ${3:r}
+`!p snip.rv = "snippet"` "(?i)\b${1:RegEx Trigger}" "${2:Description}" ${3:r}
 $4
 `!p snip.rv = "endsnippet"`
 endsnippet
