@@ -10,3 +10,9 @@ snippet "o(p(t(i(o(n(s)?)?)?)?)?)?" "Methods of options" rb
 options $1`!p snip.rv = complete(t[1], file="sas/options.json")`
 endsnippet
 
+priority 1
+snippet "\bsubm(i(t)?)?" "Submit ... EndSubmit" r
+submit;
+${1:/* ${2:code} */}
+endSubmit;
+endsnippet

@@ -337,6 +337,18 @@ close $1;
 endsnippet
 
 priority 1
+snippet "(?i)\bcre(a(t(e)?)?)?" "Write a Matrix from IML into a Data Set" r
+create ${1:work.dataset} from ${2:matrix};
+append from $2;
+close $1;
+endsnippet
+
+priority 1
+snippet "(?i)\bpr(i(n(t)?)?)?" "The PRINT Function" r
+print(${1:expr});
+endsnippet
+
+priority 1
 snippet "(?i)\bdiff?" "The dif<n> Function" r
 dif${2:1}(${1:vector})
 endsnippet
