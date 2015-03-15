@@ -28,6 +28,16 @@ repeat(${1:matrix}, ${2:nrow}, ${3:ncol})
 endsnippet
 
 priority 1
+snippet "(?i)\buni(q(u(e)?)?)?" "Unique" r
+unique(${1:m1})
+endsnippet
+
+priority 1
+snippet "(?i)\buni(o(n)?)?" "Union" r
+union(${1:m1}, ${2:m2})
+endsnippet
+
+priority 1
 snippet "\bsha(p(e)?)?|resh(a(p(e)?)?)?" "Reshapes a Matrix" r
 shape(${1:matrix}, ${2:nrow}${3:, ${4:ncol}${5:, ${6:padding_value}}})
 endsnippet
@@ -324,6 +334,18 @@ use ${1:DataSet};
 ${2:read all var _all_ into ${3:VarName};}
 ${4:read all var {${5:column_name}};}
 close $1;
+endsnippet
+
+priority 1
+snippet "(?i)\bcre(a(t(e)?)?)?" "Write a Matrix from IML into a Data Set" r
+create ${1:work.dataset} from ${2:matrix};
+append from $2;
+close $1;
+endsnippet
+
+priority 1
+snippet "(?i)\bpr(i(n(t)?)?)?" "The PRINT Function" r
+print(${1:expr});
 endsnippet
 
 priority 1

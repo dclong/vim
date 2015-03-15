@@ -14,6 +14,11 @@ catx(${1:""}, ${2:item1}, ${3:item2})
 endsnippet
 
 priority 1
+snippet "\bcat" "Concatenate Strings" r
+cat(${2:item1}, ${3:item2})
+endsnippet
+
+priority 1
 snippet "\bstrip" "Trim leading/trailing white spaces in a String" r
 strip(${1:string})
 endsnippet
@@ -28,3 +33,7 @@ snippet "scan|split" "Split a string and return the nth ocurrence" r
 scan(${1:string}, ${2:count}${3:, ${4:charlist}${5:, ${6:modifiers}}})
 endsnippet
 
+priority 1
+snippet "(?i)\bnchar|length" "Lengths of Characters" r
+length(${1:string});
+endsnippet
