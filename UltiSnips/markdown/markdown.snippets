@@ -45,12 +45,12 @@ endsnippet
 priority 2
 snippet "\bc(o(d(e)?)?)?" "Code Block" rb
 `!p snip.rv = chr(96) * 3`${2:language}
-${1:code}
+${1:${VISUAL:code}}
 `!p snip.rv = chr(96) * 3`
 endsnippet
 
 priority 2
-snippet "\bic(o(d(e)?)?)?" "Code Block" r
-`!p snip.rv = chr(96)`${1:code}`!p snip.rv = chr(96)`
+snippet "\bic(o(d(e)?)?)?|\bc(o(d(e)?)?)?" "Code Block" r
+`!p snip.rv = chr(96)`${1:${VISUAL:code}}`!p snip.rv = chr(96)`
 endsnippet
 

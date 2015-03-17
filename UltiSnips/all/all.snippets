@@ -123,3 +123,8 @@ ${2:${VISUAL:Content}}
 `!p snip.rv = _get_comment_format()[0]` `!p snip.rv = foldmarker()[1]` $1 `!p snip.rv = _get_comment_format()[2]`
 endsnippet
 
+priority 1
+snippet vis "${VISUAL}" i
+\$\{VISUAL${1::${2:${VISUAL:default}}${3:/${4:search}/${5:transform}/${6:option}}}\}
+endsnippet
+	
