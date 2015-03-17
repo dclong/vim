@@ -6,6 +6,7 @@
     "numpy",
     "os",
     "subprocess",
+    "uuid",
     "warnings",
     "shutil",
     "hashlib",
