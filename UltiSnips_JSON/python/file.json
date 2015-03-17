@@ -12,6 +12,7 @@
     "seek",
     "tell",
     "truncate",
+    "with",
     "write",
     "writelines"
 ]
