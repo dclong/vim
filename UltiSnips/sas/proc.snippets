@@ -47,31 +47,35 @@ endsnippet
 
 priority 1
 snippet "proc print" "The Print Procedure" b
+title "${7:$1}";
 proc print data = ${1:d} ${2:(${3:where=(${4:condition})} ${5:obs=${6:5}})};
-    title "${7:$1}";
 run;
+title;
 endsnippet
 
 priority 1
 snippet 'pp(\d+)' "Print Top n Rows" rb
+title "${4:$1}";
 proc print data = ${1:d} ${2:(obs=${3:`!p snip.rv = match.group(1)`})};
-    title "${4:$1}";
 run;
+title;
 endsnippet
 
 priority 1
 snippet ppw "Print with Where" b
+title "${4:$1}";
 proc print data = ${1:d} ${2:(where=(${3:conditions}))};
-    title "${4:$1}";
 run;
+title;
 endsnippet
 
 priority 1
 snippet sort "Proc Sort" b
+title "${4:$1 Sorted}";
 proc sort data = ${1:d} ${2:out = ${3:o}};
-	title "${4:$1 Sorted}";
 	by ${5:descending} ${6:var};
 run;
+title;
 endsnippet
 
 # depends on whether dlm, use delimiter or not ...

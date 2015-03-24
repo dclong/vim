@@ -82,14 +82,24 @@ endsnippet
 priority 1
 snippet "\bfile\.with" "Open a File in a With Block" r
 with open(${1:file}, "${2:r}") as ${3:f}:
-	${4:pass}
+	${4:for ${6:line} in $3:
+		${7:pass}
+	#end for}
+	${5:for ${8:i},${9:line} in enumerate($3):
+		${10:pass}
+	#end for}
 #end with
 endsnippet
 
 priority 2
 snippet "\bwith\.f(i(l(e)?)?)?" "Open a File in a With Block" r
 with open(${1:file}, "${2:r}") as ${3:f}:
-	${4:pass}
+	${4:for ${6:line} in $3:
+		${7:pass}
+	#end for}
+	${5:for ${8:i},${9:line} in enumerate($3):
+		${10:pass}
+	#end for}
 #end with
 endsnippet
 
