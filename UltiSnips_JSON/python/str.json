@@ -14,12 +14,21 @@
         2, 
         "2015-02-07 13:14:51.041624"
     ], 
+    [
+        "startswith", 
+        2, 
+        "2015-03-25 01:40:19.175178"
+    ], 
     "capitalize", 
     "center", 
     "count", 
     "decode", 
     "encode", 
-    "endswith", 
+    [
+        "endswith", 
+        1, 
+        "2015-03-25 01:41:18.405921"
+    ], 
     "expandtabs", 
     "format", 
     "index", 
@@ -43,7 +52,6 @@
     "rstrip", 
     "split", 
     "splitlines", 
-    "startswith", 
     "str", 
     "strip", 
     "swapcase", 
