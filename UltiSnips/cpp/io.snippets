@@ -4,28 +4,39 @@ from complete import *
 endglobal
 
 priority 2
-snippet readfile "read file (readF)"
+snippet "readfile" "read file (readF)" rb
 std::vector<char> v;
-if (FILE *fp = fopen(${1:"filename"}, "r")){
+if(FILE *fp = fopen(${1:"filename"}, "r")){
 	char buf[1024];
-	while(size_t len = fread(buf, 1, sizeof(buf), fp))
+	while(size_t len = fread(buf, 1, sizeof(buf), fp)){
 		v.insert(v.end(), buf, buf + len);
+	}
 	fclose(fp);
 }
 endsnippet
 
 priority 1
-snippet "\bcout" "std::cout" rb
+snippet "(?i)\bcout" "std::cout" rb
 cout << ${1:output};
 endsnippet
 
 priority 1
-snippet ":cout" "std::cout" r
+snippet "(?i):cout" "std::cout" r
 std::cout << ${1:output};
 endsnippet
 
 priority 1
 snippet ":endl" "std::endl" r
 std::endl
+endsnippet
+
+priority 2
+snippet "(?i):ofs(t(r(e(a(m)?)?)?)?)?" "std::ofstream" r
+std::ofstream
+endsnippet
+
+priority 1
+snippet "(?i)\bofs(t(r(e(a(m)?)?)?)?)?" "std::ofstream" r
+ofstream
 endsnippet
 

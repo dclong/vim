@@ -18,9 +18,14 @@ snippet "\bstol" "std::stol" r
 std::stol(${1:str})
 endsnippet
 
-priority 1
-snippet "\bstr(i(n(g)?)?)?" "std::string" r
+priority 2
+snippet "(?i):str(i(n(g)?)?)?" "std::string" r
 std::string
+endsnippet
+
+priority 1
+snippet "(?i)str(i(n(g)?)?)?" "std::string" r
+string
 endsnippet
 
 priority 1
