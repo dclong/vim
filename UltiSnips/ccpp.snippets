@@ -114,9 +114,9 @@ for(${1:init}; ${2:stop}; ${3:change}){
 }
 endsnippet
 
-snippet fori "for int loop (fori)"
-for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+snippet "(?i)\bfori(n(t)?)?" "for int loop" rb
+for(${1:int} ${2:i}=${3:0}; $2<${4:count}; ${5:++$2}){
+	${VISUAL}${6:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
 endsnippet
 
