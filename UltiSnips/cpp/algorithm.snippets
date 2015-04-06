@@ -50,3 +50,16 @@ std::sort(${1:first}, ${2:last}${3:, [${9:capture}](${4:Type1 const &} ${5:a}, $
 }});
 endsnippet
 
+priority 1
+snippet "(?i):count_(i(f)?)?" "Count elements satisfying specified condition" r
+std::count_if(nodes.cbegin(), nodes.cend(), [](hmm::Node* node){
+	return node->size() < size;
+});
+endsnippet
+
+priority 1
+snippet "(?i)\blam(b(d(a)?)?)?|\[\]" "Description" r
+[${1:capture}](${2:params}){
+	${3:/* code */} 
+} 
+endsnippet
