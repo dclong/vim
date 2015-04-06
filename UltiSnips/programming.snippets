@@ -63,25 +63,46 @@ snippet "\band" "AND" r
 endsnippet
 
 priority 1
-snippet "\bif" "if ..." rb
+snippet "(?i)\bif" "If Statement" rb
 if(${1:condition}){
-	$2
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/\/ code)/}}
 }
 endsnippet
 
 priority 1
-snippet "\bife(l(s(e)?)?)?" "if ... else ..." rb
-if(${1:condition}){
-	${2:}
-}else{
-	${3:}
+snippet "(?i)\bdo" "do...while loop (do)" rb
+do{
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+} while(${1:/* condition */});
+endsnippet
+
+priority 1
+snippet "(?i)\bwhile" "while loop" rb
+while(${1:condition}){
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
 endsnippet
 
 priority 1
-snippet "\be(l(s(e)?)?)?" "else" rb
+snippet "(?i)\bf(u(n(c(t(i(o(n)?)?)?)?)?)?)?" "Function" rb
+${1:void} ${2:funname}($3){
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bel(s(e)?)?" "Else Statement" rb
 else{
-    ${1:}
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/\/ else branch)/}}
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bife(l(s(e)?)?)?" "if ... else ..." rb
+if(${1:condition}){
+	${2:// if branch}
+}else{
+	${3:// else branch}
 }
 endsnippet
 
