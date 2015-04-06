@@ -1,20 +1,24 @@
 
-snippet def "#define ..."
+priority 1
+snippet "(?i)^#def(i(n(e)?)?)?" "#define ..."
 #define ${1}
 endsnippet
 
-snippet ifndef "#ifndef ... #define ... #endif"
+priority 1
+snippet "(?i)^#ifn(d(e(f)?)?)?" "#ifndef ... #define ... #endif" rb
 #ifndef ${1/([A-Za-z0-9_]+).*/$1/}
 #define ${1:SYMBOL} ${2:value}
 #endif
 endsnippet
 
-snippet #if "#if #endif" !b
+priority 1
+snippet "(?i)^#if" "#if #endif" rb
 #if ${1:0}
 ${VISUAL}${0:${VISUAL/(.*)/(?1::code)/}}
 #endif
 endsnippet
 
+priority 1
 snippet once "Include header once only guard"
 #ifndef ${1:`!p
 if not snip.c:
@@ -32,37 +36,19 @@ ${0}
 
 endsnippet
 
+priority 1
 snippet td "Typedef"
 typedef ${1:int} ${2:MyCustomType};
 endsnippet
 
-snippet if "If Statement"
-if(${1:/* condition */}){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
-
-snippet el "Else Statement"
-else{
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
-
-snippet ife "if .. else (ife)"
-if(${1:/* condition */}){
-	${2:/* code */}
-} 
-else{
-	${3:/* else */}
-}
-endsnippet
-
-snippet st "struct"
+priority 1
+snippet "stru(c(t)?)?" "struct"
 struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`}{
 	${0:/* data */}
 };
 endsnippet
 
+priority 1
 snippet ifdef "#ifdef" !b
 #ifdef $1
     $2
@@ -71,6 +57,7 @@ snippet ifdef "#ifdef" !b
 #endif
 endsnippet
 
+priority 1
 snippet #ifdef "#ifdef" !b
 #ifdef $1
     $2
@@ -79,16 +66,12 @@ snippet #ifdef "#ifdef" !b
 #endif
 endsnippet
 
-snippet "f(u(n(c(t(i(o(n)?)?)?)?)?)?)?" "Function" !rb
-${1:void} ${2:funname}($3){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
-
-snippet fund "function declaration" b
+priority 1
+snippet "fun(c(t(i(o(n)?)?)?)?)? ?d(e(c(l(a(r(a(t(i(o(n)?)?)?)?)?)?)?)?)?)?" "function declaration" b
 ${1:void} ${2:function_name}(${3});
 endsnippet
 
+priority 1
 snippet "m(a(i(n)?)?)?" "The main Function" !rb
 int main(int argc, char *argv[]){
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
@@ -96,24 +79,14 @@ int main(int argc, char *argv[]){
 }
 endsnippet
 
-snippet while "while loop" !b
-while(${1:condition}){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
+# priority 1
+# snippet for "For Loop" b
+# for(${1:init}; ${2:stop}; ${3:change}){
+#     $4
+# }
+# endsnippet
 
-snippet do "do...while loop (do)"
-do{
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-} while(${1:/* condition */});
-endsnippet
-
-snippet for "For Loop" b
-for(${1:init}; ${2:stop}; ${3:change}){
-    $4
-}
-endsnippet
-
+priority 1
 snippet "(?i)\bfori(n(t)?)?" "for int loop" rb
 for(${1:int} ${2:i}=${3:0}; $2<${4:count}; ${5:++$2}){
 	${VISUAL}${6:${VISUAL/(.*)/(?1::\/* code *\/)/}}
