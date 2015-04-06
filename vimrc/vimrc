@@ -26,7 +26,11 @@ syntax on
 :source $archives_dir/vim/vimrc/clang.vim
 " vim addon 
 :source $archives_dir/vim/vimrc/vam.vim
+" SuperTab
+:source $archives_dir/vim/vimrc/supertab.vim
 " UltiSnips
 :source $archives_dir/vim/vimrc/ultisnips.vim
+" YouCompleteMe
+:source $archives_dir/vim/vimrc/ycm.vim
 " airline
 :source $archives_dir/vim/vimrc/airline.vim
