@@ -100,6 +100,7 @@ with open(${1:file}, "${2:r}") as ${3:f}:
 	${5:for ${8:i},${9:line} in enumerate($3):
 		${10:pass}
 	#end for}
+	${6:[${9:$7} for ${7:line} in ${8:f}${10: if ${11:condition}}]}
 #end with
 endsnippet
 

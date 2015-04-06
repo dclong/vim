@@ -19,6 +19,13 @@ for ${1:item} in ${2:iterable}:
 #end for
 endsnippet
 
+priority 1
+snippet "(?i)\bfori(n(t)?)?|fori(n(d(e(x)?)?)?)?|fore(n(u(m)?)?)?" "for i,item in ..." rb
+for ${1:i},${2:item} in enumerate(${3:obj}):
+	${4:pass}
+#end for
+endsnippet
+
 priority 2
 snippet "\bif" "If" rb
 if ${1:condition}:
@@ -41,7 +48,7 @@ else:
 #end if
 endsnippet
 
-priority 1
+priority 2
 snippet "\be(l(s(e)?)?)?" "else" rb
 else:
     ${1:pass}
