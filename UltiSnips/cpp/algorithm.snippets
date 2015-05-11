@@ -50,10 +50,27 @@ std::sort(${1:first}, ${2:last}${3:, [${9:capture}](${4:Type1 const &} ${5:a}, $
 }});
 endsnippet
 
+priority 2
+snippet "(?i):count" "count number of elements" rb
+std::count(${1:container}.cbegin(), $1.cend(), ${2:value});
+endsnippet
+
 priority 1
-snippet "(?i):count_(i(f)?)?" "Count elements satisfying specified condition" r
-std::count_if(nodes.cbegin(), nodes.cend(), [](hmm::Node* node){
-	return node->size() < size;
+snippet "(?i)\bcount" "count number of elements" rb
+count(${1:container}.cbegin(), $1.cend(), ${2:value});
+endsnippet
+
+priority 1
+snippet "(?i)\bcount_(i(f)?)?" "Count elements satisfying specified condition" rb
+count_if(${1:nodes}.cbegin(), $1.cend(), [${5:capture}](${2:Type} ${3:value}){
+	${4:// code}
+});
+endsnippet
+
+priority 1
+snippet "(?i):count_(i(f)?)?|cif" "Count elements satisfying specified condition" rb
+std::count_if(${1:nodes}.cbegin(), $1.cend(), [${5:capture}](${2:Type} ${3:value}){
+	${4:// code}
 });
 endsnippet
 

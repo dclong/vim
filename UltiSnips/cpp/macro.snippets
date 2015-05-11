@@ -3,8 +3,13 @@ global !p
 from complete import *
 endglobal
 
-priority 1
+priority 2
 snippet "^#in(c(l(u(d(e)?)?)?)?)?" "#include" r
-#include <$1`!p snip.rv = complete(t[1], file="cpp/header.json")`>
+#include <$0>
 endsnippet
+
+#priority 2
+#snippet "^#in(c(l(u(d(e)?)?)?)?)?" "#include" r
+##include <$1`!p snip.rv = complete(t[1], file="cpp/header.json")`>
+#endsnippet
 
