@@ -63,9 +63,9 @@ snippet "\band" "AND" r
 endsnippet
 
 priority 1
-snippet "(?i)\bif" "If Statement" rb
+snippet "(?i)\bif\(?" "If Statement" rb
 if(${1:condition}){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/\/ code)/}}
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/\/ code)/}}
 }
 endsnippet
 
@@ -79,13 +79,6 @@ endsnippet
 priority 1
 snippet "(?i)\bwhile" "while loop" rb
 while(${1:condition}){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
-
-priority 1
-snippet "(?i)\bf(u(n(c(t(i(o(n)?)?)?)?)?)?)?" "Function" rb
-${1:void} ${2:funname}($3){
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
 endsnippet
