@@ -4,12 +4,12 @@ runtime! debian.vim
 :source $archives_dir/vim/vimrc/global.vim
 "color scheme
 colorscheme inkpot
+" filetype identation and plugins
+:source $archives_dir/vim/vimrc/filetype.vim
 " Syntax highlighting
 syntax on
 " more vim specific (non vi compatible) features
 :source $archives_dir/vim/vimrc/more_vim.vim
-" filetype identation and plugins
-:source $archives_dir/vim/vimrc/filetype.vim
 " typping related settings
 :source $archives_dir/vim/vimrc/typping.vim
 " jump to last position when open a file
