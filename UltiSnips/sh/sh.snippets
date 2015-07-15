@@ -63,13 +63,19 @@ endsnippet
 snippet casedist "case specially for Linux distributions"
 local dist="$(lsb_release -d)"
 case "$dist" in
-    *Debian* | *LMDE* | *Ubuntu* )
+    *Debian* | *LMDE* | *Ubuntu* | *Linux Mint* )
         return 0;;
     *Debian* )
         return 0;;
     *LMDE* )
         return 0;;
     *Ubuntu* )
+        return 0;;
+    *Linux\ Mint* )
+        return 0;;
+    *Arch\ Linux* )
+        return 0;;
+    *Fedora* )
         return 0;;
     * )
         echo "This script does not support ${dist:13}."
