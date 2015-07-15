@@ -10,26 +10,7 @@
 # @Test annotation from the method
 
 global !p
-
-def junit(snip):
-    if snip.opt("g:ultisnips_java_junit", "") == "3":
-        snip += ""
-    else:
-        snip.rv += "@Test\n\t"
-
-def nl(snip):
-    if snip.opt("g:ultisnips_java_brace_style", "") == "nl":
-        snip += ""
-    else:
-        snip.rv += " "
-def getArgs(group):
-	import re
-	word = re.compile('[a-zA-Z><.]+ \w+')
-	return [i.split(" ") for i in word.findall(group) ]
-
-def camel(word):
-	return word[0].upper() + word[1:]
-
+from java import *
 endglobal
 
 snippet "i|n" "new primitive or int" rb

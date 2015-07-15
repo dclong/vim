@@ -1,24 +1,31 @@
+global !p
+from vim_java import *
+endglobal
 
-snippet fore "for (each)" b
-for ($1 : $2)`!p nl(snip)`{
-	$0
+priority 2
+snippet "for ?e(a(c(h)?)?)?" "for (each)" rb
+for (${1:Type} ${2:elem} : ${3:collection})`!p nl(snip)`{
+	${4:/* code */}
 }
 endsnippet
 
-snippet fori "for" b
-for (int ${1:i} = 0; $1 < ${2:10}; $1++)`!p nl(snip)`{
-	$0
+# @TODO: you can decide whether to use ++ or -- based on t3 and t2
+priority 2
+snippet "for ?i(n(t(e(g(e(r)?)?)?)?)?)?" "for" rb
+for (int ${1:i}=${2:0}; $1<${3:10}; ${4:++$1})`!p nl(snip)`{
+	${5:/* code */}
 }
 endsnippet
 
-snippet for "for" b
-for ($1; $2; $3)`!p nl(snip)`{
-	$0
+priority 1
+snippet "for" "for" rb
+for (${1:Type} ${2:obj}=${3:init_value}; ${4:conditions}; ${5:change})`!p nl(snip)`{
+	${6:/* code */}
 }
 endsnippet
 
-snippet wh "while" b
-while ($1)`!p nl(snip)`{
-	$0
+snippet "wh(i(l(e)?)?)?" "while" rb
+while (${1:conditions})`!p nl(snip)`{
+	${6:/* code */}
 }
 endsnippet
