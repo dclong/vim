@@ -17,14 +17,14 @@ from
 ${10:${14:inner} join
 	${11:table_2}${12: as ${13:B}}
 on
-	${15:join_conditions}}
-${16:where
-	${17:where_conditions}}
-${18:group by
+	${15:join_conditions}
+}${16:where
+	${17:where_conditions}
+}${18:group by
 	${19:1}
 ${20:having
-	${21:having_conditions}}}
-${22:order by
+	${21:having_conditions}
+}}${22:order by
 	${23:1} ${24:desc}}
 ;
 endsnippet
@@ -183,9 +183,16 @@ ${29:order by
 endsnippet
 
 priority 1
-snippet "(?i)\bdel(e(t(e)?)?)?" "Delete Rows from Table/View" rb
+snippet "(?i)\bdel(e(t(e)?)?)?" "Delete Records from a Table/View" rb
 delete from ${1:table_or_view_name}
 where
 	${2:conditions}
 ;
+endsnippet
+
+priority 1
+snippet "(?i)\b(order|sort) ?by" "The order by Statement" rb
+order by ${1:
+	1, 2} ${2:
+	${3:filed_1}, ${4:filed_2}}
 endsnippet
