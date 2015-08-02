@@ -1,0 +1,119 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "((np|numpy)\.)?stat\." "Methods of numpy Statistics" r
+np.$1`!p snip.rv = complete(t[1], "python/numpy_stat.json")`
+endsnippet
+
+priority 1
+snippet "\bnp.amin[a-zA-Z]?" "numpy.amin" r
+np.amin(${1:array_like}${2:, ${3:axis}, ${4:out}, ${5:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.amax[a-zA-Z]?" "numpy.amax" r
+np.amax(${1:array_like}${2:, ${3:axis}, ${4:out}, ${5:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.nanmin[a-zA-Z]?" "numpy.nanmin" r
+np.nanmin(${1:array_like}${2:, ${3:axis}, ${4:out}, ${5:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.nanmax[a-zA-Z]?" "numpy.nanmax" r
+np.nanmax(${1:array_like}${2:, ${3:axis}, ${4:out}, ${5:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.ptp[a-zA-Z]?" "numpy.ptp" r
+np.ptp(${1:array_like}${2:, ${3:axis}, ${4:out}})
+endsnippet
+
+priority 1
+snippet "\bnp.percentile[a-zA-Z]?" "numpy.percentile" r
+np.percentile(${1:array_like}, ${2:q}${3:, ${4:axis}, ${5:out}, ${6:...}})
+endsnippet
+
+priority 1
+snippet "\bnp.median[a-zA-Z]?" "numpy.median" r
+np.median(${1:array_like}${2:, ${3:axis}, ${4:out}, ${5:overwrite_input}, ${6:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.average[a-zA-Z]?" "numpy.average" r
+np.average(${1:array_like}${2:, ${3:axis}, ${4:weights}, ${5:returned}})
+endsnippet
+
+priority 1
+snippet "\bnp.mean[a-zA-Z]?" "numpy.mean" r
+np.mean(${1:array_like}${2:, ${3:axis}, ${4:dtype}, ${5:out}, ${6:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.std[a-zA-Z]?" "numpy.std" r
+np.std(${1:array_like}${2:${3:, axis=${4:None}}${5:, dtype=${6:None}}${7:, out=${8:None}}${9:, ddof=${10:0}}${11:, keepdims=${12:False}}})
+endsnippet
+
+priority 1
+snippet "\bnp.var[a-zA-Z]?" "numpy.var" r
+np.var(${1:array_like}${2:, ${3:axis}, ${4:dtype}, ${5:out}, ${6:ddof}, ${7:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.nanmean[a-zA-Z]?" "numpy.nanmean" r
+np.nanmean(${1:array_like}${2:, ${3:axis}, ${4:dtype}, ${5:out}, ${6:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.nanstd[a-zA-Z]?" "numpy.nanstd" r
+np.nanstd(${1:array_like}${2:, ${3:axis}, ${4:dtype}, ${5:out}, ${6:ddof}, ${7:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.nanvar[a-zA-Z]?" "numpy.nanvar" r
+np.nanvar(${1:array_like}${2:, ${3:axis}, ${4:dtype}, ${5:out}, ${6:ddof}, ${7:keepdims}})
+endsnippet
+
+priority 1
+snippet "\bnp.corrcoef[a-zA-Z]?" "numpy.corrcoef" r
+np.corrcoef(${1:x}${2:, ${3:y}, ${4:rowvar}, ${5:bias}, ${6:ddof}})
+endsnippet
+
+priority 1
+snippet "\bnp.correlate[a-zA-Z]?" "numpy.correlate" r
+np.correlate(${1:array_like}, ${2:v}${3:, ${4:mode}, ${5:old_behavior}})
+endsnippet
+
+priority 1
+snippet "\bnp.cov[a-zA-Z]?" "numpy.cov" r
+np.cov(${1:m}${2:, ${3:y}, ${4:rowvar}, ${5:bias}, ${6:ddof}})
+endsnippet
+
+priority 1
+snippet "\bnp.histogram[a-zA-Z]?" "numpy.histogram" r
+np.histogram(${1:array_like}${2:, ${3:bins}, ${4:range}, ${5:normed}, ${6:weights}, ${7:...}})
+endsnippet
+
+priority 1
+snippet "\bnp.histogram2d[a-zA-Z]?" "numpy.histogram2d" r
+np.histogram2d(${1:x}, ${2:y}${3:, ${4:bins}, ${5:range}, ${6:normed}, ${7:weights}})
+endsnippet
+
+priority 1
+snippet "\bnp.histogramdd[a-zA-Z]?" "numpy.histogramdd" r
+np.histogramdd(${1:sample}${2:, ${3:bins}, ${4:range}, ${5:normed}, ${6:...}})
+endsnippet
+
+priority 1
+snippet "\bnp.bincount[a-zA-Z]?" "numpy.bincount" r
+np.bincount(${1:x}${2:, ${3:weights}, ${4:minlength}})
+endsnippet
+
+priority 1
+snippet "\bnp.digitize[a-zA-Z]?" "numpy.digitize" r
+np.digitize(${1:x}, ${2:bins}${3:, ${4:right}})
+endsnippet
+
