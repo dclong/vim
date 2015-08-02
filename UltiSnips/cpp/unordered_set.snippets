@@ -4,7 +4,17 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.us(e(t)?)?" "Members of std::unordered_set" r
+snippet ":?:uset<" "std::unordered_set" r
+std::unordered_set<${1:Type}>
+endsnippet
+
+priority 1
+snippet "\buset<" "std::unordered_set" r
+unordered_set<${1:Type}>
+endsnippet
+
+priority 2
+snippet "\.us(e(t)?)?" "Members of std::unordered_set" r
 .$1`!p snip.rv = complete(t[1], file="cpp/unordered_set.json")`
 endsnippet
 

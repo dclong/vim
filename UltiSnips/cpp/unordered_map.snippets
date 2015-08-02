@@ -4,7 +4,18 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.umap" "Members of std::unordered_map" r
+# don't add \b
+snippet ":?:umap<" "std::unordered_map" r
+std::unordered_map<${1:key}, ${2:value}>
+endsnippet
+
+priority 1
+snippet "\bumap<" "std::unordered_map" r
+unordered_map<${1:key}, ${2:value}>
+endsnippet
+
+priority 2
+snippet "\.umap" "Members of std::unordered_map" r
 .$1`!p snip.rv = complete(t[1], file="cpp/unordered_map.json")`
 endsnippet
 

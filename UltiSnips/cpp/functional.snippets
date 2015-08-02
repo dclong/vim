@@ -1,0 +1,34 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 3
+snippet "\.fun(c(t(i(o(n(a(l)?)?)?)?)?)?)?" "Members of std::vector" r
+$1`!p snip.rv = complete(t[1], file="cpp/functional.json")`
+endsnippet
+
+priority 2
+snippet "\bfun(c(t(i(o(n(a(l)?)?)?)?)?)?)?\." "Members of std::vector" r
+$1`!p snip.rv = complete(t[1], file="cpp/functional.json")`
+endsnippet
+
+priority 1
+snippet "(?i)\bf(u(n)?)?c?tor" "Define a Functor" rb
+struct ${12:functor_name} {
+	${3:Type} operator()(${1:args}) ${4:const} 
+	{ 
+		${2:/* code */}
+	} 
+};
+endsnippet
+
+priority 1
+snippet "(?i)\bcomp(a(r(e)?)?)?|comp(a(r(a(t(o(r)?)?)?)?)?)?" "Define a Compator Class" rb
+struct ${5:class_name} {
+    bool operator() (${1:Type}${2: const &} lhs, $1$2 rhs) const 
+	{
+        return ${3:lhs} < ${4:rhs};
+    }
+};
+endsnippet

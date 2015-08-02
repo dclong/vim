@@ -4,7 +4,7 @@ global !p
 from complete import *
 endglobal
 
-snippet cl "class .. (class)"
+snippet "cl(a(s)?)?" "Define a Class" rb
 class ${1:`!p snip.rv = snip.basename or "name"`}
 {
 public:
@@ -15,4 +15,3 @@ private:
 	${0:/* data */}
 };
 endsnippet
-

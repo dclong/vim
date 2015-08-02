@@ -4,12 +4,22 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.pq(u(e(u(e)?)?)?)?" "Members of std::priority_queue" r
+snippet ":?:p(r(i(o(r(i(t(y)?)?)?)?)?)?)?( |_)?q(u(e(u(e)?)?)?)?<" "std::priority_queue" r
+std::priority_queue<${1:Type}${2:, ${3:std::vector}<$1>, ${4:std::less<$3<$1>::value_type>}}>
+endsnippet
+
+priority 1
+snippet "\bp(r(i(o(r(i(t(y)?)?)?)?)?)?)?( |_)?q(u(e(u(e)?)?)?)?<" "std::priority_queue" r
+priority_queue<${1:Type}${2:, ${3:std::vector}<$1>, ${4:std::less<$3<$1>::value_type>}}>
+endsnippet
+
+
+priority 2
+snippet "\.p(r(i(o(r(i(t(y)?)?)?)?)?)?)?( |_)?q(u(e(u(e)?)?)?)?" "Members of std::priority_queue" r
 .$1`!p snip.rv = complete(t[1], file="cpp/priority_queue.json")`
 endsnippet
 
 priority 1
-snippet "\bpq(u(e(u(e)?)?)?)?\." "Members of std::priority_queue" r
+snippet "\bp(r(i(o(r(i(t(y)?)?)?)?)?)?)?( |_)?q(u(e(u(e)?)?)?)?\." "Members of std::priority_queue" r
 ${2:priority_queue}.$1`!p snip.rv = complete(t[1], file="cpp/priority_queue.json")`
 endsnippet
-

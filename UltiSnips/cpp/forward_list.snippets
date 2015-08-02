@@ -3,8 +3,18 @@ global !p
 from complete import *
 endglobal
 
+priority 2
+snippet ":?:forw(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?<" "std::forward_list" r
+std::forward_list<${1:Type}>
+endsnippet
+
 priority 1
-snippet "\b\.for(w(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?)?" "Members of forward_list" r
+snippet "\bforw(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?<" "std::forward_list" r
+forward_list<${1:Type}>
+endsnippet
+
+priority 1
+snippet "\.for(w(a(r(d(_(l(i(s(t)?)?)?)?)?)?)?)?)?" "Members of forward_list" r
 .$1`!p snip.rv = complete(t[1], file="cpp/forward_list.json")`
 endsnippet
 

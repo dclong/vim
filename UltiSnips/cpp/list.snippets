@@ -4,7 +4,17 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.li(s(t)?)?" "Members of std::list" r
+snippet ":?:li(s(t)?)?<" "std::list" r
+std::list<${1:Type}>
+endsnippet
+
+priority 1
+snippet "\bli(s(t)?)?<" "std::list" r
+list<${1:Type}>
+endsnippet
+
+priority 2
+snippet "\.li(s(t)?)?" "Members of std::list" r
 .$1`!p snip.rv = complete(t[1], file="cpp/list.json")`
 endsnippet
 

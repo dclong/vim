@@ -4,7 +4,17 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.vec(t(o(r)?)?)?" "Members of std::vector" r
+snippet ":?:vec(t(o(r)?)?)?<" "std::vector" r
+std::vector<${1:Type}>
+endsnippet
+
+priority 1
+snippet "\bvec(t(o(r)?)?)?<" "std::vector" r
+vector<${1:Type}>
+endsnippet
+
+priority 2
+snippet "\.vec(t(o(r)?)?)?" "Members of std::vector" r
 .$1`!p snip.rv = complete(t[1], file="cpp/vector.json")`
 endsnippet
 

@@ -4,7 +4,17 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.map" "Members of std::map" r
+snippet ":?:map<" "std::map" r
+std::map<${1:key}, ${2:value}>
+endsnippet
+
+priority 1
+snippet "\bmap<" "std::map" r
+map<${1:key}, ${2:value}>
+endsnippet
+
+priority 2
+snippet "\.map" "Members of std::map" r
 .$1`!p snip.rv = complete(t[1], file="cpp/map.json")`
 endsnippet
 

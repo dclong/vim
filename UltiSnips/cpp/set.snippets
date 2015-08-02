@@ -4,7 +4,17 @@ from complete import *
 endglobal
 
 priority 2
-snippet "\b\.set" "Members of std::set" r
+snippet ":?:set<" "std::set" r
+std::set<${1:Type}>
+endsnippet
+
+priority 1
+snippet "\bset<" "std::set" r
+set<${1:Type}>
+endsnippet
+
+priority 2
+snippet "\.set" "Members of std::set" r
 .$1`!p snip.rv = complete(t[1], file="cpp/set.json")`
 endsnippet
 
