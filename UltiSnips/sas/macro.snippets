@@ -1,27 +1,19 @@
 
 priority 1
 snippet "(?i)&" "Macro Variable" r
-&${1:macro_variable}.
+&${1:${VISUAL:macro_variable}}.
 endsnippet
 
 priority 1
 snippet '%m(a(c(r(o)?)?)?)?' "Macro Definition Without Arguments" rb
-%macro ${1:macro_name}(${2:arg1});
-    ${3:/* start here */} 
+%macro ${10:macro_name}(${1:input_data}=${2:, ${3:variables}=}${4:, ${5:output_data}=}${6:, temp_lib=${7:work}}${8:, clean=True});
+    ${9:/* start here */} 
 %mend $1;
 endsnippet
 
 priority 1
-snippet %temp "A Temp Macro" b
-%macro temp;
-%do i = 1 %to &msN.;
-    %let m = &&ms&i;
-    %let out = n3d.bd_tran_pty_&m.;
-	%ptran(data=n3d.tran_&m., bp=B, cd=D, out=&out.);
-	%percentile(data=&out., var=tot_amt, output=bd_pctl_pty_&m., pctArr=pcts);
-%end;
-%mend temp;
-%temp;
+snippet "(?i)\b%l(e(t)?)?|let" "%let" rb
+%let ${1:macro_variable} = ${2:expression};
 endsnippet
 
 priority 1

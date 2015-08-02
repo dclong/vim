@@ -24,28 +24,6 @@ run;
 endsnippet
 
 priority 1
-snippet "proc sql" "The SQL Procedure" b
-proc sql;
-    select ${1:distinct }${2:top ${3:5} }${4:*}
-    from
-        ${5:t1}
-    ${6:${7:inner join
-        ${8:t2}
-    on
-        ${9:condition}}
-    ${10:where
-        ${11:condition}}}
-    ${12:group by
-        ${13:1}
-    ${14:having
-        ${15:condition}}}
-    ${16:order by
-        ${17:1} ${18:desc}}
-    ;
-quit;
-endsnippet
-
-priority 1
 snippet "proc print" "The Print Procedure" b
 title "${7:$1}";
 proc print data = ${1:d} ${2:(${3:where=(${4:condition})} ${5:obs=${6:5}})};
@@ -111,5 +89,25 @@ proc transpose data=${1:in_dataset}${2: out=${3:out_dataset}${4: (drop=${5:_name
     var ${11:columns};
 run;
 endsnippet
+
+priority 1
+snippet "proc append" "The APPEND Procedure" rb
+proc append base=${1:base_dataset}
+    data=${2:dataset_to_append}
+    ${3:force}
+    ;
+run;
+endsnippet
+
+priority 1
+snippet "proc datasets" "The DATASETS Procedure" rb
+proc datasets ${1:library=${2:library}}${3: noList};${4:
+    delete ${5:datasets_no_lib_prefix};}${6:
+    copy from=${7:src_lib} to=${8:des_lib};${9:
+    select ${10:datasets_no_lib_prefix};}}
+quit;
+endsnippet
+
+
 
 

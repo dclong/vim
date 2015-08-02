@@ -1,0 +1,9 @@
+extends sql
+
+priority 1
+snippet "(?i)proc sql" "The SQL Procedure" rb
+proc sql${52:${53: noPrint}${54: outObs=${55:50}}};
+	$1
+quit;
+endsnippet
+
