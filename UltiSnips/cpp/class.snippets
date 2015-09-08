@@ -15,3 +15,20 @@ private:
 	${0:/* data */}
 };
 endsnippet
+
+priority 1
+snippet "(?i)\bc(onstruc)?tor" "class constructor" r
+${1:class_name}::$1(${2:args})
+${3:: x(a), y(b), z(c)}
+{
+	${4:// code}
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bd(estruc)tor" "class destructor" r
+${1:virtual} ${2:class_name}::~$2() 
+{
+    ${3:// code}
+}
+endsnippet
