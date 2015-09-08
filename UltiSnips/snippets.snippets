@@ -45,7 +45,12 @@ endsnippet
 
 priority 1
 snippet "\bc(o(m(p(l(e(t(e)?)?)?)?)?)?)?" "function complete" r
-complete(t[${1:1}], [${2:string_element}])
+complete(t[${1:1}]${2:, opts=[${3:string_element}]}${4:, file=${5:file_name}}${6:, adjust=${7:True}})
+endsnippet
+
+priority 2
+snippet "!p(y(t(h(o(n)?)?)?)?)?" "Python Functions" r
+`!p snip.rv = unichr(96) + "!p snip.rv = "`${1:pass}`!p snip.rv = unichr(96)`
 endsnippet
 
 priority 1
