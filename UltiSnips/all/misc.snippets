@@ -1,9 +1,31 @@
 
+priority 1
+snippet "\bque(s(t(i(o(n)?)?)?)?)?" "@question" r
+@question: $1
+endsnippet
+
+priority 2
+snippet "@q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" r
+@question: $1
+endsnippet
+
+priority 2
+snippet "/q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" r
+/*
+@question: $1
+*/
+endsnippet
+
 priority 2
 snippet "/todo" "@TODO" rb
 /*
 @TODO: $1
 */
+endsnippet
+
+priority 2
+snippet "@to(d(o)?)?" "@TODO" rb
+@TODO: $1
 endsnippet
 
 priority 1
