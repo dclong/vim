@@ -1,5 +1,22 @@
 
 priority 1
+snippet "\bnote" "@note" r
+@note: $1
+endsnippet
+
+priority 2
+snippet "@n(o(t(e)?)?)?" "@note" r
+@note: $1
+endsnippet
+
+priority 2
+snippet "/n(o(t(e)?)?)?" "@note" r
+/*
+@note: $1
+*/
+endsnippet
+
+priority 1
 snippet "\bque(s(t(i(o(n)?)?)?)?)?" "@question" r
 @question: $1
 endsnippet
