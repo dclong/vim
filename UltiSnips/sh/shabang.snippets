@@ -1,13 +1,35 @@
 
+priority 1
 snippet #!
 `!p snip.rv = '#!/bin/' + getShell() + "\n" `
 endsnippet
 
+priority 1
 snippet #!b
 #!/usr/bin/env bash
 endsnippet
 
+priority 1
 snippet !env "#!/usr/bin/env (!env)"
 `!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n\n" `
 endsnippet
 
+priority 1
+snippet $ "$()" 
+$(${1:command})
+endsnippet
+
+priority 1
+snippet "(?i)\band" "The AND operator" r
+&&
+endsnippet
+
+priority 1
+snippet "(?i)\bor" "The OR operator" r
+||
+endsnippet
+
+priority 1
+snippet "(?i)\bnot" "The NOT operator" r
+!
+endsnippet
