@@ -46,23 +46,40 @@ endsnippet
 priority 2
 snippet "/todo" "@TODO" rb
 /*
-@TODO: $1
+* @TODO (P${2:1}): ${1:things_to_do}
 */
 endsnippet
 
 priority 2
 snippet "@to(d(o)?)?" "@TODO" rb
-@TODO: $1
+@TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
 priority 2
 snippet "#to(d(o)?)?" "@TODO" rb
-# @TODO: $1
+# @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
 priority 1
 snippet "\btodo" "@TODO" r
-@TODO: $1
+@TODO (P${2:1}): ${1:things_to_do}
+endsnippet
+
+priority 1
+snippet "(?i)@w(a(r(n(i(n(g)?)?)?)?)?)?" "@Warning" r
+@Warning ${1:warning_message}
+endsnippet
+
+priority 1
+snippet "(?i)/w(a(r(n(i(n(g)?)?)?)?)?)?" "@Warning" r
+/* 
+* @Warning ${1:warning_message}
+*/
+endsnippet
+
+priority 1
+snippet "(?i)#w(a(r(n(i(n(g)?)?)?)?)?)?" "@Warning" r
+# @Warning ${1:warning_message}
 endsnippet
 
 priority 1
@@ -80,3 +97,10 @@ endsnippet
 #"${1:string}"
 #endsnippet
 #
+
+priority 1
+snippet "(?i)\bid" "ID" r
+ID
+endsnippet
+
+
