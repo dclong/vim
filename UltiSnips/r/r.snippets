@@ -37,3 +37,14 @@ priority 1
 snippet "(?i)\bret(u(r(n)?)?)?" "return" r
 return(${1:value})
 endsnippet
+
+priority 1
+snippet "(?i)\bx ?=? ?x[?x]?" "Description" r
+${1:x} = $1[$1${2}]
+endsnippet
+
+priority 1
+snippet "(?i)^#!?r(s(c(r(i(p(t)?)?)?)?)?)?" "Shabang for R" r
+#!/usr/bin/env Rscript
+endsnippet
+
