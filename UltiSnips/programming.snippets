@@ -65,21 +65,21 @@ endsnippet
 priority 1
 snippet "(?i)\bif\(?" "If Statement" rb
 if(${1:condition}){
-	${VISUAL}${2:${VISUAL/(.*)/(?1::\/\/ code)/}}
+	${VISUAL}${2:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
 
 priority 1
 snippet "(?i)\bdo" "do...while loop (do)" rb
 do{
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
 } while(${1:/* condition */});
 endsnippet
 
 priority 1
 snippet "(?i)\bwhile" "while loop" rb
 while(${1:condition}){
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
 
@@ -93,9 +93,9 @@ endsnippet
 priority 1
 snippet "(?i)\bife(l(s(e)?)?)?" "if ... else ..." rb
 if(${1:condition}){
-	${2:// if branch}
+	$2
 }else{
-	${3:// else branch}
+	$3
 }
 endsnippet
 
@@ -114,3 +114,7 @@ snippet "(?i)\bn ?= ?n" "x = f(x)" r
 ${1:x} = ${2:f}($1)
 endsnippet
 
+priority 1
+snippet "(?i)\bx? ?< ?y? ?< ?z?" "x < y < z" r
+${1:x} < ${2:y} ${4:&&} $2 < ${3:z}
+endsnippet
