@@ -22,12 +22,13 @@ endglobal
 
 priority 1
 snippet "(?i)^#!?(e(n(v)?)?)?" "Shabang for Shell" r
-`!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n\n" `
+`!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n" `
 endsnippet
 
 priority 1
 snippet "(?i)^#!?b(a(s(h)?)?)?" "Shabang for Bash" r
 #!/usr/bin/env bash
+
 endsnippet
 
 priority 1
