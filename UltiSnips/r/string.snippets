@@ -8,6 +8,11 @@ $1`!p snip.rv = complete(t[1], opts=["nchar", "paste"])`
 endsnippet
 
 priority 1
+snippet "\bp(a(s(t(e)?)?)?)?0" "Function paste" r
+paste0($1${2:, sep="$3"}${4:, collapse="$5"})
+endsnippet
+
+priority 1
 snippet "\bp(a(s(t(e)?)?)?)?" "Function paste" r
 paste($1${2:, sep="$3"}${4:, collapse="$5"})
 endsnippet
