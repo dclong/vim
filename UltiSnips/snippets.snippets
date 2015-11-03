@@ -44,7 +44,7 @@ snippet vi "Vim Script" w
 endsnippet
 
 priority 1
-snippet "\bc(o(m(p(l(e(t(e)?)?)?)?)?)?)?" "function complete" r
+snippet "\bc(o(m(p(l(e(t(e)?)?)?)?)?)?)?" "function complete" rb
 complete(t[${1:1}]${2:, opts=[${3:string_element}]}${4:, file=${5:file_name}}${6:, adjust=${7:True}})
 endsnippet
 
@@ -67,5 +67,14 @@ priority 1
 snippet "p(r(i(o(r(i(t(y)?)?)?)?)?)?)?" "Priority" rb
 priority ${1:1}
 endsnippet
+
+priority 1
+snippet "g(l(o(b(a(l)?)?)?)?)? ?py(t(h(o(n)?)?)?)?" "Global Python" rb
+global !p
+${1:from ${3:module_name} import ${4:*}}
+${2:import ${5:$3}}
+endglobal
+endsnippet
+
 
 
