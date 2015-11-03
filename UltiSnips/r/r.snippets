@@ -49,3 +49,16 @@ snippet "(?i)^#!?r(s(c(r(i(p(t)?)?)?)?)?)?|#!" "Shabang for R" r
 
 endsnippet
 
+priority 2
+snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\((.*)\) ?{?" "Function Definition" rb
+`!p snip.rv = match.group(1)` = function(`!p snip.rv = match.group(7)`) {
+	$1
+}
+endsnippet
+
+priority 1
+snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\(?(.*)\)? ?{?" "Function Definition" rb
+`!p snip.rv = match.group(1)` = function(`!p snip.rv = match.group(7)`) {
+	$1
+}
+endsnippet

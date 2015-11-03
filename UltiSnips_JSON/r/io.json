@@ -1,6 +1,15 @@
 [
-    "cat",
-    "print",
-    "read.table",
+    "cat", 
+    "print", 
+    "read.table", 
+    "readLines", 
+    [
+        "read_text", 
+        1, 
+        "2015-11-03 21:58:19.811360"
+    ], 
+    "write.csv",
+    "write.delim",
+    "write.xlsx",
     "write.table"
 ]

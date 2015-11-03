@@ -1,0 +1,14 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "\bre(g(e(x)?)?)?\." "regex Functions" r
+$1`!p snip.rv = complete(t[1], file="regex.json")`
+endsnippet
+
+priority 1
+snippet "(?i)\bregmatches" "Description" r
+${5:${6:matched_str} = }regmatches(${1:str_vector}, ${2:match_obj}${3:, invert=${4:FALSE}})${7: <- ${8:value}}
+endsnippet

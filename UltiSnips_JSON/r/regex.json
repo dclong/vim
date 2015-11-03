@@ -1,0 +1,12 @@
+[
+    "grep",
+    "agrep",
+    "grepl",
+    "sub",
+    "gsub",
+    "regexpr",
+    "gregexpr",
+    "grepRaw",
+    "regmatches",
+    "regexec"
+]

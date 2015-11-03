@@ -1,13 +1,28 @@
+global !p
+from complete import *
+endglobal
 
+priority 1
 snippet "\bcat" "function cat" r
 cat(${1:...}${2:, file = ""}${3:, sep = "${4:}"}${5:, fill = ${6:FALSE}}${7:, labels = ${8:NULL}}${9:, append = ${10:FALSE}})
 endsnippet
 
+priority 1
 snippet "\bio\." "IO Functions" r
 $1`!p snip.rv = complete(t[1], file="r/io.json")`
 endsnippet
 
+priority 1
+snippet "\bwr(i(t(e)?)?)?\." "write.* functions" r
+write.$1`!p snip.rv = complete(t[1], file="r/write.json")`
+endsnippet
+
+priority 1
 snippet "\bwrite.t(a(b(l(e)?)?)?)?" "function write.table" r
 write.table(x=$1, file=$2, row.names=${3:FALSE}, col.names=${4:TRUE}, sep="${5: }")
 endsnippet
 
+priority 1
+snippet "(?i)\bread(_|.)?text" "Read a Text File" r
+${2:text} = paste(readLines(con="${1:file_path}"), collapse="\n")
+endsnippet

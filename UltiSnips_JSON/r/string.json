@@ -1,0 +1,11 @@
+[
+    "nchar", 
+    "paste", 
+    "paste0", 
+    "split", 
+    "replace", 
+    "re.", 
+    "ltrim", 
+    "rtrim", 
+    "trim"
+]

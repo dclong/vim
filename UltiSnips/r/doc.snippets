@@ -1,5 +1,6 @@
 
-snippet #' "Help Documentation" b
+priority 1
+snippet "^#'" "Help Documentation" rb
 #' @title ${1:title of this help documentation}
 #'
 #' @description ${2:give a description of each function in this page}
@@ -32,42 +33,42 @@ ${21:#'
 endsnippet
 
 priority 2
-snippet "#' @exp(o(r(t)?)?)?" "@export" rb
+snippet "#'?\s*@exp(o(r(t)?)?)?" "@export" rb
 #' @export 
 endsnippet
 
 priority 2
-snippet "#' @p(a(r(a(m)?)?)?)?" "@param" rb
+snippet "#'?\s*@p(a(r(a(m)?)?)?)?" "@param" rb
 #' @param ${1:param} ${2:description}
 endsnippet
 
 priority 2
-snippet "#' @rd(n(a(m(e)?)?)?)?" "@rdname" rb
+snippet "#'?\s*@rd(n(a(m(e)?)?)?)?" "@rdname" rb
 #' @rdname ${1:target Rd doc}
 endsnippet
 
 priority 2
-snippet "#' @a(u(t(h(o(r)?)?)?)?)?" "@author" rb
+snippet "#'?\s*@a(u(t(h(o(r)?)?)?)?)?" "@author" rb
 #' @author ${1:Ben Chuanlong Du}
 endsnippet
 
 priority 2
-snippet "#' @" "Roxygen Tags" rb
+snippet "#'?\s*@" "Roxygen Tags" rb
 #' @$1`!p snip.rv = complete(t[1], file="r/roxygen.json")`
 endsnippet
 
 priority 2
-snippet "#' @t(i(t(l(e)?)?)?)?" "@title" rb
+snippet "#'?\s*@t(i(t(l(e)?)?)?)?" "@title" rb
 #' @title ${1:title}
 endsnippet
 
 priority 2
-snippet "#' @d(e(s(c(r(i(p(t(i(o(n)?)?)?)?)?)?)?)?)?)?" "@description" rb
+snippet "#'?\s*@d(e(s(c(r(i(p(t(i(o(n)?)?)?)?)?)?)?)?)?)?" "@description" rb
 #' @description ${1:description}
 endsnippet
 
 priority 2
-snippet "#' @exa(m(p(l(e)?)?)?)?" "@examples" rb
+snippet "#'?\s*@exa(m(p(l(e)?)?)?)?" "@examples" rb
 #' @examples
 #' \dontrun{
 #' ${1:example}
