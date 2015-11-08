@@ -83,9 +83,16 @@ while(${1:condition}){
 }
 endsnippet
 
+priority 2
+snippet "(?i)\} ?el(s(e)?)?" "Else Statement" rb
+} else {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
+}
+endsnippet
+
 priority 1
-snippet "(?i)\bel(s(e)?)?" "Else Statement" rb
-else{
+snippet "(?i)el(s(e)?)?" "Else Statement" rb
+else {
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/\/ else branch)/}}
 }
 endsnippet
