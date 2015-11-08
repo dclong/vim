@@ -3,14 +3,47 @@ global !p
 from complete import *
 endglobal
 
-snippet "(?i)\bt(r(u(e)?)?)?" "TRUE" r
+priority 1
+snippet true "TRUE" 
 TRUE
 endsnippet
 
-snippet "(?i)\bf(a(l(s(e)?)?)?)?" "FALSE" r
+priority 1
+snippet "(?i)\bt(r(u)?)?" "TRUE" r
+TRUE
+endsnippet
+
+priority 2
+snippet =FALSE "TRUE/FALSE" 
+=TRUE
+endsnippet
+
+priority 2
+snippet "= FALSE" "TRUE/FALSE" 
+= TRUE
+endsnippet
+
+priority 2
+snippet =TRUE "TRUE/FALSE" 
+=FALSE
+endsnippet
+
+priority 2
+snippet "= TRUE" "TRUE/FALSE" 
+= FALSE
+endsnippet
+
+priority 1
+snippet false "FALSE" 
 FALSE
 endsnippet
 
+priority 1
+snippet "(?i)\bf(a(l(s)?)?)?" "FALSE" r
+FALSE
+endsnippet
+
+priority 1
 snippet "\bb(o(o(l(e(a(n)?)?)?)?)?)?\." "Boolean Values" r
 $1`!p snip.rv = complete(t[1], opts=["FALSE", "TRUE"])`
 endsnippet

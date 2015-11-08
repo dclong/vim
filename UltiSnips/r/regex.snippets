@@ -12,3 +12,39 @@ priority 1
 snippet "(?i)\bregmatches" "Description" r
 ${5:${6:matched_str} = }regmatches(${1:str_vector}, ${2:match_obj}${3:, invert=${4:FALSE}})${7: <- ${8:value}}
 endsnippet
+
+priority 1
+snippet "(?i)\bgrep" "grep" r
+grep(${1:pattern}, ${2:str_vector}${3:${4:, fixed=FALSE$5}${6:, value=FALSE$7}${8:, ignore.case=FALSE$9}${10:, perl=FALSE$11}${12:, useBytes=FALSE}${13:, invert=FALSE$14}})
+endsnippet
+
+priority 1
+snippet "(?i)\bgrepl" "grepl" r
+grepl(${1:pattern}, ${2:str_vector}${3:${4:, fixed=FALSE$5}${6:, ignore.case=FALSE$7}${8:, perl=FALSE$9}${10:, useBytes=FALSE$11}})
+endsnippet
+
+priority 1
+snippet "(?i)\bsub" "sub" r
+sub(${1:pattern}, ${2:replacement}, ${3:str_vector}${4:${5:, fixed=FALSE$6}${7:, ignore.case=FALSE$8}${9:, perl=FALSE$10}${11:, useBytes=FALSE$12}})
+endsnippet
+
+priority 1
+snippet "(?i)\bgsub" "gsub" r
+gsub(${1:pattern}, ${2:replacement}, ${3:str_vector}${4:${5:, fixed=FALSE$6}${7:, ignore.case=FALSE$8}${9:, perl=FALSE$10}${11:, useBytes=FALSE$12}})
+endsnippet
+
+priority 1
+snippet "(?i)\bregexpr" "regexpr" r
+regexpr(${1:pattern}, ${2:str_vector}${3:${4:, fixed=FALSE$5}${6:, ignore.case=FALSE$7}${8:, perl=FALSE$9}${10:, useBytes=FALSE$11}})
+endsnippet
+
+priority 1
+snippet "(?i)\bgregexpr" "gregexpr" r
+gregexpr(${1:pattern}, ${2:str_vector}${3:${4:, fixed=FALSE$5}${6:, ignore.case=FALSE$7}${8:, perl=FALSE$9}${10:, useBytes=FALSE$11}})
+endsnippet
+
+priority 1
+snippet "(?i)\bregexec" "regexec" r
+regexec(${1:pattern}, ${2:str_vector}${3:${4:, fixed=FALSE$5}${6:, ignore.case=FALSE$7}${8:, useBytes=FALSE$9}})
+endsnippet
+

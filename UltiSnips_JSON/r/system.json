@@ -8,13 +8,14 @@
     "Sys.setFileTime",
     "Sys.setenv",
     "Sys.sleep",
-    "Sys.time",
-    "Sys.which",
+    "Sys.time: current time",
+    "Sys.Date: current date",
+    "Sys.which: find full path of files",
     "sys.parent",
     "sys.source",
     "system",
     "system.file",
-    "system.time",
+    "system.time: return CPU (and other) times that expr used",
     "system2",
     "Sys.timezone"
 ]

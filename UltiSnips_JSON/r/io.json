@@ -1,7 +1,12 @@
 [
     "cat", 
+    "scan", 
     "print", 
     "read.table", 
+    "read.csv", 
+    "read.xlsx", 
+    "read.delim", 
+    "read.fwf", 
     "readLines", 
     [
         "read_text", 

@@ -19,12 +19,36 @@ paste($1${2:, sep="$3"}${4:, collapse="$5"})
 endsnippet
 
 priority 1
-snippet "\btrim|\bstrip" "Remove leading/trailing white spaces from a string" r
+snippet "\bstr_trim|\bstrip|trim" "Remove leading/trailing white spaces from a string" r
 stringr::str_trim(${1:string}${2:, side="$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
 endsnippet
 
 priority 1
-snippet "(?i)\bsubStr(i(n(g)?)?)?" "Substring" r
+snippet "(?i)\bsubstr(i(n(g)?)?)?" "Substring" r
 substr(${1:str_vector}, ${2:start}${3:, ${4:stop}})
 endsnippet
 
+priority 1
+snippet "(?i)\bnch(a(r)?)?" "length of strings" r
+nchar(${1:str_vector}${2:${3:, type="${4:chars}"}${5:, allowNA=FALSE$6}})
+endsnippet
+
+priority 1
+snippet "(?i)\bstrsp(l(i(t)))" "String Split" r
+strsplit(${1:str_vector}, ${2:delimiter}${3:${4:, fixed=FALSE$5}${6:, perl=FALSE$7}${8:, useBytes=FALSE$9}})
+endsnippet
+
+priority 1
+snippet "(?i)\bstr_?rep(l(a(c(e))))" "str_replace" r
+stringr::str_replace(${1:string}, ${2:pattern}, ${3:replacement})
+endsnippet
+
+priority 1
+snippet "(?i)\bstr_sp(l(i(t)?)?)?" "stringr::str_split" r
+stringr::str_split(${1:string}, ${2:pattern}${3:, n=${4:Inf}})
+endsnippet
+
+priority 1
+snippet "(?i)\bstr_split_fixed" "str_split_fixed" r
+str_split_fixed(${1:string}, ${2:pattern}, ${3:n})
+endsnippet

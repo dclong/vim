@@ -4,11 +4,11 @@ endglobal
 
 priority 1
 snippet "\bcat" "function cat" r
-cat(${1:...}${2:, file = ""}${3:, sep = "${4:}"}${5:, fill = ${6:FALSE}}${7:, labels = ${8:NULL}}${9:, append = ${10:FALSE}})
+cat(${1:...}${2:, file=""}${3:, sep="${4:}"}${5:, fill=${6:FALSE}}${7:, labels=${8:NULL}}${9:, append=${10:FALSE}})
 endsnippet
 
 priority 1
-snippet "\bio\." "IO Functions" r
+snippet "\bio\.|f(i(l(e)?)?)?\." "IO Functions" r
 $1`!p snip.rv = complete(t[1], file="r/io.json")`
 endsnippet
 
@@ -18,11 +18,56 @@ write.$1`!p snip.rv = complete(t[1], file="r/write.json")`
 endsnippet
 
 priority 1
-snippet "\bwrite.t(a(b(l(e)?)?)?)?" "function write.table" r
+snippet "\bread\." "read.* functions" r
+read.$1`!p snip.rv = complete(t[1], file="r/write.json")`
+endsnippet
+
+priority 1
+snippet "\bwrite.t(a(b(l(e)?)?)?)?\(?" "function write.table" r
 write.table(x=$1, file=$2, row.names=${3:FALSE}, col.names=${4:TRUE}, sep="${5: }")
 endsnippet
 
 priority 1
 snippet "(?i)\bread(_|.)?text" "Read a Text File" r
 ${2:text} = paste(readLines(con="${1:file_path}"), collapse="\n")
+endsnippet
+
+priority 1
+snippet "(?i)\bprint" "function print" r
+print(${1:x}${2:, ...})
+endsnippet
+
+priority 2
+snippet "(?i)\bprint\.t(a(b(l(e)?)?)?)?" "function print.table" r
+print(${1:x}${2:${3:, digits=${4:getOption("digits")}}${5:, quote=${6:FALSE}}${7:, na.print="$8"}${9:, zero.print="${10:0}"}${11:, justify="${12:none}"}${13:, ...}})
+endsnippet
+
+priority 1
+snippet "(?i)\bprint\.f(u(n(c(t(i(o(n)?)?)?)?)?)?)?" "function print.function" r
+print(${1:x}${2:, useSource=TRUE}${3:, ...})
+endsnippet
+
+priority 1
+snippet "(?i)\bread\.t(a(b(l(e)?)?)?)?" "read.table" r
+read.table(${1:file}, header=FALSE$2, stringsAsFactors=TRUE$3${4:, row.names}${5:${6:, sep="$7"}${8:, quote="${9:\"'}"}${10:, dec="${11:.}"}${12:, col.names$13}${14:, na.strings="${15:NA}"}${16:, colClasses=${17:NA}}${18:, nrows=${19:-1}}${20:, skip=${21:0}}${22:, check.names=TRUE$23}${24:, strip.white=FALSE$25}${26:, blank.lines.skip=TRUE$27}${28:, comment.char="${29:#}"}${30:, allowEscapes=FALSE$31}${32:, flush=FALSE$33}${34:, fileEncoding="$35"}${36:, encoding="${37:unknown}"}${38:, text$39}})
+endsnippet
+
+priority 1
+snippet "(?i)\bread\.c(s(v)?)?" "read.csv" r
+read.csv(${1:file}, header=TRUE$2${3:${4:, sep="${5:,}"}${6:, quote="${7:\"}"}${8:, dec="${9:.}"}${10:, fill=TRUE$11}${12:, comment.char="$13"}${14:, ...}})
+endsnippet
+
+priority 1
+snippet "(?i)\bread\.d(e(l(i(m)?)?)?)?" "read.delim" r
+read.delim(${1:file}, header=TRUE$2${3:${4:, sep="${5:\t}"}${6:, quote="${7:\"}"}${8:, dec="${9:.}"}${10:, fill=TRUE$11}${12:, comment.char="$13"}${14:, ...}})
+endsnippet
+
+priority 1
+snippet "(?i)\bread\.fwf" "read.fwf" r
+read.fwf(${1:file}, widths$2, header=FALSE$3${4:${5:, sep="${6:\t}"}${7:, skip=${8:0}}${9:, row.names$10}${11:, col.names$12}${13:, n=${14:-1}}${15:, buffersize=${16:2000}}${17:, ...}})
+endsnippet
+
+priority 1
+snippet "(?i)\bscan" "scan" r
+scan(${1:file="$2"}${3:, what=${4:double()}}${5:, sep="$6"}${7:${8:, nmax=${9:-1}}${10:, n=${11:-1}}${12:, quote=${13:if(identical(sep, "\n")) "" else "'\""}}${14:, dec="${15:.}"}${16:, skip=${17:0}}${18:, nlines=${19:0}}${20:, na.strings="${21:NA}"}${22:, flush=FALSE$23}${24:, fill=FALSE$25}${26:, strip.white=FALSE$27}${28:, quiet=FALSE$29}${30:, blank.lines.skip=TRUE$31}${32:, multi.line=TRUE$33}${34:, comment.char="$35"}${36:, allowEscapes=FALSE$37}${38:, fileEncoding="$39"}${40:, encoding="${41:unknown}"}${42:, text$43}})
 endsnippet
