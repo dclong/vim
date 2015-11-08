@@ -1,29 +1,36 @@
 
-priority 1
-snippet "\bnote" "@note" r
-@note: $1
-endsnippet
-
 priority 2
 snippet "@n(o(t(e)?)?)?" "@note" r
 @note: $1
 endsnippet
 
 priority 2
-snippet "#n(o(t(e)?)?)?" "@note" r
+snippet "@b(u(g)?)?" "@bug" r
+@bug: $1
+endsnippet
+
+priority 2
+snippet "#\s*n(o(t(e)?)?)?" "@note" rb
 # @note: $1
 endsnippet
 
 priority 2
-snippet "/n(o(t(e)?)?)?" "@note" r
+snippet "#\s*b(u(g)?)?" "@bug" rb
+# @bug: $1
+endsnippet
+
+priority 2
+snippet "/\s*n(o(t(e)?)?)?" "@note" rb
 /*
-@note: $1
+* @note: $1
 */
 endsnippet
 
-priority 1
-snippet "\bque(s(t(i(o(n)?)?)?)?)?" "@question" r
-@question: $1
+priority 2
+snippet "/\s*b(u(g)?)?" "@bug" rb
+/* 
+* @bug: $1
+*/
 endsnippet
 
 priority 2
@@ -32,54 +39,54 @@ snippet "@q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" r
 endsnippet
 
 priority 2
-snippet "#q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" r
+snippet "#\s*q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" rb
 # @question: $1
 endsnippet
 
 priority 2
-snippet "/q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" r
+snippet "/\s*q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" rb
 /*
-@question: $1
+* @question: $1
 */
 endsnippet
 
 priority 2
-snippet "/todo" "@TODO" rb
+snippet "/\s*todo" "@TODO" rb
 /*
 * @TODO (P${2:1}): ${1:things_to_do}
 */
 endsnippet
 
 priority 2
-snippet "@to(d(o)?)?" "@TODO" rb
+snippet "@to(d(o)?)?" "@TODO" r
 @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
 priority 2
-snippet "#to(d(o)?)?" "@TODO" rb
+snippet "#\s*to(d(o)?)?" "@TODO" rb
 # @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
 priority 1
-snippet "\btodo" "@TODO" r
+snippet "(?i)\btodo" "@TODO" r
 @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
 priority 1
-snippet "(?i)@w(a(r(n(i(n(g)?)?)?)?)?)?" "@Warning" r
-@Warning ${1:warning_message}
+snippet "(?i)@w(a(r(n(i(n(g)?)?)?)?)?)?" "@warning" r
+@warning ${1:warning_message}
 endsnippet
 
 priority 1
-snippet "(?i)/w(a(r(n(i(n(g)?)?)?)?)?)?" "@Warning" r
+snippet "(?i)/\s*w(a(r(n(i(n(g)?)?)?)?)?)?" "@warning" r
 /* 
-* @Warning ${1:warning_message}
+* @warning ${1:warning_message}
 */
 endsnippet
 
 priority 1
-snippet "(?i)#w(a(r(n(i(n(g)?)?)?)?)?)?" "@Warning" r
-# @Warning ${1:warning_message}
+snippet "(?i)#\s*w(a(r(n(i(n(g)?)?)?)?)?)?" "@warning" r
+# @warning ${1:warning_message}
 endsnippet
 
 priority 1
