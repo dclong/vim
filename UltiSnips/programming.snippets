@@ -64,21 +64,21 @@ endsnippet
 
 priority 1
 snippet "(?i)\bif\(?" "If Statement" rb
-if(${1:condition}){
+if(${1:condition}) {
 	${VISUAL}${2:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
 
 priority 1
 snippet "(?i)\bdo" "do...while loop (do)" rb
-do{
+do {
 	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
 } while(${1:/* condition */});
 endsnippet
 
 priority 1
 snippet "(?i)\bwhile" "while loop" rb
-while(${1:condition}){
+while(${1:condition}) {
 	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
@@ -99,9 +99,9 @@ endsnippet
 
 priority 1
 snippet "(?i)\bife(l(s(e)?)?)?" "if ... else ..." rb
-if(${1:condition}){
+if(${1:condition}) {
 	$2
-}else{
+} else {
 	$3
 }
 endsnippet
