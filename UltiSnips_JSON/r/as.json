@@ -1,0 +1,13 @@
+[
+    [
+        "numeric", 
+        1, 
+        "2015-11-11 22:48:14.466420"
+    ], 
+    "data.frame", 
+    "factor", 
+    "vector", 
+    "list", 
+    "double", 
+    "integer"
+]

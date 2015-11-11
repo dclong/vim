@@ -4,7 +4,7 @@ endglobal
 
 priority 1
 snippet "\bcat" "function cat" r
-cat(${1:...}${2:, file=""}${3:, sep="${4:}"}${5:, fill=${6:FALSE}}${7:, labels=${8:NULL}}${9:, append=${10:FALSE}})
+cat(${1:...}${2:, file="$3"}${4:, sep="${5:}"}${6:, fill=${7:FALSE}}${8:, labels=${9:NULL}}${10:, append=${11:FALSE}})
 endsnippet
 
 priority 1
@@ -20,6 +20,11 @@ endsnippet
 priority 1
 snippet "\bread\." "read.* functions" r
 read.$1`!p snip.rv = complete(t[1], file="r/write.json")`
+endsnippet
+
+priority 1
+snippet "\bwrite.csv" "function write.csv" r
+write.csv(x=$1, file=$2, row.names=FALSE$3)
 endsnippet
 
 priority 1

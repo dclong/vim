@@ -1,0 +1,6 @@
+[
+    "qnorm", 
+    "qbinom", 
+    "quantile", 
+    "qt"
+]

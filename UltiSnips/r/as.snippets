@@ -1,0 +1,9 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "\bas\." "as.* functions" r
+as.$1`!p snip.rv = complete(t[1], file="r/as.json")`
+endsnippet
+
