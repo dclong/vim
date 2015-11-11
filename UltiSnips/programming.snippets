@@ -62,9 +62,16 @@ snippet "\band" "AND" r
 &
 endsnippet
 
+priority 2
+snippet "(?i)\bif ?\((.*)\) ?" "If Statement" rb
+if (${1:`!p snip.rv = match.group(1)`}) {
+	${VISUAL}${2:${VISUAL/(.*)/(?1::)/}}
+}
+endsnippet
+
 priority 1
-snippet "(?i)\bif\(?" "If Statement" rb
-if(${1:condition}) {
+snippet "(?i)\bif" "If Statement" rb
+if (${1:condition}) {
 	${VISUAL}${2:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
@@ -76,9 +83,16 @@ do {
 } while(${1:/* condition */});
 endsnippet
 
+priority 2
+snippet "(?i)\bwhile ?\((.*)\) ?" "while loop" rb
+while (${1:`!p snip.rv = match.group(1)`}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
+}
+endsnippet
+
 priority 1
-snippet "(?i)\bwhile" "while loop" rb
-while(${1:condition}) {
+snippet "(?i)\bwhile\(?" "while loop" rb
+while (${1:condition}) {
 	${VISUAL}${0:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
