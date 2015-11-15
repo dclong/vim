@@ -8,74 +8,74 @@ file.$1`!p snip.rv = complete(t[1], file="python/file.json")`
 endsnippet
 
 priority 1
-snippet "\bfile\.open[a-zA-Z]?" "Open a File" r
+snippet "\bfile\.open\(?" "Open a File" r
 ${6:fd} = open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
 endsnippet
 
 ################################################################################
 
 priority 1
-snippet "\bfile\.close[a-zA-Z]?" "file.close" r
+snippet "\bfile\.close\(?" "file.close" r
 ${1:file}.close()
 endsnippet
 
 priority 1
-snippet "\bfile\.flush[a-zA-Z]?" "file.flush" r
+snippet "\bfile\.flush\(?" "file.flush" r
 ${1:file}.flush()
 endsnippet
 
 priority 1
-snippet "\bfile\.fileno[a-zA-Z]?" "file.fileno" r
+snippet "\bfile\.fileno\(?" "file.fileno" r
 ${1:file}.fileno()
 endsnippet
 
 priority 1
-snippet "\bfile\.isatty[a-zA-Z]?" "file.isatty" r
+snippet "\bfile\.isatty\(?" "file.isatty" r
 ${1:file}.isatty()
 endsnippet
 
 priority 1
-snippet "\bfile\.next[a-zA-Z]?" "file.next" r
+snippet "\bfile\.next\(?" "file.next" r
 ${1:file}.next()
 endsnippet
 
 priority 1
-snippet "\bfile\.read[a-zA-Z]?" "file.read" r
+snippet "\bfile\.read\(?" "file.read" r
 ${2:file}.read(${1:size})
 endsnippet
 
 priority 1
-snippet "\bfile\.readline[a-zA-Z]?" "file.readline" r
+snippet "\bfile\.readline\(?" "file.readline" r
 ${2:file}.readline(${1:size})
 endsnippet
 
 priority 1
-snippet "\bfile\.readlines[a-zA-Z]?" "file.readlines" r
+snippet "\bfile\.readlines\(?" "file.readlines" r
 ${2:file}.readlines(${1:sizehint})
 endsnippet
 
 priority 1
-snippet "\bfile\.seek[a-zA-Z]?" "file.seek" r
+snippet "\bfile\.seek\(?" "file.seek" r
 ${4:file}.seek(${1:offset}${2:, ${3:whence}})
 endsnippet
 
 priority 1
-snippet "\bfile\.tell[a-zA-Z]?" "file.tell" r
+snippet "\bfile\.tell\(?" "file.tell" r
 ${1:file}.tell()
 endsnippet
 
 priority 1
-snippet "\bfile\.truncate[a-zA-Z]?" "file.truncate" r
+snippet "\bfile\.truncate\(?" "file.truncate" r
 ${2:file}.truncate(${1:size})
 endsnippet
 
 priority 1
-snippet "\bfile\.write[a-zA-Z]?\b" "file.write" r
+snippet "\bfile\.write\(?\b" "file.write" r
 ${2:file}.write(${1:str})
 endsnippet
 
 priority 1
-snippet "\bfile\.writelines[a-zA-Z]?" "file.writelines" r
+snippet "\bfile\.writelines\(?" "file.writelines" r
 ${2:file}.writelines(${1:sequence})
 endsnippet
 

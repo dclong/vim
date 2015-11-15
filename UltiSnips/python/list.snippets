@@ -4,54 +4,72 @@ endglobal
 
 priority 1
 
+priority 1
 snippet "l(i(s(t)?)?)?\." "Methods of list." r
 list.$1`!p snip.rv = complete(t[1], file="python/list.json")`
 endsnippet
 
-snippet "\blist.list[a-zA-Z]?" "list()" r
+priority 1
+snippet "\blist\.list\(?" "list()" r
 list(${1:obj})
 endsnippet
 
-snippet "\blist.len[a-zA-Z]?" "len()" r
+priority 1
+snippet "\blist\.len\(?" "len()" r
 len(${1:obj})
 endsnippet
 
 ###########################################################################
 
-snippet "\blist.append[a-zA-Z]?" "list.append" r
+priority 1
+snippet "\blist\.append\(?" "list.append" r
 ${2:list}.append(${1:x})
 endsnippet
 
-snippet "\blist.extend[a-zA-Z]?" "list.extend" r
+priority 1
+snippet "\blist\.extend\(?" "list.extend" r
 ${2:list}.extend(${1:L})
 endsnippet
 
-snippet "\blist.insert[a-zA-Z]?" "list.insert" r
+priority 1
+snippet "\blist\.insert\(?" "list.insert" r
 ${3:list}.insert(${1:i}, ${2:x})
 endsnippet
 
-snippet "\blist.remove[a-zA-Z]?" "list.remove" r
+priority 1
+snippet "\blist\.remove\(?" "list.remove" r
 ${2:list}.remove(${1:x})
 endsnippet
 
-snippet "\blist.pop[a-zA-Z]?" "list.pop" r
+priority 1
+snippet "\blist\.pop\(?" "list.pop" r
 ${2:list}.pop(${1:i})
 endsnippet
 
-snippet "\blist.index[a-zA-Z]?" "list.index" r
+priority 1
+snippet "\blist\.index\(?" "list.index" r
 ${2:list}.index(${1:x})
 endsnippet
 
-snippet "\blist.count[a-zA-Z]?" "list.count" r
+priority 1
+snippet "\blist\.count\(?" "list.count" r
 ${2:list}.count(${1:x})
 endsnippet
 
-snippet "\blist.sort[a-zA-Z]?" "list.sort" r
+priority 1
+snippet "\blist\.sort\(?" "list.sort" r
 ${4:list}.sort(${1:cmp=None}, ${2:key=None}, ${3:reverse=False})
 endsnippet
 
-snippet "\blist.reverse[a-zA-Z]?" "list.reverse" r
+priority 1
+snippet "\blist\.reverse\(?" "list.reverse" r
 ${1:list}.reverse()
 endsnippet
 
-
+priority 1
+snippet "(?i)\blist\.find\(?" "list.find" r
+${1:if ${3:e} in ${4:list}:
+	$5$4.index($3)
+#end if}
+${2:$8${7:list}.index($6) if $6 in $7 else -1}
+endsnippet
