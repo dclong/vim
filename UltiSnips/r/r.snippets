@@ -39,7 +39,12 @@ return(${1:value})
 endsnippet
 
 priority 2
-snippet "(?i)\bx ?=? ?x[?x]?" "Description" r
+snippet "(?i)\bx\[x?" "x[f(x)]" r
+${1:x}[$1${2}]
+endsnippet
+
+priority 2
+snippet "(?i)\bx ?=? ?x\[?x\]?" "x = x[f(x)]" r
 ${1:x} = $1[$1${2}]
 endsnippet
 
@@ -51,14 +56,24 @@ endsnippet
 
 priority 2
 snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\((.*)\) ?{?" "Function Definition" rb
-`!p snip.rv = match.group(1)` = function(`!p snip.rv = match.group(7)`) {
-	$1
+`!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
+	$2
 }
 endsnippet
 
 priority 1
 snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\(?(.*)\)? ?{?" "Function Definition" rb
-`!p snip.rv = match.group(1)` = function(`!p snip.rv = match.group(7)`) {
-	$1
+`!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
+	$2
 }
+endsnippet
+
+priority 1
+snippet "(?i)\buniq(u(e)?)?" "unique" r
+unique(x, incomparables = FALSE, ...)
+endsnippet
+
+priority 1
+snippet "(?i)\btab(l(e)?)?" "table" r
+table(..., exclude = if (useNA=="no") c(NA, NaN), useNA=c("no", "ifany", "always"), dnn=list.names(...), deparse.level=1)
 endsnippet
