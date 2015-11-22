@@ -1,0 +1,74 @@
+
+priority 1
+snippet "if" "if ... then (if)" r
+if ${1:[[ ${2:condition} ]]}; then
+	${3:#statements}
+fi
+endsnippet
+
+priority 1
+snippet "until|till" "until ... (done)" r
+until ${1:[[ ${2:condition} ]]}; do
+	${3:#statements}
+done
+endsnippet
+
+priority 1
+snippet "while" "while ... (done)" r
+while ${1:[[ ${2:condition} ]]}; do
+	${3:#statements}
+done
+endsnippet
+
+priority 1
+snippet "case|swit(c(h)?)?" "case .. esac (case)" r
+case ${1:word} in
+	${2:pattern} )
+		$0;;
+esac
+endsnippet
+
+priority 1
+snippet "if ?moba(x(t(e(r(m)?)?)?)?)?" "If running under MobaXterm" r
+# if running under MobaXterm in Windows as a virtualization solutions
+if [[ "$(uname -a)" == CYGWIN_NT*GNU/Linux ]]; then
+$1
+fi
+endsnippet
+
+priority 1
+snippet "if ?cyg(w(i(n)?)?)?" "If running under Cygwin" r
+# if running under Cygwin in Windows as a virtualization solutions
+if [[ "$(uname -a)" == CYGWIN_NT*Cygwin ]]; then
+$1
+fi
+endsnippet
+
+priority 1
+snippet "if ?win(d(o(w(s)?)?)?)?" "If running under Windows" r
+# if running in Windows as a virtualization solutions
+if [[ "$(uname -a)" == CYGWIN_NT* ]]; then
+$1
+fi
+endsnippet
+
+priority 1
+snippet "elif" "elif .. (elif)" r
+elif ${1:[[ ${2:condition} ]]}; then
+	${3:#statements}
+endsnippet
+
+priority 1
+snippet "f(o(r)?)? ?\(\(" "for (()) ... done" r
+for (( i = 0; i < ${1:10}; i++ )); do
+	${2:#statements}
+done
+endsnippet
+
+priority 1
+snippet "f(o(r)?)? ?in" "for ... in ... done (forin)" r
+for ${1:i}${2/.+/ in /}${2:words}; do
+	${0:#statements}
+done
+endsnippet
+

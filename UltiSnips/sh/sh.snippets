@@ -2,6 +2,7 @@ global !p
 import vim
 endglobal
 
+priority 1
 snippet temp "Tempfile"
 ${1:TMPFILE}="$(mktemp -t ${2:`!p
 snip.rv = re.sub(r'[^a-zA-Z]', '_', snip.fn) or "untitled"
@@ -10,112 +11,25 @@ ${3:${4/(.+)/trap "/}${4:rm -f '$${1/.*\s//}'}${4/(.+)/" 0               # EXIT\
 
 endsnippet
 
-snippet case "case .. esac (case)"
-case ${1:word} in
-	${2:pattern} )
-		$0;;
-esac
-endsnippet
-
-snippet ifmoba "If running under MobaXterm"
-# if running under MobaXterm in Windows as a virtualization solutions
-if [[ "$(uname -a)" == CYGWIN_NT*GNU/Linux ]]; then
-$1
-fi
-endsnippet
-
-snippet ifcyg "If running under Cygwin"
-# if running under Cygwin in Windows as a virtualization solutions
-if [[ "$(uname -a)" == CYGWIN_NT*Cygwin ]]; then
-$1
-fi
-endsnippet
-
-snippet ifwin "If running under Windows"
-# if running in Windows as a virtualization solutions
-if [[ "$(uname -a)" == CYGWIN_NT* ]]; then
-$1
-fi
-endsnippet
-
-
-snippet casedist "case specially for Linux distributions"
-local dist="$(lsb_release -d)"
-case "$dist" in
-    *Debian* | *LMDE* | *Ubuntu* | *Linux Mint* )
-        return 0;;
-    *Debian* )
-        return 0;;
-    *LMDE* )
-        return 0;;
-    *Ubuntu* )
-        return 0;;
-    *Linux\ Mint* )
-        return 0;;
-    *Arch\ Linux* )
-        return 0;;
-    *Fedora* )
-        return 0;;
-    * )
-        echo "This script does not support ${dist:13}."
-        return 1;;
-esac
-endsnippet
-
-snippet elif "elif .. (elif)"
-elif ${1:[[ ${2:condition} ]]}; then
-	${3:#statements}
-endsnippet
-
-snippet f(( "for (()) ... done"
-for (( i = 0; i < ${1:10}; i++ )); do
-	${2:#statements}
-done
-endsnippet
-
-snippet for(( "for (()) ... done"
-for (( i = 0; i < ${1:10}; i++ )); do
-	${2:#statements}
-done
-endsnippet
-
-snippet fin "for ... in ... done (forin)"
-for ${1:i}${2/.+/ in /}${2:words}; do
-	${0:#statements}
-done
-endsnippet
-
-snippet forin "for ... in ... done (forin)"
-for ${1:i}${2/.+/ in /}${2:words}; do
-	${0:#statements}
-done
-endsnippet
-
+priority 1
 snippet here "here document (here)"
 <<-${2:'${1:TOKEN}'}
 	$0
 ${1/['"`](.+)['"`]/$1/}
 endsnippet
 
-snippet if "if ... then (if)"
-if ${1:[[ ${2:condition} ]]}; then
-	${3:#statements}
-fi
-endsnippet
-
-snippet until "until ... (done)"
-until ${1:[[ ${2:condition} ]]}; do
-	${3:#statements}
-done
-endsnippet
-
-snippet while "while ... (done)"
-while ${1:[[ ${2:condition} ]]}; do
-	${3:#statements}
-done
-endsnippet
-
-# vim:ft=snippets:
+priority 1
 snippet alias "Alias Definition" b
 alias ${1:a}='${2:command}'
 endsnippet
+
+priority 1
+snippet "(?i)\bexp(o(r(t)?)?)?" "export" r
+export ${1:alias_name}='${2:command}'
+endsnippet
+
+priority 1
+snippet "(?i)\blo(c(a(l)?)?)?" "local" r
+local ${1:variable_name}=${2:definition}
+endsnippet
+

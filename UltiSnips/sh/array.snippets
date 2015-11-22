@@ -1,0 +1,13 @@
+global !p
+import vim
+endglobal
+
+priority 1
+snippet "(?i)\blen(g(t(h)?)?)?" "length of array" r
+${#${1:array}[@]}
+endsnippet
+
+priority 1
+snippet "(?i)x?\[" "array slicing" r
+${${1:array}[${2:0-based_index}]}
+endsnippet
