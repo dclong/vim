@@ -1,4 +1,9 @@
 [
+    "rowSums", 
+    "colSums", 
+    "rowMeans", 
+    "rowSums", 
+    "outer", 
     "apply", 
     "tapply", 
     "sapply", 

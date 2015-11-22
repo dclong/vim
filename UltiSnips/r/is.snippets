@@ -7,3 +7,37 @@ snippet "\bis\." "is.* functions" r
 is.$1`!p snip.rv = complete(t[1], file="r/is.json")`
 endsnippet
 
+priority 1
+snippet "(?i)\bis\.int(e(g(e(r)?)?)?)?" "is.integer" r
+is.integer(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.vec(t(o(r)?)?)?" "is.vector" r
+is.vector(${1:x}${2:, mode="${3:any}"})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.num(e(r(i(c)?)?)?)?" "is.numeric" r
+is.numeric(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.li(s(t)?)?" "is.list" r
+is.list(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.dou(b(l(e)?)?)?" "is.double(x)" r
+is.double(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.data\.f(r(a(m(e)?)?)?)?|is.df" "is.data.frame" r
+is.data.frame(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.mat(r(i(x)?)?)?" "is.matrix" r
+is.matrix(${1:x})
+endsnippet

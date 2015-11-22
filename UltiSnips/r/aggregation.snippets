@@ -38,3 +38,23 @@ priority 2
 snippet "(?i)\bouter" "outer" r
 outer(${1:vec1}, ${2:vec2}, FUN=${3:"*"}${4:, ${5:dots_optional_args_to_FUN}})
 endsnippet
+
+priority 1
+snippet "(?i)\bcol(u(m(n)?)?)? ?su(m(s)?)?" "colSums" r
+colSums(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+endsnippet
+
+priority 1
+snippet "(?i)\brow ?su(m(s))" "rowSums" r
+rowSums(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+endsnippet
+
+priority 1
+snippet "(?i)\bcol(u(m(n)?)?)? ?me(a(n(s)?)?)?" "colMeans" r
+colMeans(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+endsnippet
+
+priority 1
+snippet "(?i)\brow ?me(a(n(s)))" "rowMeans" r
+rowMeans(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+endsnippet

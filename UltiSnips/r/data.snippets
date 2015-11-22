@@ -1,15 +1,46 @@
 
 priority 1
-snippet "\bidentity matrix|\bi|\beye|\bdiag" "Identity Matrix" r
+snippet "\bidentity matrix|\beye|\bdiag" "Identity Matrix" r
 diag(x=${1:1}, ${2:nrow}, ${3:ncol})
 endsnippet
 
 priority 1
-snippet "\bmatrix|\bj" "Fill a Matrix" r
-matrix(data=${1:NA}, nrow=${2:1}, ncol=${3:1}${4:${5:, byrow=${6:FALSE}}${7:, dimnames=${8:NULL}}})
+snippet "(?i)\bmat(r(i(x)?)?)?" "matrix" r
+matrix(data=${1:NA}${2:${3:, nrow=${4:1}}${5:, ncol=${6:1}}${7:, byrow=FALSE$8}${9:, dimnames=${10:NULL}}})
 endsnippet
 
 priority 1
 snippet "\bcoln(a(m(e(s)?)?)?)?" "Column Names" r
 colnames(${1:x}${2:${3:, do.NULL=${4:TRUE}}${5:, prefix="${6:col}"}})${7: = ${8:column_names}}  
 endsnippet
+
+priority 1
+snippet "(?i)\bint(e(g(e(r)?)?)?)?" "integer" r
+integer(length=${1:0})
+endsnippet
+
+priority 1
+snippet "(?i)\bvec(t(o(r)?)?)?" "vector" r
+vector(mode="${1:logical}", length=${2:0})
+endsnippet
+
+priority 1
+snippet "(?i)\bnum(e(r(i(c)?)?)?)?" "numeric" r
+numeric(length=${1:0})
+endsnippet
+
+priority 1
+snippet "(?i)\blist" "list" r
+list(${1:...})
+endsnippet
+
+priority 1
+snippet "(?i)\bdou(b(l(e)?)?)?" "double" r
+double(length=${1:0})
+endsnippet
+
+priority 1
+snippet "(?i)\bdata.f(r(a(m(e)?)?)?)?|df" "data.frame" r
+data.frame(${1:...}${2:${3:, row.names=${4:NULL}}${5:, check.rows=FALSE$6}${7:, check.names=TRUE$8}${9:, stringsAsFactors=${10:default.stringsAsFactors()}}})
+endsnippet
+

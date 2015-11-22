@@ -2,8 +2,43 @@ global !p
 from complete import *
 endglobal
 
-priority 1
+priority 2
 snippet "\bas\." "as.* functions" r
 as.$1`!p snip.rv = complete(t[1], file="r/as.json")`
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.int(e(g(e(r)?)?)?)?" "as.integer" r
+as.integer(${1:x}${2:, ...})
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.vec(t(o(r)?)?)?" "as.vector" r
+as.vector(${1:x}${2:, mode="any"})
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.num(e(r(i(c)?)?)?)?" "as.numeric" r
+as.numeric(${1:x}${2:, ...})
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.li(s(t)?)?" "as.list" r
+as.list(${1:x}${2:, ...})
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.dou(b(l(e)?)?)?" "as.double" r
+as.double(${1:x}${2:, ...})
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.data.f(r(a(m(e)?)?)?)?|as.df" "as.data.frame" r
+as.data.frame(${1:x}${2:${3:, row.names=${4:NULL}}${4:, optional=FALSE$5}${6:, ...}})
+endsnippet
+
+priority 2
+snippet "(?i)\bas\.matrix" "as.mat(r(i(x)?)?)?" r
+as.matrix(${1:x}${2:, ...})
 endsnippet
 

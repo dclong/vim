@@ -1,0 +1,17 @@
+[
+    "max",
+    "min",
+    "mean",
+    "sum",
+    "pmax",
+    "pmin",
+    "which.min",
+    "which.max",
+    "cos",
+    "sin",
+    "tan",
+    "acos",
+    "asin",
+    "atan",
+    "atan2"
+]

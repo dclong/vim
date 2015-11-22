@@ -1,0 +1,85 @@
+extends programming
+
+global !p
+from complete import *
+endglobal
+
+priority 2
+snippet "\bmath\." "math functions" r
+$1`!p snip.rv = complete(t[1], file="r/math.json")`
+endsnippet
+
+priority 1
+snippet "(?i)\bmax" "max" r
+max(${1:...}${2:, na.rm=FALSE$3})
+endsnippet
+
+priority 1
+snippet "(?i)\bmin" "min" r
+min(${1:...}${2:, na.rm=FALSE$3})
+endsnippet
+
+priority 1
+snippet "(?i)\bmean" "mean" r
+mean(${1:x}${2:, ...})
+endsnippet
+
+priority 1
+snippet "(?i)\bsum" "sum" r
+sum(${1:...}${2:, na.rm=FALSE$3})
+endsnippet
+
+priority 1
+snippet "(?i)\bpmax" "pmax" r
+pmax(${1:...}${2:, na.rm=FALSE$3})
+endsnippet
+
+priority 1
+snippet "(?i)\bpmin" "pmin" r
+pmin(${1:...}${2:, na.rm=FALSE$3})
+endsnippet
+
+priority 1
+snippet "(?i)\bwhich.min" "which.min" r
+which.min(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bwhich.max" "which.max" r
+which.max(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bcos" "cos" r
+cos(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bsin" "sin" r
+sin(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\btan" "tan" r
+tan(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\bacos" "acos" r
+acos(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\basin" "asin" r
+asin(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\batan" "atan" r
+atan(${1:x})
+endsnippet
+
+priority 1
+snippet "(?i)\batan2" "atan2" r
+atan2(${1:y}, ${2:x})
+endsnippet
