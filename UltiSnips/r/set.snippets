@@ -1,0 +1,35 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "\bset\." "set related functions" r
+$1`!p snip.rv = complete(t[1], file="set.json")`
+endsnippet
+
+priority 1
+snippet "\bsetd(i(f(f)?)?)?" "setdiff" r
+setdiff(${1:x}, ${2:y})
+endsnippet
+
+priority 1
+snippet "(?i)\bunion" "union" r
+union(${1:x}, ${2:y})
+endsnippet
+
+priority 1
+snippet "(?i)\binter(s(e(c(t)?)?)?)?" "intersect" r
+intersect(${1:x}, ${2:y})
+endsnippet
+
+priority 1
+snippet "(?i)\bsete(q(u(a(l)?)?)?)?" "setequal" r
+setequal(${1:x}, ${2:y})
+endsnippet
+
+priority 1
+snippet "(?i)\bis\.ele(m(e(n(t)?)?)?)?" "is.element" r
+is.element(${1:el}, ${2:set})
+endsnippet
+

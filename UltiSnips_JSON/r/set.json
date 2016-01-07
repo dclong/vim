@@ -1,0 +1,7 @@
+[
+    "union",
+    "intersect",
+    "setdiff",
+    "setequal",
+    "is.element"
+]
