@@ -1,6 +1,7 @@
 [
     "argparse", 
     "datetime", 
+    "defaultdict",
     "getopt", 
     "nltk", 
     "numpy", 

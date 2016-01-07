@@ -2,6 +2,12 @@ global !p
 from complete import *
 endglobal
 
+priority 1
 snippet "i(m(p(o(r(t)?)?)?)?)?" "import" rb
 import $1`!p snip.rv = complete(t[1], file="python/import.json")`
+endsnippet
+
+priority 1
+snippet "(?i)\bimport defaultdict" "Import defaultdict" r
+from collections import defaultdict ${1:as ${2:dd}}
 endsnippet
