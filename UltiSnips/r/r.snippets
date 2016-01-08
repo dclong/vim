@@ -10,20 +10,6 @@ endglobal
 #endsnippet
 
 priority 1
-snippet "\bfun(c(t(i(o(n)?)?)?)?)?" "Define a Function" rb
-${1:fun_name} = function(${2:arg}) {
-	${3:}
-}
-endsnippet
-
-priority 1
-snippet "\bfor" "The for Loop" rb
-for(${1:i} in ${2:vector}){
-    $3
-}
-endsnippet
-
-priority 1
 snippet "\bwarn(i(n(g)?)?)?" "The warning Function for Generating a warning message" rb
 warning(${1:message}${2:${3:, call.=${4:TRUE}}${5:, immediate.=${6:FALSE}}${7:, noBreaks.=${8:FALSE}}${9:, domain=${10:NULL}}})
 endsnippet
@@ -31,11 +17,6 @@ endsnippet
 priority 1
 snippet "(?i)\bsd|\bstd|\bstdev|\bst(a(n(d(a(r(d)?)?)?)?)?)? ?dev(i(a(t(i(o(n)?)?)?)?)?)?" "Standard Deviation" r
 sd(${1:vector}${2:, na.rm=${3:FALSE}})
-endsnippet
-
-priority 1
-snippet "(?i)\bret(u(r(n)?)?)?" "return" r
-return(${1:value})
 endsnippet
 
 priority 2
@@ -54,20 +35,6 @@ snippet "(?i)^#!?r(s(c(r(i(p(t)?)?)?)?)?)?|#!" "Shabang for R" r
 
 endsnippet
 
-priority 2
-snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\((.*)\) ?{?" "Function Definition" rb
-`!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
-	$2
-}
-endsnippet
-
-priority 1
-snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\(?(.*)\)? ?{?" "Function Definition" rb
-`!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
-	$2
-}
-endsnippet
-
 priority 1
 snippet "(?i)\buniq(u(e)?)?" "unique" r
 unique(x, incomparables = FALSE, ...)
@@ -83,11 +50,3 @@ snippet "(?i)\bife(l(s(e)?)?)?\(" "ifelse()" r
 ifelse(${1:vector_condition}, ${2:action_for_true}, ${3:action_for_false})
 endsnippet
 
-max(..., na.rm = FALSE)
-min(..., na.rm = FALSE)
-
-pmax(..., na.rm = FALSE)
-pmin(..., na.rm = FALSE)
-
-which.min(x)
-which.max(x)
