@@ -16,19 +16,19 @@ snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
 \end{$1}
 endsnippet
 
-snippet "\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" rb
+snippet "\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" r
 \frac{$1}{$2}
 endsnippet
 
-snippet "\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" rb
+snippet "\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" r
 \int_{${1:lower_limit}}^{${2:upper_limit}} ${3:integrand} 
 endsnippet
 
-snippet "\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" rb
+snippet "\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" r
 \overset{$1}{$2}
 endsnippet
 
-snippet "\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" rb
+snippet "\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" r
 \nonumber 
 endsnippet
 
@@ -36,7 +36,7 @@ snippet "\\nn" "\nonumber \\" rb
 \nonumber \\
 endsnippet
 
-snippet "\\l(e(f(t)?)?)?" "\left" rb
+snippet "\\l(e(f(t)?)?)?" "\left" r
 \left$1`!p snip.rv = complete(t[1], opts=["<", "(", "{", "["])`\right$1
 endsnippet
 
@@ -56,14 +56,14 @@ snippet max "max{}" w
 max\\{$1\\}
 endsnippet
 
-snippet "\\b(a(r)?)?" "bar" rb
+snippet "\\b(a(r)?)?" "bar" r
 \bar{${1:expr}}
 endsnippet
 
-snippet "\\s(q(r(t)?)?)?" "\sqrt" rb
+snippet "\\s(q(r(t)?)?)?" "\sqrt" r
 \sqrt{${1:expr}}
 endsnippet
 
-snippet "\\d(o(t)?)?" "\dot" rb
+snippet "\\d(o(t)?)?" "\dot" r
 \dot{${1:expr}}
 endsnippet

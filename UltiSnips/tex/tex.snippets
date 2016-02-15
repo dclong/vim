@@ -5,7 +5,8 @@ from complete import *
 endglobal
 
 
-snippet "\\r(e(f)?)?" "\\ref{}" rb
+priority 1
+snippet "\\r(e(f)?)?" "\\ref{}" r
 \ref{$1}
 endsnippet
 
@@ -13,6 +14,7 @@ endsnippet
 # TABULARS, ARRAYS #
 ####################
 
+priority 1
 snippet tab
 \begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
 $0${2/((?<=.)c|l|r)|./(?1: & )/g}
@@ -23,10 +25,17 @@ endsnippet
 #  Utilities  #
 ###############
 
+priority 1
 snippet "\\(use)?p(a(c(k(a(g(e)?)?)?)?)?)?" "Package" rb
 \usepackage[${1:options}]{${2:package}}$0
 endsnippet
 
+priority 1
 snippet "\\a(u(t(h(o(r)?)?)?)?)?" "\author{}" rb
 \author{${1:Ben Chuanlong Du}}
+endsnippet
+
+priority 1
+snippet "(?i)\\lab(e(l)?)?" "\label{}" r
+\label{${1:label}}
 endsnippet
