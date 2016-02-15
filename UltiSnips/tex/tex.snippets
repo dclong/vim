@@ -5,28 +5,47 @@ from complete import *
 endglobal
 
 
-snippet "\\r(e(f)?)?" "\\ref{}" rb
-\ref{$1}
+priority 1
+snippet "\\url" "\url{}" r
+\url{${1:${VISUAL:URL}}}
 endsnippet
 
-####################
-# TABULARS, ARRAYS #
-####################
+priority 1
+snippet "\\r(e(f)?)?" "\ref{}" r
+\ref{${1:${VISUAL:ref}}}
+endsnippet
 
-snippet tab
+priority 1
+snippet "\\hr(e(f)?)?" "\href{}" r
+\href{${1:${VISUAL:href}}}
+endsnippet
+
+priority 1
+snippet "\\hyperr(e(f)?)?" "\hyperref{}" r
+\hyperref[${2:label_name}]{${1:${VISUAL:hyperref}}}
+endsnippet
+
+# TABULARS, ARRAYS 
+priority 1
+snippet "tab(l(e)?)?|tab(u(l(a(r)?)?)?)?" "table" rb
 \begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
 $0${2/((?<=.)c|l|r)|./(?1: & )/g}
 \end{$1${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
 endsnippet
 
-###############
-#  Utilities  #
-###############
+# Utilities 
 
+priority 1
 snippet "\\(use)?p(a(c(k(a(g(e)?)?)?)?)?)?" "Package" rb
-\usepackage[${1:options}]{${2:package}}$0
+\usepackage[${2:options}]{${1:${VISUAL:package}}}$0
 endsnippet
 
+priority 1
 snippet "\\a(u(t(h(o(r)?)?)?)?)?" "\author{}" rb
-\author{${1:Ben Chuanlong Du}}
+\author{${1:${VISUAL:Ben Chuanlong Du}}}
+endsnippet
+
+priority 1
+snippet "(?i)\\lab(e(l)?)?" "\label{}" r
+\label{${1:${VISUAL:label}}}
 endsnippet

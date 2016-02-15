@@ -2,68 +2,147 @@ global !p
 from complete import *
 endglobal
 
+priority 1
 snippet "g(r(e(e(k)?)?)?)?\." "Math Formula" r
 $1`!p snip.rv = complete(t[1], file="tex/math.json")`
 endsnippet
 
+priority 1
 snippet "m(a(t(h)?)?)?\." "Math Formula" r
 $1`!p snip.rv = complete(t[1], file="text/math.json")`
 endsnippet
 
+priority 1
 snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
 \begin{${1:something}}
-	${0:${VISUAL}}
+	${2:${VISUAL}}
 \end{$1}
 endsnippet
 
-snippet "\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" rb
-\frac{$1}{$2}
+priority 1
+snippet "\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" r
+\frac{${1:${VISUAL:numerator/\/.*$//}}}{${2:${VISUAL:denominator/^.*\///}}}
 endsnippet
 
-snippet "\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" rb
+priority 1
+snippet "\\i(n(t(e(g(r(a(l)?)?)?)?)?)?)?" "Integral" r
 \int_{${1:lower_limit}}^{${2:upper_limit}} ${3:integrand} 
 endsnippet
 
-snippet "\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" rb
-\overset{$1}{$2}
+priority 1
+snippet "\\o(v(e(r(s(e(t)?)?)?)?)?)?" "\overset" r
+\overset{${1:${VISUAL}}}{${2:${VISUAL}}}
 endsnippet
 
-snippet "\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" rb
+priority 1
+snippet "\\n(o(n(u(m(b(e(r)?)?)?)?)?)?)?" "\nonumber" r
 \nonumber 
 endsnippet
 
+priority 1
 snippet "\\nn" "\nonumber \\" rb
 \nonumber \\
 endsnippet
 
-snippet "\\l(e(f(t)?)?)?" "\left" rb
+priority 1
+snippet "\\l(e(f(t)?)?)?" "\left" r
 \left$1`!p snip.rv = complete(t[1], opts=["<", "(", "{", "["])`\right$1
 endsnippet
 
+priority 1
 snippet '([a-zA-Z]+)(\d+)' "X_1" r
 `!p snip.rv = match.group(1) + "_" + match.group(2)`
 endsnippet
 
+priority 1
 snippet '([a-zA-Z]+)\((\d+)' "X_(1)" r
 `!p snip.rv = match.group(1) + "_{(" + match.group(2) + ")}"`
 endsnippet
 
+priority 1
 snippet min "min{}" w
-min\\{$1\\}
+min\\{${1:${VISUAL:list}}\\}
 endsnippet
 
+priority 1
 snippet max "max{}" w
-max\\{$1\\}
+max\\{${1:${VISUAL:list}}\\}
 endsnippet
 
-snippet "\\b(a(r)?)?" "bar" rb
-\bar{${1:expr}}
+priority 1
+snippet "\\b(a(r)?)?" "bar" r
+\bar{${1:${VISUAL:expr}}}
 endsnippet
 
-snippet "\\s(q(r(t)?)?)?" "\sqrt" rb
-\sqrt{${1:expr}}
+priority 1
+snippet "\\s(q(r(t)?)?)?" "\sqrt" r
+\sqrt{${1:${VISUAL:expr}}}
 endsnippet
 
-snippet "\\d(o(t)?)?" "\dot" rb
-\dot{${1:expr}}
+priority 1
+snippet "\\d(o(t)?)?" "\dot" r
+\dot{${1:${VISUAL:expr}}}
 endsnippet
+
+priority 1
+snippet $ "inline formula" 
+$${1:${VISUAL}}$
+endsnippet
+
+priority 1
+snippet "\\eq(u(a(t(i(o(n)?)?)?)?)?)?" "Equation" rb
+\begin{equation}
+	${1:${VISUAL:equation}}
+\end{equation}
+endsnippet
+
+priority 1
+snippet "\\eq(u(a(t(i(o(n)?)?)?)?)?)? ?nn" "Equation Without Number" rb
+\begin{equation*}
+	${1:${VISUAL:equation}}
+\end{equation*}
+endsnippet
+
+priority 1
+snippet "\\equ(a(t(i(o(n)?)?)?)?)? ?a(r(r(a(y)?)?)?)?" "Equation array" rb
+\begin{eqnarray}
+	$1 & $2 & $3 \\
+	$4 & $5 & $6 
+\end{eqnarray}
+endsnippet
+
+priority 1
+snippet "\\eq(u(a(t(i(o(n)?)?)?)?)?)? ?a(r(r(a(y)?)?)?)? ?nn" "Equation array without numbers" rb
+\begin{eqnarray*}
+	$1 & $2 & $3 \\
+	$4 & $5 & $6 
+\end{eqnarray*}
+endsnippet
+
+priority 1
+snippet "\\mat(r(i(x)?)?)?" "Smart Matrix" rb
+\begin{${1:p/b/v/V/B/small}matrix}
+	$1
+\end{$1matrix}
+endsnippet
+
+priority 1
+snippet lr( "\left( \right)" w
+\left( ${1:${VISUAL}} \right)
+endsnippet
+
+priority 1
+snippet lr| "\left| \right|" w
+\left| ${1:${VISUAL}} \right|
+endsnippet
+
+priority 1
+snippet lr{ "left\{ right\}" w
+\left\\{ ${1:${VISUAL}} \right\\}
+endsnippet
+
+priority 1
+snippet lr[ "left[ right]" w
+\left[ ${1:${VISUAL}} \right]
+endsnippet
+
