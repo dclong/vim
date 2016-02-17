@@ -1,0 +1,22 @@
+
+priority 1
+snippet "\bfun(c(t(i(o(n)?)?)?)?)?" "Define a Function" rb
+${1:fun_name} = function(${2:arg}) {
+	${3:}
+}
+endsnippet
+
+priority 2
+snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\((.*)\) ?{?" "Function Definition" rb
+`!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
+	$2
+}
+endsnippet
+
+priority 1
+snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\(?(.*)\)? ?{?" "Function Definition" rb
+`!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
+	$2
+}
+endsnippet
+
