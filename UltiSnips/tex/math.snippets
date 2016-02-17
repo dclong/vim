@@ -20,6 +20,11 @@ snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
 endsnippet
 
 priority 1
+snippet "\$f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" r
+$\frac{${1:${VISUAL:numerator/\/.*$//}}}{${2:${VISUAL:denominator/^.*\///}}}$
+endsnippet
+
+priority 1
 snippet "\\f(r(a(c(t(i(o(n)?)?)?)?)?)?)?" "Fraction" r
 \frac{${1:${VISUAL:numerator/\/.*$//}}}{${2:${VISUAL:denominator/^.*\///}}}
 endsnippet
