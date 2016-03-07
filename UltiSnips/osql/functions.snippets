@@ -10,27 +10,27 @@ endsnippet
 
 priority 1
 snippet "(?i)\bagg(r(e(g(a(t(i(o(n)?)?)?)?)?)?)?)?\." "aggregation functions" r
-$1`!p snip.rv = complete(t[1], file="sql/aggregation.json", adjust=True)`
+$1`!p snip.rv = complete(t[1], file="sql/oracle/aggregation.json", adjust=True)`
 endsnippet
 
 priority 1
 snippet "(?i)\bana(l(y(t(i(c)?)?)?)?)?\." "analytic functions" r
-$1`!p snip.rv = complete(t[1], file="sql/analytic.json", adjust=True)`
+$1`!p snip.rv = complete(t[1], file="sql/oracle/analytic.json", adjust=True)`
 endsnippet
 
 priority 1
 snippet "(?i)\bmath\." "math functions" r
-$1`!p snip.rv = complete(t[1], file="sql/math.json", adjust=True)`
+$1`!p snip.rv = complete(t[1], file="sql/oracle/math.json", adjust=True)`
 endsnippet
 
 priority 1
 snippet "(?i)\bdate\.|time\." "date/time functions" r
-$1`!p snip.rv = complete(t[1], file="sql/date.json", adjust=True)`
+$1`!p snip.rv = complete(t[1], file="sql/oracle/date.json", adjust=True)`
 endsnippet
 
 priority 1
 snippet "(?i)\bstr(i(n(g)?)?)?\.|text\.|char(a(c(t(e(r)?)?)?)?)?\." "string functions" r
-$1`!p snip.rv = complete(t[1], file="sql/string.json", adjust=True)`
+$1`!p snip.rv = complete(t[1], file="sql/oracle/string.json", adjust=True)`
 endsnippet
 
 priority 1
@@ -45,17 +45,17 @@ endsnippet
 
 priority 1
 snippet "(?i)\bparse" "parse" r
-parse(${1:string_value} as $2`!p snip.rv = complete(t[2], file="sql/data_type.json", adjust=True)`${3: using ${4:culture}})
+parse(${1:string_value} as $2`!p snip.rv = complete(t[2], file="sql/oracle/data_type.json", adjust=True)`${3: using ${4:culture}})
 endsnippet
 
 priority 1
 snippet "(?i)\bcast" "cast" r
-cast(${1:expression} as $2`!p snip.rv = complete(t[2], file="sql/data_type.json", adjust=True)`${3:(${4:length})})
+cast(${1:expression} as $2`!p snip.rv = complete(t[2], file="sql/oracle/data_type.json", adjust=True)`${3:(${4:length})})
 endsnippet
 
 priority 1
 snippet "(?i)\bcon(v(e(r(t)?)?)?)?" "convert" r
-convert($1`!p snip.rv = complete(t[1], file="sql/data_type.json", adjust=True)`${2:(${3:length})}, ${4:expression}${5:, style})
+convert($1`!p snip.rv = complete(t[1], file="sql/oracle/data_type.json", adjust=True)`${2:(${3:length})}, ${4:expression}${5:, style})
 endsnippet
 
 

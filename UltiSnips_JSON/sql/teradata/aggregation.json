@@ -1,0 +1,29 @@
+[
+    [
+        "avg", 
+        1, 
+        "2015-08-27 22:56:03.277502"
+    ], 
+    "corr",
+    "count", 
+    "covar_pop",
+    "covar_samp",
+    "grouping",
+    "kurtosis",
+    "max",
+    "min", 
+    "regr_avgx",
+    "regr_avgy",
+    "regr_count",
+    "regr_intercept",
+    "regr_r2",
+    "regr_slope",
+    "regr_sxx",
+    "regr_syy",
+    "skew",
+    "stddev_pop",
+    "stddev_samp",
+    "var_pop",
+    "var_samp",
+    "sum"
+]
