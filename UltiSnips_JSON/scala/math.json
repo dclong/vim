@@ -1,0 +1,13 @@
+[
+    "max",
+    "min",
+    "mean",
+    "sum",
+    "cos",
+    "sin",
+    "tan",
+    "acos",
+    "asin",
+    "atan",
+    "atan2"
+]
