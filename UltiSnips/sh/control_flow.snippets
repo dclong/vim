@@ -2,21 +2,21 @@
 priority 1
 snippet "if" "if ... then (if)" r
 if ${1:[[ ${2:condition} ]]}; then
-	${3:#statements}
+	${3::}
 fi
 endsnippet
 
 priority 1
 snippet "until|till" "until ... (done)" r
 until ${1:[[ ${2:condition} ]]}; do
-	${3:#statements}
+	${3::}
 done
 endsnippet
 
 priority 1
 snippet "while" "while ... (done)" r
 while ${1:[[ ${2:condition} ]]}; do
-	${3:#statements}
+	${3::}
 done
 endsnippet
 
@@ -40,7 +40,7 @@ priority 1
 snippet "if ?cyg(w(i(n)?)?)?" "If running under Cygwin" r
 # if running under Cygwin in Windows as a virtualization solutions
 if [[ "$(uname -a)" == CYGWIN_NT*Cygwin ]]; then
-$1
+	${1::}
 fi
 endsnippet
 
@@ -48,27 +48,27 @@ priority 1
 snippet "if ?win(d(o(w(s)?)?)?)?" "If running under Windows" r
 # if running in Windows as a virtualization solutions
 if [[ "$(uname -a)" == CYGWIN_NT* ]]; then
-$1
+	${1::}
 fi
 endsnippet
 
 priority 1
 snippet "elif" "elif .. (elif)" r
 elif ${1:[[ ${2:condition} ]]}; then
-	${3:#statements}
+	${3::}
 endsnippet
 
 priority 1
 snippet "f(o(r)?)? ?\(\(" "for (()) ... done" r
 for (( i = 0; i < ${1:10}; i++ )); do
-	${2:#statements}
+	${2::}
 done
 endsnippet
 
 priority 1
 snippet "f(o(r)?)? ?in" "for ... in ... done (forin)" r
 for ${1:i}${2/.+/ in /}${2:words}; do
-	${0:#statements}
+	${0::}
 done
 endsnippet
 

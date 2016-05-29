@@ -33,3 +33,9 @@ snippet "(?i)\blo(c(a(l)?)?)?" "local" r
 local ${1:variable_name}=${2:definition}
 endsnippet
 
+priority 1
+snippet "(?i)\bfun(c(t(i(o(n)?)?)?)?)?" "Function Definition" rb
+function ${1:fun_name}() {
+	${2::}
+}
+endsnippet
