@@ -2,110 +2,137 @@ global !p
 from complete import *
 endglobal
 
+priority 10
 snippet sys. "Methods of sys." b
 sys.$1`!p snip.rv = complete(t[1], file="python/sys.json")`
 endsnippet
 
+priority 10
 snippet "\bsys.call_tracing[a-zA-Z]?" "sys.call_tracing" r
 sys.call_tracing(${1:func}, ${2:args})
 endsnippet
 
+priority 10
 snippet "\bsys._clear_type_cache[a-zA-Z]?" "sys._clear_type_cache" r
 sys._clear_type_cache()
 endsnippet
 
+priority 10
 snippet "\bsys._current_frames[a-zA-Z]?" "sys._current_frames" r
 sys._current_frames()
 endsnippet
 
+priority 10
 snippet "\bsys.displayhook[a-zA-Z]?" "sys.displayhook" r
 sys.displayhook(${1:value})
 endsnippet
 
+priority 10
 snippet "\bsys.excepthook[a-zA-Z]?" "sys.excepthook" r
 sys.excepthook(${1:type}, ${2:value}, ${3:traceback})
 endsnippet
 
+priority 10
 snippet "\bsys.exc_info[a-zA-Z]?" "sys.exc_info" r
 sys.exc_info()
 endsnippet
 
+priority 10
 snippet "\bsys.exc_clear[a-zA-Z]?" "sys.exc_clear" r
 sys.exc_clear()
 endsnippet
 
+priority 10
 snippet "\bsys.exit[a-zA-Z]?" "sys.exit" r
 sys.exit(${1:arg_o})
 endsnippet
 
+priority 10
 snippet "\bsys.getcheckinterval[a-zA-Z]?" "sys.getcheckinterval" r
 sys.getcheckinterval()
 endsnippet
 
+priority 10
 snippet "\bsys.getdefaultencoding[a-zA-Z]?" "sys.getdefaultencoding" r
 sys.getdefaultencoding()
 endsnippet
 
+priority 10
 snippet "\bsys.getdlopenflags[a-zA-Z]?" "sys.getdlopenflags" r
 sys.getdlopenflags()
 endsnippet
 
+priority 10
 snippet "\bsys.getfilesystemencoding[a-zA-Z]?" "sys.getfilesystemencoding" r
 sys.getfilesystemencoding()
 endsnippet
 
+priority 10
 snippet "\bsys.getrefcount[a-zA-Z]?" "sys.getrefcount" r
 sys.getrefcount(${1:object})
 endsnippet
 
+priority 10
 snippet "\bsys.getrecursionlimit[a-zA-Z]?" "sys.getrecursionlimit" r
 sys.getrecursionlimit()
 endsnippet
 
+priority 10
 snippet "\bsys.getsizeof[a-zA-Z]?" "sys.getsizeof" r
 sys.getsizeof(${1:object}${2:, ${3:default}})
 endsnippet
 
+priority 10
 snippet "\bsys._getframe[a-zA-Z]?" "sys._getframe" r
 sys._getframe(${1:depth})
 endsnippet
 
+priority 10
 snippet "\bsys.getprofile[a-zA-Z]?" "sys.getprofile" r
 sys.getprofile()
 endsnippet
 
+priority 10
 snippet "\bsys.gettrace[a-zA-Z]?" "sys.gettrace" r
 sys.gettrace()
 endsnippet
 
+priority 10
 snippet "\bsys.getwindowsversion[a-zA-Z]?" "sys.getwindowsversion" r
 sys.getwindowsversion()
 endsnippet
 
+priority 10
 snippet "\bsys.setcheckinterval[a-zA-Z]?" "sys.setcheckinterval" r
 sys.setcheckinterval(${1:interval})
 endsnippet
 
+priority 10
 snippet "\bsys.setdefaultencoding[a-zA-Z]?" "sys.setdefaultencoding" r
 sys.setdefaultencoding(${1:name})
 endsnippet
 
+priority 10
 snippet "\bsys.setdlopenflags[a-zA-Z]?" "sys.setdlopenflags" r
 sys.setdlopenflags(${1:n})
 endsnippet
 
+priority 10
 snippet "\bsys.setprofile[a-zA-Z]?" "sys.setprofile" r
 sys.setprofile(${1:profilefunc})
 endsnippet
 
+priority 10
 snippet "\bsys.setrecursionlimit[a-zA-Z]?" "sys.setrecursionlimit" r
 sys.setrecursionlimit(${1:limit})
 endsnippet
 
+priority 10
 snippet "\bsys.settrace[a-zA-Z]?" "sys.settrace" r
 sys.settrace(${1:tracefunc})
 endsnippet
 
+priority 10
 snippet "\bsys.settscdump[a-zA-Z]?" "sys.settscdump" r
 sys.settscdump(${1:on_flag})
 endsnippet

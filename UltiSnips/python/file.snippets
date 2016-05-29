@@ -2,84 +2,84 @@ global !p
 from complete import *
 endglobal
 
-priority 1
+priority 10
 snippet "\bf(i(l(e)?)?)?\." "File Methods" r
 file.$1`!p snip.rv = complete(t[1], file="python/file.json")`
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.open\(?" "Open a File" r
 ${6:fd} = open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
 endsnippet
 
 ################################################################################
 
-priority 1
+priority 10
 snippet "\bfile\.close\(?" "file.close" r
 ${1:file}.close()
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.flush\(?" "file.flush" r
 ${1:file}.flush()
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.fileno\(?" "file.fileno" r
 ${1:file}.fileno()
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.isatty\(?" "file.isatty" r
 ${1:file}.isatty()
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.next\(?" "file.next" r
 ${1:file}.next()
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.read\(?" "file.read" r
 ${2:file}.read(${1:size})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.readline\(?" "file.readline" r
 ${2:file}.readline(${1:size})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.readlines\(?" "file.readlines" r
 ${2:file}.readlines(${1:sizehint})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.seek\(?" "file.seek" r
 ${4:file}.seek(${1:offset}${2:, ${3:whence}})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.tell\(?" "file.tell" r
 ${1:file}.tell()
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.truncate\(?" "file.truncate" r
 ${2:file}.truncate(${1:size})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.write\(?\b" "file.write" r
 ${2:file}.write(${1:str})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.writelines\(?" "file.writelines" r
 ${2:file}.writelines(${1:sequence})
 endsnippet
 
-priority 1
+priority 10
 snippet "\bfile\.with" "Open a File in a With Block" r
 with open(${1:file}, "${2:r}") as ${3:f}:
 	${4:for ${6:line} in $3:
@@ -105,3 +105,12 @@ with open(${1:file}, "${2:r}") as ${3:f}:
 #end with
 endsnippet
 
+priority 10
+snippet "(?i)\bfile.isfile" "os.path.isfile" r
+os.path.isfile
+endsnippet
+
+priority 10
+snippet "(?i)\bfile.isdir" "os.path.isdir" r
+os.path.isdir
+endsnippet
