@@ -96,7 +96,7 @@ endsnippet
 
 priority 1
 snippet "(?i)\bfori(n(t)?)?" "for int loop" rb
-for(${1:int} ${2:i}=${3:0}; $2<${4:count}; ${5:++$2}){
+for (${1:int} ${2:i} = ${3:0}; $2 < ${4:count}; ${5:++$2}) {
 	${VISUAL}${6:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
 endsnippet

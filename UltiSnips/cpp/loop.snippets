@@ -1,10 +1,10 @@
 
 priority 1
 snippet "\bforer(a(s(e)?)?)?" "Erase in Loop" rb
-for(${2:auto} ${3:it}=${1:container}.begin(); $3!=$1.end(); ){
+for (${2:auto} ${3:it} = ${1:container}.begin(); $3 != $1.end(); ) {
 	$2 ${4:cit} = $3;
 	++$3;
-	if(${5:$4}){
+	if (${5:$4}) {
 		$1.erase($4);
 	}
 }
@@ -12,21 +12,21 @@ endsnippet
 
 priority 2
 snippet "\bforit" "For Loop Using Iterator" rb
-for(${2:auto} ${3:it}=${1:obj}.begin(); $3!=$1.end(); ++$3){
+for (${2:auto} ${3:it} = ${1:obj}.begin(); $3 != $1.end(); ++$3) {
 	${4:/* code */}
 }
 endsnippet
 
 priority 3
 snippet "\bforcit" "For Loop Using Const Iterator" rb
-for(${2:auto} ${3:it}=${1:obj}.cbegin(); $3!=$1.cend(); ++$3){
+for (${2:auto} ${3:it} = ${1:obj}.cbegin(); $3 != $1.cend(); ++$3) {
 	${4:/* code */}
 }
 endsnippet
 
 priority 1
 snippet "\bfor:" "Range-based For Loop" rb
-for(${3:auto}${4: &} ${2:elem} : ${1:container}){
+for (${3:auto}${4: &} ${2:elem} : ${1:container}) {
 	${5:/* code */}
 }
 endsnippet
@@ -34,4 +34,9 @@ endsnippet
 priority 1
 snippet "(?i)\bnext|cont(i(n(u)?)?)?" "continue" rb
 continue
+endsnippet
+
+priority 1
+snippet "(?i)\bbr(e(a(k)?)?)?" "continue" rb
+break;
 endsnippet
