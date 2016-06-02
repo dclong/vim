@@ -19,16 +19,16 @@
         2, 
         "2015-03-25 01:40:19.175178"
     ], 
-    "capitalize", 
-    "center", 
-    "count", 
-    "decode", 
-    "encode", 
     [
         "endswith", 
         1, 
         "2015-03-25 01:41:18.405921"
     ], 
+    "capitalize", 
+    "center", 
+    "count", 
+    "decode", 
+    "encode", 
     "expandtabs", 
     "format", 
     "index", 
@@ -43,7 +43,11 @@
     "ljust", 
     "lstrip", 
     "partition", 
-    "replace", 
+    [
+        "replace", 
+        1, 
+        "2016-06-02 00:39:42.956944"
+    ], 
     "rfind", 
     "rindex", 
     "rjust", 

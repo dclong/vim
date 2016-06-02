@@ -17,6 +17,7 @@
     "os", 
     "subprocess", 
     "uuid", 
+    "json",
     "shutil", 
     "hashlib", 
     "sys"
