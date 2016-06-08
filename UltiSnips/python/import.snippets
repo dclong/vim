@@ -2,12 +2,32 @@ global !p
 from complete import *
 endglobal
 
-priority 1
+priority 10
 snippet "i(m(p(o(r(t)?)?)?)?)?" "import" rb
 import $1`!p snip.rv = complete(t[1], file="python/import.json")`
 endsnippet
 
-priority 1
+priority 10
+snippet "(?i)\bfrom" "from module import name" rb
+from $1`!p snip.rv = complete(t[1], file="python/from.json")` import
+endsnippet
+
+priority 10
+snippet "from __future__ import" "from module import name" b
+from __future__ import $1`!p snip.rv = complete(t[1], file="python/__future__.json")`
+endsnippet
+
+priority 10
 snippet "(?i)\bimport defaultdict" "Import defaultdict" r
 from collections import defaultdict ${1:as ${2:dd}}
+endsnippet
+
+priority 10
+snippet "(?i)\bimport print" "import print_function" r
+from __future__ import print_function
+endsnippet
+
+priority 10
+snippet "(?i)\bimport division" "import division" r
+from __future__ import division
 endsnippet
