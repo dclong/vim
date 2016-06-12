@@ -34,7 +34,7 @@ endsnippet
 
 priority 2
 snippet "(?i)\bas\.data.f(r(a(m(e)?)?)?)?|as.df" "as.data.frame" r
-as.data.frame(${1:x}${2:${3:, row.names=${4:NULL}}${4:, optional=FALSE$5}${6:, ...}})
+as.data.frame(${1:x}, stringsAsFactors = ${2:FALSE}${3:${4:, row.names = ${5:NULL}}${6:, optional = ${7:FALSE}}${8:, ...}})
 endsnippet
 
 priority 2

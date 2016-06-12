@@ -39,3 +39,18 @@ function ${1:fun_name}() {
 	${2::}
 }
 endsnippet
+
+priority 10
+snippet "(?i)\bread" "read" rb
+read${1: -p "${2:msg}"} ${3:variable_name}
+endsnippet
+
+priority 10
+snippet "(?i)\breturn" "return" rb
+return ${1:return_code}
+endsnippet
+
+priority 10
+snippet "(?i)\bexit" "exit" rb
+exit ${1:exit_code}
+endsnippet

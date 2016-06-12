@@ -5,7 +5,7 @@ endglobal
 
 priority 1
 snippet "\bs(t(r(i(n(g)?)?)?)?)?\." "String Functions" r
-$1`!p snip.rv = complete(t[1], file="string.json")`
+$1`!p snip.rv = complete(t[1], file = "string.json")`
 endsnippet
 
 priority 1
@@ -15,12 +15,12 @@ endsnippet
 
 priority 1
 snippet "\bp(a(s(t(e)?)?)?)?" "Function paste" r
-paste($1${2:, sep="$3"}${4:, collapse="$5"})
+paste($1${2:, sep = "$3"}${4:, collapse = "$5"})
 endsnippet
 
 priority 1
 snippet "\bstr_trim|\bstrip|trim" "Remove leading/trailing white spaces from a string" r
-stringr::str_trim(${1:string}${2:, side="$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
+stringr::str_trim(${1:string}${2:, side = "$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
 endsnippet
 
 priority 1
@@ -30,12 +30,12 @@ endsnippet
 
 priority 1
 snippet "(?i)\bnch(a(r)?)?" "length of strings" r
-nchar(${1:str_vector}${2:${3:, type="${4:chars}"}${5:, allowNA=FALSE$6}})
+nchar(${1:str_vector}${2:${3:, type = "${4:chars}"}${5:, allowNA = FALSE$6}})
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)\bstrsp(l(i(t)))" "String Split" r
-strsplit(${1:str_vector}, ${2:delimiter}${3:${4:, fixed=FALSE$5}${6:, perl=FALSE$7}${8:, useBytes=FALSE$9}})
+strsplit(${1:str_vector}, ${2:delimiter}${4:, fixed = ${5:FALSE}}${6:, perl = ${7:FALSE}}${8:, useBytes = ${9:FALSE}})
 endsnippet
 
 priority 1
@@ -45,7 +45,7 @@ endsnippet
 
 priority 1
 snippet "(?i)\bstr_sp(l(i(t)?)?)?" "stringr::str_split" r
-stringr::str_split(${1:string}, ${2:pattern}${3:, n=${4:Inf}})
+stringr::str_split(${1:string}, ${2:pattern}${3:, n = ${4:Inf}})
 endsnippet
 
 priority 1
