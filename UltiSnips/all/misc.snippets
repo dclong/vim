@@ -1,113 +1,107 @@
 
-priority 2
+priority 11
 snippet "@n(o(t(e)?)?)?" "@note" r
 @note: $1
 endsnippet
 
-priority 2
+priority 11
 snippet "@b(u(g)?)?" "@bug" r
 @bug: $1
 endsnippet
 
-priority 2
+priority 11
 snippet "#\s*n(o(t(e)?)?)?" "@note" rb
 # @note: $1
 endsnippet
 
-priority 2
+priority 11
 snippet "#\s*b(u(g)?)?" "@bug" rb
 # @bug: $1
 endsnippet
 
-priority 2
+priority 11
 snippet "/\s*n(o(t(e)?)?)?" "@note" rb
 /*
 * @note: $1
 */
 endsnippet
 
-priority 2
+priority 11
 snippet "/\s*b(u(g)?)?" "@bug" rb
 /* 
 * @bug: $1
 */
 endsnippet
 
-priority 2
+priority 11
 snippet "@q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" r
 @question: $1
 endsnippet
 
-priority 2
+priority 11
 snippet "#\s*q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" rb
 # @question: $1
 endsnippet
 
-priority 2
+priority 11
 snippet "/\s*q(u(e(s(t(i(o(n)?)?)?)?)?)?)?" "@question" rb
 /*
 * @question: $1
 */
 endsnippet
 
-priority 2
+priority 11
 snippet "/\s*todo" "@TODO" rb
 /*
 * @TODO (P${2:1}): ${1:things_to_do}
 */
 endsnippet
 
-priority 2
+priority 11
 snippet "@to(d(o)?)?" "@TODO" r
 @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
-priority 2
+priority 11
 snippet "#\s*to(d(o)?)?" "@TODO" rb
 # @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)\btodo" "@TODO" r
 @TODO (P${2:1}): ${1:things_to_do}
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)@w(a(r(n(i(n(g)?)?)?)?)?)?" "@warning" r
 @warning ${1:warning_message}
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)/\s*w(a(r(n(i(n(g)?)?)?)?)?)?" "@warning" r
 /* 
 * @warning ${1:warning_message}
 */
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)#\s*w(a(r(n(i(n(g)?)?)?)?)?)?" "@warning" r
 # @warning ${1:warning_message}
 endsnippet
 
-priority 1
-snippet "\buuid" "Insert an UUID" r
+priority 10
+snippet "(?i)\buuid" "Insert an UUID" r
 `uuidgen`
 endsnippet
 
-#priority 1
+#priority 10
 #snippet "'" "Single Quoted String" r
 #'${1:string}' 
 #endsnippet
 #
-#priority 1
+#priority 10
 #snippet '"' "Double Quoted String" r
 #"${1:string}"
 #endsnippet
 #
-
-priority 1
-snippet "(?i)\bid" "ID" r
-ID
-endsnippet
-
 
