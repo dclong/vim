@@ -1,5 +1,19 @@
 [
     "pnorm", 
-    "pbinom", 
-    "pt"
+    "pcauchy",
+    "pchisq",
+    "pgamma",
+    "pgeom",
+    "phyper",
+    "plnorm",
+    "pmultinom",
+    "pnbinom",
+    "ppois",
+    "pt",
+    "pweibull",
+    "punif", 
+    "pbeta", 
+    "pexp", 
+    "pf", 
+    "pbinom"
 ]

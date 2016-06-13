@@ -1,5 +1,19 @@
 [
     "dnorm", 
-    "dbinom", 
-    "dt"
+    "dcauchy",
+    "dchisq",
+    "dgamma",
+    "dgeom",
+    "dhyper",
+    "dlnorm",
+    "dmultinom",
+    "dnbinom",
+    "dpois",
+    "dt",
+    "dweibull",
+    "dunif", 
+    "dbeta", 
+    "dexp", 
+    "df", 
+    "dbinom"
 ]

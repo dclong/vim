@@ -1,6 +1,19 @@
 [
     "qnorm", 
-    "qbinom", 
-    "quantile", 
-    "qt"
+    "qcauchy",
+    "qchisq",
+    "qgamma",
+    "qgeom",
+    "qhyper",
+    "qlnorm",
+    "qmultinom",
+    "qnbinom",
+    "qpois",
+    "qt",
+    "qweibull",
+    "qunif", 
+    "qbeta", 
+    "qexp", 
+    "qf", 
+    "qbinom"
 ]
