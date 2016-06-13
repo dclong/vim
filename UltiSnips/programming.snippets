@@ -63,14 +63,14 @@ snippet "\band" "AND" r
 endsnippet
 
 priority 2
-snippet "(?i)\bif ?\((.*)\) ?" "If Statement" rb
+snippet "(?i)\bif ?\((.*)\) ?{" "If Statement" rb
 if (${1:`!p snip.rv = match.group(1)`}) {
 	${VISUAL}${2:${VISUAL/(.*)/(?1::)/}}
 }
 endsnippet
 
 priority 1
-snippet "(?i)\bif" "If Statement" rb
+snippet "(?i)\bif ?" "If Statement" rb
 if (${1:condition}) {
 	${VISUAL}${2:${VISUAL/(.*)/(?1::)/}}
 }
