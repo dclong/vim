@@ -4,54 +4,63 @@ global !p
 from complete import *
 endglobal
 
-#priority 1
+#priority 10
 #snippet "\blam(b(d(a)?)?)?" "Annonymous/Lambda Function" r
 #function(${1:args}){$2}
 #endsnippet
 
-priority 1
+priority 10
 snippet "\bwarn(i(n(g)?)?)?" "The warning Function for Generating a warning message" rb
-warning(${1:message}${2:${3:, call.=${4:TRUE}}${5:, immediate.=${6:FALSE}}${7:, noBreaks.=${8:FALSE}}${9:, domain=${10:NULL}}})
+warning(${1:message}${2:${3:, call. = ${4:TRUE}}${5:, immediate. = ${6:FALSE}}${7:, noBreaks. = ${8:FALSE}}${9:, domain = ${10:NULL}}})
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)\bsd|\bstd|\bstdev|\bst(a(n(d(a(r(d)?)?)?)?)?)? ?dev(i(a(t(i(o(n)?)?)?)?)?)?" "Standard Deviation" r
-sd(${1:vector}${2:, na.rm=${3:FALSE}})
+sd(${1:vector}${2:, na.rm = ${3:FALSE}})
 endsnippet
 
-priority 2
+priority 11
 snippet "(?i)\bx\[x?" "x[f(x)]" r
 ${1:x}[$1${2}]
 endsnippet
 
-priority 2
+priority 11
 snippet "(?i)\bx ?=? ?x\[?x\]?" "x = x[f(x)]" r
 ${1:x} = $1[$1${2}]
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)^#!?r(s(c(r(i(p(t)?)?)?)?)?)?|#!" "Shabang for R" r
 #!/usr/bin/env Rscript
 
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)\buniq(u(e)?)?" "unique" r
 unique(x, incomparables = FALSE, ...)
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)\btab(l(e)?)?" "table" r
-table(..., exclude = if (useNA=="no") c(NA, NaN), useNA=c("no", "ifany", "always"), dnn=list.names(...), deparse.level=1)
+table(..., exclude = if (useNA == "no") c(NA, NaN), useNA = c("no", "ifany", "always"), dnn = list.names(...), deparse.level = 1)
 endsnippet
 
-priority 1
+priority 10
 snippet "(?i)\bife(l(s(e)?)?)?\(" "ifelse()" r
 ifelse(${1:vector_condition}, ${2:action_for_true}, ${3:action_for_false})
 endsnippet
 
-priority 1
+priority 10
 snippet "%?in%?" "%in%" r
 ${1:elem} %in% ${2:collection}
 endsnippet
 
+priority 10
+snippet "(?i)\blen(g(t(h)?)?)?" "length" r
+length(${1:vec_list})
+endsnippet
+
+priority 10
+snippet "(?i)\bmiss(i(n(g)?)?)?" "missing" r
+missing(${1:arg})
+endsnippet

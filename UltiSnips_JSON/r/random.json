@@ -1,6 +1,20 @@
 [
     "rnorm", 
+    "rcauchy",
+    "rchisq",
+    "rgamma",
+    "rgeom",
+    "rhyper",
+    "rlnorm",
+    "rmultinom",
+    "rnbinom",
+    "rpois",
+    "rt",
+    "rweibull",
+    "runif", 
+    "rbeta", 
+    "rexp", 
+    "rf", 
     "rbinom", 
-    "sample", 
-    "rt"
+    "sample"
 ]

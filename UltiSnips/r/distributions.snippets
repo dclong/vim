@@ -3,57 +3,57 @@ global !p
 from complete import *
 endglobal
 
-priority 1
-snippet "norm(a(l)?)?\." "Normal Distribution Related Functions" r
-$1`!p snip.rv = complete(t[1], opts=["dnorm", "pnorm", "qnorm", "rnorm"])`
+priority 10
+snippet "(?i)\bnorm(a(l)?)?\." "Normal Distribution Related Functions" r
+$1`!p snip.rv = complete(t[1], opts = ["dnorm", "pnorm", "qnorm", "rnorm"])`
 endsnippet
 
-priority 1
-snippet "dist\." "Distribution-related Functions" r
-$1`!p snip.rv = complete(t[1], file="r/distribution.json")`
+priority 10
+snippet "(?i)\bdist\." "Distribution-related Functions" r
+$1`!p snip.rv = complete(t[1], file = "r/distribution.json")`
 endsnippet
 
-priority 1
-snippet "r(a(n(d(o(m)?)?)?)?)?\." "Quantile Functions" r
-$1`!p snip.rv = complete(t[1], file="r/quantile.json")`
+priority 10
+snippet "(?i)\br(a(n(d(o(m)?)?)?)?)?\." "Random Number Generator" r
+$1`!p snip.rv = complete(t[1], file = "r/random.json")`
 endsnippet
 
-priority 1
-snippet "q(u(a(n(t(i(l(e)?)?)?)?)?)?)?\." "Quantile Functions" r
-$1`!p snip.rv = complete(t[1], file="r/quantile.json")`
+priority 10
+snippet "(?i)\bq(u(a(n(t(i(l(e)?)?)?)?)?)?)?\." "Quantile Functions" r
+$1`!p snip.rv = complete(t[1], file = "r/quantile.json")`
 endsnippet
 
-priority 1
-snippet "pdf\." "Probability Density Functions" r
-$1`!p snip.rv = complete(t[1], file="r/pdf.json")`
+priority 10
+snippet "(?i)\bpdf\." "Probability Density Functions" r
+$1`!p snip.rv = complete(t[1], file = "r/pdf.json")`
 endsnippet
 
-priority 1
-snippet "d(e(n(s(i(t(y)?)?)?)?)?)?\." "Cumulative Distribution Functions" r
-$1`!p snip.rv = complete(t[1], file="r/cdf.json")`
+priority 10
+snippet "(?i)\bd(e(n(s(i(t(y)?)?)?)?)?)?\." "Cumulative Distribution Functions" r
+$1`!p snip.rv = complete(t[1], file = "r/cdf.json")`
 endsnippet
 
-priority 1
-snippet "cdf\." "Cumulative Distribution Functions" r
-$1`!p snip.rv = complete(t[1], file="r/cdf.json")`
+priority 10
+snippet "(?i)\bcdf\." "Cumulative Distribution Functions" r
+$1`!p snip.rv = complete(t[1], file = "r/cdf.json")`
 endsnippet
 
-priority 1
-snippet "\bdnorm\(?" "dnorm" r
-dnorm(${1:x}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}${7:, log=${8:FALSE}}})
+priority 10
+snippet "(?i)\bdnorm\(?" "dnorm" r
+dnorm(${1:x}${2:${3:, mean = ${4:0}}${5:, sd = ${6:1}}${7:, log = ${8:FALSE}}})
 endsnippet
 
-priority 1
-snippet "\bpnorm\(?" "pnorm" r
-pnorm(${1:q}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}${7:, lower.tail=${8:TRUE}}${9:, log.p=${10:FALSE}}})
+priority 10
+snippet "(?i)\bpnorm\(?" "pnorm" r
+pnorm(${1:q}${2:${3:, mean = ${4:0}}${5:, sd = ${6:1}}${7:, lower.tail = ${8:TRUE}}${9:, log.p = ${10:FALSE}}})
 endsnippet
 
-priority 1
-snippet "\bqnorm\(?" "qnorm" r
-qnorm(${1:p}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}${7:, lower.tail=${8:TRUE}}${9:, log.p=${10:FALSE}}})
+priority 10
+snippet "(?i)\bqnorm\(?" "qnorm" r
+qnorm(${1:p}${2:${3:, mean = ${4:0}}${5:, sd = ${6:1}}${7:, lower.tail = ${8:TRUE}}${9:, log.p = ${10:FALSE}}})
 endsnippet
 
-priority 1
-snippet "\brnorm\(?" "rnorm" r
-rnorm(n=${1:1}${2:${3:, mean=${4:0}}${5:, sd=${6:1}}})
+priority 10
+snippet "(?i)\brnorm\(?" "rnorm" r
+rnorm(n = ${1:1}${2:${3:, mean = ${4:0}}${5:, sd = ${6:1}}})
 endsnippet
