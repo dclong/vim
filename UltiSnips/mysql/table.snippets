@@ -1,0 +1,58 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 3
+snippet "\bcr(e(a(t(e)?)?)?)?" "Create Table/View" rb
+create $1`!p snip.rv = complete(t[1], opts=["table", "view"])`
+endsnippet
+
+priority 2
+snippet "(?i)\bc(r(e(a(t(e)?)?)?)?)? ?t(a(b(l(e)?)?)?)?" "Create Table" rb
+create ${1:$2set }table ${3:table_name} (
+	${4:field_1} ${5:type_1},
+	${6:field_2} ${7:type_2}
+)
+;
+endsnippet
+
+priority 1
+snippet "(?i)\bc(r(e(a(t(e)?)?)?)?)? ?v(i(e(w)?)?)?" "Create View" rb
+create ${1:$2set }view ${3:view_name} ${4:as }(
+	${4:field_1} ${5:type_1},
+	${6:field_2} ${7:type_2}
+)
+;
+endsnippet
+
+priority 1
+snippet "(?i)\bs(h(o(w)?)?)? ?t(a(b(l(e)?)?)?)?" "Show Table" rb
+show table ${1:table_name};
+endsnippet
+
+priority 1
+snippet "(?i)\bs(h(o(w)?)?)? ?v(i(e(w)?)?)?" "Show View" rb
+show view ${1:view_name};
+endsnippet
+
+priority 1
+snippet "(?i)\bd(r(o(p)?)?)? ?t(a(b(l(e)?)?)?)?" "Drop Table" rb
+drop table ${1:table_name};
+endsnippet
+
+priority 1
+snippet "(?i)\bd(r(o(p)?)?)? ?v(i(e(w)?)?)?" "Drop View" rb
+drop view ${1:view_name};
+endsnippet
+
+priority 1
+snippet "(?i)\bh(e(l(p)?)?)? ?t(a(b(l(e)?)?)?)?" "Help Table" rb
+help table ${1:table_name};
+endsnippet
+
+priority 1
+snippet "(?i)\bh(e(l(p)?)?)? ?v(i(e(w)?)?)?" "Help View" rb
+help view ${1:view_name};
+endsnippet
+

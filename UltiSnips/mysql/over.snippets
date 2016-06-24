@@ -1,0 +1,14 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "(?i)\brank" "rank functions" r
+$1`!p snip.rv = complete(t[1], file="sql/mysql/rank.json")`(${2:args}) over(${3:partition by ${4:column} }order by ${5:column}${6: desc}) as ${7:alias}
+endsnippet
+
+priority 1
+snippet "(?i)\bover" "... over(...)" r
+$1`!p snip.rv = complete(t[1], file="sql/mysql/over.json")`(${2:args}) over(${3:partition by ${4:column} }order by ${5:column}${6: desc}) as ${7:alias}
+endsnippet
+

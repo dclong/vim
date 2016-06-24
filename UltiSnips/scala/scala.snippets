@@ -1,0 +1,65 @@
+
+priority 1
+snippet "(?i)\b=" "Variable Definition" rb
+val var_name = value;
+var var_name = value;
+endsnippet
+
+priority 1
+snippet "(?i)\bvar" "Variable Definition" rb
+var var_name = value;
+endsnippet
+
+priority 1
+snippet "(?i)\bval" "Variable Definition" rb
+val var_name = value;
+endsnippet
+
+priority 1
+snippet "(?i)\bmath" "Math Functions" rb
+$1`!p snip.rv = complete(t[1], file="scala/math.json")`
+endsnippet
+
+priority 1
+snippet "(?i)ternary|\?\:" "Description" r
+if(${1:conditions}) ${2:val_true} else ${3:val_false}
+endsnippet
+
+priority 1
+snippet "(?i)\bif" "if" r
+if(${1:conditions}) {
+  $2
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bifel(s(e)?)?" "if ... else ..." r
+if(${1:conditions}) {
+  $2
+} else {
+  $3
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bobject" "object" rb
+object ${1:class_name} {
+  def main(args: Array[String]){
+  	$2
+  }
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bwhile" "while loop" rb
+while (${1:conditions}) {
+  $2
+}
+endsnippet
+
+priority 1
+snippet "(?i)\bdo" "do while loop" rb
+do {
+  $2
+} while (${1:conditions})
+endsnippet

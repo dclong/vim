@@ -1,10 +1,25 @@
 [
+    [
+        "with", 
+        1, 
+        "2015-03-16 23:49:16.965994"
+    ], 
+    [
+        "isatty", 
+        1, 
+        "2016-05-29 17:54:20.131584"
+    ], 
     "close", 
     "flush", 
     "fileno", 
-    "isatty", 
+    "isfile", 
+    "isdir", 
     "next", 
-    "open", 
+    [
+        "open", 
+        1, 
+        "2016-06-02 01:38:41.087883"
+    ], 
     "read", 
     "readline", 
     "readlines", 
@@ -12,11 +27,6 @@
     "seek", 
     "tell", 
     "truncate", 
-    [
-        "with", 
-        1, 
-        "2015-03-16 23:49:16.965994"
-    ], 
     "write", 
     "writelines"
 ]

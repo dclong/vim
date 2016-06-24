@@ -43,7 +43,11 @@
     "ljust", 
     "lstrip", 
     "partition", 
-    "replace", 
+    [
+        "replace", 
+        1, 
+        "2016-06-02 00:39:42.956944"
+    ], 
     "rfind", 
     "rindex", 
     "rjust", 

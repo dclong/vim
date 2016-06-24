@@ -1,0 +1,29 @@
+[
+    [
+        "abs", 
+        1, 
+        "2015-08-27 19:34:16.065351"
+    ], 
+    "degrees", 
+    "rand", 
+    "acos", 
+    "exp", 
+    "round", 
+    "asin", 
+    "floor", 
+    "sign", 
+    "atan", 
+    "log", 
+    "sin", 
+    "atn2", 
+    "log10", 
+    "sqrt", 
+    "ceiling", 
+    "pi", 
+    "square", 
+    "cos", 
+    "power", 
+    "tan", 
+    "cot", 
+    "radians"
+]

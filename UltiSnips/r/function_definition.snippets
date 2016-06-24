@@ -7,14 +7,14 @@ ${1:fun_name} = function(${2:arg}) {
 endsnippet
 
 priority 2
-snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\((.*)\) ?{?" "Function Definition" rb
+snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\((.*)\) ?{" "Function Definition" rb
 `!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
 	$2
 }
 endsnippet
 
 priority 1
-snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\(?(.*)\)? ?{?" "Function Definition" rb
+snippet "(?i)(\w+) ?= ?fun(c(t(i(o(n)?)?)?)?)?\(?(.*)\)? ?{" "Function Definition" rb
 `!p snip.rv = match.group(1)` = function(${1:`!p snip.rv = match.group(7)`}) {
 	$2
 }

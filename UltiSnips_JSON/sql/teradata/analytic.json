@@ -1,0 +1,18 @@
+[
+    [
+        "cume_dist", 
+        1, 
+        "2015-08-27 22:58:23.006858"
+    ], 
+    "lead", 
+    [
+        "first_value", 
+        1, 
+        "2015-08-27 22:59:14.800093"
+    ], 
+    "percentile_cont", 
+    "lag", 
+    "percentile_disc", 
+    "last_value", 
+    "percent_rank"
+]

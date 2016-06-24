@@ -14,9 +14,19 @@ endsnippet
 
 priority 1
 snippet "\\b(e(g(i(n)?)?)?)?" "begin{} / end{}" rb
-\begin{${1:something}}
+\begin{$1`!p snip.rv = complete(t[1], file="tex/environment.json")`}
 	${2:${VISUAL}}
 \end{$1}
+endsnippet
+
+priority 1
+snippet \begin{figure} "\begin{figure}" b
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{${1:path_to_pic}}
+\caption{${2:title}}
+\label{fig:${3:label}}
+\end{figure}
 endsnippet
 
 priority 1
@@ -50,7 +60,7 @@ snippet "\\nn" "\nonumber \\" rb
 endsnippet
 
 priority 1
-snippet "\\l(e(f(t)?)?)?" "\left" r
+snippet "\\l(e(f(t)?)?)?|pair|lr|surround(i(n(g)?)?)?" "surrounding" r
 \left$1`!p snip.rv = complete(t[1], opts=["<", "(", "{", "["])`\right$1
 endsnippet
 
@@ -108,7 +118,7 @@ snippet "\\eq(u(a(t(i(o(n)?)?)?)?)?)? ?nn" "Equation Without Number" rb
 \end{equation*}
 endsnippet
 
-priority 1
+priority 2
 snippet "\\equ(a(t(i(o(n)?)?)?)?)? ?a(r(r(a(y)?)?)?)?" "Equation array" rb
 \begin{eqnarray}
 	$1 & $2 & $3 \\
@@ -149,5 +159,30 @@ endsnippet
 priority 1
 snippet lr[ "left[ right]" w
 \left[ ${1:${VISUAL}} \right]
+endsnippet
+
+priority 1
+snippet "\\(text)?bf|bold|bf" "\textbf" rw
+\textbf{${1:${VISUAL}}}
+endsnippet
+
+priority 1
+snippet "\\hat" "\\hat" rw
+\hat{${1:${VISUAL}}}
+endsnippet
+
+priority 1
+snippet "\\emph" "\\emph" rw
+\emph{${1:${VISUAL}}}
+endsnippet
+
+priority 1
+snippet ... "\dots" w
+\dots
+endsnippet
+
+priority 1
+snippet -> "\rightarrow" w
+\rightarrow
 endsnippet
 

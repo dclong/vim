@@ -1,0 +1,31 @@
+[
+    [
+        "row_number", 
+        1, 
+        "2015-08-27 19:08:01.738832"
+    ], 
+    "rank", 
+    "dense_rank", 
+    "ntile",
+    "avg",
+    "min",
+    "checksum_agg",
+    "sum",
+    "count",
+    "stdev",
+    "count_big",
+    "stdevp",
+    "grouping",
+    "var",
+    "grouping_id",
+    "varp",
+    "max",
+    "cume_dist",
+    "lead",
+    "first_value",
+    "percentile_cont",
+    "lag",
+    "percentile_disc",
+    "last_value",
+    "percent_rank"
+]

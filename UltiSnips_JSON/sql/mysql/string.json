@@ -1,0 +1,31 @@
+[
+    "ascii", 
+    [
+        "ltrim", 
+        1, 
+        "2015-08-27 21:59:31.880764"
+    ], 
+    "soundex", 
+    "char", 
+    "nchar", 
+    "space", 
+    "charindex", 
+    "patindex", 
+    "str", 
+    "concat", 
+    "quotename", 
+    "stuff", 
+    "difference", 
+    "replace", 
+    "substring", 
+    "format", 
+    "replicate", 
+    "unicode", 
+    "left", 
+    "reverse", 
+    "upper", 
+    "len", 
+    "right", 
+    "lower", 
+    "rtrim"
+]

@@ -1,0 +1,201 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "(?i)\bk(e(y(w(o(r(d(s)?)?)?)?)?)?)?|\bsql" "Description" rb
+$1`!p snip.rv = complete(t[1], file="sql/teradata/keywords.json")`
+endsnippet
+
+priority 1
+snippet "(?i)\bs(e(l(e(c(t)?)?)?)?)?" "Select Statement" rb
+${1:create multiset table ${2:table_name} as (}
+select ${3:distinct }${4:top ${5:5} }
+	${6:field}
+from
+	${7:table_1}${8: as ${9:A}}
+${10:${14:inner} join
+	${11:table_2}${12: as ${13:B}}
+on
+	${15:join_conditions}
+}${16:where
+	${17:where_conditions}
+}${18:group by
+	${19:1}
+${20:having
+	${21:having_conditions}
+}}${22:order by
+	${23:1} ${24:desc}}
+)
+with data
+primary index (field)
+;
+endsnippet
+
+priority 1
+snippet "(?i)\bin" "In Condition" r
+in ($1)
+endsnippet
+
+priority 1
+snippet "(?i)\bjoin" "Join Table" rb
+$1`!p snip.rv = complete(t[1], file="sql/teradata/join.json")` join
+endsnippet
+
+priority 1
+snippet "(?i)\bhelp" "Help Table/Column" rb
+help $1`!p snip.rv = complete(t[1], file="sql/teradata/help.json")`
+endsnippet
+
+priority 1
+snippet "(?i)\bh(e(l(p)?)?)? ?c(o(l(u(m(n)?)?)?)?)?" "Help Column" rb
+help column ${1:table_name}.${2:*};
+endsnippet
+
+priority 1
+snippet "(?i)\bcase" "Case ... End" rb
+case
+	when ${1:conditions_1} then 
+		${2:value_1}
+	${3:when ${4:conditions_2} then
+		${5:value_2}}	
+	${6:else
+		${7:value_3}}
+end
+endsnippet
+
+priority 1
+snippet "(?i)\bi(n(s(e(r(t)?)?)?)?)? ?i(n(t(o)?)?)?" "Insert Into" rb
+insert into
+	${1:table_name}
+values
+set
+select
+;
+endsnippet
+
+priority 1
+snippet "(?i)\bupdate" "Update Table/View" r
+update ${1:table_or_view_name}
+values
+set
+select
+endsnippet
+
+priority 1
+snippet "(?i)\bset" "Set Column Values" rb
+set
+	${1:column_1} = ${2:value_1},
+	${3:column_2} = ${4:value_2}
+endsnippet
+
+priority 1
+snippet "(?i)\bvalues" "Values" r
+values (${1:value_1}, ${2:value_2})
+endsnippet
+
+priority 1
+snippet '/\*|cb' "Comment Block" rb
+/*
+${1:* @author ${2:Ben Chuanlong Du}}
+${3:* @description $4}
+${5:* @param $6}
+${7:* @return $8}
+${9:* @summary $9}
+*/
+endsnippet
+
+priority 1
+snippet "(?i)\bdiff(e(r(e(n(c(e)?)?)?)?)?)?|\ba ?(/|\\|-) ?b" "A Minus B" rb
+-- A Minus B: best no NULL values in A.id and B.id
+select 
+	$2.${8:*},
+	$4.${9:*}
+from 
+	${1:table_1} ${2:A}
+left outer join
+	${3:table_2} ${4:B}
+on
+	$2.${5:id} = $4.${6:$5}
+where
+	$4.${7:$5} is NULL
+;
+endsnippet
+
+priority 1
+snippet "(?i)i(n(n(e(r)?)?)?)? ?j(o(i(n)?)?)?|inter(s(e(c(t(i(o(n)?)?)?)?)?)?)?|\ba ?( and |&|&&) ?b" "A Inner Join B" rb
+-- A Inner Join B
+select 
+	$2.${7:*},
+	$4.${8:*}
+from 
+	${1:table_1} ${2:A}
+inner join
+	${3:table_2} ${4:B}
+on
+	$2.${5:id} = $4.${6:$5}
+;
+endsnippet
+
+priority 1
+snippet "(?i)\bs(y(m(m(e(t(r(i(c)?)?)?)?)?)?)?)? ?diff(e(r(e(n(c(e)?)?)?)?)?)?|\ba ?(sd|^) ?b" "Symmetric Difference of A and B" rb
+-- Symmetric Difference of A and B: best no NULL values in A.id and B.id
+select 
+	$2.${9:*},
+	$4.${10:*}
+from 
+	${1:table_1} ${2:A}
+full outer join
+	${3:table_2} ${4:B}
+on
+	$2.${5:id} = $4.${6:$5}
+where
+	$2.${7:$5} is NULL or $4.${8:$5} is NULL
+;
+endsnippet
+
+priority 1
+snippet "(?i)\bagg(r(e(g(a(t(i(o(n)?)?)?)?)?)?)?)?|g(r(o(u(p)?)?)?)? ?b(y)?" "Aggregation/Group By" rb
+${1:create table ${2:table_name} as}
+select 
+	${4:id},
+	${6:agg_func}(${5:column}${7:, ${8:more_arguments}}) as ${9:alias}
+from
+	${3:table_name}
+group by
+	${10:$4}
+${11:order by
+	${12:$4}}
+;
+${13:
+-- get other columns at the aggregation value
+${14:create table ${15:table_name} as}
+select
+	${22:A.${23:$4}${24: as alias},}
+	${25:A.${26:$9}${27: as alias},}
+	B.${28:*}
+from 
+	${16:$2} A
+left outer join
+	${17:$3} B
+on
+	A.${18:$4} = B.${19:$4} and A.${20:$9} = B.${21:$5}
+${29:order by
+	${30:A}.${31:$4}}
+;}
+endsnippet
+
+priority 1
+snippet "(?i)\bdel(e(t(e)?)?)?" "Delete Records from a Table/View" rb
+delete from ${1:table_or_view_name}
+where
+	${2:conditions}
+;
+endsnippet
+
+priority 1
+snippet "(?i)\b(order|sort) ?by" "The order by Statement" rb
+order by ${1:
+	1, 2} ${2:
+	${3:filed_1}, ${4:filed_2}}
+endsnippet

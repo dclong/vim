@@ -1,2 +1,22 @@
 extends programming
 
+priority 1
+snippet "(?i)\bshell|bash" "Invoke System Comman" r
+os.system
+endsnippet
+
+priority 0
+snippet "(?i)\bwarn(i(n(g)?)?)?" "warning" r
+warnings.warn
+endsnippet
+
+priority 1
+snippet "(?i)\berr(o(r))" "Error Message" rb
+import sys
+print(err_msg, file = sys.stderr)
+endsnippet
+
+priority 1
+snippet "(?i)\bexit" "sys.exit" r
+sys.exit
+endsnippet

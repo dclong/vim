@@ -2,6 +2,12 @@ global !p
 import vim
 endglobal
 
+
+priority 1
+snippet "(?i)\barr(a(y)?)?" "Array Definition" rb
+${1:array_name}=(${2:e1}${3: e2}${4: e3})
+endsnippet
+
 priority 1
 snippet "(?i)\blen(g(t(h)?)?)?" "length of array" r
 ${#${1:array}[@]}

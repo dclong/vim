@@ -2,42 +2,52 @@ global !p
 from complete import *
 endglobal
 
+priority 10
 snippet "w(a(r(n(i(n(g(s)?)?)?)?)?)?)?\." "Methods of warnings" rb
 warnings.$1`!p snip.rv = complete(t[1], file="python/warnings.json")`
 endsnippet
 
+priority 10
 snippet "\bwarnings.simplefilter\*?" "warnings.simplefilter" r
 warnings.simplefilter(${1:'default'})
 endsnippet
 
+priority 10
 snippet "\bwarnings.warn\*?" "warnings.warn" r
 warnings.warn(${1:message}${2:, ${3:category}${4:, ${5:stacklevel}}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.warn_explicit\*?" "warnings.warn_explicit" r
 warnings.warn_explicit(${1:message}, ${2:category}, ${3:filename}, ${4:lineno}${5:, ${6:module}${7:, ${8:registry}${9:, ${10:module_globals}}}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.warnpy3k\*?" "warnings.warnpy3k" r
 warnings.warnpy3k(${1:message}${2:, ${3:category}${4:, ${5:stacklevel}}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.showwarning\*?" "warnings.showwarning" r
 warnings.showwarning(${1:message}, ${2:category}, ${3:filename}, ${4:lineno}${5:, ${6:file}${7:, ${8:line}}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.formatwarning\*?" "warnings.formatwarning" r
 warnings.formatwarning(${1:message}, ${2:category}, ${3:filename}, ${4:lineno}${5:, ${6:line}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.filterwarnings\*?" "warnings.filterwarnings" r
 warnings.filterwarnings(${1:action}${2:, ${3:message}${4:, ${5:category}${6:, ${7:module}${8:, ${9:lineno}${10:, ${11:append}}}}}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.simplefilter\*?" "warnings.simplefilter" r
 warnings.simplefilter(${1:action}${2:, ${3:category}${4:, ${5:lineno}${6:, ${7:append}}}})
 endsnippet
 
+priority 10
 snippet "\bwarnings.resetwarnings\*?" "warnings.resetwarnings" r
 warnings.resetwarnings()
 endsnippet

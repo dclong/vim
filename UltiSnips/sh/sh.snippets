@@ -33,3 +33,24 @@ snippet "(?i)\blo(c(a(l)?)?)?" "local" r
 local ${1:variable_name}=${2:definition}
 endsnippet
 
+priority 1
+snippet "(?i)\bfun(c(t(i(o(n)?)?)?)?)?" "Function Definition" rb
+function ${1:fun_name}() {
+	${2::}
+}
+endsnippet
+
+priority 10
+snippet "(?i)\bread" "read" rb
+read${1: -p "${2:msg}"} ${3:variable_name}
+endsnippet
+
+priority 10
+snippet "(?i)\breturn" "return" rb
+return ${1:return_code}
+endsnippet
+
+priority 10
+snippet "(?i)\bexit" "exit" rb
+exit ${1:exit_code}
+endsnippet
