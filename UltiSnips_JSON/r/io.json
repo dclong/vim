@@ -1,4 +1,9 @@
 [
+    [
+        "read_text", 
+        1, 
+        "2015-11-03 21:58:19.811360"
+    ], 
     "cat", 
     "scan", 
     "print", 
@@ -9,12 +14,11 @@
     "read.fwf", 
     "readLines", 
     [
-        "read_text", 
+        "write.csv", 
         1, 
-        "2015-11-03 21:58:19.811360"
+        "2015-12-15 12:59:59.963905"
     ], 
-    "write.csv",
-    "write.delim",
-    "write.xlsx",
+    "write.delim", 
+    "write.xlsx", 
     "write.table"
 ]
