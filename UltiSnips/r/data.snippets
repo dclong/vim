@@ -64,3 +64,17 @@ data.frame(
 	)
 endsnippet
 
+priority 10
+snippet "(?i)\brep" "rep" r
+rep(${1:x}${2:, each = ${3:1}}${4:, times = ${5:1}})
+endsnippet
+
+priority 10
+snippet "(?i)\brep.int" "rep.int" r
+rep.int(x, times)
+endsnippet
+
+priority 10
+snippet "(?i)\brep_len" "rep_len" r
+rep_len(x, length.out)
+endsnippet

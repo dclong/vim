@@ -1,0 +1,9 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "\b(rjdbc|db)(::|\.)" "stringi functions" r
+$1`!p snip.rv = complete(t[1], file = "r/rjdbc.json")`
+endsnippet
+
