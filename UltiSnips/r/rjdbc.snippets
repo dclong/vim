@@ -7,3 +7,38 @@ snippet "\b(rjdbc|db)(::|\.)" "stringi functions" r
 $1`!p snip.rv = complete(t[1], file = "r/rjdbc.json")`
 endsnippet
 
+priority 10
+snippet "(?i)\bdbConnect" "dbConnect" r
+dbConnect(drv, ...)
+endsnippet
+
+priority 10
+snippet "(?i)\bdbDisconnect" "dbDisconnect" r
+dbDisconnect(conn, ...)
+endsnippet
+
+priority 10
+snippet "(?i)\bdbGetQuery" "dbGetQuery" r
+dbGetQuery(conn, statement, ...)
+endsnippet
+
+priority 10
+snippet "(?i)\bdbSendUpdate" "dbSendUpdate" r
+dbSendUpdate (conn, statement, ...)
+endsnippet
+
+priority 10
+snippet "(?i)\bdbGetTables" "dbGetTables" r
+dbGetTables (conn, ...)
+endsnippet
+
+priority 10
+snippet "(?i)\bdbGetFields" "dbGetFields" r
+dbGetFields (conn, ...)
+endsnippet
+
+priority 10
+snippet "(?i)\bdbSendQuery" "dbSendQuery" r
+dbSendQuery(conn, statement, ...)
+endsnippet
+
