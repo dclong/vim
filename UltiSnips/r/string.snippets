@@ -4,7 +4,7 @@ from complete import *
 endglobal
 
 priority 1
-snippet "\bs(t(r(i(n(g)?)?)?)?)?\." "String Functions" r
+snippet "\bstr\." "String Functions" r
 $1`!p snip.rv = complete(t[1], file = "r/string.json")`
 endsnippet
 
@@ -20,7 +20,7 @@ endsnippet
 
 priority 1
 snippet "\bstr_trim|\bstrip|trim" "Remove leading/trailing white spaces from a string" r
-stringr::str_trim(${1:string}${2:, side = "$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
+stri_trim(${1:string}${2:, side = "$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
 endsnippet
 
 priority 1
@@ -40,12 +40,12 @@ endsnippet
 
 priority 1
 snippet "(?i)\bstr_?rep(l(a(c(e))))" "str_replace" r
-stringr::str_replace(${1:string}, ${2:pattern}, ${3:replacement})
+stri_replace(${1:string}, ${2:pattern}, ${3:replacement})
 endsnippet
 
 priority 1
-snippet "(?i)\bstr_sp(l(i(t)?)?)?" "stringr::str_split" r
-stringr::str_split(${1:string}, ${2:pattern}${3:, n = ${4:Inf}})
+snippet "(?i)\bstr_sp(l(i(t)?)?)?" "stri_split" r
+stri_split(${1:string}, ${2:pattern}${3:, n = ${4:Inf}})
 endsnippet
 
 priority 1

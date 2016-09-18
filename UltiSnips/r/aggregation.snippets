@@ -5,56 +5,56 @@ endglobal
 
 priority 1
 snippet "\bagg(r(e(g(a(t(i(o(n)?)?)?)?)?)?)?)?\.|app(l(y)?)?\." "Aggregation functions such as *apply" r
-$1`!p snip.rv = complete(t[1], file="r/aggregation.json")`
+$1`!p snip.rv = complete(t[1], file = "r/aggregation.json")`
 endsnippet
 
 priority 2
 snippet "\bapp(l(y)?)?" "The apply Function" r
-apply(${1:${VISUAL:array}}, $2`!p snip.rv = complete(t[2], opts=["1: apply fun on row", "2: apply fun on column"])`, ${3:function(${4:args}){$5}}${6:, ${7:optional_args_to_fun}})
+apply(${1:${VISUAL:array}}, $2`!p snip.rv = complete(t[2], opts = ["1: apply fun on row", "2: apply fun on column"])`, ${3:function(${4:args}){$5}}${6:, ${7:optional_args_to_fun}})
 endsnippet
 
 priority 2
 snippet "\blapp(l(y)?)?" "The lapply Function" r
-lapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}})
+lapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}) { $4 }}${5:, ${6:optional_args_to_fun}})
 endsnippet
 
 priority 2
 snippet "\bsapp(l(y)?)?" "The sapply Function" r
-sapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}){$4}}${5:, ${6:optional_args_to_fun}}${7:, simplify=${8:TRUE}}${9:, USE.NAMES=${10:TRUE}})
+sapply(${1:${VISUAL:vec_list}}, ${2:function(${3:args}) { $4 }}${5:, ${6:optional_args_to_fun}}${7:, simplify = ${8:TRUE}}${9:, USE.NAMES = ${10:TRUE}})
 endsnippet
 
 
 priority 2
 snippet "(?i)\btapp(l(y)?)?" "tapply" r
-tapply(${1:target_vector}, ${2:(list_of_)vector_or_factor}, FUN=${3:NULL}${4:, ${5:optional_args_to_FUN}}${6:, simplify=TRUE$7})
+tapply(${1:target_vector}, ${2:(list_of_)vector_or_factor}, FUN = ${3:NULL}${4:, ${5:optional_args_to_FUN}}${6:, simplify = TRUE})
 endsnippet
 
 priority 2
 snippet "(?i)\bmapp(l(y)?)?" "mapply" r
-mapply(${1:FUN}, ${2:dots_vec_list}${3:, MoreArgs=${4:list_of_arguments}}${5:, SIMPLIFY=TRUE$6}${7:, USE.NAMES=TRUE$8})
+mapply(${1:FUN}, ${2:dots_vec_list}${3:, MoreArgs = ${4:list_of_arguments}}${5:, SIMPLIFY = TRUE}${7:, USE.NAMES = TRUE})
 endsnippet
 
 priority 2
 snippet "(?i)\bouter" "outer" r
-outer(${1:vec1}, ${2:vec2}, FUN=${3:"*"}${4:, ${5:dots_optional_args_to_FUN}})
+outer(${1:vec1}, ${2:vec2}, FUN = ${3:"*"}${4:, ${5:dots_optional_args_to_FUN}})
 endsnippet
 
 priority 1
 snippet "(?i)\bcol(u(m(n)?)?)? ?su(m(s)?)?" "colSums" r
-colSums(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+colSums(${1:x}${2:${3:, na.rm = FALSE}${5:, dims = ${6:1}}})
 endsnippet
 
 priority 1
 snippet "(?i)\brow ?su(m(s))" "rowSums" r
-rowSums(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+rowSums(${1:x}${2:${3:, na.rm = FALSE}${5:, dims = ${6:1}}})
 endsnippet
 
 priority 1
 snippet "(?i)\bcol(u(m(n)?)?)? ?me(a(n(s)?)?)?" "colMeans" r
-colMeans(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+colMeans(${1:x}${2:${3:, na.rm = FALSE}${5:, dims = ${6:1}}})
 endsnippet
 
 priority 1
 snippet "(?i)\brow ?me(a(n(s)))" "rowMeans" r
-rowMeans(${1:x}${2:${3:, na.rm=FALSE$4}${5:, dims=${6:1}}})
+rowMeans(${1:x}${2:${3:, na.rm = FALSE}${5:, dims = ${6:1}}})
 endsnippet

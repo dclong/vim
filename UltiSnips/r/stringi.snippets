@@ -1,0 +1,159 @@
+global !p
+from complete import *
+endglobal
+
+priority 1
+snippet "\bstri(\.|_)?" "stringi functions" r
+$1`!p snip.rv = complete(t[1], file = "r/stringi.json")`
+endsnippet
+
+priority 1
+snippet "\bstr_trim|\bstrip|trim" "Remove leading/trailing white spaces from a string" r
+stri_trim(${1:string}${2:, side = "$3`!p snip.rv = complete(t[3], opts=["left", "right", "both"])`"})
+endsnippet
+
+priority 1
+snippet "(?i)\bstr_?rep(l(a(c(e))))" "str_replace" r
+stri_replace(${1:string}, ${2:pattern}, ${3:replacement})
+endsnippet
+
+priority 1
+snippet "(?i)\bstr_sp(l(i(t)?)?)?" "stri_split" r
+stri_split(${1:string}, ${2:pattern}${3:, n = ${4:Inf}})
+endsnippet
+
+priority 1
+snippet "(?i)\bstr_split_fixed" "str_split_fixed" r
+stri_split_fixed(${1:string}, ${2:pattern}, ${3:n})
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_all" "stri_replace_all" r
+stri_replace_all(str, replacement, ..., regex, fixed, coll, charclass)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_first" "stri_replace_first" r
+stri_replace_first(str, replacement, ..., regex, fixed, coll, charclass)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_last" "stri_replace_last" r
+stri_replace_last(str, replacement, ..., regex, fixed, coll, charclass)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace" "stri_replace" r
+stri_replace(str, replacement, ..., regex, fixed, coll, charclass, mode = c("first", "all", "last"))
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_all_charclass" "stri_replace_all_charclass" r
+stri_replace_all_charclass(str, pattern, replacement, merge = FALSE, vectorize_all = TRUE)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_first_charclass" "stri_replace_first_charclass" r
+stri_replace_first_charclass(str, pattern, replacement)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_last_charclass" "stri_replace_last_charclass" r
+stri_replace_last_charclass(str, pattern, replacement)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_all_coll" "stri_replace_all_coll" r
+stri_replace_all_coll(str, pattern, replacement, vectorize_all = TRUE, ..., opts_collator = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_first_coll" "stri_replace_first_coll" r
+stri_replace_first_coll(str, pattern, replacement, ..., opts_collator = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_last_coll" "stri_replace_last_coll" r
+stri_replace_last_coll(str, pattern, replacement, ..., opts_collator = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_all_fixed" "stri_replace_all_fixed" r
+stri_replace_all_fixed(str, pattern, replacement, vectorize_all = TRUE, ..., opts_fixed = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_first_fixed" "stri_replace_first_fixed" r
+stri_replace_first_fixed(str, pattern, replacement, ..., opts_fixed = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_last_fixed" "stri_replace_last_fixed" r
+stri_replace_last_fixed(str, pattern, replacement, ..., opts_fixed = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_all_regex" "stri_replace_all_regex" r
+stri_replace_all_regex(str, pattern, replacement, vectorize_all = TRUE, ..., opts_regex = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_first_regex" "stri_replace_first_regex" r
+stri_replace_first_regex(str, pattern, replacement, ..., opts_regex = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_replace_last_regex" "stri_replace_last_regex" r
+stri_replace_last_regex(str, pattern, replacement, ..., opts_regex = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_count" "stri_count" r
+stri_count(str, ..., regex, fixed, coll, charclass)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_count_charclass" "stri_count_charclass" r
+stri_count_charclass(str, pattern)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_count_coll" "stri_count_coll" r
+stri_count_coll(str, pattern, ..., opts_collator = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_count_fixed" "stri_count_fixed" r
+stri_count_fixed(str, pattern, ..., opts_fixed = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_count_regex" "stri_count_regex" r
+stri_count_regex(str, pattern, ..., opts_regex = NULL)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_join" "stri_join" r
+stri_join(..., sep = "", collapse = NULL, ignore_null = FALSE)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_c" "stri_c" r
+stri_c(..., sep = "", collapse = NULL, ignore_null = FALSE)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_paste" "stri_paste" r
+stri_paste(..., sep = "", collapse = NULL, ignore_null = FALSE)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_dup" "stri_dup" r
+stri_dup(str, times)
+endsnippet
+
+priority 10
+snippet "(?i)\bstri_flatten" "stri_flatten" r
+stri_flatten(str, collapse = "")
+endsnippet
+
