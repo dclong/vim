@@ -24,7 +24,7 @@ endsnippet
 
 priority 1
 snippet "\bwrite.csv" "function write.csv" r
-write.csv(x = $1, file = $2, row.names = ${3:FALSE})
+write.csv(x = $1, file = $2, na = "", row.names = ${3:FALSE}, fileEncoding = "UTF-8")
 endsnippet
 
 priority 1
