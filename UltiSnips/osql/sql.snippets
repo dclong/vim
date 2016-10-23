@@ -7,10 +7,21 @@ snippet "(?i)\bk(e(y(w(o(r(d(s)?)?)?)?)?)?)?|\bsql" "Description" rb
 $1`!p snip.rv = complete(t[1], file="sql/oracle/keywords.json")`
 endsnippet
 
+priority 10
+snippet "(?i)\btop" "Top 5" r
+select 
+	${3:*}
+from
+	${1:table}
+where
+	rownum <= ${2:5}
+;
+endsnippet
+
 priority 1
 snippet "(?i)\bs(e(l(e(c(t)?)?)?)?)?" "Select Statement" rb
 ${1:create table ${2:table_name} as}
-select ${3:distinct }${4:top ${5:5} }
+select ${3:distinct }
 	${6:field}
 from
 	${7:table_1}${8: as ${9:A}}
@@ -24,6 +35,8 @@ on
 	${19:1}
 ${20:having
 	${21:having_conditions}
+and 
+	rownum <= 5
 }}${22:order by
 	${23:1} ${24:desc}}
 ;
