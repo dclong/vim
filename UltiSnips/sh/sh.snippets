@@ -54,3 +54,10 @@ priority 10
 snippet "(?i)\bexit" "exit" rb
 exit ${1:exit_code}
 endsnippet
+
+priority 10
+snippet "(?i)\bifm(a(i(n)?)?)?" "Equivalence of Python if main" r
+if [[ "$0" == ${BASH_SOURCE[0]} ]]; then
+	${1::}
+fi
+endsnippet
