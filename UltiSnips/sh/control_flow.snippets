@@ -1,8 +1,17 @@
 
-priority 1
-snippet "if" "if ... then (if)" r
+priority 10
+snippet "if" "if ... then (if)" rb
 if ${1:[[ ${2:condition} ]]}; then
 	${3::}
+fi
+endsnippet
+
+priority 10
+snippet "ife(l(s(e)))" "if ... then (if)" rb
+if ${1:[[ ${2:condition} ]]}; then
+	${3::}
+else
+	${4::}
 fi
 endsnippet
 
@@ -52,7 +61,7 @@ if [[ "$(uname -a)" == CYGWIN_NT* ]]; then
 fi
 endsnippet
 
-priority 1
+priority 11
 snippet "elif" "elif .. (elif)" r
 elif ${1:[[ ${2:condition} ]]}; then
 	${3::}
