@@ -1,24 +1,24 @@
 [
     [
-        "read_text", 
-        1, 
-        "2015-11-03 21:58:19.811360"
-    ], 
-    "cat", 
-    "scan", 
-    "print", 
-    "read.table", 
-    "read.csv", 
-    "read.xlsx", 
-    "read.delim", 
-    "read.fwf", 
-    "readLines", 
+        "read_text",
+        2,
+        "2017-04-03 17:10:10.559797"
+    ],
     [
-        "write.csv", 
-        1, 
+        "write.csv",
+        1,
         "2015-12-15 12:59:59.963905"
-    ], 
-    "write.delim", 
-    "write.xlsx", 
+    ],
+    "cat",
+    "scan",
+    "print",
+    "read.table",
+    "read.csv",
+    "read.xlsx",
+    "read.delim",
+    "read.fwf",
+    "readLines",
+    "write.delim",
+    "write.xlsx",
     "write.table"
 ]
