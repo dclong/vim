@@ -12,6 +12,11 @@ snippet "(?i)\bnext" "continue" rb
 continue
 endsnippet
 
+priority 10
+snippet "(?i)\bthrow|raise" "Raise Exception" r
+raise ${1:exception}
+endsnippet
+
 priority 1
 snippet "\blo(o(p)?)?\." "Loop" rb
 $1`!p snip.rv = complete(t[1], file="python/loop.json")`
@@ -21,21 +26,18 @@ priority 2
 snippet "\bfor" "for loop" rb
 for ${1:item} in ${2:iterable}:
 	${3:pass}
-#end for
 endsnippet
 
 priority 2
 snippet "(?i)\bfori(n(t)?)?|fori(n(d(e(x)?)?)?)?|fore(n(u(m)?)?)?" "for i,item in ..." rb
 for ${1:i},${2:item} in enumerate(${3:obj}):
 	${4:pass}
-#end for
 endsnippet
 
 priority 2
 snippet "\bif" "If" rb
 if ${1:condition}:
 	${2:pass}
-#end if
 endsnippet
 
 priority 1
@@ -50,7 +52,6 @@ if ${1:condition}:
 	${2:pass}
 else:
 	${3:pass}
-#end if
 endsnippet
 
 priority 2
@@ -66,6 +67,10 @@ try:
 	${1:pass}
 except ${2:Exception}, ${3:e}:
 	${4:raise $3}
+else:
+	${5:pass}
+finally
+	${6:pass}
 #end try
 endsnippet
 

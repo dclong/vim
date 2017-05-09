@@ -117,3 +117,12 @@ snip += tripple_quotes(snip) `
 #end def 
 endsnippet
 
+priority 10
+snippet "(?i)\bclass exception|exception class" "Customized Exception Class" rb
+class ${1:CustomizedException}(Exception):
+    def __init__(self, value):
+	    self.value = ${2:value}
+	def __str__(self):
+	    retrun repr(self.value)
+#end class
+endsnippet
