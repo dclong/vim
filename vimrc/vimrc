@@ -8,6 +8,8 @@ colorscheme inkpot
 :source $archives_dir/vim/vimrc/filetype.vim
 " Syntax highlighting
 syntax on
+" encoding
+set encoding=utf-8
 " more vim specific (non vi compatible) features
 :source $archives_dir/vim/vimrc/more_vim.vim
 " typping related settings
