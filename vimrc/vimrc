@@ -36,3 +36,5 @@ set encoding=utf-8
 :source $archives_dir/vim/vimrc/ycm.vim
 " airline
 :source $archives_dir/vim/vimrc/airline.vim
+" Hive SQL Syntax
+:source $archives_dir/vim/vimrc/hive.vim
