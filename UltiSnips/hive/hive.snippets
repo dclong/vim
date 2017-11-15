@@ -1,0 +1,32 @@
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "(?i)\bq(u(e(u(e)?)?)?)?" "Queue" r
+$1`!p snip.rv = complete(t[1], opts = ['hddq-commrce-mktmisc', 'hddq-exprce-sscience', 'hddq-exprce-orgmrktg', 'hdlq-commrce-default', 'hdlq-exprce-default'])`
+endsnippet
+
+priority 10
+snippet "(?i)\bset(t(i(n(g(s)?)?)?)?)?|\bconf(i(g(u(r(a(t(i(o(n)?)?)?)?)?)?)?)?)?" "Settings" r
+set mapred.job.queue.name = hddq-exprce-orgmrktg;
+set mapred.min.split.size = 65536;
+set mapred.max.split.size = 268435456;
+set tez.queue.name = hddq-exprce-orgmrktg;
+set hive.compute.query.using.stats = true;
+set hive.auto.convert.join = true;
+set hive.auto.convert.sortmerge.join = true;
+set hive.auto.convert.join.noconditionaltask = true;
+set hive.optimize.skewjoin = true;
+set hive.skewjoin.key = 100;
+set hive.skewjoin.mapjoin.map.tasks = 10000;
+set hive.skewjoin.mapjoin.min.split = 1000000;
+set hive.exec.dynamic.partition.mode = nonstrict;
+set hive.groupby.orderby.position.alias = true;
+endsnippet
+
+priority 10
+snippet "(?i)\bset " "set " r
+$1`!p snip.rv = complete(t[1], opts = ['hive', 'mapred', 'tez'])`
+endsnippet
+
