@@ -81,7 +81,7 @@ endsnippet
 
 priority 10
 snippet "\bfile\.with" "Open a File in a With Block" r
-with open(${1:file}, "${2:r}") as ${3:f}:
+with open(${1:file}, '${2:r}') as ${3:f}:
 	${4:for ${6:line} in $3:
 		${7:pass}
 	#end for}
@@ -94,7 +94,7 @@ endsnippet
 
 priority 2
 snippet "\bwith\.f(i(l(e)?)?)?" "Open a File in a With Block" r
-with open(${1:file}, "${2:r}") as ${3:f}:
+with open(${1:file}, '${2:r}') as ${3:f}:
 	${4:for ${6:line} in $3:
 		${7:pass}
 	#end for}
