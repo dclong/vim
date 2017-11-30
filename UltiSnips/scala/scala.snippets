@@ -1,3 +1,6 @@
+global !p
+from complete import *
+endglobal
 
 priority 1
 snippet "(?i)\b=" "Variable Definition" rb
@@ -16,35 +19,40 @@ val var_name = value;
 endsnippet
 
 priority 1
-snippet "(?i)\bmath" "Math Functions" rb
+snippet "(?i)\bmath\.?" "Math Functions" rb
 $1`!p snip.rv = complete(t[1], file="scala/math.json")`
 endsnippet
 
 priority 1
 snippet "(?i)ternary|\?\:" "Description" r
-if(${1:conditions}) ${2:val_true} else ${3:val_false}
+if (${1:conditions}) ${2:val_true} else ${3:val_false}
 endsnippet
 
 priority 1
-snippet "(?i)\bif" "if" r
-if(${1:conditions}) {
-  $2
-}
+snippet "(?i)\bif(e(l(s(e)?)?)?)?" "if ... else ..." r
+if(${1:conditions}) $2
+else $3
 endsnippet
 
 priority 1
-snippet "(?i)\bifel(s(e)?)?" "if ... else ..." r
-if(${1:conditions}) {
-  $2
-} else {
-  $3
-}
+snippet "(?i)\biff" "if ... else ..." r
+if(${1:conditions}) $2
+else if (${3:conditions}) $4
+else $5
 endsnippet
 
 priority 1
-snippet "(?i)\bobject" "object" rb
-object ${1:class_name} {
-  def main(args: Array[String]){
+snippet "(?i)\bifff" "if ... else ..." r
+if(${1:conditions}) $2
+else if (${3:conditions}) $4
+else if (${5:conditons}) $6
+else $7
+endsnippet
+
+priority 1
+snippet "(?i)\bobj(e(c(t)?)?)?" "object" rb
+object ${1:ObjectName} {
+  def main(args: Array[String]): Unit = {
   	$2
   }
 }
@@ -62,4 +70,14 @@ snippet "(?i)\bdo" "do while loop" rb
 do {
   $2
 } while (${1:conditions})
+endsnippet
+
+priority 1
+snippet "(?i)\bm(a(t(c(h)?)?)?)?" "match" rb
+${1:obj} match {
+  case ${2:c1} => ${3:v1} 
+  case ${4:c2} => ${5:v2} 
+  case ${6:c3} => ${7:v3} 
+  case _ => ${8:v}
+}
 endsnippet
