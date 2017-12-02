@@ -1,0 +1,1549 @@
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.fun" "Methods of " r
+$1`!p snip.rv = complete(t[1], file='scala/fun.json')`
+endsnippet
+
+priority 10
+snippet "\bapprox_count_distinct\(?" "approx_count_distinct" r
+approx_count_distinct(${1:columnName: String}, ${2:rsd: Double})
+endsnippet
+
+priority 10
+snippet "\bapprox_count_distinct\(?" "approx_count_distinct" r
+approx_count_distinct(${1:e: Column}, ${2:rsd: Double})
+endsnippet
+
+priority 10
+snippet "\bapprox_count_distinct\(?" "approx_count_distinct" r
+approx_count_distinct(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bapprox_count_distinct\(?" "approx_count_distinct" r
+approx_count_distinct(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bavg\(?" "avg" r
+avg(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bavg\(?" "avg" r
+avg(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcollect_list\(?" "collect_list" r
+collect_list(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bcollect_list\(?" "collect_list" r
+collect_list(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcollect_set\(?" "collect_set" r
+collect_set(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bcollect_set\(?" "collect_set" r
+collect_set(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcorr\(?" "corr" r
+corr(${1:columnName1: String}, ${2:columnName2: String})
+endsnippet
+
+priority 10
+snippet "\bcorr\(?" "corr" r
+corr(${1:column1: Column}, ${2:column2: Column})
+endsnippet
+
+priority 10
+snippet "\bcount\(?" "count" r
+count(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bcount\(?" "count" r
+count(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcountDistinct\(?" "countDistinct" r
+countDistinct(${1:columnName: String}, ${2:columnNames: String*})
+endsnippet
+
+priority 10
+snippet "\bcountDistinct\(?" "countDistinct" r
+countDistinct(${1:expr: Column}, ${2:exprs: Column*})
+endsnippet
+
+priority 10
+snippet "\bcovar_pop\(?" "covar_pop" r
+covar_pop(${1:columnName1: String}, ${2:columnName2: String})
+endsnippet
+
+priority 10
+snippet "\bcovar_pop\(?" "covar_pop" r
+covar_pop(${1:column1: Column}, ${2:column2: Column})
+endsnippet
+
+priority 10
+snippet "\bcovar_samp\(?" "covar_samp" r
+covar_samp(${1:columnName1: String}, ${2:columnName2: String})
+endsnippet
+
+priority 10
+snippet "\bcovar_samp\(?" "covar_samp" r
+covar_samp(${1:column1: Column}, ${2:column2: Column})
+endsnippet
+
+priority 10
+snippet "\bfirst\(?" "first" r
+first(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bfirst\(?" "first" r
+first(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bfirst\(?" "first" r
+first(${1:columnName: String}, ${2:ignoreNulls: Boolean})
+endsnippet
+
+priority 10
+snippet "\bfirst\(?" "first" r
+first(${1:e: Column}, ${2:ignoreNulls: Boolean})
+endsnippet
+
+priority 10
+snippet "\bgrouping\(?" "grouping" r
+grouping(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bgrouping\(?" "grouping" r
+grouping(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bgrouping_id\(?" "grouping_id" r
+grouping_id(${1:colName: String}, ${2:colNames: String*})
+endsnippet
+
+priority 10
+snippet "\bgrouping_id\(?" "grouping_id" r
+grouping_id(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bkurtosis\(?" "kurtosis" r
+kurtosis(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bkurtosis\(?" "kurtosis" r
+kurtosis(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blast\(?" "last" r
+last(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\blast\(?" "last" r
+last(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blast\(?" "last" r
+last(${1:columnName: String}, ${2:ignoreNulls: Boolean})
+endsnippet
+
+priority 10
+snippet "\blast\(?" "last" r
+last(${1:e: Column}, ${2:ignoreNulls: Boolean})
+endsnippet
+
+priority 10
+snippet "\bmax\(?" "max" r
+max(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bmax\(?" "max" r
+max(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bmean\(?" "mean" r
+mean(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bmean\(?" "mean" r
+mean(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bmin\(?" "min" r
+min(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bmin\(?" "min" r
+min(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bskewness\(?" "skewness" r
+skewness(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bskewness\(?" "skewness" r
+skewness(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bstddev\(?" "stddev" r
+stddev(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bstddev\(?" "stddev" r
+stddev(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bstddev_pop\(?" "stddev_pop" r
+stddev_pop(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bstddev_pop\(?" "stddev_pop" r
+stddev_pop(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bstddev_samp\(?" "stddev_samp" r
+stddev_samp(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bstddev_samp\(?" "stddev_samp" r
+stddev_samp(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsum\(?" "sum" r
+sum(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bsum\(?" "sum" r
+sum(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsumDistinct\(?" "sumDistinct" r
+sumDistinct(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bsumDistinct\(?" "sumDistinct" r
+sumDistinct(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bvar_pop\(?" "var_pop" r
+var_pop(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bvar_pop\(?" "var_pop" r
+var_pop(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bvar_samp\(?" "var_samp" r
+var_samp(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bvar_samp\(?" "var_samp" r
+var_samp(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bvariance\(?" "variance" r
+variance(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bvariance\(?" "variance" r
+variance(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bapproxCountDistinct\(?" "approxCountDistinct" r
+approxCountDistinct(${1:columnName: String}, ${2:rsd: Double})
+endsnippet
+
+priority 10
+snippet "\bapproxCountDistinct\(?" "approxCountDistinct" r
+approxCountDistinct(${1:e: Column}, ${2:rsd: Double})
+endsnippet
+
+priority 10
+snippet "\bapproxCountDistinct\(?" "approxCountDistinct" r
+approxCountDistinct(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bapproxCountDistinct\(?" "approxCountDistinct" r
+approxCountDistinct(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\barray_contains\(?" "array_contains" r
+array_contains(${1:column: Column}, ${2:value: Any})
+endsnippet
+
+priority 10
+snippet "\bexplode\(?" "explode" r
+explode(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bexplode_outer\(?" "explode_outer" r
+explode_outer(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: String}, ${3:options: Map}${4:${5:String}, ${6:String}})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: DataType})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: StructType})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: DataType}, ${3:options: Map}${4:${5:String}, ${6:String}})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: StructType}, ${3:options: Map}${4:${5:String}, ${6:String}})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: DataType}, ${3:options: Map}${4:${5:String}, ${6:String}})
+endsnippet
+
+priority 10
+snippet "\bfrom_json\(?" "from_json" r
+from_json(${1:e: Column}, ${2:schema: StructType}, ${3:options: Map}${4:${5:String}, ${6:String}})
+endsnippet
+
+priority 10
+snippet "\bget_json_object\(?" "get_json_object" r
+get_json_object(${1:e: Column}, ${2:path: String})
+endsnippet
+
+priority 10
+snippet "\bjson_tuple\(?" "json_tuple" r
+json_tuple(${1:json: Column}, ${2:fields: String*})
+endsnippet
+
+priority 10
+snippet "\bposexplode\(?" "posexplode" r
+posexplode(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bposexplode_outer\(?" "posexplode_outer" r
+posexplode_outer(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsize\(?" "size" r
+size(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsort_array\(?" "sort_array" r
+sort_array(${1:e: Column}, ${2:asc: Boolean})
+endsnippet
+
+priority 10
+snippet "\bsort_array\(?" "sort_array" r
+sort_array(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bto_json\(?" "to_json" r
+to_json(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bto_json\(?" "to_json" r
+to_json(${1:e: Column}, ${2:options: Map}${3:${4:String}, ${5:String}})
+endsnippet
+
+priority 10
+snippet "\bto_json\(?" "to_json" r
+to_json(${1:e: Column}, ${2:options: Map}${3:${4:String}, ${5:String}})
+endsnippet
+
+priority 10
+snippet "\badd_months\(?" "add_months" r
+add_months(${1:startDate: Column}, ${2:numMonths: Int})
+endsnippet
+
+priority 10
+snippet "\bcurrent_date\(?" "current_date" r
+current_date()
+endsnippet
+
+priority 10
+snippet "\bcurrent_timestamp\(?" "current_timestamp" r
+current_timestamp()
+endsnippet
+
+priority 10
+snippet "\bdate_add\(?" "date_add" r
+date_add(${1:start: Column}, ${2:days: Int})
+endsnippet
+
+priority 10
+snippet "\bdate_format\(?" "date_format" r
+date_format(${1:dateExpr: Column}, ${2:format: String})
+endsnippet
+
+priority 10
+snippet "\bdate_sub\(?" "date_sub" r
+date_sub(${1:start: Column}, ${2:days: Int})
+endsnippet
+
+priority 10
+snippet "\bdatediff\(?" "datediff" r
+datediff(${1:end: Column}, ${2:start: Column})
+endsnippet
+
+priority 10
+snippet "\bdayofmonth\(?" "dayofmonth" r
+dayofmonth(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bdayofyear\(?" "dayofyear" r
+dayofyear(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bfrom_unixtime\(?" "from_unixtime" r
+from_unixtime(${1:ut: Column}, ${2:f: String})
+endsnippet
+
+priority 10
+snippet "\bfrom_unixtime\(?" "from_unixtime" r
+from_unixtime(${1:ut: Column})
+endsnippet
+
+priority 10
+snippet "\bfrom_utc_timestamp\(?" "from_utc_timestamp" r
+from_utc_timestamp(${1:ts: Column}, ${2:tz: String})
+endsnippet
+
+priority 10
+snippet "\bhour\(?" "hour" r
+hour(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blast_day\(?" "last_day" r
+last_day(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bminute\(?" "minute" r
+minute(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bmonth\(?" "month" r
+month(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bmonths_between\(?" "months_between" r
+months_between(${1:date1: Column}, ${2:date2: Column})
+endsnippet
+
+priority 10
+snippet "\bnext_day\(?" "next_day" r
+next_day(${1:date: Column}, ${2:dayOfWeek: String})
+endsnippet
+
+priority 10
+snippet "\bquarter\(?" "quarter" r
+quarter(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsecond\(?" "second" r
+second(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bto_date\(?" "to_date" r
+to_date(${1:e: Column}, ${2:fmt: String})
+endsnippet
+
+priority 10
+snippet "\bto_date\(?" "to_date" r
+to_date(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bto_timestamp\(?" "to_timestamp" r
+to_timestamp(${1:s: Column}, ${2:fmt: String})
+endsnippet
+
+priority 10
+snippet "\bto_timestamp\(?" "to_timestamp" r
+to_timestamp(${1:s: Column})
+endsnippet
+
+priority 10
+snippet "\bto_utc_timestamp\(?" "to_utc_timestamp" r
+to_utc_timestamp(${1:ts: Column}, ${2:tz: String})
+endsnippet
+
+priority 10
+snippet "\btrunc\(?" "trunc" r
+trunc(${1:date: Column}, ${2:format: String})
+endsnippet
+
+priority 10
+snippet "\bunix_timestamp\(?" "unix_timestamp" r
+unix_timestamp(${1:s: Column}, ${2:p: String})
+endsnippet
+
+priority 10
+snippet "\bunix_timestamp\(?" "unix_timestamp" r
+unix_timestamp(${1:s: Column})
+endsnippet
+
+priority 10
+snippet "\bunix_timestamp\(?" "unix_timestamp" r
+unix_timestamp()
+endsnippet
+
+priority 10
+snippet "\bweekofyear\(?" "weekofyear" r
+weekofyear(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bwindow\(?" "window" r
+window(${1:timeColumn: Column}, ${2:windowDuration: String})
+endsnippet
+
+priority 10
+snippet "\bwindow\(?" "window" r
+window(${1:timeColumn: Column}, ${2:windowDuration: String}, ${3:slideDuration: String})
+endsnippet
+
+priority 10
+snippet "\bwindow\(?" "window" r
+window(${1:timeColumn: Column}, ${2:windowDuration: String}, ${3:slideDuration: String}, ${4:startTime: String})
+endsnippet
+
+priority 10
+snippet "\byear\(?" "year" r
+year(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bacos\(?" "acos" r
+acos(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bacos\(?" "acos" r
+acos(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\basin\(?" "asin" r
+asin(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\basin\(?" "asin" r
+asin(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\batan\(?" "atan" r
+atan(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\batan\(?" "atan" r
+atan(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:l: Double}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:l: Double}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:leftName: String}, ${2:r: Double})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:l: Column}, ${2:r: Double})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:leftName: String}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:leftName: String}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:l: Column}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\batan2\(?" "atan2" r
+atan2(${1:l: Column}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\bbin\(?" "bin" r
+bin(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bbin\(?" "bin" r
+bin(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bbround\(?" "bround" r
+bround(${1:e: Column}, ${2:scale: Int})
+endsnippet
+
+priority 10
+snippet "\bbround\(?" "bround" r
+bround(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcbrt\(?" "cbrt" r
+cbrt(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bcbrt\(?" "cbrt" r
+cbrt(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bceil\(?" "ceil" r
+ceil(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bceil\(?" "ceil" r
+ceil(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bconv\(?" "conv" r
+conv(${1:num: Column}, ${2:fromBase: Int}, ${3:toBase: Int})
+endsnippet
+
+priority 10
+snippet "\bcos\(?" "cos" r
+cos(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bcos\(?" "cos" r
+cos(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcosh\(?" "cosh" r
+cosh(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bcosh\(?" "cosh" r
+cosh(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bdegrees\(?" "degrees" r
+degrees(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bdegrees\(?" "degrees" r
+degrees(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bexp\(?" "exp" r
+exp(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bexp\(?" "exp" r
+exp(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bexpm1\(?" "expm1" r
+expm1(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bexpm1\(?" "expm1" r
+expm1(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bfactorial\(?" "factorial" r
+factorial(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bfloor\(?" "floor" r
+floor(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bfloor\(?" "floor" r
+floor(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bhex\(?" "hex" r
+hex(${1:column: Column})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:l: Double}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:l: Double}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:leftName: String}, ${2:r: Double})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:l: Column}, ${2:r: Double})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:leftName: String}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:leftName: String}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:l: Column}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\bhypot\(?" "hypot" r
+hypot(${1:l: Column}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\blog\(?" "log" r
+log(${1:base: Double}, ${2:columnName: String})
+endsnippet
+
+priority 10
+snippet "\blog\(?" "log" r
+log(${1:base: Double}, ${2:a: Column})
+endsnippet
+
+priority 10
+snippet "\blog\(?" "log" r
+log(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\blog\(?" "log" r
+log(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blog10\(?" "log10" r
+log10(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\blog10\(?" "log10" r
+log10(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blog1p\(?" "log1p" r
+log1p(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\blog1p\(?" "log1p" r
+log1p(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blog2\(?" "log2" r
+log2(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\blog2\(?" "log2" r
+log2(${1:expr: Column})
+endsnippet
+
+priority 10
+snippet "\bpmod\(?" "pmod" r
+pmod(${1:dividend: Column}, ${2:divisor: Column})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:l: Double}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:l: Double}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:leftName: String}, ${2:r: Double})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:l: Column}, ${2:r: Double})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:leftName: String}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:leftName: String}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:l: Column}, ${2:rightName: String})
+endsnippet
+
+priority 10
+snippet "\bpow\(?" "pow" r
+pow(${1:l: Column}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\bradians\(?" "radians" r
+radians(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bradians\(?" "radians" r
+radians(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\brint\(?" "rint" r
+rint(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\brint\(?" "rint" r
+rint(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bround\(?" "round" r
+round(${1:e: Column}, ${2:scale: Int})
+endsnippet
+
+priority 10
+snippet "\bround\(?" "round" r
+round(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bshiftLeft\(?" "shiftLeft" r
+shiftLeft(${1:e: Column}, ${2:numBits: Int})
+endsnippet
+
+priority 10
+snippet "\bshiftRight\(?" "shiftRight" r
+shiftRight(${1:e: Column}, ${2:numBits: Int})
+endsnippet
+
+priority 10
+snippet "\bshiftRightUnsigned\(?" "shiftRightUnsigned" r
+shiftRightUnsigned(${1:e: Column}, ${2:numBits: Int})
+endsnippet
+
+priority 10
+snippet "\bsignum\(?" "signum" r
+signum(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bsignum\(?" "signum" r
+signum(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsin\(?" "sin" r
+sin(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bsin\(?" "sin" r
+sin(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsinh\(?" "sinh" r
+sinh(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bsinh\(?" "sinh" r
+sinh(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsqrt\(?" "sqrt" r
+sqrt(${1:colName: String})
+endsnippet
+
+priority 10
+snippet "\bsqrt\(?" "sqrt" r
+sqrt(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\btan\(?" "tan" r
+tan(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\btan\(?" "tan" r
+tan(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\btanh\(?" "tanh" r
+tanh(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\btanh\(?" "tanh" r
+tanh(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bunhex\(?" "unhex" r
+unhex(${1:column: Column})
+endsnippet
+
+priority 10
+snippet "\btoDegrees\(?" "toDegrees" r
+toDegrees(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\btoDegrees\(?" "toDegrees" r
+toDegrees(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\btoRadians\(?" "toRadians" r
+toRadians(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\btoRadians\(?" "toRadians" r
+toRadians(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcrc32\(?" "crc32" r
+crc32(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bhash\(?" "hash" r
+hash(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bmd5\(?" "md5" r
+md5(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsha1\(?" "sha1" r
+sha1(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsha2\(?" "sha2" r
+sha2(${1:e: Column}, ${2:numBits: Int})
+endsnippet
+
+priority 10
+snippet "\babs\(?" "abs" r
+abs(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\barray\(?" "array" r
+array(${1:colName: String}, ${2:colNames: String*})
+endsnippet
+
+priority 10
+snippet "\barray\(?" "array" r
+array(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bbitwiseNOT\(?" "bitwiseNOT" r
+bitwiseNOT(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bbroadcast\(?" "broadcast" r
+broadcast(${1:df: Dataset}${2:T})
+endsnippet
+
+priority 10
+snippet "\bcoalesce\(?" "coalesce" r
+coalesce(${1:e: Column*})
+endsnippet
+
+priority 10
+snippet "\bcol\(?" "col" r
+col(${1:colName: String})
+endsnippet
+
+priority 10
+snippet "\bcolumn\(?" "column" r
+column(${1:colName: String})
+endsnippet
+
+priority 10
+snippet "\bexpr\(?" "expr" r
+expr(${1:expr: String})
+endsnippet
+
+priority 10
+snippet "\bgreatest\(?" "greatest" r
+greatest(${1:columnName: String}, ${2:columnNames: String*})
+endsnippet
+
+priority 10
+snippet "\bgreatest\(?" "greatest" r
+greatest(${1:exprs: Column*})
+endsnippet
+
+priority 10
+snippet "\binput_file_name\(?" "input_file_name" r
+input_file_name()
+endsnippet
+
+priority 10
+snippet "\bisnan\(?" "isnan" r
+isnan(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bisnull\(?" "isnull" r
+isnull(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bleast\(?" "least" r
+least(${1:columnName: String}, ${2:columnNames: String*})
+endsnippet
+
+priority 10
+snippet "\bleast\(?" "least" r
+least(${1:exprs: Column*})
+endsnippet
+
+priority 10
+snippet "\blit\(?" "lit" r
+lit(${1:literal: Any})
+endsnippet
+
+priority 10
+snippet "\bmap\(?" "map" r
+map(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bmonotonically_increasing_id\(?" "monotonically_increasing_id" r
+monotonically_increasing_id()
+endsnippet
+
+priority 10
+snippet "\bnanvl\(?" "nanvl" r
+nanvl(${1:col1: Column}, ${2:col2: Column})
+endsnippet
+
+priority 10
+snippet "\bnegate\(?" "negate" r
+negate(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bnot\(?" "not" r
+not(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\brand\(?" "rand" r
+rand()
+endsnippet
+
+priority 10
+snippet "\brand\(?" "rand" r
+rand(${1:seed: Long})
+endsnippet
+
+priority 10
+snippet "\brandn\(?" "randn" r
+randn()
+endsnippet
+
+priority 10
+snippet "\brandn\(?" "randn" r
+randn(${1:seed: Long})
+endsnippet
+
+priority 10
+snippet "\bspark_partition_id\(?" "spark_partition_id" r
+spark_partition_id()
+endsnippet
+
+priority 10
+snippet "\bstruct\(?" "struct" r
+struct(${1:colName: String}, ${2:colNames: String*})
+endsnippet
+
+priority 10
+snippet "\bstruct\(?" "struct" r
+struct(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\btypedLit\(?" "typedLit" r
+typedLit(${1:literal: T})
+endsnippet
+
+priority 10
+snippet "\bwhen\(?" "when" r
+when(${1:condition: Column}, ${2:value: Any})
+endsnippet
+
+priority 10
+snippet "\bmonotonicallyIncreasingId\(?" "monotonicallyIncreasingId" r
+monotonicallyIncreasingId()
+endsnippet
+
+priority 10
+snippet "\basc\(?" "asc" r
+asc(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\basc_nulls_first\(?" "asc_nulls_first" r
+asc_nulls_first(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\basc_nulls_last\(?" "asc_nulls_last" r
+asc_nulls_last(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bdesc\(?" "desc" r
+desc(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bdesc_nulls_first\(?" "desc_nulls_first" r
+desc_nulls_first(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bdesc_nulls_last\(?" "desc_nulls_last" r
+desc_nulls_last(${1:columnName: String})
+endsnippet
+
+priority 10
+snippet "\bascii\(?" "ascii" r
+ascii(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bbase64\(?" "base64" r
+base64(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bconcat\(?" "concat" r
+concat(${1:exprs: Column*})
+endsnippet
+
+priority 10
+snippet "\bconcat_ws\(?" "concat_ws" r
+concat_ws(${1:sep: String}, ${2:exprs: Column*})
+endsnippet
+
+priority 10
+snippet "\bdecode\(?" "decode" r
+decode(${1:value: Column}, ${2:charset: String})
+endsnippet
+
+priority 10
+snippet "\bencode\(?" "encode" r
+encode(${1:value: Column}, ${2:charset: String})
+endsnippet
+
+priority 10
+snippet "\bformat_number\(?" "format_number" r
+format_number(${1:x: Column}, ${2:d: Int})
+endsnippet
+
+priority 10
+snippet "\bformat_string\(?" "format_string" r
+format_string(${1:format: String}, ${2:arguments: Column*})
+endsnippet
+
+priority 10
+snippet "\binitcap\(?" "initcap" r
+initcap(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\binstr\(?" "instr" r
+instr(${1:str: Column}, ${2:substring: String})
+endsnippet
+
+priority 10
+snippet "\blength\(?" "length" r
+length(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blevenshtein\(?" "levenshtein" r
+levenshtein(${1:l: Column}, ${2:r: Column})
+endsnippet
+
+priority 10
+snippet "\blocate\(?" "locate" r
+locate(${1:substr: String}, ${2:str: Column}, ${3:pos: Int})
+endsnippet
+
+priority 10
+snippet "\blocate\(?" "locate" r
+locate(${1:substr: String}, ${2:str: Column})
+endsnippet
+
+priority 10
+snippet "\blower\(?" "lower" r
+lower(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\blpad\(?" "lpad" r
+lpad(${1:str: Column}, ${2:len: Int}, ${3:pad: String})
+endsnippet
+
+priority 10
+snippet "\bltrim\(?" "ltrim" r
+ltrim(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bregexp_extract\(?" "regexp_extract" r
+regexp_extract(${1:e: Column}, ${2:exp: String}, ${3:groupIdx: Int})
+endsnippet
+
+priority 10
+snippet "\bregexp_replace\(?" "regexp_replace" r
+regexp_replace(${1:e: Column}, ${2:pattern: Column}, ${3:replacement: Column})
+endsnippet
+
+priority 10
+snippet "\bregexp_replace\(?" "regexp_replace" r
+regexp_replace(${1:e: Column}, ${2:pattern: String}, ${3:replacement: String})
+endsnippet
+
+priority 10
+snippet "\brepeat\(?" "repeat" r
+repeat(${1:str: Column}, ${2:n: Int})
+endsnippet
+
+priority 10
+snippet "\breverse\(?" "reverse" r
+reverse(${1:str: Column})
+endsnippet
+
+priority 10
+snippet "\brpad\(?" "rpad" r
+rpad(${1:str: Column}, ${2:len: Int}, ${3:pad: String})
+endsnippet
+
+priority 10
+snippet "\brtrim\(?" "rtrim" r
+rtrim(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsoundex\(?" "soundex" r
+soundex(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bsplit\(?" "split" r
+split(${1:str: Column}, ${2:pattern: String})
+endsnippet
+
+priority 10
+snippet "\bsubstring\(?" "substring" r
+substring(${1:str: Column}, ${2:pos: Int}, ${3:len: Int})
+endsnippet
+
+priority 10
+snippet "\bsubstring_index\(?" "substring_index" r
+substring_index(${1:str: Column}, ${2:delim: String}, ${3:count: Int})
+endsnippet
+
+priority 10
+snippet "\btranslate\(?" "translate" r
+translate(${1:src: Column}, ${2:matchingString: String}, ${3:replaceString: String})
+endsnippet
+
+priority 10
+snippet "\btrim\(?" "trim" r
+trim(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bunbase64\(?" "unbase64" r
+unbase64(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bupper\(?" "upper" r
+upper(${1:e: Column})
+endsnippet
+
+priority 10
+snippet "\bcallUDF\(?" "callUDF" r
+callUDF(${1:udfName: String}, ${2:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: AnyRef}, ${2:dataType: DataType})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4}, ${5:A5}, ${6:A6}, ${7:A7}, ${8:A8}, ${9:A9}, ${10:A10})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4}, ${5:A5}, ${6:A6}, ${7:A7}, ${8:A8}, ${9:A9})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4}, ${5:A5}, ${6:A6}, ${7:A7}, ${8:A8})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4}, ${5:A5}, ${6:A6}, ${7:A7})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4}, ${5:A5}, ${6:A6})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4}, ${5:A5})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3}, ${4:A4})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2}, ${3:A3})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1}, ${2:A2})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (A1})
+endsnippet
+
+priority 10
+snippet "\budf\(?" "udf" r
+udf(${1:f: (})
+endsnippet
+
+priority 10
+snippet "\bcume_dist\(?" "cume_dist" r
+cume_dist()
+endsnippet
+
+priority 10
+snippet "\bdense_rank\(?" "dense_rank" r
+dense_rank()
+endsnippet
+
+priority 10
+snippet "\blag\(?" "lag" r
+lag(${1:e: Column}, ${2:offset: Int}, ${3:defaultValue: Any})
+endsnippet
+
+priority 10
+snippet "\blag\(?" "lag" r
+lag(${1:columnName: String}, ${2:offset: Int}, ${3:defaultValue: Any})
+endsnippet
+
+priority 10
+snippet "\blag\(?" "lag" r
+lag(${1:columnName: String}, ${2:offset: Int})
+endsnippet
+
+priority 10
+snippet "\blag\(?" "lag" r
+lag(${1:e: Column}, ${2:offset: Int})
+endsnippet
+
+priority 10
+snippet "\blead\(?" "lead" r
+lead(${1:e: Column}, ${2:offset: Int}, ${3:defaultValue: Any})
+endsnippet
+
+priority 10
+snippet "\blead\(?" "lead" r
+lead(${1:columnName: String}, ${2:offset: Int}, ${3:defaultValue: Any})
+endsnippet
+
+priority 10
+snippet "\blead\(?" "lead" r
+lead(${1:e: Column}, ${2:offset: Int})
+endsnippet
+
+priority 10
+snippet "\blead\(?" "lead" r
+lead(${1:columnName: String}, ${2:offset: Int})
+endsnippet
+
+priority 10
+snippet "\bntile\(?" "ntile" r
+ntile(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\bpercent_rank\(?" "percent_rank" r
+percent_rank()
+endsnippet
+
+priority 10
+snippet "\brank\(?" "rank" r
+rank()
+endsnippet
+
+priority 10
+snippet "\brow_number\(?" "row_number" r
+row_number()
+endsnippet
+

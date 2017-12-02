@@ -1,0 +1,255 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.col" "Methods of Column" r 
+$1`!p snip.rv = complete(t[1], file='column.json')`
+endsnippet
+
+
+priority 10
+snippet "\bexplain\(?" "explain" r 
+explain(${1:extended: Boolean})
+endsnippet
+
+priority 10
+snippet "\balias\(?" "alias" r 
+alias(${1:alias: String})
+endsnippet
+
+priority 10
+snippet "\bapply\(?" "apply" r 
+apply(${1:extraction: Any})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r 
+as(${1:alias: String},${2:metadata: Metada})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r 
+as(${1:alias: Symbol})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r 
+as(${1:aliases: Array})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r 
+as(${1:aliases: Seq})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r 
+as(${1:alias: String})
+endsnippet
+
+priority 10
+snippet "\bbitwiseAND\(?" "bitwiseAND" r 
+bitwiseAND(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bbitwiseOR\(?" "bitwiseOR" r 
+bitwiseOR(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bbitwiseXOR\(?" "bitwiseXOR" r 
+bitwiseXOR(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bcast\(?" "cast" r 
+cast(${1:to: String})
+endsnippet
+
+priority 10
+snippet "\bcast\(?" "cast" r 
+cast(${1:to: DataType})
+endsnippet
+
+priority 10
+snippet "\bcontains\(?" "contains" r 
+contains(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bendsWith\(?" "endsWith" r 
+endsWith(${1:literal: String})
+endsnippet
+
+priority 10
+snippet "\bendsWith\(?" "endsWith" r 
+endsWith(${1:other: Column})
+endsnippet
+
+priority 10
+snippet "\bequalTo\(?" "equalTo" r 
+equalTo(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bgetField\(?" "getField" r 
+getField(${1:fieldName: String})
+endsnippet
+
+priority 10
+snippet "\bgetItem\(?" "getItem" r 
+getItem(${1:key: Any})
+endsnippet
+
+priority 10
+snippet "\bisin\(?" "isin" r 
+isin(${1:list: Any*})
+endsnippet
+
+priority 10
+snippet "\blike\(?" "like" r 
+like(${1:literal: String})
+endsnippet
+
+priority 10
+snippet "\bname\(?" "name" r 
+name(${1:alias: String})
+endsnippet
+
+priority 10
+snippet "\botherwise\(?" "otherwise" r 
+otherwise(${1:value: Any})
+endsnippet
+
+priority 10
+snippet "\bover\(?" "over" r 
+over()
+endsnippet
+
+priority 10
+snippet "\bover\(?" "over" r 
+over(${1:window: WindowSpec})
+endsnippet
+
+priority 10
+snippet "\brlike\(?" "rlike" r 
+rlike(${1:literal: String})
+endsnippet
+
+priority 10
+snippet "\bstartsWith\(?" "startsWith" r 
+startsWith(${1:literal: String})
+endsnippet
+
+priority 10
+snippet "\bstartsWith\(?" "startsWith" r 
+startsWith(${1:other: Column})
+endsnippet
+
+priority 10
+snippet "\bsubstr\(?" "substr" r 
+substr(${1:startPos: Int},${2:len: I})
+endsnippet
+
+priority 10
+snippet "\bsubstr\(?" "substr" r 
+substr(${1:startPos: Column},${2:len: Colu})
+endsnippet
+
+priority 10
+snippet "\bwhen\(?" "when" r 
+when(${1:condition: Column},${2:value: A})
+endsnippet
+
+priority 10
+snippet "\band\(?" "and" r 
+and(${1:other: Column})
+endsnippet
+
+priority 10
+snippet "\bbetween\(?" "between" r 
+between(${1:lowerBound: Any},${2:upperBound: A})
+endsnippet
+
+priority 10
+snippet "\bdivide\(?" "divide" r 
+divide(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\beqNullSafe\(?" "eqNullSafe" r 
+eqNullSafe(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bgeq\(?" "geq" r 
+geq(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bgt\(?" "gt" r 
+gt(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bleq\(?" "leq" r 
+leq(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\blt\(?" "lt" r 
+lt(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bminus\(?" "minus" r 
+minus(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bmod\(?" "mod" r 
+mod(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bmultiply\(?" "multiply" r 
+multiply(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bnotEqual\(?" "notEqual" r 
+notEqual(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bor\(?" "or" r 
+or(${1:other: Column})
+endsnippet
+
+priority 10
+snippet "\bplus\(?" "plus" r 
+plus(${1:other: Any})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r 
+as(${1:implicit arg0: Encoder})
+endsnippet
+
+priority 10
+snippet "\bequals\(?" "equals" r 
+equals(${1:that: Any})
+endsnippet
+
+priority 10
+snippet "\bhashCode\(?" "hashCode" r 
+hashCode()
+endsnippet
+
+priority 10
+snippet "\btoString\(?" "toString" r 
+toString()
+endsnippet

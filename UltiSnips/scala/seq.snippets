@@ -1,0 +1,534 @@
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.seq" "Methods of Seq" r
+$1`!p snip.rv = complete(t[1], file='scala/seq.json')`
+endsnippet
+
+priority 10
+snippet "\baddString\(?" "addString" r
+addString(${1:b: StringBuilder})
+endsnippet
+
+priority 10
+snippet "\baddString\(?" "addString" r
+addString(${1:b: StringBuilder}, ${2:sep: String})
+endsnippet
+
+priority 10
+snippet "\baddString\(?" "addString" r
+addString(${1:b: StringBuilder}, ${2:start: String}, ${3:sep: String}, ${4:end: String})
+endsnippet
+
+priority 10
+snippet "\baggregate\(?" "aggregate" r
+aggregate(${1:z: ⇒ B})
+endsnippet
+
+priority 10
+snippet "\bandThen\(?" "andThen" r
+andThen(${1:k: (A})
+endsnippet
+
+priority 10
+snippet "\bapplyOrElse\(?" "applyOrElse" r
+applyOrElse(${1:x: A1}, ${2:default: (A1})
+endsnippet
+
+priority 10
+snippet "\bcanEqual\(?" "canEqual" r
+canEqual(${1:that: Any})
+endsnippet
+
+priority 10
+snippet "\bcollect\(?" "collect" r
+collect(${1:pf: PartialFunction}${2:${3:A}, ${4:B}})
+endsnippet
+
+priority 10
+snippet "\bcollectFirst\(?" "collectFirst" r
+collectFirst(${1:pf: PartialFunction}${2:${3:A}, ${4:B}})
+endsnippet
+
+priority 10
+snippet "\bcombinations\(?" "combinations" r
+combinations(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\bcompose\(?" "compose" r
+compose(${1:g: (A})
+endsnippet
+
+priority 10
+snippet "\bcontains\(?" "contains" r
+contains(${1:elem: A1})
+endsnippet
+
+priority 10
+snippet "\bcontainsSlice\(?" "containsSlice" r
+containsSlice(${1:that: GenSeq}${2:B})
+endsnippet
+
+priority 10
+snippet "\bcopyToArray\(?" "copyToArray" r
+copyToArray(${1:xs: Array})
+endsnippet
+
+priority 10
+snippet "\bcopyToArray\(?" "copyToArray" r
+copyToArray(${1:xs: Array}${2:A})
+endsnippet
+
+priority 10
+snippet "\bcopyToArray\(?" "copyToArray" r
+copyToArray(${1:xs: Array})
+endsnippet
+
+priority 10
+snippet "\bcopyToBuffer\(?" "copyToBuffer" r
+copyToBuffer(${1:dest: Buffer}${2:B})
+endsnippet
+
+priority 10
+snippet "\bcorresponds\(?" "corresponds" r
+corresponds(${1:that: GenSeq}${2:B})
+endsnippet
+
+priority 10
+snippet "\bcount\(?" "count" r
+count(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bdiff\(?" "diff" r
+diff(${1:that: Seq}${2:A})
+endsnippet
+
+priority 10
+snippet "\bdrop\(?" "drop" r
+drop(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\bdropRight\(?" "dropRight" r
+dropRight(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\bdropWhile\(?" "dropWhile" r
+dropWhile(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bendsWith\(?" "endsWith" r
+endsWith(${1:that: GenSeq}${2:B})
+endsnippet
+
+priority 10
+snippet "\bequals\(?" "equals" r
+equals(${1:that: Any})
+endsnippet
+
+priority 10
+snippet "\bexists\(?" "exists" r
+exists(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bfilter\(?" "filter" r
+filter(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bfilterNot\(?" "filterNot" r
+filterNot(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bfind\(?" "find" r
+find(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bflatMap\(?" "flatMap" r
+flatMap(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bfold\(?" "fold" r
+fold(${1:z: A1})
+endsnippet
+
+priority 10
+snippet "\bfoldLeft\(?" "foldLeft" r
+foldLeft(${1:z: B})
+endsnippet
+
+priority 10
+snippet "\bfoldRight\(?" "foldRight" r
+foldRight(${1:z: B})
+endsnippet
+
+priority 10
+snippet "\bforall\(?" "forall" r
+forall(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bforeach\(?" "foreach" r
+foreach(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bgroupBy\(?" "groupBy" r
+groupBy(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bgrouped\(?" "grouped" r
+grouped(${1:size: Int})
+endsnippet
+
+priority 10
+snippet "\bhashCode\(?" "hashCode" r
+hashCode()
+endsnippet
+
+priority 10
+snippet "\bindexOf\(?" "indexOf" r
+indexOf(${1:elem: A}, ${2:from: Int})
+endsnippet
+
+priority 10
+snippet "\bindexOf\(?" "indexOf" r
+indexOf(${1:elem: A})
+endsnippet
+
+priority 10
+snippet "\bindexOfSlice\(?" "indexOfSlice" r
+indexOfSlice(${1:that: GenSeq})
+endsnippet
+
+priority 10
+snippet "\bindexOfSlice\(?" "indexOfSlice" r
+indexOfSlice(${1:that: GenSeq}${2:B})
+endsnippet
+
+priority 10
+snippet "\bindexWhere\(?" "indexWhere" r
+indexWhere(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bindexWhere\(?" "indexWhere" r
+indexWhere(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bintersect\(?" "intersect" r
+intersect(${1:that: Seq}${2:A})
+endsnippet
+
+priority 10
+snippet "\bisDefinedAt\(?" "isDefinedAt" r
+isDefinedAt(${1:idx: Int})
+endsnippet
+
+priority 10
+snippet "\blastIndexOf\(?" "lastIndexOf" r
+lastIndexOf(${1:elem: A}, ${2:end: Int})
+endsnippet
+
+priority 10
+snippet "\blastIndexOf\(?" "lastIndexOf" r
+lastIndexOf(${1:elem: A})
+endsnippet
+
+priority 10
+snippet "\blastIndexOfSlice\(?" "lastIndexOfSlice" r
+lastIndexOfSlice(${1:that: GenSeq})
+endsnippet
+
+priority 10
+snippet "\blastIndexOfSlice\(?" "lastIndexOfSlice" r
+lastIndexOfSlice(${1:that: GenSeq}${2:B})
+endsnippet
+
+priority 10
+snippet "\blastIndexWhere\(?" "lastIndexWhere" r
+lastIndexWhere(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\blastIndexWhere\(?" "lastIndexWhere" r
+lastIndexWhere(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\blengthCompare\(?" "lengthCompare" r
+lengthCompare(${1:len: Int})
+endsnippet
+
+priority 10
+snippet "\blift\(?" "lift" r
+lift(${1:Int})
+endsnippet
+
+priority 10
+snippet "\bmap\(?" "map" r
+map(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bmaxBy\(?" "maxBy" r
+maxBy(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bminBy\(?" "minBy" r
+minBy(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bmkString\(?" "mkString" r
+mkString(${1:sep: String})
+endsnippet
+
+priority 10
+snippet "\bmkString\(?" "mkString" r
+mkString(${1:start: String}, ${2:sep: String}, ${3:end: String})
+endsnippet
+
+priority 10
+snippet "\borElse\(?" "orElse" r
+orElse(${1:that: PartialFunction}${2:${3:A1}, ${4:B1}})
+endsnippet
+
+priority 10
+snippet "\bpadTo\(?" "padTo" r
+padTo(${1:len: Int}, ${2:elem: A})
+endsnippet
+
+priority 10
+snippet "\bpartition\(?" "partition" r
+partition(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bpatch\(?" "patch" r
+patch(${1:from: Int}, ${2:that: GenSeq})
+endsnippet
+
+priority 10
+snippet "\bprefixLength\(?" "prefixLength" r
+prefixLength(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\breduce\(?" "reduce" r
+reduce(${1:op: (A1}, ${2:A1})
+endsnippet
+
+priority 10
+snippet "\breduceLeft\(?" "reduceLeft" r
+reduceLeft(${1:op: (B}, ${2:A})
+endsnippet
+
+priority 10
+snippet "\breduceLeftOption\(?" "reduceLeftOption" r
+reduceLeftOption(${1:op: (B}, ${2:A})
+endsnippet
+
+priority 10
+snippet "\breduceOption\(?" "reduceOption" r
+reduceOption(${1:op: (A1}, ${2:A1})
+endsnippet
+
+priority 10
+snippet "\breduceRight\(?" "reduceRight" r
+reduceRight(${1:op: (A}, ${2:B})
+endsnippet
+
+priority 10
+snippet "\breduceRightOption\(?" "reduceRightOption" r
+reduceRightOption(${1:op: (A}, ${2:B})
+endsnippet
+
+priority 10
+snippet "\breverseMap\(?" "reverseMap" r
+reverseMap(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\brunWith\(?" "runWith" r
+runWith(${1:action: (A})
+endsnippet
+
+priority 10
+snippet "\bsameElements\(?" "sameElements" r
+sameElements(${1:that: GenIterable}${2:A})
+endsnippet
+
+priority 10
+snippet "\bscan\(?" "scan" r
+scan(${1:z: B})
+endsnippet
+
+priority 10
+snippet "\bscanLeft\(?" "scanLeft" r
+scanLeft(${1:z: B})
+endsnippet
+
+priority 10
+snippet "\bscanRight\(?" "scanRight" r
+scanRight(${1:z: B})
+endsnippet
+
+priority 10
+snippet "\bsegmentLength\(?" "segmentLength" r
+segmentLength(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bslice\(?" "slice" r
+slice(${1:from: Int}, ${2:until: Int})
+endsnippet
+
+priority 10
+snippet "\bsliding\(?" "sliding" r
+sliding(${1:size: Int}, ${2:step: Int})
+endsnippet
+
+priority 10
+snippet "\bsliding\(?" "sliding" r
+sliding(${1:size: Int})
+endsnippet
+
+priority 10
+snippet "\bsortBy\(?" "sortBy" r
+sortBy(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bsortWith\(?" "sortWith" r
+sortWith(${1:lt: (A}, ${2:A})
+endsnippet
+
+priority 10
+snippet "\bsorted\(?" "sorted" r
+sorted(${1:implicit ord: math.Ordering}${2:B})
+endsnippet
+
+priority 10
+snippet "\bspan\(?" "span" r
+span(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bsplitAt\(?" "splitAt" r
+splitAt(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\bstartsWith\(?" "startsWith" r
+startsWith(${1:that: GenSeq})
+endsnippet
+
+priority 10
+snippet "\bstartsWith\(?" "startsWith" r
+startsWith(${1:that: GenSeq}${2:B})
+endsnippet
+
+priority 10
+snippet "\btake\(?" "take" r
+take(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\btakeRight\(?" "takeRight" r
+takeRight(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\btakeWhile\(?" "takeWhile" r
+takeWhile(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\btoString\(?" "toString" r
+toString()
+endsnippet
+
+priority 10
+snippet "\btranspose\(?" "transpose" r
+transpose(${1:implicit asTraversable: (A})
+endsnippet
+
+priority 10
+snippet "\bunion\(?" "union" r
+union(${1:that: Seq}${2:A})
+endsnippet
+
+priority 10
+snippet "\bunzip\(?" "unzip" r
+unzip(${1:implicit asPair: (A})
+endsnippet
+
+priority 10
+snippet "\bunzip3\(?" "unzip3" r
+unzip3(${1:implicit asTriple: (A})
+endsnippet
+
+priority 10
+snippet "\bupdated\(?" "updated" r
+updated(${1:index: Int}, ${2:elem: A})
+endsnippet
+
+priority 10
+snippet "\bview\(?" "view" r
+view(${1:from: Int}, ${2:until: Int})
+endsnippet
+
+priority 10
+snippet "\bwithFilter\(?" "withFilter" r
+withFilter(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bzip\(?" "zip" r
+zip(${1:that: GenIterable}${2:B})
+endsnippet
+
+priority 10
+snippet "\bzipAll\(?" "zipAll" r
+zipAll(${1:that: Iterable})
+endsnippet
+
+priority 10
+snippet "\bzipWithIndex\(?" "zipWithIndex" r
+zipWithIndex(${1:A}, ${2:Int})
+endsnippet
+
+priority 10
+snippet "\bfilter\(?" "filter" r
+filter(${1:p: (A})
+endsnippet
+
+priority 10
+snippet "\bflatMap\(?" "flatMap" r
+flatMap(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bmap\(?" "map" r
+map(${1:f: (A})
+endsnippet
+
+priority 10
+snippet "\bwithFilter\(?" "withFilter" r
+withFilter(${1:p: (A})
+endsnippet
+

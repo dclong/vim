@@ -1,0 +1,509 @@
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.df" "Methods of " r
+$1`!p snip.rv = complete(t[1], file='scala/df.json')`
+endsnippet
+
+priority 10
+snippet "\bcollect\(?" "collect" r
+collect()
+endsnippet
+
+priority 10
+snippet "\bcollectAsList\(?" "collectAsList" r
+collectAsList()
+endsnippet
+
+priority 10
+snippet "\bcount\(?" "count" r
+count()
+endsnippet
+
+priority 10
+snippet "\bdescribe\(?" "describe" r
+describe(${1:cols: String*})
+endsnippet
+
+priority 10
+snippet "\bfirst\(?" "first" r
+first()
+endsnippet
+
+priority 10
+snippet "\bforeach\(?" "foreach" r
+foreach(${1:func: ForeachFunction}${2:T})
+endsnippet
+
+priority 10
+snippet "\bforeach\(?" "foreach" r
+foreach(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bforeachPartition\(?" "foreachPartition" r
+foreachPartition(${1:func: ForeachPartitionFunction}${2:T})
+endsnippet
+
+priority 10
+snippet "\bforeachPartition\(?" "foreachPartition" r
+foreachPartition(${1:f: (Iterator}${2:T})
+endsnippet
+
+priority 10
+snippet "\bhead\(?" "head" r
+head()
+endsnippet
+
+priority 10
+snippet "\bhead\(?" "head" r
+head(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\bshow\(?" "show" r
+show(${1:numRows: Int}, ${2:truncate: Int})
+endsnippet
+
+priority 10
+snippet "\bshow\(?" "show" r
+show(${1:numRows: Int}, ${2:truncate: Boolean})
+endsnippet
+
+priority 10
+snippet "\bshow\(?" "show" r
+show(${1:truncate: Boolean})
+endsnippet
+
+priority 10
+snippet "\bshow\(?" "show" r
+show()
+endsnippet
+
+priority 10
+snippet "\bshow\(?" "show" r
+show(${1:numRows: Int})
+endsnippet
+
+priority 10
+snippet "\btake\(?" "take" r
+take(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\btakeAsList\(?" "takeAsList" r
+takeAsList(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\btoLocalIterator\(?" "toLocalIterator" r
+toLocalIterator()
+endsnippet
+
+priority 10
+snippet "\bcache\(?" "cache" r
+cache()
+endsnippet
+
+priority 10
+snippet "\bcreateGlobalTempView\(?" "createGlobalTempView" r
+createGlobalTempView(${1:viewName: String})
+endsnippet
+
+priority 10
+snippet "\bcreateOrReplaceGlobalTempView\(?" "createOrReplaceGlobalTempView" r
+createOrReplaceGlobalTempView(${1:viewName: String})
+endsnippet
+
+priority 10
+snippet "\bcreateOrReplaceTempView\(?" "createOrReplaceTempView" r
+createOrReplaceTempView(${1:viewName: String})
+endsnippet
+
+priority 10
+snippet "\bcreateTempView\(?" "createTempView" r
+createTempView(${1:viewName: String})
+endsnippet
+
+priority 10
+snippet "\bdtypes\(?" "dtypes" r
+dtypes(${1:String}, ${2:String})
+endsnippet
+
+priority 10
+snippet "\bexplain\(?" "explain" r
+explain()
+endsnippet
+
+priority 10
+snippet "\bexplain\(?" "explain" r
+explain(${1:extended: Boolean})
+endsnippet
+
+priority 10
+snippet "\bhint\(?" "hint" r
+hint(${1:name: String}, ${2:parameters: Any*})
+endsnippet
+
+priority 10
+snippet "\bpersist\(?" "persist" r
+persist(${1:newLevel: StorageLevel})
+endsnippet
+
+priority 10
+snippet "\bpersist\(?" "persist" r
+persist()
+endsnippet
+
+priority 10
+snippet "\bprintSchema\(?" "printSchema" r
+printSchema()
+endsnippet
+
+priority 10
+snippet "\btoDF\(?" "toDF" r
+toDF(${1:colNames: String*})
+endsnippet
+
+priority 10
+snippet "\btoDF\(?" "toDF" r
+toDF()
+endsnippet
+
+priority 10
+snippet "\bunpersist\(?" "unpersist" r
+unpersist()
+endsnippet
+
+priority 10
+snippet "\bunpersist\(?" "unpersist" r
+unpersist(${1:blocking: Boolean})
+endsnippet
+
+priority 10
+snippet "\bregisterTempTable\(?" "registerTempTable" r
+registerTempTable(${1:tableName: String})
+endsnippet
+
+priority 10
+snippet "\balias\(?" "alias" r
+alias(${1:alias: Symbol})
+endsnippet
+
+priority 10
+snippet "\balias\(?" "alias" r
+alias(${1:alias: String})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r
+as(${1:alias: Symbol})
+endsnippet
+
+priority 10
+snippet "\bas\(?" "as" r
+as(${1:alias: String})
+endsnippet
+
+priority 10
+snippet "\bcoalesce\(?" "coalesce" r
+coalesce(${1:numPartitions: Int})
+endsnippet
+
+priority 10
+snippet "\bdistinct\(?" "distinct" r
+distinct()
+endsnippet
+
+priority 10
+snippet "\bdropDuplicates\(?" "dropDuplicates" r
+dropDuplicates(${1:col1: String}, ${2:cols: String*})
+endsnippet
+
+priority 10
+snippet "\bdropDuplicates\(?" "dropDuplicates" r
+dropDuplicates(${1:colNames: Array}${2:String})
+endsnippet
+
+priority 10
+snippet "\bdropDuplicates\(?" "dropDuplicates" r
+dropDuplicates(${1:colNames: Seq}${2:String})
+endsnippet
+
+priority 10
+snippet "\bdropDuplicates\(?" "dropDuplicates" r
+dropDuplicates()
+endsnippet
+
+priority 10
+snippet "\bexcept\(?" "except" r
+except(${1:other: Dataset}${2:T})
+endsnippet
+
+priority 10
+snippet "\bfilter\(?" "filter" r
+filter(${1:conditionExpr: String})
+endsnippet
+
+priority 10
+snippet "\bfilter\(?" "filter" r
+filter(${1:condition: Column})
+endsnippet
+
+priority 10
+snippet "\bintersect\(?" "intersect" r
+intersect(${1:other: Dataset}${2:T})
+endsnippet
+
+priority 10
+snippet "\blimit\(?" "limit" r
+limit(${1:n: Int})
+endsnippet
+
+priority 10
+snippet "\borderBy\(?" "orderBy" r
+orderBy(${1:sortExprs: Column*})
+endsnippet
+
+priority 10
+snippet "\borderBy\(?" "orderBy" r
+orderBy(${1:sortCol: String}, ${2:sortCols: String*})
+endsnippet
+
+priority 10
+snippet "\brandomSplit\(?" "randomSplit" r
+randomSplit(${1:weights: Array}${2:Double})
+endsnippet
+
+priority 10
+snippet "\brandomSplit\(?" "randomSplit" r
+randomSplit(${1:weights: Array})
+endsnippet
+
+priority 10
+snippet "\brandomSplitAsList\(?" "randomSplitAsList" r
+randomSplitAsList(${1:weights: Array})
+endsnippet
+
+priority 10
+snippet "\brepartition\(?" "repartition" r
+repartition(${1:partitionExprs: Column*})
+endsnippet
+
+priority 10
+snippet "\brepartition\(?" "repartition" r
+repartition(${1:numPartitions: Int}, ${2:partitionExprs: Column*})
+endsnippet
+
+priority 10
+snippet "\brepartition\(?" "repartition" r
+repartition(${1:numPartitions: Int})
+endsnippet
+
+priority 10
+snippet "\bsample\(?" "sample" r
+sample(${1:withReplacement: Boolean}, ${2:fraction: Double})
+endsnippet
+
+priority 10
+snippet "\bsample\(?" "sample" r
+sample(${1:withReplacement: Boolean}, ${2:fraction: Double}, ${3:seed: Long})
+endsnippet
+
+priority 10
+snippet "\bsort\(?" "sort" r
+sort(${1:sortExprs: Column*})
+endsnippet
+
+priority 10
+snippet "\bsort\(?" "sort" r
+sort(${1:sortCol: String}, ${2:sortCols: String*})
+endsnippet
+
+priority 10
+snippet "\bsortWithinPartitions\(?" "sortWithinPartitions" r
+sortWithinPartitions(${1:sortExprs: Column*})
+endsnippet
+
+priority 10
+snippet "\bsortWithinPartitions\(?" "sortWithinPartitions" r
+sortWithinPartitions(${1:sortCol: String}, ${2:sortCols: String*})
+endsnippet
+
+priority 10
+snippet "\btransform\(?" "transform" r
+transform(${1:t: (Dataset}${2:T})
+endsnippet
+
+priority 10
+snippet "\bunion\(?" "union" r
+union(${1:other: Dataset}${2:T})
+endsnippet
+
+priority 10
+snippet "\bwhere\(?" "where" r
+where(${1:conditionExpr: String})
+endsnippet
+
+priority 10
+snippet "\bwhere\(?" "where" r
+where(${1:condition: Column})
+endsnippet
+
+priority 10
+snippet "\bunionAll\(?" "unionAll" r
+unionAll(${1:other: Dataset}${2:T})
+endsnippet
+
+priority 10
+snippet "\bagg\(?" "agg" r
+agg(${1:expr: Column}, ${2:exprs: Column*})
+endsnippet
+
+priority 10
+snippet "\bagg\(?" "agg" r
+agg(${1:exprs: Map}${2:${3:String}, ${4:String}})
+endsnippet
+
+priority 10
+snippet "\bagg\(?" "agg" r
+agg(${1:exprs: Map}${2:${3:String}, ${4:String}})
+endsnippet
+
+priority 10
+snippet "\bagg\(?" "agg" r
+agg(${1:aggExpr: (String}, ${2:String})
+endsnippet
+
+priority 10
+snippet "\bapply\(?" "apply" r
+apply(${1:colName: String})
+endsnippet
+
+priority 10
+snippet "\bcol\(?" "col" r
+col(${1:colName: String})
+endsnippet
+
+priority 10
+snippet "\bcrossJoin\(?" "crossJoin" r
+crossJoin(${1:right: Dataset}${2:_})
+endsnippet
+
+priority 10
+snippet "\bcube\(?" "cube" r
+cube(${1:col1: String}, ${2:cols: String*})
+endsnippet
+
+priority 10
+snippet "\bcube\(?" "cube" r
+cube(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bdrop\(?" "drop" r
+drop(${1:col: Column})
+endsnippet
+
+priority 10
+snippet "\bdrop\(?" "drop" r
+drop(${1:colNames: String*})
+endsnippet
+
+priority 10
+snippet "\bdrop\(?" "drop" r
+drop(${1:colName: String})
+endsnippet
+
+priority 10
+snippet "\bgroupBy\(?" "groupBy" r
+groupBy(${1:col1: String}, ${2:cols: String*})
+endsnippet
+
+priority 10
+snippet "\bgroupBy\(?" "groupBy" r
+groupBy(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bjoin\(?" "join" r
+join(${1:right: Dataset})
+endsnippet
+
+priority 10
+snippet "\bjoin\(?" "join" r
+join(${1:right: Dataset})
+endsnippet
+
+priority 10
+snippet "\bjoin\(?" "join" r
+join(${1:right: Dataset})
+endsnippet
+
+priority 10
+snippet "\bjoin\(?" "join" r
+join(${1:right: Dataset}${2:${3:_]}, ${4:usingColumns: Seq}})
+endsnippet
+
+priority 10
+snippet "\bjoin\(?" "join" r
+join(${1:right: Dataset})
+endsnippet
+
+priority 10
+snippet "\bjoin\(?" "join" r
+join(${1:right: Dataset}${2:_})
+endsnippet
+
+priority 10
+snippet "\brollup\(?" "rollup" r
+rollup(${1:col1: String}, ${2:cols: String*})
+endsnippet
+
+priority 10
+snippet "\brollup\(?" "rollup" r
+rollup(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bselect\(?" "select" r
+select(${1:col: String}, ${2:cols: String*})
+endsnippet
+
+priority 10
+snippet "\bselect\(?" "select" r
+select(${1:cols: Column*})
+endsnippet
+
+priority 10
+snippet "\bselectExpr\(?" "selectExpr" r
+selectExpr(${1:exprs: String*})
+endsnippet
+
+priority 10
+snippet "\bwithColumn\(?" "withColumn" r
+withColumn(${1:colName: String}, ${2:col: Column})
+endsnippet
+
+priority 10
+snippet "\bwithColumnRenamed\(?" "withColumnRenamed" r
+withColumnRenamed(${1:existingName: String}, ${2:newName: String})
+endsnippet
+
+priority 10
+snippet "\bexplode\(?" "explode" r
+explode(${1:inputColumn: String}, ${2:outputColumn: String})
+endsnippet
+
+priority 10
+snippet "\bexplode\(?" "explode" r
+explode(${1:input: Column*})
+endsnippet
+
+priority 10
+snippet "\btoString\(?" "toString" r
+toString()
+endsnippet
+
