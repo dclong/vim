@@ -1,13 +1,17 @@
 [
     [
-        "cross", 
-        2, 
+        "cross",
+        2,
         "2015-06-23 22:46:52.796301"
-    ], 
-    "inner", 
-    "left outer", 
-    "right outer", 
-    "full outer", 
-    "self", 
+    ],
+    [
+        "inner",
+        1,
+        "2017-12-02 10:13:59.411378"
+    ],
+    "left outer",
+    "right outer",
+    "full outer",
+    "self",
     "natural"
 ]
