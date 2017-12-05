@@ -1,0 +1,16 @@
+[
+    "baseRelationToDataFrame", 
+    "close", 
+    "createDataFrame", 
+    "newSession", 
+    "read", 
+    "readStream", 
+    "sparkContext", 
+    "sql", 
+    "sqlContext", 
+    "stop", 
+    "table", 
+    "time", 
+    "udf", 
+    "version"
+]

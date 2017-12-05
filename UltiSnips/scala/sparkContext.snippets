@@ -1,0 +1,330 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.sc" "Methods of SparkContext" r 
+$1`!p snip.rv = complete(t[1], file='scala/sparkContext.json')`
+endsnippet
+
+
+priority 10
+snippet "\baddFile\(?" "addFile" r 
+addFile(${1:path: String},${2:recursive: Boole})
+endsnippet
+
+priority 10
+snippet "\baddFile\(?" "addFile" r 
+addFile(${1:path: String})
+endsnippet
+
+priority 10
+snippet "\baddJar\(?" "addJar" r 
+addJar(${1:path: String})
+endsnippet
+
+priority 10
+snippet "\bbinaryFiles\(?" "binaryFiles" r 
+binaryFiles(${1:path: String},${2:minPartitions: Int = defaultMinPartitio})
+endsnippet
+
+priority 10
+snippet "\bbinaryRecords\(?" "binaryRecords" r 
+binaryRecords(${1:path: String},${2:recordLength: Int},${3:conf: Configuration = hadoopConfigura})
+endsnippet
+
+priority 10
+snippet "\bbroadcast\(?" "broadcast" r 
+broadcast(${1:value: T})
+endsnippet
+
+priority 10
+snippet "\bcancelAllJobs\(?" "cancelAllJobs" r 
+cancelAllJobs()
+endsnippet
+
+priority 10
+snippet "\bcancelJob\(?" "cancelJob" r 
+cancelJob(${1:jobId: Int})
+endsnippet
+
+priority 10
+snippet "\bcancelJob\(?" "cancelJob" r 
+cancelJob(${1:jobId: Int},${2:reason: Stri})
+endsnippet
+
+priority 10
+snippet "\bcancelJobGroup\(?" "cancelJobGroup" r 
+cancelJobGroup(${1:groupId: String})
+endsnippet
+
+priority 10
+snippet "\bcancelStage\(?" "cancelStage" r 
+cancelStage(${1:stageId: Int})
+endsnippet
+
+priority 10
+snippet "\bcancelStage\(?" "cancelStage" r 
+cancelStage(${1:stageId: Int},${2:reason: Stri})
+endsnippet
+
+priority 10
+snippet "\bclearCallSite\(?" "clearCallSite" r 
+clearCallSite()
+endsnippet
+
+priority 10
+snippet "\bclearJobGroup\(?" "clearJobGroup" r 
+clearJobGroup()
+endsnippet
+
+priority 10
+snippet "\bcollectionAccumulator\(?" "collectionAccumulator" r 
+collectionAccumulator(${1:name: String})
+endsnippet
+
+priority 10
+snippet "\bdoubleAccumulator\(?" "doubleAccumulator" r 
+doubleAccumulator(${1:name: String})
+endsnippet
+
+priority 10
+snippet "\bemptyRDD\(?" "emptyRDD" r 
+emptyRDD(${1:implicit arg0: ClassTag})
+endsnippet
+
+priority 10
+snippet "\bgetExecutorMemoryStatus\(?" "getExecutorMemoryStatus" r 
+getExecutorMemoryStatus(${1:Long},${2:Lo})
+endsnippet
+
+priority 10
+snippet "\bgetLocalProperty\(?" "getLocalProperty" r 
+getLocalProperty(${1:key: String})
+endsnippet
+
+priority 10
+snippet "\bhadoopFile\(?" "hadoopFile" r 
+hadoopFile(${1:path: String})
+endsnippet
+
+priority 10
+snippet "\bhadoopFile\(?" "hadoopFile" r 
+hadoopFile(${1:path: String},${2:minPartitions: I})
+endsnippet
+
+priority 10
+snippet "\bhadoopFile\(?" "hadoopFile" r 
+hadoopFile(${1:path: String},${2:inputFormatClass: Class})
+endsnippet
+
+priority 10
+snippet "\bhadoopRDD\(?" "hadoopRDD" r 
+hadoopRDD(${1:conf: JobConf},${2:inputFormatClass: Class})
+endsnippet
+
+priority 10
+snippet "\bkillTaskAttempt\(?" "killTaskAttempt" r 
+killTaskAttempt(${1:taskId: Long},${2:interruptThread: Boolean = true},${3:reason: String})
+endsnippet
+
+priority 10
+snippet "\blistFiles\(?" "listFiles" r 
+listFiles()
+endsnippet
+
+priority 10
+snippet "\blistJars\(?" "listJars" r 
+listJars()
+endsnippet
+
+priority 10
+snippet "\blongAccumulator\(?" "longAccumulator" r 
+longAccumulator(${1:name: String})
+endsnippet
+
+priority 10
+snippet "\bmakeRDD\(?" "makeRDD" r 
+makeRDD(${1:seq: Seq}${2:T},${3:Seq})
+endsnippet
+
+priority 10
+snippet "\bmakeRDD\(?" "makeRDD" r 
+makeRDD(${1:seq: Seq})
+endsnippet
+
+priority 10
+snippet "\bnewAPIHadoopFile\(?" "newAPIHadoopFile" r 
+newAPIHadoopFile(${1:path: String},${2:fClass: Class})
+endsnippet
+
+priority 10
+snippet "\bnewAPIHadoopFile\(?" "newAPIHadoopFile" r 
+newAPIHadoopFile(${1:path: String})
+endsnippet
+
+priority 10
+snippet "\bnewAPIHadoopRDD\(?" "newAPIHadoopRDD" r 
+newAPIHadoopRDD(${1:conf: Configuration = hadoopConfiguration},${2:fClass: Class})
+endsnippet
+
+priority 10
+snippet "\bobjectFile\(?" "objectFile" r 
+objectFile(${1:path: String},${2:minPartitions: Int = defaultMinPartitio})
+endsnippet
+
+priority 10
+snippet "\bparallelize\(?" "parallelize" r 
+parallelize(${1:seq: Seq})
+endsnippet
+
+priority 10
+snippet "\brange\(?" "range" r 
+range(${1:start: Long},${2:end: Long},${3:step: Long = 1},${4:numSlices: Int = defaultParal})
+endsnippet
+
+priority 10
+snippet "\bregister\(?" "register" r 
+register(${1:acc: AccumulatorV2})
+endsnippet
+
+priority 10
+snippet "\bregister\(?" "register" r 
+register(${1:acc: AccumulatorV2})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:Iterator})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:TaskContext},${3:Iterator})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:Iterator})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:TaskContext},${3:Iterator})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:Iterator})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:TaskContext},${3:Iterator})
+endsnippet
+
+priority 10
+snippet "\brunJob\(?" "runJob" r 
+runJob(${1:rdd: RDD}${2:TaskContext},${3:Iterator})
+endsnippet
+
+priority 10
+snippet "\bsequenceFile\(?" "sequenceFile" r 
+sequenceFile(${1:path: String},${2:minPartitions: Int = defaultMinPartitio})
+endsnippet
+
+priority 10
+snippet "\bsequenceFile\(?" "sequenceFile" r 
+sequenceFile(${1:path: String},${2:keyClass: Class})
+endsnippet
+
+priority 10
+snippet "\bsequenceFile\(?" "sequenceFile" r 
+sequenceFile(${1:path: String},${2:keyClass: Class})
+endsnippet
+
+priority 10
+snippet "\bsetCallSite\(?" "setCallSite" r 
+setCallSite(${1:shortCallSite: String})
+endsnippet
+
+priority 10
+snippet "\bsetCheckpointDir\(?" "setCheckpointDir" r 
+setCheckpointDir(${1:directory: String})
+endsnippet
+
+priority 10
+snippet "\bsetJobDescription\(?" "setJobDescription" r 
+setJobDescription(${1:value: String})
+endsnippet
+
+priority 10
+snippet "\bsetJobGroup\(?" "setJobGroup" r 
+setJobGroup(${1:groupId: String},${2:description: String},${3:interruptOnCancel: Boolean = f})
+endsnippet
+
+priority 10
+snippet "\bsetLocalProperty\(?" "setLocalProperty" r 
+setLocalProperty(${1:key: String},${2:value: Stri})
+endsnippet
+
+priority 10
+snippet "\bsetLogLevel\(?" "setLogLevel" r 
+setLogLevel(${1:logLevel: String})
+endsnippet
+
+priority 10
+snippet "\bstop\(?" "stop" r 
+stop()
+endsnippet
+
+priority 10
+snippet "\bsubmitJob\(?" "submitJob" r 
+submitJob(${1:rdd: RDD}${2:Iterator})
+endsnippet
+
+priority 10
+snippet "\btextFile\(?" "textFile" r 
+textFile(${1:path: String},${2:minPartitions: Int = defaultMinPartitio})
+endsnippet
+
+priority 10
+snippet "\bunion\(?" "union" r 
+union(${1:first: RDD}${2:${3:T]},${4:rest: RD}})
+endsnippet
+
+priority 10
+snippet "\bunion\(?" "union" r 
+union(${1:rdds: Seq}${2:${3:RDD}})
+endsnippet
+
+priority 10
+snippet "\bwholeTextFiles\(?" "wholeTextFiles" r 
+wholeTextFiles(${1:path: String},${2:minPartitions: Int = defaultMinPartitio})
+endsnippet
+
+priority 10
+snippet "\baccumulable\(?" "accumulable" r 
+accumulable(${1:initialValue: R},${2:name: Stri})
+endsnippet
+
+priority 10
+snippet "\baccumulable\(?" "accumulable" r 
+accumulable(${1:initialValue: R})
+endsnippet
+
+priority 10
+snippet "\baccumulableCollection\(?" "accumulableCollection" r 
+accumulableCollection(${1:initialValue: R})
+endsnippet
+
+priority 10
+snippet "\baccumulator\(?" "accumulator" r 
+accumulator(${1:initialValue: T},${2:name: Stri})
+endsnippet
+
+priority 10
+snippet "\baccumulator\(?" "accumulator" r 
+accumulator(${1:initialValue: T})
+endsnippet

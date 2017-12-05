@@ -1,0 +1,60 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.ss" "Methods of SparkSession" r 
+$1`!p snip.rv = complete(t[1], file='scala/sparkSession.json')`
+endsnippet
+
+
+priority 10
+snippet "\bbaseRelationToDataFrame\(?" "baseRelationToDataFrame" r 
+baseRelationToDataFrame(${1:baseRelation: BaseRelation})
+endsnippet
+
+priority 10
+snippet "\bclose\(?" "close" r 
+close()
+endsnippet
+
+priority 10
+snippet "\bcreateDataFrame\(?" "createDataFrame" r 
+createDataFrame(${1:data: List})
+endsnippet
+
+priority 10
+snippet "\bcreateDataFrame\(?" "createDataFrame" r 
+createDataFrame(${1:rdd: JavaRDD})
+endsnippet
+
+priority 10
+snippet "\bcreateDataFrame\(?" "createDataFrame" r 
+createDataFrame(${1:rdd: RDD})
+endsnippet
+
+priority 10
+snippet "\bnewSession\(?" "newSession" r 
+newSession()
+endsnippet
+
+priority 10
+snippet "\bsql\(?" "sql" r 
+sql(${1:sqlText: String})
+endsnippet
+
+priority 10
+snippet "\bstop\(?" "stop" r 
+stop()
+endsnippet
+
+priority 10
+snippet "\btable\(?" "table" r 
+table(${1:tableName: String})
+endsnippet
+
+priority 10
+snippet "\btime\(?" "time" r 
+time(${1:f: ⇒ T})
+endsnippet

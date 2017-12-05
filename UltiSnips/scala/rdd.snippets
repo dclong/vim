@@ -1,0 +1,370 @@
+
+global !p
+from complete import *
+endglobal
+
+priority 10
+snippet "\.rdd" "Methods of RDD" r 
+$1`!p snip.rv = complete(t[1], file='scala/rdd.json')`
+endsnippet
+
+
+priority 10
+snippet "\baggregate\(?" "aggregate" r 
+aggregate(${1:zeroValue: U})
+endsnippet
+
+priority 10
+snippet "\bcache\(?" "cache" r 
+cache()
+endsnippet
+
+priority 10
+snippet "\bcartesian\(?" "cartesian" r 
+cartesian(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bcheckpoint\(?" "checkpoint" r 
+checkpoint()
+endsnippet
+
+priority 10
+snippet "\bcoalesce\(?" "coalesce" r 
+coalesce(${1:numPartitions: Int},${2:shuffle: Boolean = false},${3:partitionCoalescer: Option})
+endsnippet
+
+priority 10
+snippet "\bcollect\(?" "collect" r 
+collect(${1:f: PartialFunction})
+endsnippet
+
+priority 10
+snippet "\bcollect\(?" "collect" r 
+collect()
+endsnippet
+
+priority 10
+snippet "\bcount\(?" "count" r 
+count()
+endsnippet
+
+priority 10
+snippet "\bcountApprox\(?" "countApprox" r 
+countApprox(${1:timeout: Long},${2:confidence: Double = 0.})
+endsnippet
+
+priority 10
+snippet "\bcountApproxDistinct\(?" "countApproxDistinct" r 
+countApproxDistinct(${1:relativeSD: Double = 0.05})
+endsnippet
+
+priority 10
+snippet "\bcountApproxDistinct\(?" "countApproxDistinct" r 
+countApproxDistinct(${1:p: Int},${2:sp: I})
+endsnippet
+
+priority 10
+snippet "\bcountByValue\(?" "countByValue" r 
+countByValue()
+endsnippet
+
+priority 10
+snippet "\bcountByValueApprox\(?" "countByValueApprox" r 
+countByValueApprox(${1:timeout: Long},${2:confidence: Double = 0.})
+endsnippet
+
+priority 10
+snippet "\bdistinct\(?" "distinct" r 
+distinct()
+endsnippet
+
+priority 10
+snippet "\bdistinct\(?" "distinct" r 
+distinct(${1:numPartitions: Int})
+endsnippet
+
+priority 10
+snippet "\bfilter\(?" "filter" r 
+filter(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bfirst\(?" "first" r 
+first()
+endsnippet
+
+priority 10
+snippet "\bflatMap\(?" "flatMap" r 
+flatMap(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bfold\(?" "fold" r 
+fold(${1:zeroValue: T})
+endsnippet
+
+priority 10
+snippet "\bforeach\(?" "foreach" r 
+foreach(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bforeachPartition\(?" "foreachPartition" r 
+foreachPartition(${1:f: (Iterator})
+endsnippet
+
+priority 10
+snippet "\bglom\(?" "glom" r 
+glom()
+endsnippet
+
+priority 10
+snippet "\bgroupBy\(?" "groupBy" r 
+groupBy(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bgroupBy\(?" "groupBy" r 
+groupBy(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bgroupBy\(?" "groupBy" r 
+groupBy(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bintersection\(?" "intersection" r 
+intersection(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bintersection\(?" "intersection" r 
+intersection(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bintersection\(?" "intersection" r 
+intersection(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bisEmpty\(?" "isEmpty" r 
+isEmpty()
+endsnippet
+
+priority 10
+snippet "\bkeyBy\(?" "keyBy" r 
+keyBy(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\blocalCheckpoint\(?" "localCheckpoint" r 
+localCheckpoint()
+endsnippet
+
+priority 10
+snippet "\bmap\(?" "map" r 
+map(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bmapPartitions\(?" "mapPartitions" r 
+mapPartitions(${1:f: (Iterator})
+endsnippet
+
+priority 10
+snippet "\bmapPartitionsWithIndex\(?" "mapPartitionsWithIndex" r 
+mapPartitionsWithIndex(${1:f: (Int},${2:Iterator})
+endsnippet
+
+priority 10
+snippet "\bmax\(?" "max" r 
+max()
+endsnippet
+
+priority 10
+snippet "\bmin\(?" "min" r 
+min()
+endsnippet
+
+priority 10
+snippet "\bpersist\(?" "persist" r 
+persist()
+endsnippet
+
+priority 10
+snippet "\bpersist\(?" "persist" r 
+persist(${1:newLevel: StorageLevel})
+endsnippet
+
+priority 10
+snippet "\bpipe\(?" "pipe" r 
+pipe(${1:command: Seq})
+endsnippet
+
+priority 10
+snippet "\bpipe\(?" "pipe" r 
+pipe(${1:command: String},${2:env: Map})
+endsnippet
+
+priority 10
+snippet "\bpipe\(?" "pipe" r 
+pipe(${1:command: String})
+endsnippet
+
+priority 10
+snippet "\brandomSplit\(?" "randomSplit" r 
+randomSplit(${1:weights: Array})
+endsnippet
+
+priority 10
+snippet "\breduce\(?" "reduce" r 
+reduce(${1:f: (T},)
+endsnippet
+
+priority 10
+snippet "\brepartition\(?" "repartition" r 
+repartition(${1:numPartitions: Int})
+endsnippet
+
+priority 10
+snippet "\bsample\(?" "sample" r 
+sample(${1:withReplacement: Boolean},${2:fraction: Double},${3:seed: Long = Utils.random.next})
+endsnippet
+
+priority 10
+snippet "\bsaveAsObjectFile\(?" "saveAsObjectFile" r 
+saveAsObjectFile(${1:path: String})
+endsnippet
+
+priority 10
+snippet "\bsaveAsTextFile\(?" "saveAsTextFile" r 
+saveAsTextFile(${1:path: String},${2:codec: Class})
+endsnippet
+
+priority 10
+snippet "\bsaveAsTextFile\(?" "saveAsTextFile" r 
+saveAsTextFile(${1:path: String})
+endsnippet
+
+priority 10
+snippet "\bsetName\(?" "setName" r 
+setName(${1:_name: String})
+endsnippet
+
+priority 10
+snippet "\bsortBy\(?" "sortBy" r 
+sortBy(${1:f: (T})
+endsnippet
+
+priority 10
+snippet "\bsubtract\(?" "subtract" r 
+subtract(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bsubtract\(?" "subtract" r 
+subtract(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bsubtract\(?" "subtract" r 
+subtract(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\btake\(?" "take" r 
+take(${1:num: Int})
+endsnippet
+
+priority 10
+snippet "\btakeOrdered\(?" "takeOrdered" r 
+takeOrdered(${1:num: Int})
+endsnippet
+
+priority 10
+snippet "\btakeSample\(?" "takeSample" r 
+takeSample(${1:withReplacement: Boolean},${2:num: Int},${3:seed: Long = Utils.random.next})
+endsnippet
+
+priority 10
+snippet "\btoJavaRDD\(?" "toJavaRDD" r 
+toJavaRDD()
+endsnippet
+
+priority 10
+snippet "\btoString\(?" "toString" r 
+toString()
+endsnippet
+
+priority 10
+snippet "\btop\(?" "top" r 
+top(${1:num: Int})
+endsnippet
+
+priority 10
+snippet "\btreeAggregate\(?" "treeAggregate" r 
+treeAggregate(${1:zeroValue: U})
+endsnippet
+
+priority 10
+snippet "\btreeReduce\(?" "treeReduce" r 
+treeReduce(${1:f: (T},)
+endsnippet
+
+priority 10
+snippet "\bunion\(?" "union" r 
+union(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bunpersist\(?" "unpersist" r 
+unpersist(${1:blocking: Boolean = true})
+endsnippet
+
+priority 10
+snippet "\bzip\(?" "zip" r 
+zip(${1:other: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipPartitions\(?" "zipPartitions" r 
+zipPartitions(${1:rdd2: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipPartitions\(?" "zipPartitions" r 
+zipPartitions(${1:rdd2: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipPartitions\(?" "zipPartitions" r 
+zipPartitions(${1:rdd2: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipPartitions\(?" "zipPartitions" r 
+zipPartitions(${1:rdd2: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipPartitions\(?" "zipPartitions" r 
+zipPartitions(${1:rdd2: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipPartitions\(?" "zipPartitions" r 
+zipPartitions(${1:rdd2: RDD})
+endsnippet
+
+priority 10
+snippet "\bzipWithIndex\(?" "zipWithIndex" r 
+zipWithIndex()
+endsnippet
+
+priority 10
+snippet "\bzipWithUniqueId\(?" "zipWithUniqueId" r 
+zipWithUniqueId()
+endsnippet
