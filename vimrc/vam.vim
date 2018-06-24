@@ -51,7 +51,7 @@ fun! SetupVAM()
     let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
 
     " Tell VAM which plugins to fetch & load:
-    call vam#ActivateAddons(['vim-scala', 'Supertab', 'tComment', 'csv', 'repeat', 'surround', 'UltiSnips', 'vim-airline', 'JSON'], {'auto_install' : 0})
+    call vam#ActivateAddons(['Supertab', 'tComment', 'csv', 'repeat', 'surround', 'UltiSnips', 'vim-airline', 'JSON'], {'auto_install' : 0})
     "YouCompleteMe", 
     "dbext", 
     "Vim-R-plugin", 
