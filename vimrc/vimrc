@@ -3,7 +3,11 @@ runtime! debian.vim
 " global configuration file
 :source $archives_dir/vim/vimrc/global.vim
 "color scheme
-colorscheme inkpot
+if $TERM == "xterm"
+    colorscheme default
+else
+    colorscheme inkpot 
+endif
 " filetype identation and plugins
 :source $archives_dir/vim/vimrc/filetype.vim
 " Syntax highlighting
